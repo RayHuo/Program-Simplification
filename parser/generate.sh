@@ -1,2 +1,2 @@
-lex -o ../src/lex.cpp lex.l
-yacc --defines=../src/parse.h -o ../src/parse.cpp parse.y
+lex -o ../sources/lex.cpp lex.l
+yacc --defines=../sources/parse.h -o ../sources/parse.cpp parse.y

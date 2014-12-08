@@ -1,153 +1,179 @@
 %{
-#include <stdio.h>
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
 #include <string.h>
 #include <assert.h>
 #include <vector>
+#include "structs.h"
+#include "Utils.h"
 #include "Vocabulary.h"
 #include "Rule.h"
 
 extern "C" {
-	void yyerror(const char *s);
-	extern int yylex(void);
+    void yyerror(const char *s);
+    extern int yylex(void);
 }
- 
-extern vector<Rule> G_NLP;
 
-int id;
-
-void yyerror(const char* s)
-{
-	printf("Parser error: %s\n", s);
-}
+extern vector<Rule> G_Rules;
 
 %}
 
 %union {
-    char* s;
+    char* str;  // 这个作用于lex.l中的yylval.str。
     int i;
-    struct __literals* l;
     struct __rule* r;
+    struct __literals* l;
 }
 
-%token <s> S_ATOM
-%token <s> S_NEGA
-%token <s> S_IMPL
-%token <s> LPAREN
-%token <s> RPAREN
-%token <s> COMMA
-%token <s> PERIOD
+%token<str> DISJ;
+%token<str> ATOM;
+%token<str> NEG;
+%token<str> IMPL;
+%token<str> LPAREN;
+%token<str> RPAREN;
+%token<str> COMMA;
+%token<str> PERIOD;
 
-%type <s> term terms atom
-%type <i> literal
-%type <l> literals
-%type <r> rule
+%type<str> term terms atom
+%type<i> literal
+%type<r> rule
+%type<l> head body
 
-%left S_IMPL
+%left IMPL;
+%left DISJ;
 
 %%
-nlp 
-    : rules {
-        printf("nlp\n");
-    }
-    |
+
+program : rules {
+            printf("Start Parser!\n");
+        }
+        |
 ;
 
-rules
-    : rules rule {
-        Rule rule($2);
-        G_NLP.push_back(rule);
-    }
-    | rule {
-        Rule rule($1);
-        G_NLP.push_back(rule);
-    }
+rules : rules rule {
+            Rule r($2);
+            G_Rules.push_back(r);
+      }
+      | rule {
+            Rule r($1);
+            G_Rules.push_back(r);
+      }
 ;
 
-rule 
-    : literal PERIOD{
+rule : head PERIOD {
         $$ = (_rule*)malloc(sizeof(_rule));
-        $$->head = $1;
-        $$->length = 0;
+        $$->head_length = 0;
+        $$->body_length = 0;
         $$->type = FACT;
-    }
-    | literal S_IMPL literals PERIOD{
+        for(int i = 0; i < $1->atoms_length; i++)
+            $$->head[$$->head_length++] = $1->atoms[i];
+        // think about the initailization of $$->body.
+     }
+     | head IMPL PERIOD {
         $$ = (_rule*)malloc(sizeof(_rule));
-        $$->head = $1;
+        $$->head_length = 0;
+        $$->body_length = 0;
+        $$->type = FACT;
+        for(int i = 0; i < $1->atoms_length; i++)
+            $$->head[$$->head_length++] = $1->atoms[i];
+     }
+     | head IMPL body PERIOD {
+        $$ = (_rule*)malloc(sizeof(_rule));
+        $$->head_length = 0;
+        $$->body_length = 0;
         $$->type = RULE;
-        for(int i = 0; i < ($3->length); i++) {
-            $$->body[i] = $3->atoms[i];
-        }
-        $$->length = $3->length;
-    }
-    | S_IMPL literals PERIOD{
+        
+        for(int i = 0; i < $1->atoms_length; i++)
+            $$->head[$$->head_length++] = $1->atoms[i];
+        for(int i = 0; i < $3->atoms_length; i++)
+            $$->body[$$->body_length++] = $3->atoms[i];
+     }
+     | IMPL body PERIOD {
         $$ = (_rule*)malloc(sizeof(_rule));
-        $$->head = -1;
+        $$->head_length = 0;
+        $$->body_length = 0;
         $$->type = CONSTRANT;
-        for(int i = 0; i < ($2->length); i++) {
-            $$->body[i] = $2->atoms[i];
+        for(int i = 0; i < $2->atoms_length; i++)
+            $$->body[$$->body_length++] = $2->atoms[i];
+     }
+;
+
+head : head DISJ atom {
+        $$ = (_literals*)malloc(sizeof(_literals));
+        $$->atoms_length = 0;
+
+        $1->atoms[$1->atoms_length++] = Vocabulary::instance().findAtom($3);
+        for(int i = 0; i < $1->atoms_length; i++)
+          $$->atoms[$$->atoms_length++] = $1->atoms[i];
+     }
+     | atom {
+        $$ = (_literals*)malloc(sizeof(_literals));
+        $$->atoms_length = 0;
+        $$->atoms[$$->atoms_length++] = Vocabulary::instance().findAtom($1);
+     }
+;
+
+body : body COMMA literal {
+        $$ = (_literals*)malloc(sizeof(_literals));
+        $$->atoms_length = 0;
+
+        $1->atoms[$1->atoms_length++] = $3;
+        for(int i = 0; i < $1->atoms_length; i++)
+          $$->atoms[$$->atoms_length++] = $1->atoms[i];
+     }
+     | literal {
+        $$ = (_literals*)malloc(sizeof(_literals));
+        $$->atoms_length = 0;
+        $$->atoms[$$->atoms_length++] = $1;
+     }
+;
+
+literal : NEG atom {
+            int id = Vocabulary::instance().findAtom($2);
+            if(id < 0)
+                id = Vocabulary::instance().insertAtom($2);
+            $$ = -1 * id;
         }
-        $$->length = $2->length;
-    }
+        | atom {
+            int id = Vocabulary::instance().findAtom($1);
+            if(id < 0)
+                id = Vocabulary::instance().insertAtom($1);
+            $$ = id;
+        }
 ;
 
-literals
-    : literals COMMA literal {
-        $1->atoms[$1->length] = $3;
-        $1->length++;
-    }
-    | literal {
-        $$ = (__literals*)malloc(sizeof(_literals));
-        memset($$->atoms, 0, sizeof(int) * MAX_ATOM_LENGTH);
-        
-        $$->atoms[0] = $1;
-        $$->length = 1;
-    }
-;
-
-literal
-    : S_NEGA atom {
-        int id = Vocabulary::instance().queryAtom($2);
-        if(id < 0)
-            id = Vocabulary::instance().addAtom($2);
-
-        $$ = -1 * id;
-    }
-    | atom {
-        int id = Vocabulary::instance().queryAtom($1);
-        if(id < 0)
-            id = Vocabulary::instance().addAtom($1);
-
-        $$ = id;
-    }
-;
-
-atom
-    : S_ATOM LPAREN terms RPAREN {
-        char str_buff[512];
-        
+atom : ATOM LPAREN terms RPAREN {
+        char str_buff[1024];
         sprintf(str_buff, "%s(%s)", $1, $3);
         $$ = strdup(str_buff);
-    } 
-    | S_ATOM {
+        // 获取到一个atom后，马上将其插入到Vocabulary中。
+        int id = Vocabulary::instance().insertAtom($$);
+     }
+     | ATOM {
         $$ = strdup($1);
-    }
+        // 获取到一个atom后，马上将其插入到Vocabulary中。
+        int id = Vocabulary::instance().insertAtom($$);
+     }
 ;
 
-terms
-    : terms COMMA term {
-        char str_buff[512];
-        
-        sprintf(str_buff, "%s,%s", $1, $3);
+terms : terms COMMA term {
+        char str_buff[1024];
+        sprintf(str_buff, "%s, %s", $1, $3);
         $$ = strdup(str_buff);
-    }
-    | term {
+      }
+      | term {
         $$ = strdup($1);
-    }
+      }
 ;
 
-term
-    : S_ATOM {
+term : ATOM {
         $$ = strdup($1);
-    }
+     }
 ;
+
 %%
+
+void yyerror(const char *s) {
+    printf("Parser Error : %s\n", s);
+}

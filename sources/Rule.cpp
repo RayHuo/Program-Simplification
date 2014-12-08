@@ -3,72 +3,143 @@
 #include "Vocabulary.h"
 #include <assert.h>
 #include <cstdlib>
+#include <iostream>
+#include <vector>
+#include <cstdio>
 #include <string>
 #include <cstring>
 #include <algorithm>
 
+using namespace std;
+/*
+ * 默认构造函数
+ */
 Rule::Rule() {
-    head = -1;
+    head_length = 0;
     body_length = 0;
-    body_lits.clear();
+    heads.clear();
+    bodys.clear();
     type = RULE;
 }
 
-Rule::Rule(_rule* r) : 
-        head(r->head), type(r->type), body_length(r->length) {
-    for(int i = 0; i < (r->length); i++) {
-        body_lits.insert(r->body[i]);
-    }
+/*
+ * 自定义构造函数
+ */
+Rule::Rule(_rule* r) : head_length(r->head_length), body_length(r->body_length), type(r->type) {
+    for(int i = 0; i < r->head_length; i++)
+        heads.push_back(r->head[i]);
+    for(int i = 0; i < r->body_length; i++)
+        bodys.push_back(r->body[i]);
 }
-Rule::Rule(const Rule& _rhs) : 
-        head(_rhs.head),
-        type(_rhs.type),
-        body_lits(_rhs.body_lits),
-        body_length(_rhs.body_length) {
+
+/*
+ * 拷贝构造函数
+ */
+Rule::Rule(const Rule& r) : 
+        heads(r.heads), head_length(r.head_length), 
+        bodys(r.bodys), body_length(r.body_length), 
+        type(r.type) {
+    
 }
-Rule::~Rule() {
-    body_lits.clear();
+
+/*
+ * 析构函数
+ */
+Rule::~Rule(){
+    head_length = 0;
+    body_length = 0;
+    heads.clear();
+    bodys.clear();
+    type = RULE;
 }
-Rule& Rule::operator = (const Rule& _rhs) {
-    head = _rhs.head;
-    type = _rhs.type;
-    body_length = _rhs.body_length;
-    body_lits = _rhs.body_lits;
+
+/*
+ * 等号运算符重载
+ */
+Rule& Rule::operator = (const Rule& r) {
+    heads = r.heads;
+    head_length = r.head_length;
+    bodys = r.bodys;
+    body_length = r.body_length;
+    type = r.type;
     return *this;
 }
 
-bool Rule::operator == (const Rule& _rhs) {
-    if(type != _rhs.type || head != _rhs.head || body_length != _rhs.body_length)
+/*
+ * 等价运算符重载
+ */
+bool Rule::operator == (const Rule& r) {
+    if(type != r.type || head_length != r.head_length || body_length != r.body_length)
         return false;
     else {
-        if(!(body_lits.size() == _rhs.body_lits.size() && 
-                includes(_rhs.body_lits.begin(), _rhs.body_lits.end(), body_lits.begin(), body_lits.end())))
+        if(!(heads.size() == r.heads.size() && 
+                includes(heads.begin(), heads.end(), r.heads.begin(), r.heads.end())))
+            return false;
+        if(!(bodys.size() == r.bodys.size() && 
+                includes(bodys.begin(), bodys.end(), r.bodys.begin(), r.bodys.end())))
             return false;
     }
+    
     return true;
 }
 
-void Rule::output(FILE* _out) const {
+/*
+ * 输出一个Rule，对应Rule可能的三种type进行输出。
+ */
+void Rule::output(FILE* out) const {
     if(type == FACT) {
-        if(head > 0 && strlen(Vocabulary::instance().getAtom(head)) > 0)
-            fprintf(_out, "%s.\n", Vocabulary::instance().getAtom(head));
-    }
-    fflush(_out);
-    if(type != FACT) {
-        if(head > 0)
-             fprintf(_out, "%s", Vocabulary::instance().getAtom(head));
-        fprintf(_out, " :- ");
-        for(set<int>::iterator pit = body_lits.begin(); pit != 
-                body_lits.end(); pit++) {
-            if(*pit < 0) fprintf(_out, "not ");
-            int id = (*pit < 0) ? (-1 * (*pit)) : *pit;
-            fprintf(_out, "%s", Vocabulary::instance().getAtom(id));
-            if(pit != (--body_lits.end())) {
-                fprintf(_out, ",");
-            }
+        for(vector<int>::const_iterator it = heads.begin(); it != heads.end(); it++) {
+            fprintf(out, "%s", Vocabulary::instance().getAtomName(*it));
+            if(it != --heads.end())
+                fprintf(out, " | ");
         }
-        fprintf(_out, ".\n");
+        fprintf(out, ".\n");
     }
     
-    
+    // 注意体部可能存在负数，对于负数的情况，需要加 not。
+    if(type == CONSTRANT) {
+        fprintf(out, ":- ");
+        for(vector<int>::const_iterator it = bodys.begin(); it != bodys.end(); it++) {
+            int id = *it;
+            if(id < 0) {
+                fprintf(out, "not ");
+                id *= -1;
+            }
+            fprintf(out, "%s", Vocabulary::instance().getAtomName(id));
+            if(it != --bodys.end())
+                fprintf(out, ", ");
+        }
+        fprintf(out, ".\n");
+    }
+    if(type == RULE) {
+        // head
+        for(vector<int>::const_iterator it = heads.begin(); it != heads.end(); it++) {
+            fprintf(out, "%s", Vocabulary::instance().getAtomName(*it));
+            if(it != --heads.end())
+                fprintf(out, " | ");
+        }
+        fprintf(out, " :- ");
+        // body， 注意体部可能存在负数，对于负数的情况，需要加 not。
+        for(vector<int>::const_iterator it = bodys.begin(); it != bodys.end(); it++) {
+            int id = *it;
+            if(id < 0) {
+                fprintf(out, "not ");
+                id *= -1;
+            }
+            fprintf(out, "%s", Vocabulary::instance().getAtomName(id));
+            if(it != --bodys.end())
+                fprintf(out, ", ");
+        }
+        fprintf(out, ".\n");
+    }
+}
+
+void Rule::Situation(FILE* out) {
+    fprintf(out, "Type %d :  ",type);
+    for(int i = 0; i < heads.size(); i++)
+        fprintf(out, "%d, ", heads.at(i));
+    fprintf(out, ":- ");
+    for(int i = 0; i < bodys.size(); i++)
+        fprintf(out, "%d, ", bodys.at(i));
+    fprintf(out, ".\n");
 }

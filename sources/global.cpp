@@ -4,7 +4,5 @@
 #include "Rule.h"
 using namespace std;
 
-vector<Rule> G_NLP;
-set<int> U;
-int *atomState;
-int *ruleState;
+// 保存输入文件中的所有rules
+vector<Rule> G_Rules;

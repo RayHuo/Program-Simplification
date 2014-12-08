@@ -4,6 +4,25 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>headfile/DependenceGraph.h</itemPath>
+      <itemPath>headfile/Rule.h</itemPath>
+      <itemPath>headfile/Utils.h</itemPath>
+      <itemPath>headfile/Vocabulary.h</itemPath>
+      <itemPath>headfile/structs.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f1" displayName="IO" projectFiles="true">
+      <logicalFolder name="inputs" displayName="inputs" projectFiles="true">
+        <itemPath>IO/inputs/sample1.in</itemPath>
+      </logicalFolder>
+      <logicalFolder name="outputs" displayName="outputs" projectFiles="true">
+        <itemPath>IO/outputs/sample1.out</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="f2" displayName="parser" projectFiles="true">
+      <itemPath>parser/clean.sh</itemPath>
+      <itemPath>parser/generate.sh</itemPath>
+      <itemPath>parser/lex.l</itemPath>
+      <itemPath>parser/parse.y</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -12,7 +31,15 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>main.cpp</itemPath>
+      <itemPath>sources/DependenceGraph.cpp</itemPath>
+      <itemPath>sources/Rule.cpp</itemPath>
+      <itemPath>sources/Utils.cpp</itemPath>
+      <itemPath>sources/Vocabulary.cpp</itemPath>
+      <itemPath>sources/global.cpp</itemPath>
+      <itemPath>sources/lex.cpp</itemPath>
+      <itemPath>sources/main.cpp</itemPath>
+      <itemPath>sources/parse.cpp</itemPath>
+      <itemPath>sources/parse.h</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -26,6 +53,11 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>sources</Elem>
+    <Elem>IO/inputs</Elem>
+    <Elem>IO/outputs</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="1">
@@ -37,7 +69,52 @@
       </toolsSet>
       <compileType>
       </compileType>
-      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      <item path="IO/inputs/sample1.in" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/outputs/sample1.out" ex="false" tool="3" flavor2="0">
+      </item>
+      <folder path="SourceFiles">
+        <ccTool>
+          <incDir>
+            <pElem>headfile</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <item path="headfile/DependenceGraph.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headfile/Rule.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headfile/Utils.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headfile/Vocabulary.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headfile/structs.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="parser/clean.sh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="parser/generate.sh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="parser/lex.l" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="parser/parse.y" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sources/DependenceGraph.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sources/Rule.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sources/Utils.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sources/Vocabulary.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sources/global.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sources/lex.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sources/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sources/parse.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sources/parse.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -61,7 +138,45 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      <item path="IO/inputs/sample1.in" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/outputs/sample1.out" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headfile/DependenceGraph.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headfile/Rule.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headfile/Utils.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headfile/Vocabulary.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headfile/structs.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="parser/clean.sh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="parser/generate.sh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="parser/lex.l" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="parser/parse.y" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sources/DependenceGraph.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sources/Rule.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sources/Utils.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sources/Vocabulary.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sources/global.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sources/lex.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sources/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sources/parse.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sources/parse.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

@@ -1,8 +1,8 @@
 /* 
  * File:   Rule.h
- * Author: yzf
+ * Author: ray
  *
- * Created on July 30, 2013, 7:59 AM
+ * Created on December 8, 2014, 9:59 AM
  */
 
 #ifndef RULE_H
@@ -10,6 +10,7 @@
 
 #include <cstdio>
 #include <cstdlib>
+#include <iostream>
 #include <vector>
 #include "structs.h"
 
@@ -19,18 +20,20 @@ using namespace std;
  */
 class Rule {
 public:
-    int head;
+    int head_length;
     int body_length;
-    set<int> body_lits;
+    vector<int> bodys;
+    vector<int> heads;
     RULE_TYPE type;
 public:
     Rule();
-    Rule(_rule* rule);
-    Rule(const Rule& _rhs);
+    Rule(_rule* r);
+    Rule(const Rule& r);
     ~Rule();
-    Rule& operator = (const Rule& _rhs);
-    bool operator == (const Rule& _rhs);
-    void output(FILE* _out) const;
+    Rule& operator = (const Rule& r);
+    bool operator == (const Rule& r);
+    void output(FILE* out) const;
+    void Situation(FILE* out);
 };
 
 #endif	/* RULE_H */

@@ -11,7 +11,7 @@ using namespace std;
  */
 class Vocabulary {
 private:
-    unsigned int atom_id;
+    unsigned int atom_id;       // 在构造函数中默认初始化为1。
     vector<char*> atom_list;
 private:
     Vocabulary();
@@ -21,11 +21,11 @@ private:
     
 public:
     static Vocabulary& instance();
-    void dumpVocabulary(FILE* _out);
-    int addAtom(char*);
-    int apSize();
-    char* getAtom(int id);
-    int queryAtom(char*);
+    void VocabularyDetails(FILE* out);
+    int findAtom(const char *s);
+    int insertAtom(const char *s);
+    char* getAtomName(int id);
+    int atomsNumber();
 };
 
 #endif

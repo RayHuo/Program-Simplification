@@ -35,7 +35,14 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/sources/DependenceGraph.o \
+	${OBJECTDIR}/sources/Rule.o \
+	${OBJECTDIR}/sources/Utils.o \
+	${OBJECTDIR}/sources/Vocabulary.o \
+	${OBJECTDIR}/sources/global.o \
+	${OBJECTDIR}/sources/lex.o \
+	${OBJECTDIR}/sources/main.o \
+	${OBJECTDIR}/sources/parse.o
 
 
 # C Compiler Flags
@@ -62,10 +69,45 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/programsimplification: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/programsimplification ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/main.o: main.cpp 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/sources/DependenceGraph.o: sources/DependenceGraph.cpp 
+	${MKDIR} -p ${OBJECTDIR}/sources
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/sources/DependenceGraph.o sources/DependenceGraph.cpp
+
+${OBJECTDIR}/sources/Rule.o: sources/Rule.cpp 
+	${MKDIR} -p ${OBJECTDIR}/sources
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/sources/Rule.o sources/Rule.cpp
+
+${OBJECTDIR}/sources/Utils.o: sources/Utils.cpp 
+	${MKDIR} -p ${OBJECTDIR}/sources
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/sources/Utils.o sources/Utils.cpp
+
+${OBJECTDIR}/sources/Vocabulary.o: sources/Vocabulary.cpp 
+	${MKDIR} -p ${OBJECTDIR}/sources
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/sources/Vocabulary.o sources/Vocabulary.cpp
+
+${OBJECTDIR}/sources/global.o: sources/global.cpp 
+	${MKDIR} -p ${OBJECTDIR}/sources
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/sources/global.o sources/global.cpp
+
+${OBJECTDIR}/sources/lex.o: sources/lex.cpp 
+	${MKDIR} -p ${OBJECTDIR}/sources
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/sources/lex.o sources/lex.cpp
+
+${OBJECTDIR}/sources/main.o: sources/main.cpp 
+	${MKDIR} -p ${OBJECTDIR}/sources
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/sources/main.o sources/main.cpp
+
+${OBJECTDIR}/sources/parse.o: sources/parse.cpp 
+	${MKDIR} -p ${OBJECTDIR}/sources
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/sources/parse.o sources/parse.cpp
 
 # Subprojects
 .build-subprojects:
