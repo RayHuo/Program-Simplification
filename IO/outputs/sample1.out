@@ -7,9 +7,16 @@ b with id 5
 c with id 6
 d with id 7
 e with id 8
+f with id 9
+g with id 10
+i with id 11
+j with id 12
+k with id 13
+l with id 14
+m with id 15
 
 
-The Input file with 13 rules, is :
+The Input file with 19 rules, is :
 p | q :- r.
 r :- p.
 r :- q.
@@ -23,3 +30,29 @@ d :- c.
 d :- e.
 c | d | e.
 a :- c.
+f :- not g.
+f :- g.
+:- i.
+:- j, k.
+f | g :- not l.
+g :- not m, i, k.
+
+dpdGraph
+p to r.
+q to r.
+r to p, q, a.
+a to b, c.
+b to a.
+c to d.
+d to c, e.
+e to .
+f to g.
+g to i, k.
+i to .
+k to .
+
+All SCCs : 
+SCC : c d 
+SCC : a b 
+SCC : p q r 
+

@@ -48,10 +48,18 @@ int main(int argc, char** argv) {
     Vocabulary::instance().VocabularyDetails(fout);
     
     fprintf(fout, "\nThe Input file with %d rules, is :\n", G_Rules.size());
-    for(vector<Rule>::iterator it = G_Rules.begin(); it != G_Rules.end(); it++)
-//         it->Situation(fout);
-        it->output(fout);
+    for(vector<Rule>::iterator it = G_Rules.begin(); it != G_Rules.end(); it++) {
+//         it->Situation(fout);         // 直接把rule中atom的id输出来。 
+        it->output(fout);       // 把rule以实际形式输出来。
+    }
      
+    // 找出输入程序的正依赖图中的所有SCC。
+    DependenceGraph dpdg;       // 直接使用默认构造函数就会构造输入程序的正依赖图了。
+    dpdg.findSCCs();
+    dpdg.printDpdGraph(fout);   // 打印出输入程序的正依赖图
+    dpdg.printSCCs(fout);       // 输出找到的SCC。
+    
+    
 #endif    
     
     

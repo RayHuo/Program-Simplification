@@ -28,6 +28,9 @@ using namespace std;
 
 extern vector<Rule> G_Rules;
 
+/*
+ * 默认构造函数，其中进行输入程序的正依赖图的构造。
+ */
 DependenceGraph::DependenceGraph() {  
     for(vector<Rule>::iterator it = G_Rules.begin(); it != G_Rules.end(); it++) {
         // heads里边的元素必然都是正的。
@@ -53,7 +56,9 @@ DependenceGraph::DependenceGraph() {
     SCCs.clear();
 }
 
-
+/*
+ * 析构函数
+ */
 DependenceGraph::~DependenceGraph() {
     dpdGraph.clear();
     delete[] visited;
@@ -65,7 +70,9 @@ DependenceGraph::~DependenceGraph() {
     Index = -1;
 }
 
-
+/*
+ * 找出程序正依赖图中的所有SCC。
+ */
 void DependenceGraph::findSCCs() {
     memset(visited, false, sizeof(bool) * (Vocabulary::instance().atomsNumber() + 1));
     for(map<int, set<int> >::iterator it = dpdGraph.begin(); it != dpdGraph.end(); it++) {
@@ -76,7 +83,11 @@ void DependenceGraph::findSCCs() {
     }
 }
 
-
+/*
+ * tarjan算法，以O(n)的时间复杂度，把输入的有向图的所有SCC都找出来，并保存在SCCs中。
+ * 在找到一个SCC的同时，还会将其外部支持找到，实际操作是将各个外部支持rule在输入程序中
+ * 的序号存放在loop.ESRules中。
+ */
 void DependenceGraph::tarjan(int u, vector<Loop>& loops) {
     DFN[u] = Low[u] = ++Index;
     vs.push(u);
@@ -114,6 +125,10 @@ void DependenceGraph::tarjan(int u, vector<Loop>& loops) {
     }
 }
 
+/*
+ * 给指定的Loop找出其所有外部支持，并保存该外部支持在输入程序中的序号。
+ * 注意，这里的形参是call by reference，即会直接修改参数本身中的ESRules属性.
+ */
 void DependenceGraph::findESRules(Loop& loop) {
     int i = 1;  // 外部支持存放的是rule的序号，从1开始。
     for(vector<Rule>::iterator it = G_Rules.begin(); it != G_Rules.end(); it++, i++) {
@@ -128,4 +143,45 @@ void DependenceGraph::findESRules(Loop& loop) {
                 loop.ESRules.insert(i);
         }
     }
+}
+
+
+/*
+ * 打印出正依赖图
+ */
+void DependenceGraph::printDpdGraph(FILE* out) {
+    fprintf(out, "\ndpdGraph\n");
+    for(map<int, set<int> >::iterator it = dpdGraph.begin(); it != dpdGraph.end(); it++) {
+        if(it->first < 0) {
+            printf("\nPrint DpdGraph Error!\n");
+            assert(0);
+        } 
+        fprintf(out, "%s to ", Vocabulary::instance().getAtomName(it->first));
+        for(set<int>::iterator bit = (it->second).begin(); bit != (it->second).end(); bit++) {
+            fprintf(out, "%s", Vocabulary::instance().getAtomName(*bit));
+            if(bit != --(it->second).end())
+                fprintf(out, ", ");
+        }
+        fprintf(out, ".\n");
+    }
+}
+
+
+/*
+ * 把SCCs打印出来
+ */
+void DependenceGraph::printSCCs(FILE* out) {
+    fprintf(out, "\nAll SCCs : \n");
+    for(vector<Loop>::iterator it = SCCs.begin(); it != SCCs.end(); it++) {
+        fprintf(out, "SCC : ");
+        for(set<int>::iterator nit = (it->loopNodes).begin(); nit != (it->loopNodes).end(); nit++) {
+            if(*nit < 0) {
+                printf("\nPrint SCC Error\n");
+                assert(0);
+            }
+            fprintf(out, "%s ", Vocabulary::instance().getAtomName(*nit));
+        }
+        fprintf(out, "\n");
+    }
+    fprintf(out, "\n");
 }

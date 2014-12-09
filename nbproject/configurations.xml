@@ -13,6 +13,7 @@
     <logicalFolder name="f1" displayName="IO" projectFiles="true">
       <logicalFolder name="inputs" displayName="inputs" projectFiles="true">
         <itemPath>IO/inputs/sample1.in</itemPath>
+        <itemPath>IO/inputs/test.in</itemPath>
       </logicalFolder>
       <logicalFolder name="outputs" displayName="outputs" projectFiles="true">
         <itemPath>IO/outputs/sample1.out</itemPath>
@@ -70,6 +71,8 @@
       <compileType>
       </compileType>
       <item path="IO/inputs/sample1.in" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/test.in" ex="false" tool="3" flavor2="0">
       </item>
       <item path="IO/outputs/sample1.out" ex="false" tool="3" flavor2="0">
       </item>
@@ -139,6 +142,8 @@
         </asmTool>
       </compileType>
       <item path="IO/inputs/sample1.in" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/test.in" ex="false" tool="3" flavor2="0">
       </item>
       <item path="IO/outputs/sample1.out" ex="false" tool="3" flavor2="0">
       </item>

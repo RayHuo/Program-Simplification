@@ -94,6 +94,10 @@ public:
     ~DependenceGraph();
     void findSCCs();
     void findESRules(Loop& loop);
+    
+    // 辅助函数
+    void printDpdGraph(FILE* out);
+    void printSCCs(FILE* out);
 };
 
 #endif	/* DEPENDENCEGRAPH_H */

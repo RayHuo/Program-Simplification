@@ -11,3 +11,11 @@ d :- c.
 d :- e.
 c | d | e :-.
 a :- c.
+f :- not g.
+f :- g.
+% comment here 1
+:- i.
+:- j, k.
+f | g :- not l.
+g :- k, i, not m.
+%g :- not h. comment here 2
