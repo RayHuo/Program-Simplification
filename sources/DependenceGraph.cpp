@@ -45,14 +45,22 @@ DependenceGraph::DependenceGraph() {
 DependenceGraph::DependenceGraph(vector<Rule> rules) {
     set<int> nodeSet; 
     for(vector<Rule>::iterator it = rules.begin(); it != rules.end(); it++) {
+        for(set<int>::iterator hit = (it->heads).begin(); hit != (it->heads).end(); hit++) {
+            dpdGraph.insert(make_pair(*hit, set<int>()));
+            nodeSet.insert(*hit);
+        }
+        for(set<int>::iterator bit = (it->bodys).begin(); bit != (it->bodys).end(); bit++) {
+            if(*bit > 0) {
+                dpdGraph.insert(make_pair(*bit, set<int>()));
+                nodeSet.insert(*bit); 
+            }
+        }
         if(it->type == RULE) {
             // heads里边的元素必然都是正的。
             for(set<int>::iterator hit = (it->heads).begin(); hit != (it->heads).end(); hit++) {
-                nodeSet.insert(*hit);
                 for(set<int>::iterator bit = (it->bodys).begin(); bit != (it->bodys).end(); bit++) {
                     if(*bit > 0) {
                         dpdGraph[*hit].insert(*bit);
-                        nodeSet.insert(*bit);
                     }
                 }
             }
@@ -126,20 +134,17 @@ void DependenceGraph::tarjan(int u, vector<Loop>& loops) {
     }
     
     if(Low[u] == DFN[u]) {
+        Loop l;
         if(vs.top() != u) {
-            Loop l;
             while(vs.top() != u) {
                 l.loopNodes.insert(vs.top());
                 vs.pop();
             }
-            l.loopNodes.insert(u);
-            findESRules(l);
-            vs.pop();
-            loops.push_back(l);
         }
-        else {
-            vs.pop();
-        }
+        l.loopNodes.insert(u);
+        findESRules(l);
+        vs.pop();
+        loops.push_back(l);
     }
 }
 

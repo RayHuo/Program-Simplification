@@ -49,10 +49,17 @@ e to .
 f to g.
 g to i, k.
 i to .
+j to .
 k to .
 
 All SCCs : 
+SCC : e 
 SCC : c d 
 SCC : a b 
 SCC : p q r 
+SCC : i 
+SCC : k 
+SCC : g 
+SCC : f 
+SCC : j 
 
