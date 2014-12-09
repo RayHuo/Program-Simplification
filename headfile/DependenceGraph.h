@@ -20,28 +20,23 @@ extern vector<Rule> G_Rules;
 
 struct Loop {
     set<int> loopNodes;
-    set<int> ESRules;   // 存放外部支持rule在G_NLP中的下标号，从0开始
-    vector< set<int> > loopFormulas;
+    set<int> ESRules;   // 存放外部支持rule在G_Rules中的下标号，从0开始
     
     Loop() {
         loopNodes.clear();
-        loopFormulas.clear();
         ESRules.clear();
     }
     Loop(set<int> s) {
         loopNodes = s;
-        loopFormulas.clear();
         ESRules.clear();
     }
     Loop(const Loop& l) {
         loopNodes = l.loopNodes;
         ESRules = l.ESRules;
-        loopFormulas = l.loopFormulas;
     }
     
     ~Loop() {
         loopNodes.clear();
-        loopFormulas.clear();
         ESRules.clear();
     }
     
@@ -58,14 +53,14 @@ struct Loop {
     
     int calHash() {
         int hash = 0;
-       for(set<int>::iterator it = loopNodes.begin(); it != loopNodes.end(); it++) {
+        for(set<int>::iterator it = loopNodes.begin(); it != loopNodes.end(); it++) {
            hash += (*it) * (*it);
-       } 
+        } 
         
         return hash;
     }
     
-    void print(FILE* out) {
+    void printLoop(FILE* out) {
         fprintf(out, "Loop: ");
         for(set<int>::iterator it = this->loopNodes.begin(); it != this->loopNodes.end(); it++) {
             fprintf(out, "%s ", Vocabulary::instance().getAtomName(*it));
@@ -81,7 +76,24 @@ struct Loop {
 };
 
 class DependenceGraph {
-
+private:
+    vector<Loop> SCCs;
+    map<int, set<int> > dpdGraph;       // 原程序的有向正依赖图，key为head(r)，value为body^+(r)
+    
+    void tarjan(int u, vector<Loop>& loops);    // 寻找全连通分量的算法，时间复杂度仅为O(n)
+    // tarjan算法中需要用到的全局变量。
+    bool *visited;
+    bool *involved;
+    int *DFN;
+    int *Low;
+    int Index;
+    stack<int> vs;
+    
+public:
+    DependenceGraph();  // 直接在默认构造函数中把整个正依赖图构造出来。
+    ~DependenceGraph();
+    void findSCCs();
+    void findESRules(Loop& loop);
 };
 
 #endif	/* DEPENDENCEGRAPH_H */

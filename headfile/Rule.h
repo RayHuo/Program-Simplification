@@ -22,8 +22,8 @@ class Rule {
 public:
     int head_length;
     int body_length;
-    vector<int> bodys;
-    vector<int> heads;
+    set<int> bodys;
+    set<int> heads;
     RULE_TYPE type;
 public:
     Rule();

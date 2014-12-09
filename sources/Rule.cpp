@@ -27,9 +27,9 @@ Rule::Rule() {
  */
 Rule::Rule(_rule* r) : head_length(r->head_length), body_length(r->body_length), type(r->type) {
     for(int i = 0; i < r->head_length; i++)
-        heads.push_back(r->head[i]);
+        heads.insert(r->head[i]);
     for(int i = 0; i < r->body_length; i++)
-        bodys.push_back(r->body[i]);
+        bodys.insert(r->body[i]);
 }
 
 /*
@@ -88,7 +88,7 @@ bool Rule::operator == (const Rule& r) {
  */
 void Rule::output(FILE* out) const {
     if(type == FACT) {
-        for(vector<int>::const_iterator it = heads.begin(); it != heads.end(); it++) {
+        for(set<int>::const_iterator it = heads.begin(); it != heads.end(); it++) {
             fprintf(out, "%s", Vocabulary::instance().getAtomName(*it));
             if(it != --heads.end())
                 fprintf(out, " | ");
@@ -99,7 +99,7 @@ void Rule::output(FILE* out) const {
     // 注意体部可能存在负数，对于负数的情况，需要加 not。
     if(type == CONSTRANT) {
         fprintf(out, ":- ");
-        for(vector<int>::const_iterator it = bodys.begin(); it != bodys.end(); it++) {
+        for(set<int>::const_iterator it = bodys.begin(); it != bodys.end(); it++) {
             int id = *it;
             if(id < 0) {
                 fprintf(out, "not ");
@@ -113,14 +113,14 @@ void Rule::output(FILE* out) const {
     }
     if(type == RULE) {
         // head
-        for(vector<int>::const_iterator it = heads.begin(); it != heads.end(); it++) {
+        for(set<int>::const_iterator it = heads.begin(); it != heads.end(); it++) {
             fprintf(out, "%s", Vocabulary::instance().getAtomName(*it));
             if(it != --heads.end())
                 fprintf(out, " | ");
         }
         fprintf(out, " :- ");
         // body， 注意体部可能存在负数，对于负数的情况，需要加 not。
-        for(vector<int>::const_iterator it = bodys.begin(); it != bodys.end(); it++) {
+        for(set<int>::const_iterator it = bodys.begin(); it != bodys.end(); it++) {
             int id = *it;
             if(id < 0) {
                 fprintf(out, "not ");
@@ -136,10 +136,10 @@ void Rule::output(FILE* out) const {
 
 void Rule::Situation(FILE* out) {
     fprintf(out, "Type %d :  ",type);
-    for(int i = 0; i < heads.size(); i++)
-        fprintf(out, "%d, ", heads.at(i));
+    for(set<int>::iterator it = heads.begin(); it != heads.end(); it++)
+        fprintf(out, "%d, ", *it);
     fprintf(out, ":- ");
-    for(int i = 0; i < bodys.size(); i++)
-        fprintf(out, "%d, ", bodys.at(i));
+    for(set<int>::iterator it = bodys.begin(); it != bodys.end(); it++)
+        fprintf(out, "%d, ", *it);
     fprintf(out, ".\n");
 }
