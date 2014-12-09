@@ -28,22 +28,40 @@ using namespace std;
 
 extern vector<Rule> G_Rules;
 
+
 /*
- * 默认构造函数，其中进行输入程序的正依赖图的构造。
+ * 默认构造函数
  */
 DependenceGraph::DependenceGraph() {  
-    for(vector<Rule>::iterator it = G_Rules.begin(); it != G_Rules.end(); it++) {
-        // heads里边的元素必然都是正的。
-        for(set<int>::iterator hit = (it->heads).begin(); hit != (it->heads).end(); hit++) {
-            for(set<int>::iterator bit = (it->bodys).begin(); bit != (it->bodys).end(); bit++) {
-                if(*bit > 0)
-                    dpdGraph[*hit].insert(*bit);
+    maxNode = 0;
+    Index = 0;
+    SCCs.clear();
+    dpdGraph.clear();
+}
+
+/*
+ * 通过参数rules来构建其对应的正依赖图。
+ */
+DependenceGraph::DependenceGraph(vector<Rule> rules) {
+    set<int> nodeSet; 
+    for(vector<Rule>::iterator it = rules.begin(); it != rules.end(); it++) {
+        if(it->type == RULE) {
+            // heads里边的元素必然都是正的。
+            for(set<int>::iterator hit = (it->heads).begin(); hit != (it->heads).end(); hit++) {
+                nodeSet.insert(*hit);
+                for(set<int>::iterator bit = (it->bodys).begin(); bit != (it->bodys).end(); bit++) {
+                    if(*bit > 0) {
+                        dpdGraph[*hit].insert(*bit);
+                        nodeSet.insert(*bit);
+                    }
+                }
             }
         }
     }
     
     // 这个主要用于给出tarjan算法里的visited的size.
-    int maxNode = Vocabulary::instance().atomsNumber();
+//    int maxNode = Vocabulary::instance().atomsNumber();
+    maxNode = *(--nodeSet.end());
     visited = new bool[maxNode + 1];
     memset(visited, false,sizeof(bool) * (maxNode + 1));
     DFN = new int[maxNode + 1];
@@ -74,7 +92,7 @@ DependenceGraph::~DependenceGraph() {
  * 找出程序正依赖图中的所有SCC。
  */
 void DependenceGraph::findSCCs() {
-    memset(visited, false, sizeof(bool) * (Vocabulary::instance().atomsNumber() + 1));
+    memset(visited, false, sizeof(bool) * (maxNode + 1));
     for(map<int, set<int> >::iterator it = dpdGraph.begin(); it != dpdGraph.end(); it++) {
         if(!visited[it->first] && involved[it->first]) {
             Index = 0;

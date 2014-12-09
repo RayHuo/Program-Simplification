@@ -54,8 +54,8 @@ int main(int argc, char** argv) {
     }
      
     // 找出输入程序的正依赖图中的所有SCC。
-    DependenceGraph dpdg;       // 直接使用默认构造函数就会构造输入程序的正依赖图了。
-    dpdg.findSCCs();
+    DependenceGraph dpdg(G_Rules);       // 直接使用默认构造函数就会构造输入程序的正依赖图了。
+    dpdg.findSCCs();            // 找出正依赖图中的所有SCC，目前的算法没有找到所有孤立点形成的SCC。
     dpdg.printDpdGraph(fout);   // 打印出输入程序的正依赖图
     dpdg.printSCCs(fout);       // 输出找到的SCC。
     

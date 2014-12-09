@@ -79,6 +79,7 @@ class DependenceGraph {
 private:
     vector<Loop> SCCs;
     map<int, set<int> > dpdGraph;       // 原程序的有向正依赖图，key为head(r)，value为body^+(r)
+    int maxNode;
     
     void tarjan(int u, vector<Loop>& loops);    // 寻找全连通分量的算法，时间复杂度仅为O(n)
     // tarjan算法中需要用到的全局变量。
@@ -89,8 +90,10 @@ private:
     int Index;
     stack<int> vs;
     
-public:
-    DependenceGraph();  // 直接在默认构造函数中把整个正依赖图构造出来。
+    
+public:    
+    DependenceGraph();
+    DependenceGraph(vector<Rule> rules);        // 通过指定的一系列rules来构造对应的正依赖图。
     ~DependenceGraph();
     void findSCCs();
     void findESRules(Loop& loop);
