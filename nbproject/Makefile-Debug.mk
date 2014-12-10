@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/sources/DependenceGraph.o \
+	${OBJECTDIR}/sources/Loop.o \
 	${OBJECTDIR}/sources/MaxU.o \
 	${OBJECTDIR}/sources/Rule.o \
 	${OBJECTDIR}/sources/Utils.o \
@@ -74,6 +75,11 @@ ${OBJECTDIR}/sources/DependenceGraph.o: sources/DependenceGraph.cpp
 	${MKDIR} -p ${OBJECTDIR}/sources
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iheadfile -MMD -MP -MF $@.d -o ${OBJECTDIR}/sources/DependenceGraph.o sources/DependenceGraph.cpp
+
+${OBJECTDIR}/sources/Loop.o: sources/Loop.cpp 
+	${MKDIR} -p ${OBJECTDIR}/sources
+	${RM} $@.d
+	$(COMPILE.cc) -g -Iheadfile -MMD -MP -MF $@.d -o ${OBJECTDIR}/sources/Loop.o sources/Loop.cpp
 
 ${OBJECTDIR}/sources/MaxU.o: sources/MaxU.cpp 
 	${MKDIR} -p ${OBJECTDIR}/sources

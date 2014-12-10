@@ -15,10 +15,12 @@
 #include "Vocabulary.h"
 #include "Utils.h"
 #include "DependenceGraph.h"
+#include "Loop.h"
+#include "MaxU.h"
 
 using namespace std;
 
-#define INPUTDETAIL
+#define TEST
 
 extern vector<Rule> G_Rules;
 extern FILE* yyin;
@@ -44,7 +46,7 @@ int main(int argc, char** argv) {
     yyparse();
     printf("End Parser!\n");
     
-#ifdef INPUTDETAIL    
+#ifdef TEST    
     Vocabulary::instance().VocabularyDetails(fout);
     
     fprintf(fout, "\nThe Input file with %d rules, is :\n", G_Rules.size());
@@ -58,6 +60,16 @@ int main(int argc, char** argv) {
     dpdg.findSCCs();            // 找出正依赖图中的所有SCC，目前的算法没有找到所有孤立点形成的SCC。
     dpdg.printDpdGraph(fout);   // 打印出输入程序的正依赖图
     dpdg.printSCCs(fout);       // 输出找到的SCC。
+    
+    MaxU maxu(G_Rules);
+    set<int> U = maxu.MaxUTest(fout);
+    fprintf(fout, "\nThe max suitable U is : ");
+    for(set<int>::iterator uit = U.begin(); uit != U.end(); uit++) {
+        fprintf(fout, "%s", Vocabulary::instance().getAtomName(*uit));
+        if(uit != --(U.end()))
+            fprintf(fout, ", ");
+    }
+    fprintf(fout, "\n");
     
 #endif    
     

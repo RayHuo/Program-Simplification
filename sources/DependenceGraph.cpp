@@ -7,6 +7,7 @@
 
 #include "DependenceGraph.h"
 #include "Utils.h"
+#include "Loop.h"
 #include "Rule.h"
 #include "structs.h"
 #include "Vocabulary.h"
@@ -37,13 +38,14 @@ DependenceGraph::DependenceGraph() {
     input_rules.clear();
     SCCs.clear();
     dpdGraph.clear();
+    nodeSet.clear();
 }
 
 /*
  * 通过参数rules来构建其对应的正依赖图。
  */
 DependenceGraph::DependenceGraph(vector<Rule> rules) : input_rules(rules) {
-    set<int> nodeSet; 
+    nodeSet.clear(); 
     for(vector<Rule>::iterator it = rules.begin(); it != rules.end(); it++) {
         for(set<int>::iterator hit = (it->heads).begin(); hit != (it->heads).end(); hit++) {
             dpdGraph.insert(make_pair(*hit, set<int>()));
@@ -89,6 +91,7 @@ DependenceGraph::~DependenceGraph() {
     dpdGraph.clear();
     SCCs.clear();
     input_rules.clear();
+    nodeSet.clear();
     
     delete[] visited;
     delete[] DFN;
@@ -195,7 +198,7 @@ map<int, set<int> > DependenceGraph::induceSubgraph(set<int> atoms) {
     // 接着把作为到达点的删掉，即每个second都跟atoms进行一个差集即可
     for(map<int, set<int> >::iterator it = subgraph.begin(); it != subgraph.end(); it++) {
         set<int> diff;
-        set_difference((it->second).begin(), (it->second).end(), atoms.begin(), atoms.end());
+        set_difference((it->second).begin(), (it->second).end(), atoms.begin(), atoms.end(), inserter(diff, diff.begin()));
         it->second = diff;
     }
 
@@ -208,6 +211,15 @@ map<int, set<int> > DependenceGraph::induceSubgraph(set<int> atoms) {
 void DependenceGraph::resetDpdGraph(map<int, set<int> > graph) {
     dpdGraph = graph;
 }
+
+/*
+ * 返回本正依赖图中的原子个数
+ */
+int DependenceGraph::nodeNum() {
+    return nodeSet.size();
+}
+
+
 
 /*
  * 打印出正依赖图

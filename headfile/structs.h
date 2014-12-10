@@ -28,7 +28,6 @@ typedef struct __literals {
     int atoms_length;    
 }_literals;
 
-
 #endif
 
 
