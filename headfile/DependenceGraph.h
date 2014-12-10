@@ -16,11 +16,10 @@
 #include "Rule.h"
 #include "Utils.h"
 
-extern vector<Rule> G_Rules;
 
 struct Loop {
     set<int> loopNodes;
-    set<int> ESRules;   // 存放外部支持rule在G_Rules中的下标号，从0开始
+    vector<Rule> ESRules;
     
     Loop() {
         loopNodes.clear();
@@ -77,6 +76,7 @@ struct Loop {
 
 class DependenceGraph {
 private:
+    vector<Rule> input_rules;
     vector<Loop> SCCs;
     map<int, set<int> > dpdGraph;       // 原程序的有向正依赖图，key为head(r)，value为body^+(r)
     int maxNode;
@@ -96,9 +96,12 @@ public:
     DependenceGraph(vector<Rule> rules);        // 通过指定的一系列rules来构造对应的正依赖图。
     ~DependenceGraph();
     void findSCCs();
-    void findESRules(Loop& loop);
+//    void findESRules(const vector<Rule>& rules, Loop& loop);
+    vector<Loop> getSCCs();
+    map<int, set<int> > induceSubgraph(set<int> atoms);    // 根据指定的atoms来得到原图的一个子图。
+    void resetDpdGraph(map<int, set<int> > graph);         // 重置dpgGraph，这样可以让程序员选择，在获得子图后是否更新当前的graph
     
-    // 辅助函数
+    // 测试辅助函数
     void printDpdGraph(FILE* out);
     void printSCCs(FILE* out);
 };

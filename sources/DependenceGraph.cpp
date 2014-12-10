@@ -6,16 +6,17 @@
  */
 
 #include "DependenceGraph.h"
+#include "Utils.h"
+#include "Rule.h"
+#include "structs.h"
+#include "Vocabulary.h"
 #include <iostream>
 #include <cstdio>
-#include "Utils.h"
+#include <cstdlib>
 #include <cstring>
 #include <assert.h>
 #include <vector>
-#include "Rule.h"
 #include <map>
-#include "structs.h"
-#include "Vocabulary.h"
 #include <string.h>
 #include <set>
 #include <algorithm>
@@ -26,8 +27,6 @@
 
 using namespace std;
 
-extern vector<Rule> G_Rules;
-
 
 /*
  * 默认构造函数
@@ -35,6 +34,7 @@ extern vector<Rule> G_Rules;
 DependenceGraph::DependenceGraph() {  
     maxNode = 0;
     Index = 0;
+    input_rules.clear();
     SCCs.clear();
     dpdGraph.clear();
 }
@@ -42,7 +42,7 @@ DependenceGraph::DependenceGraph() {
 /*
  * 通过参数rules来构建其对应的正依赖图。
  */
-DependenceGraph::DependenceGraph(vector<Rule> rules) {
+DependenceGraph::DependenceGraph(vector<Rule> rules) : input_rules(rules) {
     set<int> nodeSet; 
     for(vector<Rule>::iterator it = rules.begin(); it != rules.end(); it++) {
         for(set<int>::iterator hit = (it->heads).begin(); hit != (it->heads).end(); hit++) {
@@ -87,12 +87,17 @@ DependenceGraph::DependenceGraph(vector<Rule> rules) {
  */
 DependenceGraph::~DependenceGraph() {
     dpdGraph.clear();
+    SCCs.clear();
+    input_rules.clear();
+    
     delete[] visited;
     delete[] DFN;
     delete[] Low;
     delete[] involved;
+    
     while(!vs.empty())
         vs.pop();
+    
     Index = -1;
 }
 
@@ -142,7 +147,7 @@ void DependenceGraph::tarjan(int u, vector<Loop>& loops) {
             }
         }
         l.loopNodes.insert(u);
-        findESRules(l);
+        Utils::findESRules(input_rules, l);
         vs.pop();
         loops.push_back(l);
     }
@@ -152,22 +157,57 @@ void DependenceGraph::tarjan(int u, vector<Loop>& loops) {
  * 给指定的Loop找出其所有外部支持，并保存该外部支持在输入程序中的序号。
  * 注意，这里的形参是call by reference，即会直接修改参数本身中的ESRules属性.
  */
-void DependenceGraph::findESRules(Loop& loop) {
-    int i = 1;  // 外部支持存放的是rule的序号，从1开始。
-    for(vector<Rule>::iterator it = G_Rules.begin(); it != G_Rules.end(); it++, i++) {
-        set<int> h_intersection;
-        set_intersection(loop.loopNodes.begin(), loop.loopNodes.end(), (it->heads).begin(), 
-                (it->heads).end(), inserter(h_intersection, h_intersection.begin()));
-        if(!h_intersection.empty()) {
-            set<int> b_intersection;
-            set_intersection(loop.loopNodes.begin(), loop.loopNodes.end(), (it->bodys).begin(),
-                    (it->bodys).end(), inserter(b_intersection, b_intersection.begin()));
-            if(b_intersection.empty())
-                loop.ESRules.insert(i);
-        }
-    }
+//void DependenceGraph::findESRules(const vector<Rule>& rules, Loop& loop) {
+//    int i = 1;  // 外部支持存放的是rule的序号，从1开始。
+//    for(vector<Rule>::iterator it = rules.begin(); it != rules.end(); it++, i++) {
+//        set<int> h_intersection;
+//        set_intersection(loop.loopNodes.begin(), loop.loopNodes.end(), (it->heads).begin(), 
+//                (it->heads).end(), inserter(h_intersection, h_intersection.begin()));
+//        if(!h_intersection.empty()) {
+//            set<int> b_intersection;
+//            set_intersection(loop.loopNodes.begin(), loop.loopNodes.end(), (it->bodys).begin(),
+//                    (it->bodys).end(), inserter(b_intersection, b_intersection.begin()));
+//            if(b_intersection.empty())
+//                loop.ESRules.insert(i);
+//        }
+//    }
+//}
+
+/*
+ * 返回SCCs.
+ */
+vector<Loop> DependenceGraph::getSCCs() {
+    return SCCs;
 }
 
+
+/*
+ * 根据指定的atoms来得到原图的一个子图，实际为原图减去atoms中的点。
+ * 另外：由于在使用findSCCs()时，需要重置visited，然后maxNode必然比当前的要大，所以不需要担心。
+ */
+map<int, set<int> > DependenceGraph::induceSubgraph(set<int> atoms) {
+    map<int, set<int> > subgraph(dpdGraph);
+    
+    // 先把作为出发点的都删掉
+    for(set<int>::iterator it = atoms.begin(); it != atoms.end(); it++)
+        subgraph.erase(*it);
+    
+    // 接着把作为到达点的删掉，即每个second都跟atoms进行一个差集即可
+    for(map<int, set<int> >::iterator it = subgraph.begin(); it != subgraph.end(); it++) {
+        set<int> diff;
+        set_difference((it->second).begin(), (it->second).end(), atoms.begin(), atoms.end());
+        it->second = diff;
+    }
+
+    return subgraph;
+}
+
+/*
+ * 更新dpdGraph
+ */
+void DependenceGraph::resetDpdGraph(map<int, set<int> > graph) {
+    dpdGraph = graph;
+}
 
 /*
  * 打印出正依赖图

@@ -23,8 +23,9 @@ using namespace std;
  * 工具类
  */
 class Utils {
-public:    
-
+public:
+    static void findESRules(const vector<Rule>& rules, Loop& loop);    // 在指定的rule集中查找指定loop的外部支持。
+    
 };
 
 
