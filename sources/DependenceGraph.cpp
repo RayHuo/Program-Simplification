@@ -39,6 +39,15 @@ DependenceGraph::DependenceGraph() {
     SCCs.clear();
     dpdGraph.clear();
     nodeSet.clear();
+    
+    visited = new bool[2];;
+    memset(visited, false,sizeof(bool) * (2));
+    DFN = new int[2];
+    memset(DFN, 0, sizeof(int) * (2));
+    Low = new int[2];
+    memset(Low, 0, sizeof(int) * (2));
+    involved = new bool[2];
+    memset(involved, true, sizeof(bool) * (2));
 }
 
 /*
@@ -156,31 +165,20 @@ void DependenceGraph::tarjan(int u, vector<Loop>& loops) {
     }
 }
 
-/*
- * 给指定的Loop找出其所有外部支持，并保存该外部支持在输入程序中的序号。
- * 注意，这里的形参是call by reference，即会直接修改参数本身中的ESRules属性.
- */
-//void DependenceGraph::findESRules(const vector<Rule>& rules, Loop& loop) {
-//    int i = 1;  // 外部支持存放的是rule的序号，从1开始。
-//    for(vector<Rule>::iterator it = rules.begin(); it != rules.end(); it++, i++) {
-//        set<int> h_intersection;
-//        set_intersection(loop.loopNodes.begin(), loop.loopNodes.end(), (it->heads).begin(), 
-//                (it->heads).end(), inserter(h_intersection, h_intersection.begin()));
-//        if(!h_intersection.empty()) {
-//            set<int> b_intersection;
-//            set_intersection(loop.loopNodes.begin(), loop.loopNodes.end(), (it->bodys).begin(),
-//                    (it->bodys).end(), inserter(b_intersection, b_intersection.begin()));
-//            if(b_intersection.empty())
-//                loop.ESRules.insert(i);
-//        }
-//    }
-//}
 
 /*
  * 返回SCCs.
  */
 vector<Loop> DependenceGraph::getSCCs() {
     return SCCs;
+}
+
+
+/*
+ * 返回dpdGraph
+ */
+map<int, set<int> > DependenceGraph::getDpdGraph() {
+    return dpdGraph;
 }
 
 
@@ -210,6 +208,15 @@ map<int, set<int> > DependenceGraph::induceSubgraph(set<int> atoms) {
  */
 void DependenceGraph::resetDpdGraph(map<int, set<int> > graph) {
     dpdGraph = graph;
+    // 要把nodeSet也一并更新
+    nodeSet.clear();
+    for(map<int, set<int> >::iterator kit = dpdGraph.begin(); kit != dpdGraph.end(); kit++) {
+        nodeSet.insert(kit->first);
+        for(set<int>::iterator vit = (kit->second).begin(); vit != (kit->second).end(); kit++) {
+            nodeSet.insert(*vit);
+        }
+    }
+    maxNode = *(--(nodeSet.end()));
 }
 
 /*
@@ -256,7 +263,10 @@ void DependenceGraph::printSCCs(FILE* out) {
             }
             fprintf(out, "%s ", Vocabulary::instance().getAtomName(*nit));
         }
-        fprintf(out, "\n");
+        fprintf(out, "\n\tES rules : \n");
+        for(vector<Rule>::iterator esit = (it->ESRules).begin(); esit != (it->ESRules).end(); esit++) {
+            fprintf(out, "\t"); esit->output(out);
+        }
     }
     fprintf(out, "\n");
 }

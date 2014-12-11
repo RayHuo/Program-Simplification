@@ -1,6 +1,7 @@
  #include "Utils.h"
 #include "Rule.h"
 #include "Loop.h"
+#include "structs.h"
 #include <assert.h>
 #include <cstdlib>
 #include <cstring>
@@ -37,6 +38,7 @@ void Utils::findESRules(const vector<Rule>& rules, Loop& loop) {
  * 所以这里的实际操作是：判断每条rule
  *      抽取rule的负体和正体;
  *      判断U与头部、负体和正体是否有交集，并执行相关的删除操作
+ *      如果体部的原子个数为0,则需要把该rule的type修改为FACT
  */
 void Utils::tr_p(vector<Rule>& program, set<int> U) {
     for(vector<Rule>::iterator it = program.begin(); it != program.end(); ) {
@@ -57,13 +59,18 @@ void Utils::tr_p(vector<Rule>& program, set<int> U) {
         set_intersection(U.begin(), U.end(), nBody.begin(), nBody.end(), inserter(nb_inter, nb_inter.begin()));
         set_intersection(U.begin(), U.end(), pBody.begin(), pBody.end(), inserter(pb_inter, pb_inter.begin()));
         
+        // 如果头部、负体中出现原子，删除该规则
         if(!h_inter.empty() || !nb_inter.empty()) {
             it = program.erase(it);
         }
+        // 如果正体中出现原子，删除该原子
         else if(!pb_inter.empty()) {
             set<int> diff;
             set_difference((it->bodys).begin(), (it->bodys).end(), U.begin(), U.end(), inserter(diff, diff.begin()));
             it->bodys = diff;
+            // 如果该rule的体部原子个数为0,则修改该rule的type为FACT
+            if((it->bodys).size() == 0 || (it->bodys).empty())
+                it->type = FACT;
             it++;
         }
         else {

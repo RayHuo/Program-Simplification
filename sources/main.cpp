@@ -61,6 +61,7 @@ int main(int argc, char** argv) {
     dpdg.printDpdGraph(fout);   // 打印出输入程序的正依赖图
     dpdg.printSCCs(fout);       // 输出找到的SCC。
     
+    
     MaxU maxu(G_Rules);
     set<int> U = maxu.MaxUTest(fout);
     fprintf(fout, "\nThe max suitable U is : ");

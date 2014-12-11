@@ -43,6 +43,7 @@ public:
     ~DependenceGraph();
     void findSCCs();
     vector<Loop> getSCCs();
+    map<int, set<int> > getDpdGraph();          
     map<int, set<int> > induceSubgraph(set<int> atoms);    // 根据指定的atoms来得到原图的一个子图。
     void resetDpdGraph(map<int, set<int> > graph);         // 重置dpgGraph，这样可以让程序员选择，在获得子图后是否更新当前的graph
     int nodeNum();                                         // 直接返回nodeSet的size
