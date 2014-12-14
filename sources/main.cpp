@@ -22,10 +22,11 @@ using namespace std;
 
 #define TEST
 
-extern vector<Rule> G_Rules;
-extern FILE* yyin;
-extern void yyparse();
-FILE* fout;
+extern vector<Rule> G_Rules;    // 保存输入文件的所有rules，定义在global.cpp中
+extern FILE* yyin;              // lex.cpp中定义的变量，默认的文件输入对象，注意此处不要重定义
+extern void yyparse();          // parse.cpp中定义的函数，实际进行parser的函数，把输入文件中的rules写进G_Rules并把相关的atom存放在Vocabulary中
+FILE* fout;                     // 自定义的输出文件对象。
+
 
 /*
  * This is the Program for both NLP and DLP simplification
@@ -55,15 +56,16 @@ int main(int argc, char** argv) {
         it->output(fout);       // 把rule以实际形式输出来。
     }
      
+    // 这里定义一个dpdg纯粹是为了查看一下DependenceGraph的功能
     // 找出输入程序的正依赖图中的所有SCC。
     DependenceGraph dpdg(G_Rules);       // 直接使用默认构造函数就会构造输入程序的正依赖图了。
     dpdg.findSCCs();            // 找出正依赖图中的所有SCC，目前的算法没有找到所有孤立点形成的SCC。
     dpdg.printDpdGraph(fout);   // 打印出输入程序的正依赖图
     dpdg.printSCCs(fout);       // 输出找到的SCC。
     
-    
+    // 构造MaxU对象，使用算法计算最大的U。
     MaxU maxu(G_Rules);
-    set<int> U = maxu.MaxUTest(fout);
+    set<int> U = maxu.MaxUTest(fout);   // 计算得到U，输出整个计算过程。
     fprintf(fout, "\nThe max suitable U is : ");
     for(set<int>::iterator uit = U.begin(); uit != U.end(); uit++) {
         fprintf(fout, "%s", Vocabulary::instance().getAtomName(*uit));

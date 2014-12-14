@@ -87,6 +87,7 @@ bool Rule::operator == (const Rule& r) {
  * 输出一个Rule，对应Rule可能的三种type进行输出。
  */
 void Rule::output(FILE* out) const {
+    // 打印事实
     if(type == FACT) {
         for(set<int>::const_iterator it = heads.begin(); it != heads.end(); it++) {
             fprintf(out, "%s", Vocabulary::instance().getAtomName(*it));
@@ -96,6 +97,7 @@ void Rule::output(FILE* out) const {
         fprintf(out, ".\n");
     }
     
+    // 打印限制
     // 注意体部可能存在负数，对于负数的情况，需要加 not。
     if(type == CONSTRANT) {
         fprintf(out, ":- ");
@@ -111,6 +113,8 @@ void Rule::output(FILE* out) const {
         }
         fprintf(out, ".\n");
     }
+    
+    // 打印一般规则
     if(type == RULE) {
         // head
         for(set<int>::const_iterator it = heads.begin(); it != heads.end(); it++) {
@@ -134,6 +138,9 @@ void Rule::output(FILE* out) const {
     }
 }
 
+/*
+ * 直接打印出Rule中的头部和体部的规则，及其类型
+ */
 void Rule::Situation(FILE* out) {
     fprintf(out, "Type %d :  ",type);
     for(set<int>::iterator it = heads.begin(); it != heads.end(); it++)

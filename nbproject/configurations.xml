@@ -14,6 +14,47 @@
     </logicalFolder>
     <logicalFolder name="f1" displayName="IO" projectFiles="true">
       <logicalFolder name="inputs" displayName="inputs" projectFiles="true">
+        <logicalFolder name="DisjunctiveLoops"
+                       displayName="DisjunctiveLoops"
+                       projectFiles="true">
+          <itemPath>IO/inputs/DisjunctiveLoops/dln5000</itemPath>
+        </logicalFolder>
+        <logicalFolder name="Hampath" displayName="Hampath" projectFiles="true">
+          <itemPath>IO/inputs/Hampath/x10.23.ground</itemPath>
+          <itemPath>IO/inputs/Hampath/x10.25.ground</itemPath>
+          <itemPath>IO/inputs/Hampath/x10.33.ground</itemPath>
+          <itemPath>IO/inputs/Hampath/x10.41.ground</itemPath>
+          <itemPath>IO/inputs/Hampath/x10.43.ground</itemPath>
+          <itemPath>IO/inputs/Hampath/x10.48.ground</itemPath>
+          <itemPath>IO/inputs/Hampath/x10.7.ground</itemPath>
+          <itemPath>IO/inputs/Hampath/x15.19.ground</itemPath>
+          <itemPath>IO/inputs/Hampath/x15.23.ground</itemPath>
+          <itemPath>IO/inputs/Hampath/x15.34.ground</itemPath>
+          <itemPath>IO/inputs/Hampath/x15.37.ground</itemPath>
+          <itemPath>IO/inputs/Hampath/x15.39.ground</itemPath>
+          <itemPath>IO/inputs/Hampath/x15.49.ground</itemPath>
+          <itemPath>IO/inputs/Hampath/x5.24.ground</itemPath>
+          <itemPath>IO/inputs/Hampath/x5.42.ground</itemPath>
+        </logicalFolder>
+        <logicalFolder name="RandomQuantifiedBooleanFormulas"
+                       displayName="RandomQuantifiedBooleanFormulas"
+                       projectFiles="true">
+          <itemPath>IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha5.00rho0.8-79-10.cnf.dl.lparse</itemPath>
+          <itemPath>IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha5.00rho0.8-79-2.cnf.dl.lparse</itemPath>
+          <itemPath>IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha5.00rho0.8-79-5.cnf.dl.lparse</itemPath>
+          <itemPath>IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha5.00rho1.0-80-10.cnf.dl.lparse</itemPath>
+          <itemPath>IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha5.00rho1.0-80-2.cnf.dl.lparse</itemPath>
+          <itemPath>IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha5.00rho1.0-80-8.cnf.dl.lparse</itemPath>
+          <itemPath>IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.6-80-2.cnf.dl.lparse</itemPath>
+          <itemPath>IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.6-80-3.cnf.dl.lparse</itemPath>
+          <itemPath>IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.6-80-7.cnf.dl.lparse</itemPath>
+          <itemPath>IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.6-80-8.cnf.dl.lparse</itemPath>
+          <itemPath>IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.6-80-9.cnf.dl.lparse</itemPath>
+          <itemPath>IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.8-79-10.cnf.dl.lparse</itemPath>
+          <itemPath>IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.8-79-3.cnf.dl.lparse</itemPath>
+          <itemPath>IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.8-79-6.cnf.dl.lparse</itemPath>
+          <itemPath>IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.8-79-7.cnf.dl.lparse</itemPath>
+        </logicalFolder>
         <itemPath>IO/inputs/sample1.in</itemPath>
         <itemPath>IO/inputs/test.in</itemPath>
       </logicalFolder>
@@ -74,6 +115,113 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="IO/inputs/DisjunctiveLoops/dln5000" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x10.23.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x10.25.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x10.33.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x10.41.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x10.43.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x10.48.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x10.7.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x15.19.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x15.23.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x15.34.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x15.37.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x15.39.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x15.49.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x5.24.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x5.42.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha5.00rho0.8-79-10.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha5.00rho0.8-79-2.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha5.00rho0.8-79-5.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha5.00rho1.0-80-10.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha5.00rho1.0-80-2.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha5.00rho1.0-80-8.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.6-80-2.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.6-80-3.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.6-80-7.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.6-80-8.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.6-80-9.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.8-79-10.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.8-79-3.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.8-79-6.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.8-79-7.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="IO/inputs/sample1.in" ex="false" tool="3" flavor2="0">
       </item>
       <item path="IO/inputs/test.in" ex="false" tool="3" flavor2="0">
@@ -153,6 +301,113 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="IO/inputs/DisjunctiveLoops/dln5000" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x10.23.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x10.25.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x10.33.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x10.41.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x10.43.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x10.48.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x10.7.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x15.19.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x15.23.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x15.34.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x15.37.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x15.39.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x15.49.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x5.24.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/Hampath/x5.42.ground" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha5.00rho0.8-79-10.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha5.00rho0.8-79-2.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha5.00rho0.8-79-5.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha5.00rho1.0-80-10.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha5.00rho1.0-80-2.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha5.00rho1.0-80-8.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.6-80-2.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.6-80-3.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.6-80-7.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.6-80-8.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.6-80-9.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.8-79-10.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.8-79-3.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.8-79-6.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.8-79-7.cnf.dl.lparse"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="IO/inputs/sample1.in" ex="false" tool="3" flavor2="0">
       </item>
       <item path="IO/inputs/test.in" ex="false" tool="3" flavor2="0">
