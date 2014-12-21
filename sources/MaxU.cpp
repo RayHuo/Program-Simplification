@@ -95,9 +95,9 @@ void MaxU::simplifyProgram(FILE* out) {
  * 算法步骤5中，把当前程序的析取事实放进E中，
  * 注意：只需要把集合意义下最小的析取事实放进去就可以了。
  */
-set< set<int> > MaxU::updateE(vector<Rule>& program) {
-//    E.clear();
-    set< set<int> > E;
+void MaxU::updateE(vector<Rule>& program) {
+    E.clear();
+//    set< set<int> > E;
     for(vector<Rule>::iterator it = program.begin(); it != program.end(); it++) {
         if((it->type) == FACT && (it->heads).size() > 1) {
             // 只把集合意义下最小的放进去
@@ -114,7 +114,7 @@ set< set<int> > MaxU::updateE(vector<Rule>& program) {
         }
     }
     
-    return E;
+//    return E;
 }
  
 /*
@@ -275,11 +275,19 @@ Loop MaxU::existLoop(FILE* out, const vector<Rule>& p_rules) {
 
 
 /*
- * 这里是把算法的步骤5～10整理为一个递归的过程，事实上它确实是个一个递归过程，
+ * 这里是把算法的步骤5～10整理好，注意每次返回到步骤5都是重新计算E，并且遍历完
+ * 当前的E即可，不需要在考虑之前的E了，即不是一个递归循环的过程。
  * 因为步骤9返回步骤6,即循环E，而步骤10，返回步骤5,更新E，再次计算.
+ * 步骤9 返回 6，是一个不断的循环；步骤 10 返回 5（其实应该是返回2，用新的P'和U，
+ * 重新计算），重新计算 E，之前的 E 可以不用再考虑了。即，当遍历完当前的 E，则不
+ * 需要再考虑之前的 E 了。只要当前的 E 遍历完，就可以结束程序了。
+ * 
+ * 对于步骤5～10这个过程：
+ * 如果是循环递归，即需要把之前的E也遍历完的：则把E作为一个临时遍历存放在函数中;
+ * 如果非循环递归，即只需每次都直接更新E即可：则把E作为MaxU的一个成员属性。
  */
 void MaxU::Step5To10(FILE* out, vector<Rule>& rules) {
-    set< set<int> > E = updateE(rules);
+    updateE(rules);
     
     // 输出E
     fprintf(out, "\nE : \n");

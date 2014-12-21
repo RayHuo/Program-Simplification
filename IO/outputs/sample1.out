@@ -175,23 +175,6 @@ ES Rules :
 	c | d | e.
 
 Do exist that loop, goto Step 6.
-The_Next C, C : c, d, e
-
-P* is : 
-	c :- d.
-	d :- c.
-	d :- e.
-	c | d | e.
-
-All SCCs in P* : 
-	e
-	c, d
-
-Loop : e
-ES Rules : 
-	c | d | e.
-
-Do exist that loop, goto Step 6.
 The_Next C, 
 
 No more C in E !
