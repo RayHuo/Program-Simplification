@@ -78,3 +78,12 @@ void Utils::tr_p(vector<Rule>& program, set<int> U) {
         }
     }
 }
+
+
+
+/*
+ * 把一条rule转换成DNF的形式，注意应该考虑到DLP中的rule的例子，这个更具普遍性
+ */
+set<int> Utils::rule2DNF(const Rule& rule) {
+    
+}

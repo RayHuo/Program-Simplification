@@ -20,7 +20,8 @@
 
 using namespace std;
 
-#define TEST
+//#define MAXU
+#define GRS
 
 extern vector<Rule> G_Rules;    // 保存输入文件的所有rules，定义在global.cpp中
 extern FILE* yyin;              // lex.cpp中定义的变量，默认的文件输入对象，注意此处不要重定义
@@ -32,13 +33,13 @@ FILE* fout;                     // 自定义的输出文件对象。
  * This is the Program for both NLP and DLP simplification
  */
 int main(int argc, char** argv) {
-    yyin = fopen("IO/inputs/sample1.in", "r");
+    yyin = fopen("IO/inputs/grs.in", "r");
     if(!yyin) {
         printf("IO Error : Cannot open the input file!\n");
         assert(0);
     }
     
-    fout = fopen("IO/outputs/sample1.out", "w");
+    fout = fopen("IO/outputs/grs.out", "w");
     if(!fout) {
         printf("IO Error : Cannot open the output file!\n");
         assert(0);
@@ -47,7 +48,7 @@ int main(int argc, char** argv) {
     yyparse();
     printf("End Parser!\n");
     
-#ifdef TEST    
+#ifdef MAXU    
     Vocabulary::instance().VocabularyDetails(fout);
     
     fprintf(fout, "\nThe Input file with %d rules, is :\n", G_Rules.size());
@@ -76,6 +77,13 @@ int main(int argc, char** argv) {
     
 #endif    
     
+    
+#ifdef GRS
+    printf("========================\n");
+    printf("Calculating the Greatest Reliable Set :\n");
+    
+    
+#endif
     
     fclose(fout);
     fclose(yyin);
