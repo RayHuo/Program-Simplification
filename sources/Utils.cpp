@@ -92,7 +92,7 @@ set<int> Utils::rule2DNF(const Rule& rule) {
         dnf.insert(*it);
     }
     // 体部取非再加入
-    for (set<int>::const_iterator it = rule.bodys.end();
+    for (set<int>::const_iterator it = rule.bodys.begin();
             it != rule.bodys.end(); ++ it) {
         dnf.insert(- *it);
     }

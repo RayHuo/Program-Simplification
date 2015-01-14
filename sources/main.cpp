@@ -17,6 +17,7 @@
 #include "DependenceGraph.h"
 #include "Loop.h"
 #include "MaxU.h"
+#include "Consequence.h"
 
 using namespace std;
 
@@ -81,7 +82,14 @@ int main(int argc, char** argv) {
 #ifdef GRS
     printf("========================\n");
     printf("Calculating the Greatest Reliable Set :\n");
-    
+    Vocabulary::instance().VocabularyDetails(stdout);
+    Consequence consequence(G_Rules);
+    set<int> result = consequence.calConsequence();
+    for (set<int>::const_iterator it = result.begin();
+            it != result.end(); ++ it) {
+        printf("%d ", *it);
+    }
+    printf("\n");
     
 #endif
     
