@@ -199,8 +199,9 @@ set<int> Consequence::PhiL(set<int> L, set<int> X) {
                         NL.insert((*lit)*(-1));
                 set<int> X_NL;
                 set_difference(X.begin(), X.end(), NL.begin(), NL.end(), inserter(X_NL, X_NL.begin()));
-                set<int> pbody_L;
-//                includes();
+                set<int> pbody;
+//                for()
+//                if(includes(X_NL.begin(), X_NL.end(), ))
             }
         }
     }
