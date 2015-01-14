@@ -36,7 +36,7 @@ public:
     
     set< set<int> > P2Clauses();        // 把输入的程序P变成对应的命题公式(clauses)，即把rules转成DNFs。
     
-    set<int> Lit(set< set<int> > clauses);//计算 clauses 的 Lit
+    set<int> Lit();//计算Lit
     set<int> UnitPropagation(set< set<int> > clauses);// 计算clauses 的 unit propagation 结果
     set<int> UnitPropagation(set<int> literals, set< set<int> > clauses);      // 计算clauses w.r.t literals 的 unit propagation 结果
     set< set<int> > assign(set<int> literals, set< set<int> > clauses);        // 即UP(\Gamma)中的assgin方法

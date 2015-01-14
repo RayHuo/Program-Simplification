@@ -70,15 +70,10 @@ set< set<int> > Consequence::P2Clauses() {
 /*
  * Lit(P) = Atom(P) \cup {~a | a \in Atom(P)}
  */
-set<int> Consequence::Lit(set< set<int> > clauses) {
+set<int> Consequence::Lit() {
     set<int> ret;
-    set<int> tmp;
-    for (set< set<int> >::const_iterator it = clauses.begin();
-            it != clauses.end(); ++ it) {
-        tmp.insert(it->begin(), it->end());
-    }
-    for (set<int>::const_iterator it = tmp.begin();
-            it != tmp.end(); ++ it) {
+    for (set<int>::iterator it = Atoms_P.begin();
+            it != Atoms_P.end(); ++ it) {
         ret.insert(*it);
         ret.insert(- *it);
     }
@@ -88,10 +83,10 @@ set<int> Consequence::Lit(set< set<int> > clauses) {
  * UnitPropagation without literals
  */
 set<int> Consequence::UnitPropagation(set<set<int> > clauses) {
-    set<int> empty_set;
+    const set<int> empty_set;
     if (clauses.find(empty_set) != clauses.end()) {
         // return Lit
-        return Lit(clauses);
+        return Lit();
     }
     // unit clause
     set<int> unit_clause;
@@ -106,13 +101,13 @@ set<int> Consequence::UnitPropagation(set<set<int> > clauses) {
             it != unit_clause.end(); ++ it) {
         if (unit_clause.find(- *it) != unit_clause.end()) {
             // inconsistent, return Lit
-            return Lit(clauses);
+            return Lit();
         }
     }
     if (! unit_clause.empty()) {
         // return A \cup UP(assign(A, P))
         set<int> ret;
-        set<int> assign_clauses = assign(unit_clause, clauses);
+        set< set<int> > assign_clauses = assign(unit_clause, clauses);
         set<int> tmp = UnitPropagation(assign_clauses);
         set_union(unit_clause.begin(), unit_clause.end(), tmp.begin(),
                 tmp.end(), inserter(ret, ret.begin()));
@@ -140,22 +135,21 @@ set<int> Consequence::UnitPropagation(set<int> literals, set< set<int> > clauses
 set< set<int> > Consequence::assign(set<int> literals, set< set<int> > clauses) {
     set< set<int> > ret;
     // 计算_A
-    set<int> neg_literals = literals;
-    for (set<int>::iterator it = neg_literals.begin();
-            it != neg_literals.end(); ++ it) {
-        *it = -*it;
+    set<int> neg_literals;
+    for (set<int>::iterator it = literals.begin();
+            it != literals.end(); ++ it) {
+        neg_literals.insert(- *it);
     }
     // {c | for some c_ in clauses, c_ ^ A = empty, c = c_ \ _A} 见吉老师KR08的论文
-    for (set< set<int> >::const_iterator it = clauses.begin();
+    for (set< set<int> >::iterator it = clauses.begin();
             it != clauses.end(); ++ it) {
-        set<int> &cur_clause = *it;
         set<int> intersection;
-        set_intersection(cur_clause.begin(), cur_clause.end(),
+        set_intersection(it->begin(), it->end(),
                 literals.begin(), literals.end(),
                 inserter(intersection, intersection.begin()));
         if (intersection.empty()) {
             set<int> diff;
-            set_difference(cur_clause.begin(), cur_clause.end(),
+            set_difference(it->begin(), it->end(),
                     neg_literals.begin(), neg_literals.end(),
                     inserter(diff, diff.begin()));
             if (! diff.empty()) {
@@ -246,5 +240,6 @@ bool Consequence::Lookahead(set<int> L) {
  * 整合调用上面的函数来计算consequence
  */
 set<int> Consequence::calConsequence() {
-    
+    set<int> literals;
+    return UnitPropagation(literals, clauses);
 }
