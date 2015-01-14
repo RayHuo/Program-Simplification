@@ -4,7 +4,9 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>headfile/Consequence.h</itemPath>
       <itemPath>headfile/DependenceGraph.h</itemPath>
+      <itemPath>headfile/GRS.h</itemPath>
       <itemPath>headfile/Loop.h</itemPath>
       <itemPath>headfile/MaxU.h</itemPath>
       <itemPath>headfile/Rule.h</itemPath>
@@ -55,6 +57,7 @@
           <itemPath>IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.8-79-6.cnf.dl.lparse</itemPath>
           <itemPath>IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.8-79-7.cnf.dl.lparse</itemPath>
         </logicalFolder>
+        <itemPath>IO/inputs/grs.in</itemPath>
         <itemPath>IO/inputs/sample1.in</itemPath>
         <itemPath>IO/inputs/test.in</itemPath>
       </logicalFolder>
@@ -75,7 +78,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>sources/Consequence.cpp</itemPath>
       <itemPath>sources/DependenceGraph.cpp</itemPath>
+      <itemPath>sources/GRS.cpp</itemPath>
       <itemPath>sources/Loop.cpp</itemPath>
       <itemPath>sources/MaxU.cpp</itemPath>
       <itemPath>sources/Rule.cpp</itemPath>
@@ -222,6 +227,8 @@
             tool="3"
             flavor2="0">
       </item>
+      <item path="IO/inputs/grs.in" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="IO/inputs/sample1.in" ex="false" tool="3" flavor2="0">
       </item>
       <item path="IO/inputs/test.in" ex="false" tool="3" flavor2="0">
@@ -235,7 +242,11 @@
           </incDir>
         </ccTool>
       </folder>
+      <item path="headfile/Consequence.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="headfile/DependenceGraph.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headfile/GRS.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="headfile/Loop.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -257,7 +268,11 @@
       </item>
       <item path="parser/parse.y" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="sources/Consequence.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="sources/DependenceGraph.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sources/GRS.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="sources/Loop.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -408,13 +423,19 @@
             tool="3"
             flavor2="0">
       </item>
+      <item path="IO/inputs/grs.in" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="IO/inputs/sample1.in" ex="false" tool="3" flavor2="0">
       </item>
       <item path="IO/inputs/test.in" ex="false" tool="3" flavor2="0">
       </item>
       <item path="IO/outputs/sample1.out" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="headfile/Consequence.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="headfile/DependenceGraph.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headfile/GRS.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="headfile/Loop.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -436,7 +457,11 @@
       </item>
       <item path="parser/parse.y" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="sources/Consequence.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="sources/DependenceGraph.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sources/GRS.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="sources/Loop.cpp" ex="false" tool="1" flavor2="0">
       </item>

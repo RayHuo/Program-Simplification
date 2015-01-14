@@ -35,7 +35,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/sources/Consequence.o \
 	${OBJECTDIR}/sources/DependenceGraph.o \
+	${OBJECTDIR}/sources/GRS.o \
 	${OBJECTDIR}/sources/Loop.o \
 	${OBJECTDIR}/sources/MaxU.o \
 	${OBJECTDIR}/sources/Rule.o \
@@ -71,10 +73,20 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/programsimplification: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/programsimplification ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/sources/Consequence.o: sources/Consequence.cpp 
+	${MKDIR} -p ${OBJECTDIR}/sources
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/sources/Consequence.o sources/Consequence.cpp
+
 ${OBJECTDIR}/sources/DependenceGraph.o: sources/DependenceGraph.cpp 
 	${MKDIR} -p ${OBJECTDIR}/sources
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/sources/DependenceGraph.o sources/DependenceGraph.cpp
+
+${OBJECTDIR}/sources/GRS.o: sources/GRS.cpp 
+	${MKDIR} -p ${OBJECTDIR}/sources
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/sources/GRS.o sources/GRS.cpp
 
 ${OBJECTDIR}/sources/Loop.o: sources/Loop.cpp 
 	${MKDIR} -p ${OBJECTDIR}/sources
