@@ -85,5 +85,16 @@ void Utils::tr_p(vector<Rule>& program, set<int> U) {
  * 把一条rule转换成DNF的形式，注意应该考虑到DLP中的rule的例子，这个更具普遍性
  */
 set<int> Utils::rule2DNF(const Rule& rule) {
-    
+    set<int> dnf;
+    // 头部直接加入
+    for (set<int>::const_iterator it = rule.heads.begin();
+            it != rule.heads.end(); ++ it) {
+        dnf.insert(*it);
+    }
+    // 体部取非再加入
+    for (set<int>::const_iterator it = rule.bodys.end();
+            it != rule.bodys.end(); ++ it) {
+        dnf.insert(- *it);
+    }
+    return dnf;
 }
