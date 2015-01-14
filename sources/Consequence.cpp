@@ -61,13 +61,6 @@ Consequence::~Consequence() {
 
 
 /*
- * 把输入的程序P变成对应的命题公式(clauses)，即把rules转成DNFs。
- * 貌似没有用了
- */
-set< set<int> > Consequence::P2Clauses() {        
-
-}
-/*
  * Lit(P) = Atom(P) \cup {~a | a \in Atom(P)}
  */
 set<int> Consequence::Lit(set< set<int> > clauses) {
@@ -87,7 +80,7 @@ set<int> Consequence::Lit(set< set<int> > clauses) {
 /*
  * UnitPropagation without literals
  */
-set<int> Consequence::UnitPropagation(set<set<int> > clauses) {
+set<int> Consequence::UnitPropagation(set< set<int> > clauses) {
     set<int> empty_set;
     if (clauses.find(empty_set) != clauses.end()) {
         // return Lit
@@ -171,7 +164,7 @@ set< set<int> > Consequence::assign(set<int> literals, set< set<int> > clauses) 
  * 计算并返回greatest unfounded set
  */
 set<int> Consequence::GUS(vector<Rule> P, set<int> L) {
-    
+    return lfp_PhiL(P, L);
 }
 
 
@@ -181,9 +174,9 @@ set<int> Consequence::GUS(vector<Rule> P, set<int> L) {
  *                  body(r) \cap ({p | ~p \in L} \cup {~p | p \in L}) = \emptyset,
  *                  body^+(r) \subseteq (X \ {p | ~p \in L}), head(r) \cap L = \emptyset}
  */
-set<int> Consequence::PhiL(set<int> L, set<int> X) {
+set<int> Consequence::PhiL(vector<Rule> P, set<int> L, set<int> X) {
     set<int> phi;
-    for(vector<Rule>::iterator pit = program.begin(); pit != program.end(); pit++) {
+    for(vector<Rule>::iterator pit = P.begin(); pit != P.end(); pit++) {
         set<int> head_L;
         set_intersection((pit->heads).begin(), (pit->heads).end(), L.begin(), L.end(), inserter(head_L, head_L.begin()));
         if(head_L.empty()) {    // head(r) \cap L = \emptyset
@@ -200,8 +193,16 @@ set<int> Consequence::PhiL(set<int> L, set<int> X) {
                 set<int> X_NL;
                 set_difference(X.begin(), X.end(), NL.begin(), NL.end(), inserter(X_NL, X_NL.begin()));
                 set<int> pbody;
-//                for()
-//                if(includes(X_NL.begin(), X_NL.end(), ))
+                for(set<int>::iterator bit = (pit->bodys).begin(); bit != (pit->bodys).end(); bit++)
+                    if(*bit >= 0)
+                        pbody.insert(*bit);
+                if(includes(X_NL.begin(), X_NL.end(), pbody.begin(), pbody.end())) {
+                    for(set<int>::iterator hit = (pit->heads).begin(); hit != (pit->heads).end(); hit++) {
+                        if(NL.find(*hit) != NL.end())
+                            phi.insert(*hit);
+                    }
+                }
+                    
             }
         }
     }
@@ -213,8 +214,26 @@ set<int> Consequence::PhiL(set<int> L, set<int> X) {
 /*
  * 计算 \Phi_L(X) \cup { p | p \in L} 的极小不动点。
  */
-set<int> Consequence::lfp_PhiL() {
-
+set<int> Consequence::lfp_PhiL(vector<Rule> P, set<int> L) {
+    set<int> X;
+    X.clear();
+    set<int> Ls;
+    for(set<int>::iterator it = L.begin(); it != L.end(); it++)
+        if(*it >= 0)
+            Ls.insert(*it);
+    
+    while(true) {
+        set<int> phi = PhiL(P, L, X);
+        set<int> phi_L;
+        set_union(phi.begin(), phi.end(), Ls.begin(), Ls.end(), inserter(phi_L, phi_L.begin()));
+        set<int> X_phi_L;
+        set_difference(X.begin(), X.end(), phi_L.begin(), phi_L.end(), inserter(X_phi_L, X_phi_L.begin()));
+        if(X.size() == phi_L.size() && X_phi_L.empty())
+            return X;
+        X = phi_L;
+    }
+    
+//    return X;
 }
 
 
@@ -222,7 +241,11 @@ set<int> Consequence::lfp_PhiL() {
  * WP(L) = UP(L, P) \cup ~GUS(P, L) 算子
  */
 set<int> Consequence::W_P(set<int> L) {
-    
+    set<int> up = UnitPropagation(L, clauses);
+    set<int> gus = GUS(program, L);
+    set<int> upAndgus;
+    set_union(up.begin(), up.end(), gus.begin(), gus.end(), inserter(upAndgus, upAndgus.begin()));
+    return upAndgus;
 }
 
 
@@ -230,7 +253,18 @@ set<int> Consequence::W_P(set<int> L) {
  * 计算WP(L)的极小不动点。
  */
 set<int> Consequence::lfp_WP() {
-
+    set<int> wp;
+    set<int> L;         
+    L.clear();
+    
+    while(true) {
+        wp = W_P(L);
+        set<int> wp_L;
+        set_difference(wp.begin(), wp.end(), L.begin(), L.end(), inserter(wp_L, wp_L.begin()));
+        if(L.size() == wp.size() && wp_L.empty())
+            return wp;
+        L = wp;
+    }
 }
 
 
@@ -238,7 +272,7 @@ set<int> Consequence::lfp_WP() {
  * 进行计算consequence中第4步的lookahead
  */
 bool Consequence::Lookahead(set<int> L) {
-    
+    return true;
 }
 
 
@@ -246,5 +280,8 @@ bool Consequence::Lookahead(set<int> L) {
  * 整合调用上面的函数来计算consequence
  */
 set<int> Consequence::calConsequence() {
+    set<int> first = lfp_WP();
     
+    
+    return first;
 }

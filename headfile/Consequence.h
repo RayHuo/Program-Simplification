@@ -34,16 +34,15 @@ public:
     Consequence(vector<Rule> p);
     ~Consequence();
     
-    set< set<int> > P2Clauses();        // 把输入的程序P变成对应的命题公式(clauses)，即把rules转成DNFs。
-    
     set<int> Lit(set< set<int> > clauses);//计算 clauses 的 Lit
     set<int> UnitPropagation(set< set<int> > clauses);// 计算clauses 的 unit propagation 结果
     set<int> UnitPropagation(set<int> literals, set< set<int> > clauses);      // 计算clauses w.r.t literals 的 unit propagation 结果
     set< set<int> > assign(set<int> literals, set< set<int> > clauses);        // 即UP(\Gamma)中的assgin方法
     
-    set<int> GUS(vector<Rule> P, set<int> L);   // 计算并返回greatest unfounded set
-    set<int> PhiL(set<int> L, set<int> X);      // \Phi_L(X)算子
-    set<int> lfp_PhiL();                        // 计算 \Phi_L(X) \cup { p | p \in L} 的极小不动点。
+    // 下面程序中用到的程序P都是类属性program
+    set<int> GUS(vector<Rule> P, set<int> L);                   // 计算并返回greatest unfounded set
+    set<int> PhiL(vector<Rule> P, set<int> L, set<int> X);      // \Phi_L(X)算子
+    set<int> lfp_PhiL(vector<Rule> P, set<int> L);              // 计算 \Phi_L(X) \cup { p | p \in L} 的极小不动点。
     
     set<int> W_P(set<int> L);                   // WP(L) = UP(L, P) \cup ~GUS(P, L) 算子
     set<int> lfp_WP();                          // 计算WP(L)的极小不动点。
