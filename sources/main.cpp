@@ -84,6 +84,7 @@ int main(int argc, char** argv) {
     Vocabulary::instance().VocabularyDetails(stdout);
     Consequence consequence(G_Rules);
     
+//    // Testing Unit Propagation
 //    fprintf(fout, "The Unit Propagation :\n");
 //    Vocabulary::instance().VocabularyDetails(stdout);
 //    Consequence consequence(G_Rules);
@@ -93,7 +94,8 @@ int main(int argc, char** argv) {
 //        fprintf(fout, "%d ", *it);
 //    }
 //    fprintf(fout, "\n");
-    
+
+//    // Testing Greatest Unfounded Set 
 //    fprintf(fout, "The Greatest Unfounded Set : \n");
 //    consequence.printClauses(fout);
 //    set<int> L;
@@ -106,17 +108,33 @@ int main(int argc, char** argv) {
 //            fprintf(fout, ",");
 //    }
 //    fprintf(fout, "\n");        fflush(fout);
+
+//    // Testing W_P(L)     
+//    set<int> conq = consequence.lfp_WP(fout);
+//    fprintf(fout, "\nConsequence : ");
+//    for(set<int>::iterator cit = conq.begin(); cit != conq.end(); cit++) {
+//        int id = *cit;
+//            if(id < 0) {
+//                fprintf(fout, "~");
+//                id *= -1;
+//            }
+//            fprintf(fout, "%s", Vocabulary::instance().getAtomName(id));
+//            if(cit != --(conq.end()))
+//                fprintf(fout, ", ");
+//    }
+//    fprintf(fout, "\n");        fflush(fout);
     
-    set<int> conq = consequence.lfp_WP(fout);
-    fprintf(fout, "\nConsequence : ");
-    for(set<int>::iterator cit = conq.begin(); cit != conq.end(); cit++) {
+    
+    set<int> finalConsequence = consequence.calConsequence(fout);
+    fprintf(fout, "\nFinal Consequence : ");
+    for(set<int>::iterator cit = finalConsequence.begin(); cit != finalConsequence.end(); cit++) {
         int id = *cit;
             if(id < 0) {
                 fprintf(fout, "~");
                 id *= -1;
             }
             fprintf(fout, "%s", Vocabulary::instance().getAtomName(id));
-            if(cit != --(conq.end()))
+            if(cit != --(finalConsequence.end()))
                 fprintf(fout, ", ");
     }
     fprintf(fout, "\n");        fflush(fout);

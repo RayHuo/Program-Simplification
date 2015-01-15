@@ -4,8 +4,13 @@ WP Start :
 
 L : 
 
+=============================
+W_P(L) Start : 
+L : 
+
 UP(L, P) : a,c
 
+------------------------
 PhiL Start:
 
 
@@ -60,8 +65,13 @@ W_P(L) : a,c
 
 L : a,c
 
+=============================
+W_P(L) Start : 
+L : a, c
+
 UP(L, P) : a,c
 
+------------------------
 PhiL Start:
 
 
@@ -87,4 +97,113 @@ GUS :
 
 W_P(L) : a,c
 
-Consequence : a, c
+Step 1 to 3 out Consequence : a, c
+
+=============================
+W_P(L) Start : 
+L : e
+
+UP(L, P) : a,c,e
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+:- not c.
+
+Phi out :
+e
+
+X : e
+
+Satisfy rules :
+c :- e.
+:- not c.
+
+Phi out :
+c, e
+
+X : c, e
+
+Satisfy rules :
+a :- c.
+c :- e.
+:- not c.
+
+Phi out :
+a, c, e
+
+X : a, c, e
+
+Satisfy rules :
+a :- c.
+c :- e.
+:- not c.
+
+Phi out :
+a, c, e
+
+GUS : f
+
+=============================
+W_P(L) Start : 
+L : ~e
+
+UP(L, P) : ~e,a,c,f
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+f :- not e.
+:- not c.
+
+Phi out :
+f
+
+X : f
+
+Satisfy rules :
+f :- not e.
+:- not c.
+
+Phi out :
+f
+
+GUS : a,c,e
+
+=============================
+W_P(L) Start : 
+L : f
+
+UP(L, P) : a,c,f
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+:- not c.
+
+Phi out :
+f
+
+X : f
+
+Satisfy rules :
+:- not c.
+
+Phi out :
+f
+
+GUS : a,c,e
+
+Final Consequence : ~f, a, c, e

@@ -51,10 +51,10 @@ public:
     set<int> W_P(FILE* out, set<int> L);                   // WP(L) = UP(L, P) \cup ~GUS(P, L) 算子
     set<int> lfp_WP(FILE* out);                          // 计算WP(L)的极小不动点。
     
-    bool Lookahead(set<int> L);                 // 进行计算consequence中第4步的lookahead
+    set<int> Lookahead(FILE* out);                 // 进行计算consequence中第4步的lookahead
     
     // 整合调用上面的函数来计算consequence
-    set<int> calConsequence();
+    set<int> calConsequence(FILE* out);
     
     // 辅助函数
     void printClauses(FILE* out);       // 输出clauses

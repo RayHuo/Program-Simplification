@@ -39,7 +39,13 @@ Consequence::Consequence(vector<Rule> p) : program(p) {
         set<int> lits;
         set_union((pit->heads).begin(), (pit->heads).end(), (pit->bodys).begin(), 
                 (pit->bodys).end(), inserter(lits, lits.begin()));
-        Atoms_P.insert(lits.begin(), lits.end());
+//        Atoms_P.insert(lits.begin(), lits.end());
+        for(set<int>::const_iterator lit = lits.begin(); lit != lits.end(); lit++) {
+            if(*lit < 0)
+                Atoms_P.insert(*lit * -1);
+            else
+                Atoms_P.insert(*lit);
+        }
     }
     
     consequence.clear();
@@ -78,6 +84,8 @@ set<int> Consequence::Lit() {
 set<int> Consequence::UnitPropagation(set<set<int> > clauses) {
     const set<int> empty_set;
     if (clauses.find(empty_set) != clauses.end()) {
+        conflict = true;        // 有矛盾
+        printf("\nUnit Propagation Conflict\n");
         // return Lit
         return Lit();
     }
@@ -161,7 +169,7 @@ set<int> Consequence::GUS(FILE* out, vector<Rule> P, set<int> L) {
     set<int> lfp = lfp_PhiL(out, P, L);
     set<int> result;
     // Atoms(P) \ lfp(\Phi_L(X) \ {p | p \in L})
-    set_difference(Atoms_P.begin(), Atoms_P.begin(), lfp.begin(), lfp.end(), inserter(result, result.begin()));
+    set_difference(Atoms_P.begin(), Atoms_P.end(), lfp.begin(), lfp.end(), inserter(result, result.begin()));   
     return result;
 }
 
@@ -197,11 +205,15 @@ set<int> Consequence::PhiL(FILE* out, vector<Rule> P, set<int> L, set<int> X) {
                         pbody.insert(*bit);
                 // 3. body^+(r) \subseteq (X \ {p | ~p \in L})
                 if(includes(X_NL.begin(), X_NL.end(), pbody.begin(), pbody.end())) {
-                    (*pit).output(out); fflush(out);
                     // 4. a \in head(r)
+                    if((pit->heads).empty()) {
+                        (*pit).output(out); fflush(out);
+                    }
                     for(set<int>::iterator hit = (pit->heads).begin(); hit != (pit->heads).end(); hit++) {
-                        if(NL.find(*hit) == NL.end())   // 5. a \notin { p | ~p \in L }
+                        if(NL.find(*hit) == NL.end()) {  // 5. a \notin { p | ~p \in L }
+                            (*pit).output(out); fflush(out);
                             phi.insert(*hit);
+                        }
                     }
                 }
                     
@@ -224,7 +236,7 @@ set<int> Consequence::lfp_PhiL(FILE* out, vector<Rule> P, set<int> L) {
         if(*it >= 0)
             Ls.insert(*it);
     
-    fprintf(out, "\nPhiL Start:\n\n");
+    fprintf(out, "\n------------------------\nPhiL Start:\n\n");
     while(true) {    
         fprintf(out, "\nX : ");
         for(set<int>::iterator xit = X.begin(); xit != X.end(); xit++) {
@@ -260,6 +272,20 @@ set<int> Consequence::lfp_PhiL(FILE* out, vector<Rule> P, set<int> L) {
  * WP(L) = UP(L, P) \cup ~GUS(P, L) 算子
  */
 set<int> Consequence::W_P(FILE* out, set<int> L) {
+    fprintf(out, "\n=============================\nW_P(L) Start : \n");
+    fprintf(out, "L : ");
+    for(set<int>::const_iterator lit = L.begin(); lit != L.end(); lit++) {
+        int id = *lit;
+        if(id < 0) {
+            fprintf(out, "~");
+            id *= -1;
+        }
+        fprintf(out, "%s", Vocabulary::instance().getAtomName(id));
+        if(lit != --(L.end()))
+            fprintf(out, ", ");
+    }
+    fprintf(out, "\n");
+    
     set<int> up = UnitPropagation(L, clauses);
     fprintf(out, "\nUP(L, P) : ");
     for(set<int>::iterator lit = up.begin(); lit != up.end(); lit++) {
@@ -289,8 +315,20 @@ set<int> Consequence::W_P(FILE* out, set<int> L) {
     }
     fprintf(out, "\n");     fflush(out);
     
+    // 判断是否存在矛盾：即 a\in UP(L, P)， 同时 a\in GUS(P, L)；
+    set<int> intersection;
+    set_intersection(up.begin(), up.end(), gus.begin(), gus.end(), inserter(intersection, intersection.begin()));
+    if(!intersection.empty()) {
+        conflict = true;
+        printf("\nW_P Conflict\n");
+    }
+    
+    set<int> ngus;
+    for(set<int>::const_iterator nit = gus.begin(); nit != gus.end(); nit++)
+        ngus.insert(*nit * -1);
+    
     set<int> upAndgus;
-    set_union(up.begin(), up.end(), gus.begin(), gus.end(), inserter(upAndgus, upAndgus.begin()));
+    set_union(up.begin(), up.end(), ngus.begin(), ngus.end(), inserter(upAndgus, upAndgus.begin()));
     return upAndgus;
 }
 
@@ -344,18 +382,77 @@ set<int> Consequence::lfp_WP(FILE* out) {
 
 /*
  * 进行计算consequence中第4步的lookahead
+ * "矛盾"就是 : 
+ *      {a} \cup {-a} 形式的，即可能 a\in UP(L, P)， 同时 a\in GUS(P, L)；
+ *      也可能是 UP(L, P) 自身就矛盾了（即出现空集表示的子句）。
  */
-bool Consequence::Lookahead(set<int> L) {
-    return true;
+set<int> Consequence::Lookahead(FILE* out) {
+    set<int> final_consequence = lfp_WP(out);
+    fprintf(out, "\nStep 1 to 3 out Consequence : ");
+    for(set<int>::const_iterator fit = final_consequence.begin(); fit != final_consequence.end(); fit++) {
+        int id = *fit;
+        if(id < 0) {
+            fprintf(out, "~");
+            id *= -1;
+        }
+        fprintf(out, "%s", Vocabulary::instance().getAtomName(id));
+        if(fit != --(final_consequence.end()))
+            fprintf(out, ", ");
+    }
+    fprintf(out, "\n");         fflush(out);
+    
+    
+    set<int> tmp;       // 保存着lfp_WP返回结果的原子集的绝对值集
+    for(set<int>::const_iterator it = final_consequence.begin(); it != final_consequence.end(); it++) {
+        if(*it < 0)
+            tmp.insert(*it * -1);
+        else
+            tmp.insert(*it);
+    }
+    
+    set<int> left;      // 剩下的原子
+    for(set<int>::const_iterator it = Atoms_P.begin(); it != Atoms_P.end(); it++) {
+        if(tmp.find(*it) == tmp.end())
+            left.insert(*it);
+    }
+    
+    // lookahead：对剩下的原子逐个猜测真假性
+    for(set<int>::const_iterator it = left.begin(); it != left.end(); it++) {
+        printf("\nGuessing atom %s :\n", Vocabulary::instance().getAtomName(*it));
+        conflict = false;
+        
+        // 先猜原子为“真”
+        set<int> guess;
+        guess.insert(*it);      // 即猜测为真
+        set<int> useless = W_P(out, guess);    // 如猜测剩下的原子e为真，则W_P({e})
+        printf("1. Conflict : %d\n", conflict);
+        if(conflict) { 
+            final_consequence.insert(*it * -1);
+        }
+        
+        // 如果上一步没有产生“矛盾”，再猜该原子为“假”
+        else {
+            guess.clear();
+            guess.insert(*it * -1);     // 猜该原子为假
+            useless = W_P(out, guess);
+            printf("2. Conflict : %d\n", conflict);
+            if(conflict) {
+                final_consequence.insert(*it);
+            }
+        }
+    }
+        
+    return final_consequence;
 }
 
 
 /*
  * 整合调用上面的函数来计算consequence
  */
-set<int> Consequence::calConsequence() {
-    set<int> literals;
-    return UnitPropagation(literals, clauses);
+set<int> Consequence::calConsequence(FILE* out) {
+//    set<int> literals;
+//    return UnitPropagation(literals, clauses);
+    return Lookahead(out);
 }
 
 
