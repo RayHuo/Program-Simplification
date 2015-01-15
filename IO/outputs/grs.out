@@ -1,0 +1,90 @@
+Calculating the Greatest Reliable Set :
+
+WP Start :
+
+L : 
+
+UP(L, P) : a,c
+
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+e :- not f.
+f :- not e.
+:- not c.
+
+Phi out :
+e, f
+
+X : e, f
+
+Satisfy rules :
+c :- e.
+e :- not f.
+f :- not e.
+:- not c.
+
+Phi out :
+c, e, f
+
+X : c, e, f
+
+Satisfy rules :
+a :- c.
+c :- e.
+e :- not f.
+f :- not e.
+:- not c.
+
+Phi out :
+a, c, e, f
+
+X : a, c, e, f
+
+Satisfy rules :
+a :- c.
+c :- e.
+e :- not f.
+f :- not e.
+:- not c.
+
+Phi out :
+a, c, e, f
+
+GUS : 
+
+W_P(L) : a,c
+
+L : a,c
+
+UP(L, P) : a,c
+
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+e :- not f.
+f :- not e.
+
+Phi out :
+a, c, e, f
+
+X : a, c, e, f
+
+Satisfy rules :
+e :- not f.
+f :- not e.
+
+Phi out :
+a, c, e, f
+
+GUS : 
+
+W_P(L) : a,c
+
+Consequence : a, c

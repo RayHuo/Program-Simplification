@@ -157,30 +157,35 @@ set< set<int> > Consequence::assign(set<int> literals, set< set<int> > clauses) 
 /*
  * 计算并返回greatest unfounded set
  */
-set<int> Consequence::GUS(vector<Rule> P, set<int> L) {
-    return lfp_PhiL(P, L);
+set<int> Consequence::GUS(FILE* out, vector<Rule> P, set<int> L) {
+    set<int> lfp = lfp_PhiL(out, P, L);
+    set<int> result;
+    // Atoms(P) \ lfp(\Phi_L(X) \ {p | p \in L})
+    set_difference(Atoms_P.begin(), Atoms_P.begin(), lfp.begin(), lfp.end(), inserter(result, result.begin()));
+    return result;
 }
 
 
 /*
  * \Phi_L(X)算子
- * \Phi_L(X) = {a | 存在r \in P, a \in head(r) 且 a \in {p | ~p \in L},
+ * \Phi_L(X) = {a | 存在r \in P, a \in head(r) 且 a \notin {p | ~p \in L},
  *                  body(r) \cap ({p | ~p \in L} \cup {~p | p \in L}) = \emptyset,
  *                  body^+(r) \subseteq (X \ {p | ~p \in L}), head(r) \cap L = \emptyset}
  */
-set<int> Consequence::PhiL(vector<Rule> P, set<int> L, set<int> X) {
+set<int> Consequence::PhiL(FILE* out, vector<Rule> P, set<int> L, set<int> X) {
     set<int> phi;
+    fprintf(out, "\nSatisfy rules :\n"); fflush(out);
     for(vector<Rule>::iterator pit = P.begin(); pit != P.end(); pit++) {
         set<int> head_L;
         set_intersection((pit->heads).begin(), (pit->heads).end(), L.begin(), L.end(), inserter(head_L, head_L.begin()));
-        if(head_L.empty()) {    // head(r) \cap L = \emptyset
+        if(head_L.empty()) {    // 1. head(r) \cap L = \emptyset
             set<int> Ls;    // 对应 {p | ~p \in L} \cup {~p | p \in L}
             for(set<int>::iterator lit = L.begin(); lit != L.end(); lit++)
                 Ls.insert((*lit)*(-1));
             set<int> body_L;
             set_intersection((pit->bodys).begin(), (pit->bodys).end(), Ls.begin(), Ls.end(), inserter(body_L, body_L.begin()));
-            if(body_L.empty()) {    // body(r) \cap ({p | ~p \in L} \cup {~p | p \in L}) = \emptyset
-                set<int> NL;
+            if(body_L.empty()) {    // 2. body(r) \cap ({p | ~p \in L} \cup {~p | p \in L}) = \emptyset
+                set<int> NL;    // { p | ~p \in L }
                 for(set<int>::iterator lit = L.begin(); lit != L.end(); lit++)
                     if(*lit < 0)
                         NL.insert((*lit)*(-1));
@@ -190,9 +195,12 @@ set<int> Consequence::PhiL(vector<Rule> P, set<int> L, set<int> X) {
                 for(set<int>::iterator bit = (pit->bodys).begin(); bit != (pit->bodys).end(); bit++)
                     if(*bit >= 0)
                         pbody.insert(*bit);
+                // 3. body^+(r) \subseteq (X \ {p | ~p \in L})
                 if(includes(X_NL.begin(), X_NL.end(), pbody.begin(), pbody.end())) {
+                    (*pit).output(out); fflush(out);
+                    // 4. a \in head(r)
                     for(set<int>::iterator hit = (pit->heads).begin(); hit != (pit->heads).end(); hit++) {
-                        if(NL.find(*hit) != NL.end())
+                        if(NL.find(*hit) == NL.end())   // 5. a \notin { p | ~p \in L }
                             phi.insert(*hit);
                     }
                 }
@@ -208,7 +216,7 @@ set<int> Consequence::PhiL(vector<Rule> P, set<int> L, set<int> X) {
 /*
  * 计算 \Phi_L(X) \cup { p | p \in L} 的极小不动点。
  */
-set<int> Consequence::lfp_PhiL(vector<Rule> P, set<int> L) {
+set<int> Consequence::lfp_PhiL(FILE* out, vector<Rule> P, set<int> L) {
     set<int> X;
     X.clear();
     set<int> Ls;
@@ -216,10 +224,27 @@ set<int> Consequence::lfp_PhiL(vector<Rule> P, set<int> L) {
         if(*it >= 0)
             Ls.insert(*it);
     
-    while(true) {
-        set<int> phi = PhiL(P, L, X);
+    fprintf(out, "\nPhiL Start:\n\n");
+    while(true) {    
+        fprintf(out, "\nX : ");
+        for(set<int>::iterator xit = X.begin(); xit != X.end(); xit++) {
+            fprintf(out, "%s", Vocabulary::instance().getAtomName(*xit));
+            if(xit != --(X.end()))
+                fprintf(out, ", ");
+        }
+        fprintf(out, "\n");     fflush(out);
+        
+        set<int> phi = PhiL(out, P, L, X);   
         set<int> phi_L;
         set_union(phi.begin(), phi.end(), Ls.begin(), Ls.end(), inserter(phi_L, phi_L.begin()));
+        fprintf(out, "\nPhi out :\n");
+        for(set<int>::iterator pit = phi_L.begin(); pit != phi_L.end(); pit++) {
+            fprintf(out, "%s", Vocabulary::instance().getAtomName(*pit));
+            if(pit != --(phi_L.end()))
+                fprintf(out, ", ");
+        }
+        fprintf(out, "\n");     fflush(out);
+        
         set<int> X_phi_L;
         set_difference(X.begin(), X.end(), phi_L.begin(), phi_L.end(), inserter(X_phi_L, X_phi_L.begin()));
         if(X.size() == phi_L.size() && X_phi_L.empty())
@@ -234,9 +259,36 @@ set<int> Consequence::lfp_PhiL(vector<Rule> P, set<int> L) {
 /*
  * WP(L) = UP(L, P) \cup ~GUS(P, L) 算子
  */
-set<int> Consequence::W_P(set<int> L) {
+set<int> Consequence::W_P(FILE* out, set<int> L) {
     set<int> up = UnitPropagation(L, clauses);
-    set<int> gus = GUS(program, L);
+    fprintf(out, "\nUP(L, P) : ");
+    for(set<int>::iterator lit = up.begin(); lit != up.end(); lit++) {
+        int id = *lit;
+        if(id < 0) {
+            fprintf(out, "~");
+            id *= -1;
+        }
+        fprintf(out, "%s", Vocabulary::instance().getAtomName(id));
+        if(lit != --(up.end()))
+            fprintf(out, ",");
+    }
+    fprintf(out, "\n");     fflush(out);
+    
+    
+    set<int> gus = GUS(out, program, L);
+    fprintf(out, "\nGUS : ");
+    for(set<int>::iterator lit = gus.begin(); lit != gus.end(); lit++) {
+        int id = *lit;
+        if(id < 0) {
+            fprintf(out, "~");
+            id *= -1;
+        }
+        fprintf(out, "%s", Vocabulary::instance().getAtomName(id));
+        if(lit != --(gus.end()))
+            fprintf(out, ",");
+    }
+    fprintf(out, "\n");     fflush(out);
+    
     set<int> upAndgus;
     set_union(up.begin(), up.end(), gus.begin(), gus.end(), inserter(upAndgus, upAndgus.begin()));
     return upAndgus;
@@ -246,13 +298,41 @@ set<int> Consequence::W_P(set<int> L) {
 /*
  * 计算WP(L)的极小不动点。
  */
-set<int> Consequence::lfp_WP() {
+set<int> Consequence::lfp_WP(FILE* out) {
     set<int> wp;
     set<int> L;         
     L.clear();
     
+    fprintf(out, "\nWP Start :\n");
     while(true) {
-        wp = W_P(L);
+        fprintf(out, "\nL : ");
+        for(set<int>::iterator lit = L.begin(); lit != L.end(); lit++) {
+            int id = *lit;
+            if(id < 0) {
+                fprintf(out, "~");
+                id *= -1;
+            }
+            fprintf(out, "%s", Vocabulary::instance().getAtomName(id));
+            if(lit != --(L.end()))
+                fprintf(out, ",");
+        }
+        fprintf(out, "\n");     fflush(out);
+        
+        wp = W_P(out, L);
+        
+        fprintf(out, "\nW_P(L) : ");
+        for(set<int>::iterator sit = wp.begin(); sit != wp.end(); sit++) {
+            int id = *sit;
+            if(id < 0) {
+                fprintf(out, "~");
+                id *= -1;
+            }
+            fprintf(out, "%s", Vocabulary::instance().getAtomName(id));
+            if(sit != --(wp.end()))
+                fprintf(out, ",");
+        }
+        fprintf(out, "\n");     fflush(out);
+        
         set<int> wp_L;
         set_difference(wp.begin(), wp.end(), L.begin(), L.end(), inserter(wp_L, wp_L.begin()));
         if(L.size() == wp.size() && wp_L.empty())
@@ -276,4 +356,26 @@ bool Consequence::Lookahead(set<int> L) {
 set<int> Consequence::calConsequence() {
     set<int> literals;
     return UnitPropagation(literals, clauses);
+}
+
+
+/*
+ * 输出clauses
+ */
+void Consequence::printClauses(FILE* out) {
+    fprintf(out, "\nThe clauses :\n");
+    for(set< set<int> >::iterator it = clauses.begin(); it != clauses.end(); it++) {
+        fprintf(out, "{ ");
+        for(set<int>::iterator sit = it->begin(); sit != it->end(); sit++) {
+            int id = *sit;
+            if(id < 0) {
+                fprintf(out, "~");
+                id *= -1;
+            }
+            fprintf(out, "%s", Vocabulary::instance().getAtomName(id));
+            if(sit != --(it->end()))
+                fprintf(out, ", ");
+        }
+        fprintf(out, " }\n");
+    }
 }

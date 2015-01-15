@@ -80,16 +80,46 @@ int main(int argc, char** argv) {
     
     
 #ifdef GRS
-    printf("========================\n");
-    printf("Calculating the Greatest Reliable Set :\n");
+    fprintf(fout, "Calculating the Greatest Reliable Set :\n");
     Vocabulary::instance().VocabularyDetails(stdout);
     Consequence consequence(G_Rules);
-    set<int> result = consequence.calConsequence();
-    for (set<int>::const_iterator it = result.begin();
-            it != result.end(); ++ it) {
-        printf("%d ", *it);
+    
+//    fprintf(fout, "The Unit Propagation :\n");
+//    Vocabulary::instance().VocabularyDetails(stdout);
+//    Consequence consequence(G_Rules);
+//    set<int> result = consequence.calConsequence();
+//    for (set<int>::const_iterator it = result.begin();
+//            it != result.end(); ++ it) {
+//        fprintf(fout, "%d ", *it);
+//    }
+//    fprintf(fout, "\n");
+    
+//    fprintf(fout, "The Greatest Unfounded Set : \n");
+//    consequence.printClauses(fout);
+//    set<int> L;
+//    L.insert(1);        L.insert(2);    // L = { a, c }
+//    set<int> gus = consequence.GUS(fout, G_Rules, L);
+//    fprintf(fout, "\nGUS(P, L) : ");
+//    for(set<int>::iterator git = gus.begin(); git != gus.end(); git++) {
+//        fprintf(fout, "%s", Vocabulary::instance().getAtomName(*git));
+//        if(git != --(gus.end()))
+//            fprintf(fout, ",");
+//    }
+//    fprintf(fout, "\n");        fflush(fout);
+    
+    set<int> conq = consequence.lfp_WP(fout);
+    fprintf(fout, "\nConsequence : ");
+    for(set<int>::iterator cit = conq.begin(); cit != conq.end(); cit++) {
+        int id = *cit;
+            if(id < 0) {
+                fprintf(fout, "~");
+                id *= -1;
+            }
+            fprintf(fout, "%s", Vocabulary::instance().getAtomName(id));
+            if(cit != --(conq.end()))
+                fprintf(fout, ", ");
     }
-    printf("\n");
+    fprintf(fout, "\n");        fflush(fout);
     
 #endif
     
