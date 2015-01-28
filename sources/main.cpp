@@ -23,7 +23,7 @@
 using namespace std;
 
 //#define MAXU
-//#define GRS
+#define GRST
 
 extern vector<Rule> G_Rules;    // 保存输入文件的所有rules，定义在global.cpp中
 extern FILE* yyin;              // lex.cpp中定义的变量，默认的文件输入对象，注意此处不要重定义
@@ -80,7 +80,7 @@ int main(int argc, char** argv) {
 #endif    
     
     
-//#ifdef GRS
+#ifdef GRST
     fprintf(fout, "Calculating the Greatest Reliable Set :\n");
     Vocabulary::instance().VocabularyDetails(stdout);
     
@@ -145,7 +145,7 @@ int main(int argc, char** argv) {
 //    }
 //    fprintf(fout, "\n");        fflush(fout);
     
-//#endif
+#endif
     
     fclose(fout);
     fclose(yyin);
