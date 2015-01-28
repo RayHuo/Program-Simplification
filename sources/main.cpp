@@ -18,11 +18,12 @@
 #include "Loop.h"
 #include "MaxU.h"
 #include "Consequence.h"
+#include "GRS.h"
 
 using namespace std;
 
 //#define MAXU
-#define GRS
+//#define GRS
 
 extern vector<Rule> G_Rules;    // 保存输入文件的所有rules，定义在global.cpp中
 extern FILE* yyin;              // lex.cpp中定义的变量，默认的文件输入对象，注意此处不要重定义
@@ -79,10 +80,15 @@ int main(int argc, char** argv) {
 #endif    
     
     
-#ifdef GRS
+//#ifdef GRS
     fprintf(fout, "Calculating the Greatest Reliable Set :\n");
     Vocabulary::instance().VocabularyDetails(stdout);
-    Consequence consequence(G_Rules);
+    
+    GRS grs(G_Rules);
+    set<int> ans = grs.calGRS(fout);
+    
+    
+//    Consequence consequence(G_Rules);
     
 //    // Testing Unit Propagation
 //    fprintf(fout, "The Unit Propagation :\n");
@@ -125,21 +131,21 @@ int main(int argc, char** argv) {
 //    fprintf(fout, "\n");        fflush(fout);
     
     
-    set<int> finalConsequence = consequence.calConsequence(fout);
-    fprintf(fout, "\nFinal Consequence : ");
-    for(set<int>::iterator cit = finalConsequence.begin(); cit != finalConsequence.end(); cit++) {
-        int id = *cit;
-            if(id < 0) {
-                fprintf(fout, "~");
-                id *= -1;
-            }
-            fprintf(fout, "%s", Vocabulary::instance().getAtomName(id));
-            if(cit != --(finalConsequence.end()))
-                fprintf(fout, ", ");
-    }
-    fprintf(fout, "\n");        fflush(fout);
+//    set<int> finalConsequence = consequence.calConsequence(fout);
+//    fprintf(fout, "\nFinal Consequence : ");
+//    for(set<int>::iterator cit = finalConsequence.begin(); cit != finalConsequence.end(); cit++) {
+//        int id = *cit;
+//            if(id < 0) {
+//                fprintf(fout, "~");
+//                id *= -1;
+//            }
+//            fprintf(fout, "%s", Vocabulary::instance().getAtomName(id));
+//            if(cit != --(finalConsequence.end()))
+//                fprintf(fout, ", ");
+//    }
+//    fprintf(fout, "\n");        fflush(fout);
     
-#endif
+//#endif
     
     fclose(fout);
     fclose(yyin);
