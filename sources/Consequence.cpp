@@ -206,12 +206,17 @@ set<int> Consequence::PhiL(FILE* out, vector<Rule> P, set<int> L, set<int> X) {
                 // 3. body^+(r) \subseteq (X \ {p | ~p \in L})
                 if(includes(X_NL.begin(), X_NL.end(), pbody.begin(), pbody.end())) {
                     // 4. a \in head(r)
-                    if((pit->heads).empty()) {
-                        (*pit).output(out); fflush(out);
-                    }
+                    //实际上 head(r) = \emptyset 的对结果都是没有影响的，所以可以直接忽略。
+//                    if((pit->heads).empty()) {
+//                        (*pit).output(out); fflush(out);
+//                    }
+                    bool is_print = false;
                     for(set<int>::iterator hit = (pit->heads).begin(); hit != (pit->heads).end(); hit++) {
                         if(NL.find(*hit) == NL.end()) {  // 5. a \notin { p | ~p \in L }
-                            (*pit).output(out); fflush(out);
+                            if(!is_print) {
+                                (*pit).output(out); fflush(out);
+                                is_print = true;
+                            }
                             phi.insert(*hit);
                         }
                     }

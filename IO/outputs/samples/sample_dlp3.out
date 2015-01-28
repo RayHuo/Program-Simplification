@@ -1,0 +1,873 @@
+Calculating the Greatest Reliable Set :
+
+WP Start :
+
+L : 
+
+=============================
+W_P(L) Start : 
+L : 
+
+UP(L, P) : p,r
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+p.
+a | b.
+c | d | e.
+
+Phi out :
+p, a, b, c, d, e
+
+X : p, a, b, c, d, e
+
+Satisfy rules :
+r :- p.
+p.
+r :- a.
+a :- b.
+b :- a.
+a | b.
+c :- d.
+d :- c.
+d :- e.
+c | d | e.
+a :- c.
+
+Phi out :
+p, r, a, b, c, d, e
+
+X : p, r, a, b, c, d, e
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+p.
+r :- a.
+a :- b.
+b :- a.
+a | b.
+c :- d.
+d :- c.
+d :- e.
+c | d | e.
+a :- c.
+
+Phi out :
+p, q, r, a, b, c, d, e
+
+X : p, q, r, a, b, c, d, e
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+r :- q.
+p.
+r :- a.
+a :- b.
+b :- a.
+a | b.
+c :- d.
+d :- c.
+d :- e.
+c | d | e.
+a :- c.
+
+Phi out :
+p, q, r, a, b, c, d, e
+
+GUS : 
+
+W_P(L) : p,r
+
+L : p,r
+
+=============================
+W_P(L) Start : 
+L : p, r
+
+UP(L, P) : p,r
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+a | b.
+c | d | e.
+
+Phi out :
+p, r, a, b, c, d, e
+
+X : p, r, a, b, c, d, e
+
+Satisfy rules :
+a :- b.
+b :- a.
+a | b.
+c :- d.
+d :- c.
+d :- e.
+c | d | e.
+a :- c.
+
+Phi out :
+p, r, a, b, c, d, e
+
+GUS : q
+
+W_P(L) : ~q,p,r
+
+L : ~q,p,r
+
+=============================
+W_P(L) Start : 
+L : ~q, p, r
+
+UP(L, P) : ~q,p,r
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+a | b.
+c | d | e.
+
+Phi out :
+p, r, a, b, c, d, e
+
+X : p, r, a, b, c, d, e
+
+Satisfy rules :
+a :- b.
+b :- a.
+a | b.
+c :- d.
+d :- c.
+d :- e.
+c | d | e.
+a :- c.
+
+Phi out :
+p, r, a, b, c, d, e
+
+GUS : q
+
+W_P(L) : ~q,p,r
+
+Step 1 to 3 out Consequence : ~q, p, r
+
+=============================
+W_P(L) Start : 
+L : a
+
+UP(L, P) : p,r,a,b
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+p.
+c | d | e.
+
+Phi out :
+p, a, c, d, e
+
+X : p, a, c, d, e
+
+Satisfy rules :
+r :- p.
+p.
+r :- a.
+b :- a.
+c :- d.
+d :- c.
+d :- e.
+c | d | e.
+
+Phi out :
+p, r, a, b, c, d, e
+
+X : p, r, a, b, c, d, e
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+p.
+r :- a.
+b :- a.
+c :- d.
+d :- c.
+d :- e.
+c | d | e.
+
+Phi out :
+p, q, r, a, b, c, d, e
+
+X : p, q, r, a, b, c, d, e
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+r :- q.
+p.
+r :- a.
+b :- a.
+c :- d.
+d :- c.
+d :- e.
+c | d | e.
+
+Phi out :
+p, q, r, a, b, c, d, e
+
+GUS : 
+
+=============================
+W_P(L) Start : 
+L : ~a
+
+UP(L, P) : ~e,~d,~c,~b,~a,~r,~q,~p,p,q,r,a,b,c,d,e
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+p.
+a | b.
+c | d | e.
+
+Phi out :
+p, b, c, d, e
+
+X : p, b, c, d, e
+
+Satisfy rules :
+r :- p.
+p.
+a | b.
+c :- d.
+d :- c.
+d :- e.
+c | d | e.
+
+Phi out :
+p, r, b, c, d, e
+
+X : p, r, b, c, d, e
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+p.
+a | b.
+c :- d.
+d :- c.
+d :- e.
+c | d | e.
+
+Phi out :
+p, q, r, b, c, d, e
+
+X : p, q, r, b, c, d, e
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+r :- q.
+p.
+a | b.
+c :- d.
+d :- c.
+d :- e.
+c | d | e.
+
+Phi out :
+p, q, r, b, c, d, e
+
+GUS : a
+
+=============================
+W_P(L) Start : 
+L : b
+
+UP(L, P) : p,r,a,b
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+p.
+c | d | e.
+
+Phi out :
+p, b, c, d, e
+
+X : p, b, c, d, e
+
+Satisfy rules :
+r :- p.
+p.
+a :- b.
+c :- d.
+d :- c.
+d :- e.
+c | d | e.
+a :- c.
+
+Phi out :
+p, r, a, b, c, d, e
+
+X : p, r, a, b, c, d, e
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+p.
+r :- a.
+a :- b.
+c :- d.
+d :- c.
+d :- e.
+c | d | e.
+a :- c.
+
+Phi out :
+p, q, r, a, b, c, d, e
+
+X : p, q, r, a, b, c, d, e
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+r :- q.
+p.
+r :- a.
+a :- b.
+c :- d.
+d :- c.
+d :- e.
+c | d | e.
+a :- c.
+
+Phi out :
+p, q, r, a, b, c, d, e
+
+GUS : 
+
+=============================
+W_P(L) Start : 
+L : ~b
+
+UP(L, P) : ~e,~d,~c,~b,~a,~r,~q,~p,p,q,r,a,b,c,d,e
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+p.
+a | b.
+c | d | e.
+
+Phi out :
+p, a, c, d, e
+
+X : p, a, c, d, e
+
+Satisfy rules :
+r :- p.
+p.
+r :- a.
+a | b.
+c :- d.
+d :- c.
+d :- e.
+c | d | e.
+a :- c.
+
+Phi out :
+p, r, a, c, d, e
+
+X : p, r, a, c, d, e
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+p.
+r :- a.
+a | b.
+c :- d.
+d :- c.
+d :- e.
+c | d | e.
+a :- c.
+
+Phi out :
+p, q, r, a, c, d, e
+
+X : p, q, r, a, c, d, e
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+r :- q.
+p.
+r :- a.
+a | b.
+c :- d.
+d :- c.
+d :- e.
+c | d | e.
+a :- c.
+
+Phi out :
+p, q, r, a, c, d, e
+
+GUS : b
+
+=============================
+W_P(L) Start : 
+L : c
+
+UP(L, P) : p,r,a,b,c,d
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+p.
+a | b.
+
+Phi out :
+p, a, b, c
+
+X : p, a, b, c
+
+Satisfy rules :
+r :- p.
+p.
+r :- a.
+a :- b.
+b :- a.
+a | b.
+d :- c.
+a :- c.
+
+Phi out :
+p, r, a, b, c, d
+
+X : p, r, a, b, c, d
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+p.
+r :- a.
+a :- b.
+b :- a.
+a | b.
+d :- c.
+a :- c.
+
+Phi out :
+p, q, r, a, b, c, d
+
+X : p, q, r, a, b, c, d
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+r :- q.
+p.
+r :- a.
+a :- b.
+b :- a.
+a | b.
+d :- c.
+a :- c.
+
+Phi out :
+p, q, r, a, b, c, d
+
+GUS : e
+
+=============================
+W_P(L) Start : 
+L : ~c
+
+UP(L, P) : ~e,~d,~c,~b,~a,~r,~q,~p,p,q,r,a,b,c,d,e
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+p.
+a | b.
+c | d | e.
+
+Phi out :
+p, a, b, d, e
+
+X : p, a, b, d, e
+
+Satisfy rules :
+r :- p.
+p.
+r :- a.
+a :- b.
+b :- a.
+a | b.
+d :- e.
+c | d | e.
+
+Phi out :
+p, r, a, b, d, e
+
+X : p, r, a, b, d, e
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+p.
+r :- a.
+a :- b.
+b :- a.
+a | b.
+d :- e.
+c | d | e.
+
+Phi out :
+p, q, r, a, b, d, e
+
+X : p, q, r, a, b, d, e
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+r :- q.
+p.
+r :- a.
+a :- b.
+b :- a.
+a | b.
+d :- e.
+c | d | e.
+
+Phi out :
+p, q, r, a, b, d, e
+
+GUS : c
+
+=============================
+W_P(L) Start : 
+L : d
+
+UP(L, P) : p,r,a,b,c,d
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+p.
+a | b.
+
+Phi out :
+p, a, b, d
+
+X : p, a, b, d
+
+Satisfy rules :
+r :- p.
+p.
+r :- a.
+a :- b.
+b :- a.
+a | b.
+c :- d.
+
+Phi out :
+p, r, a, b, c, d
+
+X : p, r, a, b, c, d
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+p.
+r :- a.
+a :- b.
+b :- a.
+a | b.
+c :- d.
+a :- c.
+
+Phi out :
+p, q, r, a, b, c, d
+
+X : p, q, r, a, b, c, d
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+r :- q.
+p.
+r :- a.
+a :- b.
+b :- a.
+a | b.
+c :- d.
+a :- c.
+
+Phi out :
+p, q, r, a, b, c, d
+
+GUS : e
+
+=============================
+W_P(L) Start : 
+L : ~d
+
+UP(L, P) : ~e,~d,~c,p,r
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+p.
+a | b.
+c | d | e.
+
+Phi out :
+p, a, b, c, e
+
+X : p, a, b, c, e
+
+Satisfy rules :
+r :- p.
+p.
+r :- a.
+a :- b.
+b :- a.
+a | b.
+c | d | e.
+a :- c.
+
+Phi out :
+p, r, a, b, c, e
+
+X : p, r, a, b, c, e
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+p.
+r :- a.
+a :- b.
+b :- a.
+a | b.
+c | d | e.
+a :- c.
+
+Phi out :
+p, q, r, a, b, c, e
+
+X : p, q, r, a, b, c, e
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+r :- q.
+p.
+r :- a.
+a :- b.
+b :- a.
+a | b.
+c | d | e.
+a :- c.
+
+Phi out :
+p, q, r, a, b, c, e
+
+GUS : d
+
+=============================
+W_P(L) Start : 
+L : e
+
+UP(L, P) : p,r,a,b,c,d,e
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+p.
+a | b.
+
+Phi out :
+p, a, b, e
+
+X : p, a, b, e
+
+Satisfy rules :
+r :- p.
+p.
+r :- a.
+a :- b.
+b :- a.
+a | b.
+d :- e.
+
+Phi out :
+p, r, a, b, d, e
+
+X : p, r, a, b, d, e
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+p.
+r :- a.
+a :- b.
+b :- a.
+a | b.
+c :- d.
+d :- e.
+
+Phi out :
+p, q, r, a, b, c, d, e
+
+X : p, q, r, a, b, c, d, e
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+r :- q.
+p.
+r :- a.
+a :- b.
+b :- a.
+a | b.
+c :- d.
+d :- c.
+d :- e.
+a :- c.
+
+Phi out :
+p, q, r, a, b, c, d, e
+
+GUS : 
+
+=============================
+W_P(L) Start : 
+L : ~e
+
+UP(L, P) : ~e,p,r
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+p.
+a | b.
+c | d | e.
+
+Phi out :
+p, a, b, c, d
+
+X : p, a, b, c, d
+
+Satisfy rules :
+r :- p.
+p.
+r :- a.
+a :- b.
+b :- a.
+a | b.
+c :- d.
+d :- c.
+c | d | e.
+a :- c.
+
+Phi out :
+p, r, a, b, c, d
+
+X : p, r, a, b, c, d
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+p.
+r :- a.
+a :- b.
+b :- a.
+a | b.
+c :- d.
+d :- c.
+c | d | e.
+a :- c.
+
+Phi out :
+p, q, r, a, b, c, d
+
+X : p, q, r, a, b, c, d
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+r :- q.
+p.
+r :- a.
+a :- b.
+b :- a.
+a | b.
+c :- d.
+d :- c.
+c | d | e.
+a :- c.
+
+Phi out :
+p, q, r, a, b, c, d
+
+GUS : e
+
+Final Consequence : ~q, p, r, a, b, c

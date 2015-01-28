@@ -34,13 +34,13 @@ FILE* fout;                     // 自定义的输出文件对象。
  * This is the Program for both NLP and DLP simplification
  */
 int main(int argc, char** argv) {
-    yyin = fopen("IO/inputs/grs.in", "r");
+    yyin = fopen("IO/inputs/samples/sample_dlp1.in", "r");
     if(!yyin) {
         printf("IO Error : Cannot open the input file!\n");
         assert(0);
     }
     
-    fout = fopen("IO/outputs/grs.out", "w");
+    fout = fopen("IO/outputs/samples/sample_dlp1.out", "w");
     if(!fout) {
         printf("IO Error : Cannot open the output file!\n");
         assert(0);

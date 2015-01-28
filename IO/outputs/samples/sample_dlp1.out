@@ -1,0 +1,281 @@
+Calculating the Greatest Reliable Set :
+
+WP Start :
+
+L : 
+
+=============================
+W_P(L) Start : 
+L : 
+
+UP(L, P) : c
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+c | d.
+d :- not c.
+d | b :- not a.
+
+Phi out :
+c, d, b
+
+X : c, d, b
+
+Satisfy rules :
+c | d.
+a | b :- c.
+d :- not c.
+a :- c, d.
+d | b :- not a.
+
+Phi out :
+c, d, a, b
+
+X : c, d, a, b
+
+Satisfy rules :
+c | d.
+a | b :- c.
+d :- not c.
+a :- c, d.
+c :- a.
+d | b :- not a.
+
+Phi out :
+c, d, a, b
+
+GUS : 
+
+W_P(L) : c
+
+L : c
+
+=============================
+W_P(L) Start : 
+L : c
+
+UP(L, P) : c
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+d | b :- not a.
+
+Phi out :
+c, d, b
+
+X : c, d, b
+
+Satisfy rules :
+a | b :- c.
+a :- c, d.
+d | b :- not a.
+
+Phi out :
+c, d, a, b
+
+X : c, d, a, b
+
+Satisfy rules :
+a | b :- c.
+a :- c, d.
+d | b :- not a.
+
+Phi out :
+c, d, a, b
+
+GUS : 
+
+W_P(L) : c
+
+Step 1 to 3 out Consequence : c
+
+=============================
+W_P(L) Start : 
+L : d
+
+UP(L, P) : c,d,a
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+
+Phi out :
+d
+
+X : d
+
+Satisfy rules :
+
+Phi out :
+d
+
+GUS : c,a,b
+
+=============================
+W_P(L) Start : 
+L : a
+
+UP(L, P) : c,a
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+c | d.
+d :- not c.
+
+Phi out :
+c, d, a
+
+X : c, d, a
+
+Satisfy rules :
+c | d.
+d :- not c.
+c :- a.
+
+Phi out :
+c, d, a
+
+GUS : b
+
+=============================
+W_P(L) Start : 
+L : ~a
+
+UP(L, P) : ~a,~d,c,b
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+c | d.
+d :- not c.
+d | b :- not a.
+
+Phi out :
+c, d, b
+
+X : c, d, b
+
+Satisfy rules :
+c | d.
+a | b :- c.
+d :- not c.
+d | b :- not a.
+
+Phi out :
+c, d, b
+
+GUS : a
+
+=============================
+W_P(L) Start : 
+L : b
+
+UP(L, P) : c,b
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+c | d.
+d :- not c.
+
+Phi out :
+c, d, b
+
+X : c, d, b
+
+Satisfy rules :
+c | d.
+d :- not c.
+a :- c, d.
+
+Phi out :
+c, d, a, b
+
+X : c, d, a, b
+
+Satisfy rules :
+c | d.
+d :- not c.
+a :- c, d.
+c :- a.
+
+Phi out :
+c, d, a, b
+
+GUS : 
+
+=============================
+W_P(L) Start : 
+L : ~b
+
+UP(L, P) : ~b,c,a
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+c | d.
+d :- not c.
+d | b :- not a.
+
+Phi out :
+c, d
+
+X : c, d
+
+Satisfy rules :
+c | d.
+a | b :- c.
+d :- not c.
+a :- c, d.
+d | b :- not a.
+
+Phi out :
+c, d, a
+
+X : c, d, a
+
+Satisfy rules :
+c | d.
+a | b :- c.
+d :- not c.
+a :- c, d.
+c :- a.
+d | b :- not a.
+
+Phi out :
+c, d, a
+
+GUS : b
+
+Final Consequence : ~d, c

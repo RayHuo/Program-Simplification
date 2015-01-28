@@ -1,0 +1,121 @@
+Calculating the Greatest Reliable Set :
+
+WP Start :
+
+L : 
+
+=============================
+W_P(L) Start : 
+L : 
+
+UP(L, P) : p,r
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+p.
+
+Phi out :
+p
+
+X : p
+
+Satisfy rules :
+r :- p.
+p.
+
+Phi out :
+p, r
+
+X : p, r
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+p.
+
+Phi out :
+p, q, r
+
+X : p, q, r
+
+Satisfy rules :
+p | q :- r.
+r :- p.
+r :- q.
+p.
+
+Phi out :
+p, q, r
+
+GUS : 
+
+W_P(L) : p,r
+
+L : p,r
+
+=============================
+W_P(L) Start : 
+L : p, r
+
+UP(L, P) : p,r
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+
+Phi out :
+p, r
+
+X : p, r
+
+Satisfy rules :
+
+Phi out :
+p, r
+
+GUS : q
+
+W_P(L) : ~q,p,r
+
+L : ~q,p,r
+
+=============================
+W_P(L) Start : 
+L : ~q, p, r
+
+UP(L, P) : ~q,p,r
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+
+Phi out :
+p, r
+
+X : p, r
+
+Satisfy rules :
+
+Phi out :
+p, r
+
+GUS : q
+
+W_P(L) : ~q,p,r
+
+Step 1 to 3 out Consequence : ~q, p, r
+
+Final Consequence : ~q, p, r

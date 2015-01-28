@@ -1,0 +1,120 @@
+Calculating the Greatest Reliable Set :
+
+WP Start :
+
+L : 
+
+=============================
+W_P(L) Start : 
+L : 
+
+UP(L, P) : a,c
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+a | d.
+d :- not c.
+d | b :- not a.
+a.
+
+Phi out :
+a, d, b
+
+X : a, d, b
+
+Satisfy rules :
+a | d.
+d :- not c.
+c :- a.
+d | b :- not a.
+a.
+
+Phi out :
+a, d, b, c
+
+X : a, d, b, c
+
+Satisfy rules :
+a | d.
+a | b :- c.
+d :- not c.
+a :- d, c.
+c :- a.
+d | b :- not a.
+a.
+
+Phi out :
+a, d, b, c
+
+GUS : 
+
+W_P(L) : a,c
+
+L : a,c
+
+=============================
+W_P(L) Start : 
+L : a, c
+
+UP(L, P) : a,c
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+
+Phi out :
+a, c
+
+X : a, c
+
+Satisfy rules :
+
+Phi out :
+a, c
+
+GUS : d,b
+
+W_P(L) : ~b,~d,a,c
+
+L : ~b,~d,a,c
+
+=============================
+W_P(L) Start : 
+L : ~b, ~d, a, c
+
+UP(L, P) : ~b,~d,a,c
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+
+Phi out :
+a, c
+
+X : a, c
+
+Satisfy rules :
+
+Phi out :
+a, c
+
+GUS : d,b
+
+W_P(L) : ~b,~d,a,c
+
+Step 1 to 3 out Consequence : ~b, ~d, a, c
+
+Final Consequence : ~b, ~d, a, c
