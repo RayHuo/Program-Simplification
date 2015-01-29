@@ -98,3 +98,26 @@ set<int> Utils::rule2DNF(const Rule& rule) {
     }
     return dnf;
 }
+
+
+/*
+ * R^-(X, P)，更为纯粹地基于一个集合来找外部支持
+ * head(r) \cap X 不等于空集，且 body^+(r) \cap X = 空集
+ */
+vector<Rule> Utils::findESRules(const vector<Rule>& rules, set<int> X) {
+    vector<Rule> esRules;
+    for(vector<Rule>::const_iterator rit = rules.begin(); rit != rules.end(); rit++) {
+        set<int> h_intersection;
+        set_intersection(X.begin(), X.end(), (rit->heads).begin(), 
+                (rit->heads).end(), inserter(h_intersection, h_intersection.begin()));
+        if(!h_intersection.empty()) {
+            set<int> b_intersection;    // 由于bodys里负原子是负数，正原子是整数，且X是atom集，不会有负数，所以可以直接算交集
+            set_intersection(X.begin(), X.end(), (rit->bodys).begin(), 
+                    (rit->bodys).end(), inserter(b_intersection, b_intersection.begin()));
+            if(b_intersection.empty())
+                esRules.push_back(*rit);
+        }
+    }
+    
+    return esRules;
+}

@@ -7,6 +7,8 @@
 
 #include <cstdlib>
 #include <iostream>
+#include <algorithm>
+#include <cmath>
 #include <cstdio>
 #include <vector>
 #include <assert.h>
@@ -19,6 +21,7 @@
 #include "MaxU.h"
 #include "Consequence.h"
 #include "GRS.h"
+#include "GRSDLP.h"
 
 using namespace std;
 
@@ -84,8 +87,35 @@ int main(int argc, char** argv) {
     fprintf(fout, "Calculating the Greatest Reliable Set :\n");
     Vocabulary::instance().VocabularyDetails(stdout);
     
-    GRS grs(G_Rules);
-    set<int> ans = grs.calGRS(fout);
+    // 计算NLP的greatest reliable set，注意输入文件是否NLP
+//    GRS grs(G_Rules);
+//    set<int> ans = grs.calGRS(fout);
+    
+    // 计算DLP的greatest reliable set，注意输入文件是否DLP
+    Consequence consequence(G_Rules);
+    set<int> L = consequence.calConsequence(fout);
+    fprintf(fout, "\nFinal Consequence : ");
+    for(set<int>::iterator cit = L.begin(); cit != L.end(); cit++) {
+        int id = *cit;
+            if(id < 0) {
+                fprintf(fout, "~");
+                id *= -1;
+            }
+            fprintf(fout, "%s", Vocabulary::instance().getAtomName(id));
+            if(cit != --(L.end()))
+                fprintf(fout, ", ");
+    }
+    fprintf(fout, "\n");
+    
+    GRSDLP grsdlp(G_Rules, L);
+    set<int> result = grsdlp.calGRSDLP(fout);
+    fprintf(fout, "\nGRSDLP : ");
+    for(set<int>::const_iterator rit = result.begin(); rit != result.end(); rit++) {
+        if(*rit < 0)
+            fprintf(fout, "~");
+        fprintf(fout, "%s ", Vocabulary::instance().getAtomName(abs(*rit)));
+    }
+    fprintf(fout, "\n");
     
     
 //    Consequence consequence(G_Rules);
