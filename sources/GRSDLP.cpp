@@ -97,7 +97,7 @@ set<int> GRSDLP::UCLP(set<int> U, set<int> X, FILE* out) {
             fprintf(out, "~");
         fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*it)));
     }
-    fprintf(out, "\n{p | ~p \in L} : ");
+    fprintf(out, "\n{p | ~p \\in L} : ");
     for(set<int>::const_iterator it = NL.begin(); it != NL.end(); it++) {
         if(*it < 0)
             fprintf(out, "~");
