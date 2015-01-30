@@ -125,7 +125,8 @@ set<int> GRSDLP::UCLP(set<int> U, set<int> X, FILE* out) {
                 set<int> hL;
                 set_difference((esit->heads).begin(), (esit->heads).end(), NL.begin(), NL.end(), inserter(hL, hL.begin()));
                 if(includes(X.begin(), X.end(), hL.begin(), hL.end())) {
-                    E.insert(esit->heads);
+//                    E.insert(esit->heads);
+                    E.insert(hL);
                 }
             }
         }
@@ -230,7 +231,7 @@ set<int> GRSDLP::RSLP(set<int> U, FILE* out) {
 set<int> GRSDLP::gfp_RSLP(FILE* out) {
     set<int> U = Atoms_P;
     while(true) {
-        printf("working\n");
+        fprintf(out, "\n\nworking-------------------------");
         set<int> output = RSLP(U, out);
         
         // 判断U是否与输出output相等，若是则计算得到极大不动点，返回结果

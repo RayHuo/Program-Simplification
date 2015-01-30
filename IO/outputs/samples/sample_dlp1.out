@@ -286,28 +286,25 @@ Start GRSDLP :
 
 
 
+working-------------------------
+
 UCLP : 
 U : c d a b 
 X : c d a b 
 L : ~d c 
 U \cup L : ~d c d a b 
-{p | ~p in L} : d 
+{p | ~p \in L} : d 
 ES rules : 
 	c | d.
 	d :- not c.
 	d | b :- not a.
 
 E : 
-	{ c d }, 
+	{ c }
+
 
 XHold : c d a b 
-
-UCLP : 
-U : c d a b 
 X : d a b 
-L : ~d c 
-U \cup L : ~d c d a b 
-{p | ~p in L} : d 
 ES rules : 
 	c | d.
 	a | b :- c.
@@ -315,7 +312,8 @@ ES rules :
 	d | b :- not a.
 
 E : 
-	{ a b }, 
+	{ a b }
+
 
 XHold : d a b 
 
@@ -324,7 +322,7 @@ U : c d a b
 X : d b 
 L : ~d c 
 U \cup L : ~d c d a b 
-{p | ~p in L} : d 
+{p | ~p \in L} : d 
 ES rules : 
 	c | d.
 	a | b :- c.
@@ -341,7 +339,7 @@ U : c d a b
 X : d a 
 L : ~d c 
 U \cup L : ~d c d a b 
-{p | ~p in L} : d 
+{p | ~p \in L} : d 
 ES rules : 
 	c | d.
 	a | b :- c.
@@ -354,349 +352,73 @@ E :
 XHold : d a 
 Y : a b 
 X : d a b 
----------------------------------
+
+
+working-------------------------
 
 UCLP : 
-U : c d a b 
-X : c a b 
+U : c 
+X : c d a b 
 L : ~d c 
-U \cup L : ~d c d a b 
-{p | ~p in L} : d 
+U \cup L : ~d c 
+{p | ~p \in L} : d 
 ES rules : 
 	c | d.
+	d :- not c.
 	d | b :- not a.
 
 E : 
-	{ c d }, 
-
-XHold : c a b 
-
-UCLP : 
-U : c d a b 
-X : a b 
-L : ~d c 
-U \cup L : ~d c d a b 
-{p | ~p in L} : d 
-ES rules : 
-	a | b :- c.
-	a :- c, d.
-	d | b :- not a.
-
-E : 
-	{ a }, 	{ a b }, 
-
-XHold : a b 
-
-UCLP : 
-U : c d a b 
-X : b 
-L : ~d c 
-U \cup L : ~d c d a b 
-{p | ~p in L} : d 
-ES rules : 
-	a | b :- c.
-	d | b :- not a.
-
-E : 
+	{ c }
 
 
-XHold : b 
-
-UCLP : 
-U : c d a b 
-X : 
-L : ~d c 
-U \cup L : ~d c d a b 
-{p | ~p in L} : d 
-ES rules : 
-
-E : 
-
-
-XHold : 
-Y : b 
-X : b 
-ES rules : 
-	a | b :- c.
-	d | b :- not a.
-
-E : 
-
-
-XHold : b 
-
-UCLP : 
-U : c d a b 
-X : c a b 
-L : ~d c 
-U \cup L : ~d c d a b 
-{p | ~p in L} : d 
+XHold : c d a b 
+X : d a b 
 ES rules : 
 	c | d.
-	d | b :- not a.
-
-E : 
-	{ c d }, 
-
-XHold : c a b 
-
-UCLP : 
-U : c d a b 
-X : a b 
-L : ~d c 
-U \cup L : ~d c d a b 
-{p | ~p in L} : d 
-ES rules : 
 	a | b :- c.
-	a :- c, d.
+	d :- not c.
 	d | b :- not a.
 
 E : 
-	{ a }, 	{ a b }, 
-
-XHold : a b 
-
-UCLP : 
-U : c d a b 
-X : b 
-L : ~d c 
-U \cup L : ~d c d a b 
-{p | ~p in L} : d 
-ES rules : 
-	a | b :- c.
-	d | b :- not a.
-
-E : 
+	{ a b }
 
 
-XHold : b 
+XHold : d a b 
 
 UCLP : 
-U : c d a b 
-X : 
+U : c 
+X : d b 
 L : ~d c 
-U \cup L : ~d c d a b 
-{p | ~p in L} : d 
-ES rules : 
-
-E : 
-
-
-XHold : 
-Y : b 
-X : b 
-ES rules : 
-	a | b :- c.
-	d | b :- not a.
-
-E : 
-
-
-XHold : b 
-
-UCLP : 
-U : c d a b 
-X : c a b 
-L : ~d c 
-U \cup L : ~d c d a b 
-{p | ~p in L} : d 
+U \cup L : ~d c 
+{p | ~p \in L} : d 
 ES rules : 
 	c | d.
-	d | b :- not a.
-
-E : 
-	{ c d }, 
-
-XHold : c a b 
-
-UCLP : 
-U : c d a b 
-X : a b 
-L : ~d c 
-U \cup L : ~d c d a b 
-{p | ~p in L} : d 
-ES rules : 
 	a | b :- c.
-	a :- c, d.
-	d | b :- not a.
-
-E : 
-	{ a }, 	{ a b }, 
-
-XHold : a b 
-
-UCLP : 
-U : c d a b 
-X : b 
-L : ~d c 
-U \cup L : ~d c d a b 
-{p | ~p in L} : d 
-ES rules : 
-	a | b :- c.
+	d :- not c.
 	d | b :- not a.
 
 E : 
 
 
-XHold : b 
+XHold : d b 
 
 UCLP : 
-U : c d a b 
-X : 
+U : c 
+X : d a 
 L : ~d c 
-U \cup L : ~d c d a b 
-{p | ~p in L} : d 
-ES rules : 
-
-E : 
-
-
-XHold : 
-Y : b 
-X : b 
-ES rules : 
-	a | b :- c.
-	d | b :- not a.
-
-E : 
-
-
-XHold : b 
-
-UCLP : 
-U : c d a b 
-X : c a b 
-L : ~d c 
-U \cup L : ~d c d a b 
-{p | ~p in L} : d 
+U \cup L : ~d c 
+{p | ~p \in L} : d 
 ES rules : 
 	c | d.
-	d | b :- not a.
-
-E : 
-	{ c d }, 
-
-XHold : c a b 
-
-UCLP : 
-U : c d a b 
-X : a b 
-L : ~d c 
-U \cup L : ~d c d a b 
-{p | ~p in L} : d 
-ES rules : 
 	a | b :- c.
-	a :- c, d.
-	d | b :- not a.
-
-E : 
-	{ a }, 	{ a b }, 
-
-XHold : a b 
-
-UCLP : 
-U : c d a b 
-X : b 
-L : ~d c 
-U \cup L : ~d c d a b 
-{p | ~p in L} : d 
-ES rules : 
-	a | b :- c.
+	d :- not c.
 	d | b :- not a.
 
 E : 
 
 
-XHold : b 
+XHold : d a 
+Y : a b 
+X : d a b 
 
-UCLP : 
-U : c d a b 
-X : 
-L : ~d c 
-U \cup L : ~d c d a b 
-{p | ~p in L} : d 
-ES rules : 
-
-E : 
-
-
-XHold : 
-Y : b 
-X : b 
-ES rules : 
-	a | b :- c.
-	d | b :- not a.
-
-E : 
-
-
-XHold : b 
-
-UCLP : 
-U : c d a b 
-X : c a b 
-L : ~d c 
-U \cup L : ~d c d a b 
-{p | ~p in L} : d 
-ES rules : 
-	c | d.
-	d | b :- not a.
-
-E : 
-	{ c d }, 
-
-XHold : c a b 
-
-UCLP : 
-U : c d a b 
-X : a b 
-L : ~d c 
-U \cup L : ~d c d a b 
-{p | ~p in L} : d 
-ES rules : 
-	a | b :- c.
-	a :- c, d.
-	d | b :- not a.
-
-E : 
-	{ a }, 	{ a b }, 
-
-XHold : a b 
-
-UCLP : 
-U : c d a b 
-X : b 
-L : ~d c 
-U \cup L : ~d c d a b 
-{p | ~p in L} : d 
-ES rules : 
-	a | b :- c.
-	d | b :- not a.
-
-E : 
-
-
-XHold : b 
-
-UCLP : 
-U : c d a b 
-X : 
-L : ~d c 
-U \cup L : ~d c d a b 
-{p | ~p in L} : d 
-ES rules : 
-
-E : 
-
-
-XHold : 
-Y : b 
-X : b 
-ES rules : 
-	a | b :- c.
-	d | b :- not a.
-
-E : 
-
-
-XHold : b 
+GRSDLP : c 
