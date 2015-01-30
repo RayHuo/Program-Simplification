@@ -1,5 +1,5 @@
 /* 
- * File:   main.cpp
+ * File:   GRSDLP.h
  * Author: ray
  *
  * Created on January 26, 2015, 17:23 AM
@@ -27,7 +27,6 @@ private:
     vector<Rule> program;
     set<int> Atoms_P;           // Atoms(P)
     set<int> L;                 // 从前面步骤计算得到的consequence
-    int num;
 public:
     GRSDLP();
     GRSDLP(vector<Rule> p, set<int> l);

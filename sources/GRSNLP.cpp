@@ -1,4 +1,4 @@
-#include "GRS.h"
+#include "GRSNLP.h"
 #include "Consequence.h"
 #include "Rule.h"
 #include "Loop.h"
@@ -18,16 +18,16 @@ using namespace std;
 /*
  * 默认构造函数
  */
-GRS::GRS() {
+GRSNLP::GRSNLP() {
     program.clear();
     ATOMS_P.clear();
 }
 
 
 /*
- * 
+ * 自定义构造函数
  */
-GRS::GRS(vector<Rule> P) : program(P) {
+GRSNLP::GRSNLP(vector<Rule> P) : program(P) {
     ATOMS_P.clear();
     for (vector<Rule>::const_iterator rule_it = program.begin();
             rule_it != program.end(); ++ rule_it) {
@@ -44,18 +44,18 @@ GRS::GRS(vector<Rule> P) : program(P) {
 
 
 /*
- * 
+ * 析构函数
  */
-GRS::~GRS() {
+GRSNLP::~GRSNLP() {
     program.clear();
     ATOMS_P.clear();
 }
 
 
 /*
- * 
+ * algorithm1中的uc_P(L)函数 
  */
-set<int> GRS::UCP(set<int> L) {
+set<int> GRSNLP::UCP(set<int> L) {
     set<int> X = ATOMS_P;
     set<int> E;
     set<int> tmp;
@@ -103,7 +103,7 @@ set<int> GRS::UCP(set<int> L) {
 /*
  * 
  */
-set<int> GRS::calGRS(FILE *out) {
+set<int> GRSNLP::calGRS(FILE *out) {
     Consequence consequence(program);
     set<int> L = consequence.calConsequence(out);
 //    set<int> L; L.insert(1); L.insert(2);

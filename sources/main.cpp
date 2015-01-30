@@ -20,7 +20,7 @@
 #include "Loop.h"
 #include "MaxU.h"
 #include "Consequence.h"
-#include "GRS.h"
+#include "GRSNLP.h"
 #include "GRSDLP.h"
 
 using namespace std;
@@ -88,7 +88,7 @@ int main(int argc, char** argv) {
     Vocabulary::instance().VocabularyDetails(stdout);
     
     // 计算NLP的greatest reliable set，注意输入文件是否NLP
-//    GRS grs(G_Rules);
+//    GRSNLP grs(G_Rules);
 //    set<int> ans = grs.calGRS(fout);
     
     // 计算DLP的greatest reliable set，注意输入文件是否DLP

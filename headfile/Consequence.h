@@ -1,5 +1,5 @@
 /* 
- * File:   main.cpp
+ * File:   Consequence.h
  * Author: ray
  *
  * Created on January 13, 2015, 12:47 AM

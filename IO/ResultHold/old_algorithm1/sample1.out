@@ -1,0 +1,198 @@
+Vocabulary List : 
+p with id 1
+q with id 2
+r with id 3
+a with id 4
+b with id 5
+c with id 6
+d with id 7
+e with id 8
+
+
+The Input file with 13 rules, is :
+p | q :- r.
+r :- p.
+r :- q.
+p.
+r :- a.
+a :- b.
+b :- a.
+a | b.
+c :- d.
+d :- c.
+d :- e.
+c | d | e.
+a :- c.
+
+dpdGraph
+p to r.
+q to r.
+r to p, q, a.
+a to b, c.
+b to a.
+c to d.
+d to c, e.
+e to .
+
+All SCCs : 
+SCC : e 
+	ES rules : 
+	c | d | e.
+SCC : c d 
+	ES rules : 
+	d :- e.
+	c | d | e.
+SCC : a b 
+	ES rules : 
+	a | b.
+	a :- c.
+SCC : p q r 
+	ES rules : 
+	p.
+	r :- a.
+
+
+=============================
+Start the algorithm :
+
+Step 1 to 4, simplify the program with U : 
+
+------------------
+U : p 
+
+P' is : 
+r.
+r :- q.
+r :- a.
+a :- b.
+b :- a.
+a | b.
+c :- d.
+d :- c.
+d :- e.
+c | d | e.
+a :- c.
+----------------------
+
+------------------
+U : p r 
+
+P' is : 
+a :- b.
+b :- a.
+a | b.
+c :- d.
+d :- c.
+d :- e.
+c | d | e.
+a :- c.
+----------------------
+
+Step 5 to 10 : 
+
+E : 
+	a, b
+	c, d, e
+
+Start to go through E : 
+C : a, b
+
+P* is : 
+	a :- b.
+	b :- a.
+	a | b.
+
+All SCCs in P* : 
+	a, b
+
+Loop : a, b
+ES Rules : 
+	a | b.
+
+Some ESRules maintain head(r) is subset of L
+Goto Step 8.3.2, insert next sub SCC :
+Subgraph : 
+a to : 
+
+Insert new SCCs : 
+	a
+
+Subgraph : 
+b to : 
+
+Insert new SCCs : 
+	b
+
+
+Loop : a
+ES Rules : 
+	a :- b.
+	a | b.
+
+Some ESRules maintain head(r) is subset of L
+Goto Step 8.3.2, insert next sub SCC :
+No more next level subgraph
+
+Loop : b
+ES Rules : 
+	b :- a.
+	a | b.
+
+Some ESRules maintain head(r) is subset of L
+Goto Step 8.3.2, insert next sub SCC :
+No more next level subgraph
+
+Do not exist that Loop, goto Step 10, update U to be : 
+	current U = { p, r, a, b }
+
+The new P' is : 
+c :- d.
+d :- c.
+d :- e.
+c | d | e.
+
+
+Then go to Step 5 : 
+
+E : 
+	c, d, e
+
+Start to go through E : 
+C : c, d, e
+
+P* is : 
+	c :- d.
+	d :- c.
+	d :- e.
+	c | d | e.
+
+All SCCs in P* : 
+	e
+	c, d
+
+Loop : e
+ES Rules : 
+	c | d | e.
+
+Do exist that loop, goto Step 6.
+The_Next C, C : c, d, e
+
+P* is : 
+	c :- d.
+	d :- c.
+	d :- e.
+	c | d | e.
+
+All SCCs in P* : 
+	e
+	c, d
+
+Loop : e
+ES Rules : 
+	c | d | e.
+
+Do exist that loop, goto Step 6.
+The_Next C, 
+
+No more C in E !
+The max suitable U is : p, r, a, b

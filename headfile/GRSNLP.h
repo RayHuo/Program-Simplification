@@ -5,8 +5,8 @@
  * Created on January 13, 2015, 13:10 AM
  */
 
-#ifndef GRS_H
-#define	GRS_H
+#ifndef GRSNLP_H
+#define	GRSNLP_H
 
 #include <iostream>
 #include <cstdio>
@@ -22,14 +22,14 @@
 
 using namespace std;
 
-class GRS {
+class GRSNLP {
 private:
     vector<Rule> program;
     set<int> ATOMS_P;           // Atoms(program)
 public:
-    GRS();
-    GRS(vector<Rule> P);
-    ~GRS();
+    GRSNLP();
+    GRSNLP(vector<Rule> P);
+    ~GRSNLP();
     
     set<int> UCP(set<int> L);   // Algorithm 1 中的uc_P(L)函数
     
@@ -37,4 +37,4 @@ public:
     set<int> calGRS(FILE *out);
 };
 
-#endif /* GRS_H */
+#endif /* GRSNLP_H */

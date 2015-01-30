@@ -22,7 +22,6 @@ GRSDLP::GRSDLP() {
     program.clear();
     Atoms_P.clear();
     L.clear();
-    num = 0;
 }
  
 /*
@@ -36,7 +35,6 @@ GRSDLP::GRSDLP(vector<Rule> p, set<int> l) : program(p), L(l){
             Atoms_P.insert(abs(*bit));
         }
     }
-    num = 0;
 }
  
 /*
@@ -46,19 +44,12 @@ GRSDLP::~GRSDLP() {
     program.clear();
     Atoms_P.clear();
     L.clear();
-    num = -1;
 }
     
 /*
  * 实现论文中的algorithm2
  */   
 set<int> GRSDLP::UCLP(set<int> U, set<int> X, FILE* out) {
-//    if(num++ > 40000) {          // 在50000时就会segement fault，可能是爆内存了，毕竟递归得太深了。
-//        set<int> empty;
-//        return empty;
-//    }
-//    fprintf(out, "X in : %d.  ", X.size());     fflush(out);    // 某一步传入的X突然跪了
-    
     // 准备工作
     set< set<int> > E;
     set<int> UL;        // U \cup L
