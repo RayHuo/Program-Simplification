@@ -23,6 +23,7 @@ NLP::NLP() {
     program.clear();
     Atoms_P.clear();
     L.clear();
+    NL.clear();
 }
 
 
@@ -37,6 +38,12 @@ NLP::NLP(vector<Rule> p, set<int> l) : program(p), L(l) {
             Atoms_P.insert(abs(*bit));
         }
     }
+    
+    NL.clear();
+    for(set<int>::const_iterator lit = L.begin(); lit != L.end(); lit++) {
+        if(*lit < 0)
+            NL.insert(*lit);
+    }
 }
 
 
@@ -47,6 +54,7 @@ NLP::~NLP() {
     program.clear();
     Atoms_P.clear();
     L.clear();
+    NL.clear();
 }
 
 
@@ -146,13 +154,13 @@ set<int> NLP::TSPL(set<int> X, FILE* out) {
         
         // 遍历每一个满足 p \in head(r) 且 p \notin body^+(r) 的原子p
         for(set<int>::const_iterator p = h_pb.begin(); p != h_pb.end(); p++) {
-            set<int> NL;         // L \ L^+，其中 L^+ = { p | p \in L }
-            for(set<int>::const_iterator lit = L.begin(); lit != L.end(); lit++) {
-                if(*lit < 0)
-                    NL.insert(*lit);
-            }
+//            set<int> NL;         
+//            for(set<int>::const_iterator lit = L.begin(); lit != L.end(); lit++) {
+//                if(*lit < 0)
+//                    NL.insert(*lit);
+//            }
             
-            set<int> NLX;        // (L \ L^+) \cup X
+            set<int> NLX;        // (L \ L^+) \cup X，下面的NL，为L \ L^+，其中 L^+ = { p | p \in L }
             set_union(NL.begin(), NL.end(), X.begin(), X.end(), inserter(NLX, NLX.begin()));
             
             
@@ -266,7 +274,7 @@ set<int> NLP::TS(FILE* out) {
  * 直接调用TW()
  */
 set<int> NLP::GWRS(FILE* out) {
-    fprintf(out, "\n=============================\nStart GWRS : \n");
+    fprintf(out, "\n=============================\nStart NLP GWRS : \n");
     set<int> gwrs = TW(out);
     return gwrs;
 }
@@ -276,7 +284,7 @@ set<int> NLP::GWRS(FILE* out) {
  * 直接调用TS()
  */
 set<int> NLP::GSRS(FILE* out) {
-    fprintf(out, "\n=============================\nStart GSRS : \n");
+    fprintf(out, "\n=============================\nStart NLP GSRS : \n");
     set<int> gsrs = TS(out);
     return gsrs;
 }

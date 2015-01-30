@@ -41,13 +41,13 @@ FILE* fout;                     // 自定义的输出文件对象。
  * This is the Program for both NLP and DLP simplification
  */
 int main(int argc, char** argv) {
-    yyin = fopen("IO/inputs/samples/sample_nlp1.in", "r");
+    yyin = fopen("IO/inputs/samples/sample_dlp1.in", "r");
     if(!yyin) {
         printf("IO Error : Cannot open the input file!\n");
         assert(0);
     }
     
-    fout = fopen("IO/outputs/samples/sample_nlp1.out", "w");
+    fout = fopen("IO/outputs/samples/sample_dlp1.out", "w");
     if(!fout) {
         printf("IO Error : Cannot open the output file!\n");
         assert(0);
@@ -201,11 +201,34 @@ int main(int argc, char** argv) {
     }
     fprintf(fout, "\n");
     
-    // NLP 当前情况：顺利跑完，中间逻辑貌似没错，但尚未详细检查输出的过程！！！！！！！！
-    // 计算NLP的greatest strong(and weak) reliable set，注意输入文件是否NLP
-    NLP nlp(G_Rules, L);
-    set<int> gwrs = nlp.GWRS(fout);
-    fprintf(fout, "\nThe GWRS of NLP is : ");
+    
+//    // NLP 当前情况：顺利跑完，中间逻辑貌似没错，但尚未详细检查输出的过程！！！！！！！！
+//    // 计算NLP的greatest strong(and weak) reliable set，注意输入文件是否NLP
+//    NLP nlp(G_Rules, L);
+//    set<int> gwrs = nlp.GWRS(fout);
+//    fprintf(fout, "\nThe GWRS of NLP is : ");
+//    for(set<int>::const_iterator it = gwrs.begin(); it != gwrs.end(); it++) {
+//        if(*it < 0)
+//            fprintf(fout, "~");
+//        fprintf(fout, "%s ", Vocabulary::instance().getAtomName(abs(*it)));
+//    }
+//    fprintf(fout, "\n");        fflush(fout);
+//    
+//    set<int> gsrs = nlp.GSRS(fout);
+//    fprintf(fout, "\nThe GSRS of NLP is : ");
+//    for(set<int>::const_iterator it = gsrs.begin(); it != gsrs.end(); it++) {
+//        if(*it < 0)
+//            fprintf(fout, "~");
+//        fprintf(fout, "%s ", Vocabulary::instance().getAtomName(abs(*it)));
+//    }
+//    fprintf(fout, "\n");        fflush(fout);
+    
+    
+    // DLP 当前情况：顺利跑完，中间逻辑貌似没错，但尚未详细检查输出的过程！！！！！！！！
+    // 计算DLP的greatest strong(and weak) reliable set，注意输入文件是否DLP
+    DLP dlp(G_Rules, L);
+    set<int> gwrs = dlp.GWRS(fout);
+    fprintf(fout, "\nThe GWRS of DLP is : ");
     for(set<int>::const_iterator it = gwrs.begin(); it != gwrs.end(); it++) {
         if(*it < 0)
             fprintf(fout, "~");
@@ -213,8 +236,8 @@ int main(int argc, char** argv) {
     }
     fprintf(fout, "\n");        fflush(fout);
     
-    set<int> gsrs = nlp.GSRS(fout);
-    fprintf(fout, "\nThe GSRS of NLP is : ");
+    set<int> gsrs = dlp.GSRS(fout);
+    fprintf(fout, "\nThe GSRS of DLP is : ");
     for(set<int>::const_iterator it = gsrs.begin(); it != gsrs.end(); it++) {
         if(*it < 0)
             fprintf(fout, "~");
