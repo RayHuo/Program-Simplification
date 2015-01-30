@@ -19,6 +19,7 @@
 #include "structs.h"
 #include "DependenceGraph.h"
 #include "Utils.h"
+#include <algorithm>
 
 using namespace std;
 

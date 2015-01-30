@@ -19,6 +19,7 @@
 #include "structs.h"
 #include "DependenceGraph.h"
 #include "Utils.h"
+#include <algorithm>
 
 using namespace std;
 
@@ -32,7 +33,7 @@ public:
     DLP(vector<Rule> p, set<int> l);
     ~DLP();
     
-    set<int> RSWPL(set<int> X, FILE* out);      // 论文中algorithm 1的函数的week版本。
+    set<int> RSWPL(set<int> X, FILE* out);      // 论文中algorithm 1的函数的weak版本。
     set<int> RSSPL(set<int> X, FILE* out);      // 论文中algorithm 1的函数的strong版本。
     set<int> RSW(FILE* out);                    // 计算RSWPL的极小不动点
     set<int> RSS(FILE* out);                    // 计算RSSPL的极小不动点

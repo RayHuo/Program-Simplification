@@ -22,11 +22,14 @@
 #include "Consequence.h"
 #include "GRSNLP.h"
 #include "GRSDLP.h"
+#include "NLP.h"
+#include "DLP.h"
 
 using namespace std;
 
 //#define MAXU
-#define GRST
+//#define GRST
+#define GRS_WS
 
 extern vector<Rule> G_Rules;    // 保存输入文件的所有rules，定义在global.cpp中
 extern FILE* yyin;              // lex.cpp中定义的变量，默认的文件输入对象，注意此处不要重定义
@@ -38,13 +41,13 @@ FILE* fout;                     // 自定义的输出文件对象。
  * This is the Program for both NLP and DLP simplification
  */
 int main(int argc, char** argv) {
-    yyin = fopen("IO/inputs/samples/sample_dlp1.in", "r");
+    yyin = fopen("IO/inputs/samples/sample_nlp1.in", "r");
     if(!yyin) {
         printf("IO Error : Cannot open the input file!\n");
         assert(0);
     }
     
-    fout = fopen("IO/outputs/samples/sample_dlp1.out", "w");
+    fout = fopen("IO/outputs/samples/sample_nlp1.out", "w");
     if(!fout) {
         printf("IO Error : Cannot open the output file!\n");
         assert(0);
@@ -176,6 +179,51 @@ int main(int argc, char** argv) {
 //    fprintf(fout, "\n");        fflush(fout);
     
 #endif
+    
+
+#ifdef GRS_WS
+    fprintf(fout, "Calculating the Greatest Reliable Set :\n");
+    Vocabulary::instance().VocabularyDetails(fout);
+    
+    // 计算NLP的最大consequence，注意输入文件是否NLP
+    Consequence consequence(G_Rules);
+    set<int> L = consequence.calConsequence(fout);
+    fprintf(fout, "\nFinal Consequence : ");
+    for(set<int>::iterator cit = L.begin(); cit != L.end(); cit++) {
+        int id = *cit;
+            if(id < 0) {
+                fprintf(fout, "~");
+                id *= -1;
+            }
+            fprintf(fout, "%s", Vocabulary::instance().getAtomName(id));
+            if(cit != --(L.end()))
+                fprintf(fout, ", ");
+    }
+    fprintf(fout, "\n");
+    
+    // NLP 当前情况：顺利跑完，中间逻辑貌似没错，但尚未详细检查输出的过程！！！！！！！！
+    // 计算NLP的greatest strong(and weak) reliable set，注意输入文件是否NLP
+    NLP nlp(G_Rules, L);
+    set<int> gwrs = nlp.GWRS(fout);
+    fprintf(fout, "\nThe GWRS of NLP is : ");
+    for(set<int>::const_iterator it = gwrs.begin(); it != gwrs.end(); it++) {
+        if(*it < 0)
+            fprintf(fout, "~");
+        fprintf(fout, "%s ", Vocabulary::instance().getAtomName(abs(*it)));
+    }
+    fprintf(fout, "\n");        fflush(fout);
+    
+    set<int> gsrs = nlp.GSRS(fout);
+    fprintf(fout, "\nThe GSRS of NLP is : ");
+    for(set<int>::const_iterator it = gsrs.begin(); it != gsrs.end(); it++) {
+        if(*it < 0)
+            fprintf(fout, "~");
+        fprintf(fout, "%s ", Vocabulary::instance().getAtomName(abs(*it)));
+    }
+    fprintf(fout, "\n");        fflush(fout);
+    
+    
+#endif    
     
     fclose(fout);
     fclose(yyin);

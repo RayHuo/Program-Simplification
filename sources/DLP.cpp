@@ -10,6 +10,8 @@
 #include "structs.h"
 #include "DependenceGraph.h"
 #include "Utils.h"
+#include <algorithm>
+#include <cmath>
 
 using namespace std;
 
@@ -49,7 +51,7 @@ DLP::~DLP() {
 
 
 /**
- * 论文中algorithm 1的函数的week版本。
+ * 论文中algorithm 1的函数的weak版本。
  * @param X   开始的X为空集
  * @param out 输出中间结果，便于测试
  * @return 
