@@ -295,7 +295,7 @@ RSW :
 RSW X : 
 
 +++++++++++++++++++++++++
-RSSPL :
+RSWPL :
 X : 
 L : ~d c 
 H : 
@@ -303,11 +303,14 @@ H :
 		item : c 
 	rule : a | b :- c.
 		item : a b 
+C : c 
+A : c 
+C : a b 
 
-foreach p \in C = { a b 
+foreach p \in C = { a b }
 
 +++++++++++++++++++++++++
-RSSPL :
+RSWPL :
 X : a 
 L : ~d c 
 H : 
@@ -315,7 +318,12 @@ H :
 		item : c 
 	rule : c :- a.
 		item : c 
-p = tg¼¿, and rswpl(X \cup {p}) = { c a 
+C : c 
+A : c a 
+Return A : c a 
+p = a, and rswpl(X \cup {p}) = { c a }
+A : c 
+Return A : c 
 
 RSW rswpl : c 
 
@@ -325,21 +333,25 @@ RSW :
 RSW X : c 
 
 +++++++++++++++++++++++++
-RSSPL :
+RSWPL :
 X : c 
 L : ~d c 
 H : 
 	rule : a | b :- c.
 		item : a b 
+C : a b 
 
-foreach p \in C = { a b 
+foreach p \in C = { a b }
 
 +++++++++++++++++++++++++
-RSSPL :
+RSWPL :
 X : c a 
 L : ~d c 
 H : 
-p = tg¼¿, and rswpl(X \cup {p}) = { c a 
+Return A : c a 
+p = a, and rswpl(X \cup {p}) = { c a }
+A : c 
+Return A : c 
 
 RSW rswpl : c 
 
@@ -360,6 +372,9 @@ L : ~d c
 H : 
 	rule : c | d.
 		item : c 
+C : c 
+A : c 
+Return A : c 
 
 RSS rsspl : c 
 
@@ -375,15 +390,19 @@ L : ~d c
 H : 
 	rule : a | b :- c.
 		item : a b 
+C : a b 
 
-foreach p \in C = { a b 
+foreach p \in C = { a b }
 
 +++++++++++++++++++++++++
 RSSPL :
 X : c a 
 L : ~d c 
 H : 
-p = tg¼¿, and rsspl(X \cup {p}) = { c a 
+Return A : c a 
+p = a, and rsspl(X \cup {p}) = { c a }
+A : c 
+Return A : c 
 
 RSS rsspl : c 
 

@@ -70,7 +70,7 @@ DLP::~DLP() {
  * @return 
  */
 set<int> DLP::RSWPL(set<int> X, FILE* out) {
-    fprintf(out, "\n+++++++++++++++++++++++++\nRSSPL :\n");
+    fprintf(out, "\n+++++++++++++++++++++++++\nRSWPL :\n");
     fprintf(out, "X : ");
     for(set<int>::const_iterator xit = X.begin(); xit != X.end(); xit++) {
         if(*xit < 0)
@@ -128,12 +128,34 @@ set<int> DLP::RSWPL(set<int> X, FILE* out) {
     
     // for each C \in H
     for(set< set<int> >::const_iterator C= H.begin(); C != H.end(); C++) {
+        fprintf(out, "C : ");   // 因为H中的是rule的头部，必然只有正原子，所以这里不用判断cit的正负
+        for(set<int>::const_iterator cit = C->begin(); cit != C->end(); cit++)
+            fprintf(out, "%s ", Vocabulary::instance().getAtomName(*cit));
+        fprintf(out, "\n");     fflush(out);
+        
         if(C->size() == 1 || all_C_in_RSWPL(X, *C, out)) {
             set<int> A_C;       // A \cup C
             set_union(A.begin(), A.end(), C->begin(), C->end(), inserter(A_C, A_C.begin()));
             A = A_C;
         }
+        
+        fprintf(out, "A : ");
+        for(set<int>::const_iterator ait = A.begin(); ait != A.end(); ait++) {
+            if(*ait < 0)
+                fprintf(out, "~");
+            fprintf(out, "%s ", Vocabulary::instance().getAtomName(*ait));
+        }
+        fprintf(out, "\n");     fflush(out);
     }
+    
+    
+    fprintf(out, "Return A : ");
+    for(set<int>::const_iterator ait = A.begin(); ait != A.end(); ait++) {
+        if(*ait < 0)
+            fprintf(out, "~");
+        fprintf(out, "%s ", Vocabulary::instance().getAtomName(*ait));
+    }
+    fprintf(out, "\n");     fflush(out);
     
     return A;
 }
@@ -151,7 +173,7 @@ bool DLP::all_C_in_RSWPL(set<int> X, set<int> C, FILE* out) {
             fprintf(out, "~");
         fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*p)));
     }
-    fprintf(out, "\n"); fflush(out);
+    fprintf(out, "}\n"); fflush(out);
     
     
     for(set<int>::const_iterator p = C.begin(); p != C.end(); p++) {
@@ -160,14 +182,16 @@ bool DLP::all_C_in_RSWPL(set<int> X, set<int> C, FILE* out) {
         set_union(X.begin(), X.end(), p_set.begin(), p_set.end(), inserter(XP, XP.begin()));
         set<int> rswpl = RSWPL(XP, out);
         
-        
-        fprintf(out, "p = %s, and rswpl(X \\cup {p}) = { ");
+        fprintf(out, "p = ");
+        if(*p < 0)
+            fprintf(out, "~");
+        fprintf(out, "%s, and rswpl(X \\cup {p}) = { ", Vocabulary::instance().getAtomName(abs(*p)));
         for(set<int>::const_iterator it = rswpl.begin(); it != rswpl.end(); it++) {
             if(*it < 0)
                 fprintf(out, "~");
             fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*it)));
         }
-        fprintf(out, "\n"); fflush(out);
+        fprintf(out, "}\n"); fflush(out);
         
         
         if(!includes(rswpl.begin(), rswpl.end(), C.begin(), C.end()))
@@ -245,12 +269,34 @@ set<int> DLP::RSSPL(set<int> X, FILE* out) {
     
     // for each C \in H
     for(set< set<int> >::const_iterator C= H.begin(); C != H.end(); C++) {
+        fprintf(out, "C : ");   // 因为H中的是rule的头部，必然只有正原子，所以这里不用判断cit的正负
+        for(set<int>::const_iterator cit = C->begin(); cit != C->end(); cit++)
+            fprintf(out, "%s ", Vocabulary::instance().getAtomName(*cit));
+        fprintf(out, "\n");     fflush(out);
+        
         if(C->size() == 1 || all_C_in_RSSPL(X, *C, out)) {
             set<int> A_C;       // A \cup C
             set_union(A.begin(), A.end(), C->begin(), C->end(), inserter(A_C, A_C.begin()));
             A = A_C;
         }
+        
+        fprintf(out, "A : ");
+        for(set<int>::const_iterator ait = A.begin(); ait != A.end(); ait++) {
+            if(*ait < 0)
+                fprintf(out, "~");
+            fprintf(out, "%s ", Vocabulary::instance().getAtomName(*ait));
+        }
+        fprintf(out, "\n");     fflush(out);
     }
+    
+    
+    fprintf(out, "Return A : ");
+    for(set<int>::const_iterator ait = A.begin(); ait != A.end(); ait++) {
+        if(*ait < 0)
+            fprintf(out, "~");
+        fprintf(out, "%s ", Vocabulary::instance().getAtomName(*ait));
+    }
+    fprintf(out, "\n");     fflush(out);
     
     return A;
 }
@@ -268,7 +314,7 @@ bool DLP::all_C_in_RSSPL(set<int> X, set<int> C, FILE* out) {
             fprintf(out, "~");
         fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*p)));
     }
-    fprintf(out, "\n"); fflush(out);
+    fprintf(out, "}\n"); fflush(out);
     
     
     for(set<int>::const_iterator p = C.begin(); p != C.end(); p++) {
@@ -278,13 +324,16 @@ bool DLP::all_C_in_RSSPL(set<int> X, set<int> C, FILE* out) {
         set<int> rsspl = RSSPL(XP, out);
         
         
-        fprintf(out, "p = %s, and rsspl(X \\cup {p}) = { ");
+        fprintf(out, "p = ");
+        if(*p < 0)
+            fprintf(out, "~");
+        fprintf(out, "%s, and rsspl(X \\cup {p}) = { ", Vocabulary::instance().getAtomName(abs(*p)));
         for(set<int>::const_iterator it = rsspl.begin(); it != rsspl.end(); it++) {
             if(*it < 0)
                 fprintf(out, "~");
             fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*it)));
         }
-        fprintf(out, "\n"); fflush(out);
+        fprintf(out, "}\n"); fflush(out);
         
         
         if(!includes(rsspl.begin(), rsspl.end(), C.begin(), C.end()))
