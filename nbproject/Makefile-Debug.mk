@@ -36,10 +36,13 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/sources/Consequence.o \
+	${OBJECTDIR}/sources/DLP.o \
 	${OBJECTDIR}/sources/DependenceGraph.o \
-	${OBJECTDIR}/sources/GRS.o \
+	${OBJECTDIR}/sources/GRSDLP.o \
+	${OBJECTDIR}/sources/GRSNLP.o \
 	${OBJECTDIR}/sources/Loop.o \
 	${OBJECTDIR}/sources/MaxU.o \
+	${OBJECTDIR}/sources/NLP.o \
 	${OBJECTDIR}/sources/Rule.o \
 	${OBJECTDIR}/sources/Utils.o \
 	${OBJECTDIR}/sources/Vocabulary.o \
@@ -78,15 +81,25 @@ ${OBJECTDIR}/sources/Consequence.o: sources/Consequence.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iheadfile -MMD -MP -MF $@.d -o ${OBJECTDIR}/sources/Consequence.o sources/Consequence.cpp
 
+${OBJECTDIR}/sources/DLP.o: sources/DLP.cpp 
+	${MKDIR} -p ${OBJECTDIR}/sources
+	${RM} $@.d
+	$(COMPILE.cc) -g -Iheadfile -MMD -MP -MF $@.d -o ${OBJECTDIR}/sources/DLP.o sources/DLP.cpp
+
 ${OBJECTDIR}/sources/DependenceGraph.o: sources/DependenceGraph.cpp 
 	${MKDIR} -p ${OBJECTDIR}/sources
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iheadfile -MMD -MP -MF $@.d -o ${OBJECTDIR}/sources/DependenceGraph.o sources/DependenceGraph.cpp
 
-${OBJECTDIR}/sources/GRS.o: sources/GRS.cpp 
+${OBJECTDIR}/sources/GRSDLP.o: sources/GRSDLP.cpp 
 	${MKDIR} -p ${OBJECTDIR}/sources
 	${RM} $@.d
-	$(COMPILE.cc) -g -Iheadfile -MMD -MP -MF $@.d -o ${OBJECTDIR}/sources/GRS.o sources/GRS.cpp
+	$(COMPILE.cc) -g -Iheadfile -MMD -MP -MF $@.d -o ${OBJECTDIR}/sources/GRSDLP.o sources/GRSDLP.cpp
+
+${OBJECTDIR}/sources/GRSNLP.o: sources/GRSNLP.cpp 
+	${MKDIR} -p ${OBJECTDIR}/sources
+	${RM} $@.d
+	$(COMPILE.cc) -g -Iheadfile -MMD -MP -MF $@.d -o ${OBJECTDIR}/sources/GRSNLP.o sources/GRSNLP.cpp
 
 ${OBJECTDIR}/sources/Loop.o: sources/Loop.cpp 
 	${MKDIR} -p ${OBJECTDIR}/sources
@@ -97,6 +110,11 @@ ${OBJECTDIR}/sources/MaxU.o: sources/MaxU.cpp
 	${MKDIR} -p ${OBJECTDIR}/sources
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iheadfile -MMD -MP -MF $@.d -o ${OBJECTDIR}/sources/MaxU.o sources/MaxU.cpp
+
+${OBJECTDIR}/sources/NLP.o: sources/NLP.cpp 
+	${MKDIR} -p ${OBJECTDIR}/sources
+	${RM} $@.d
+	$(COMPILE.cc) -g -Iheadfile -MMD -MP -MF $@.d -o ${OBJECTDIR}/sources/NLP.o sources/NLP.cpp
 
 ${OBJECTDIR}/sources/Rule.o: sources/Rule.cpp 
 	${MKDIR} -p ${OBJECTDIR}/sources

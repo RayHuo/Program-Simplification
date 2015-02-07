@@ -5,10 +5,13 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>headfile/Consequence.h</itemPath>
+      <itemPath>headfile/DLP.h</itemPath>
       <itemPath>headfile/DependenceGraph.h</itemPath>
-      <itemPath>headfile/GRS.h</itemPath>
+      <itemPath>headfile/GRSDLP.h</itemPath>
+      <itemPath>headfile/GRSNLP.h</itemPath>
       <itemPath>headfile/Loop.h</itemPath>
       <itemPath>headfile/MaxU.h</itemPath>
+      <itemPath>headfile/NLP.h</itemPath>
       <itemPath>headfile/Rule.h</itemPath>
       <itemPath>headfile/Utils.h</itemPath>
       <itemPath>headfile/Vocabulary.h</itemPath>
@@ -57,13 +60,24 @@
           <itemPath>IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.8-79-6.cnf.dl.lparse</itemPath>
           <itemPath>IO/inputs/RandomQuantifiedBooleanFormulas/Ql2k3alpha6.00rho0.8-79-7.cnf.dl.lparse</itemPath>
         </logicalFolder>
-        <itemPath>IO/inputs/grs.in</itemPath>
-        <itemPath>IO/inputs/sample1.in</itemPath>
-        <itemPath>IO/inputs/test.in</itemPath>
+        <logicalFolder name="samples" displayName="samples" projectFiles="true">
+          <itemPath>IO/inputs/samples/grs.in</itemPath>
+          <itemPath>IO/inputs/samples/sample1.in</itemPath>
+          <itemPath>IO/inputs/samples/sample_dlp1.in</itemPath>
+          <itemPath>IO/inputs/samples/sample_dlp2.in</itemPath>
+          <itemPath>IO/inputs/samples/test.in</itemPath>
+        </logicalFolder>
       </logicalFolder>
       <logicalFolder name="outputs" displayName="outputs" projectFiles="true">
-        <itemPath>IO/outputs/grs.out</itemPath>
-        <itemPath>IO/outputs/sample1.out</itemPath>
+        <logicalFolder name="samples" displayName="samples" projectFiles="true">
+          <itemPath>IO/outputs/samples/grs.out</itemPath>
+          <itemPath>IO/outputs/samples/sample1.out</itemPath>
+          <itemPath>IO/outputs/samples/sample_dlp1.out</itemPath>
+          <itemPath>IO/outputs/samples/sample_dlp2.out</itemPath>
+          <itemPath>IO/outputs/samples/sample_dlp3.out</itemPath>
+          <itemPath>IO/outputs/samples/sample_dlp4.out</itemPath>
+          <itemPath>IO/outputs/samples/sample_dlp5.out</itemPath>
+        </logicalFolder>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="f2" displayName="parser" projectFiles="true">
@@ -80,10 +94,13 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>sources/Consequence.cpp</itemPath>
+      <itemPath>sources/DLP.cpp</itemPath>
       <itemPath>sources/DependenceGraph.cpp</itemPath>
-      <itemPath>sources/GRS.cpp</itemPath>
+      <itemPath>sources/GRSDLP.cpp</itemPath>
+      <itemPath>sources/GRSNLP.cpp</itemPath>
       <itemPath>sources/Loop.cpp</itemPath>
       <itemPath>sources/MaxU.cpp</itemPath>
+      <itemPath>sources/NLP.cpp</itemPath>
       <itemPath>sources/Rule.cpp</itemPath>
       <itemPath>sources/Utils.cpp</itemPath>
       <itemPath>sources/Vocabulary.cpp</itemPath>
@@ -228,15 +245,29 @@
             tool="3"
             flavor2="0">
       </item>
-      <item path="IO/inputs/grs.in" ex="false" tool="3" flavor2="0">
+      <item path="IO/inputs/samples/grs.in" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="IO/inputs/sample1.in" ex="false" tool="3" flavor2="0">
+      <item path="IO/inputs/samples/sample1.in" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="IO/inputs/test.in" ex="false" tool="3" flavor2="0">
+      <item path="IO/inputs/samples/sample_dlp1.in" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="IO/outputs/grs.out" ex="false" tool="3" flavor2="0">
+      <item path="IO/inputs/samples/sample_dlp2.in" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="IO/outputs/sample1.out" ex="false" tool="3" flavor2="0">
+      <item path="IO/inputs/samples/test.in" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/outputs/samples/grs.out" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/outputs/samples/sample1.out" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/outputs/samples/sample_dlp1.out" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/outputs/samples/sample_dlp2.out" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/outputs/samples/sample_dlp3.out" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/outputs/samples/sample_dlp4.out" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/outputs/samples/sample_dlp5.out" ex="false" tool="3" flavor2="0">
       </item>
       <folder path="SourceFiles">
         <ccTool>
@@ -247,13 +278,19 @@
       </folder>
       <item path="headfile/Consequence.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="headfile/DLP.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="headfile/DependenceGraph.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="headfile/GRS.h" ex="false" tool="3" flavor2="0">
+      <item path="headfile/GRSDLP.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headfile/GRSNLP.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="headfile/Loop.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="headfile/MaxU.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headfile/NLP.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="headfile/Rule.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -273,13 +310,19 @@
       </item>
       <item path="sources/Consequence.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="sources/DLP.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="sources/DependenceGraph.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="sources/GRS.cpp" ex="false" tool="1" flavor2="0">
+      <item path="sources/GRSDLP.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sources/GRSNLP.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="sources/Loop.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="sources/MaxU.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sources/NLP.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="sources/Rule.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -426,25 +469,45 @@
             tool="3"
             flavor2="0">
       </item>
-      <item path="IO/inputs/grs.in" ex="false" tool="3" flavor2="0">
+      <item path="IO/inputs/samples/grs.in" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="IO/inputs/sample1.in" ex="false" tool="3" flavor2="0">
+      <item path="IO/inputs/samples/sample1.in" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="IO/inputs/test.in" ex="false" tool="3" flavor2="0">
+      <item path="IO/inputs/samples/sample_dlp1.in" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="IO/outputs/grs.out" ex="false" tool="3" flavor2="0">
+      <item path="IO/inputs/samples/sample_dlp2.in" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="IO/outputs/sample1.out" ex="false" tool="3" flavor2="0">
+      <item path="IO/inputs/samples/test.in" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/outputs/samples/grs.out" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/outputs/samples/sample1.out" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/outputs/samples/sample_dlp1.out" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/outputs/samples/sample_dlp2.out" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/outputs/samples/sample_dlp3.out" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/outputs/samples/sample_dlp4.out" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IO/outputs/samples/sample_dlp5.out" ex="false" tool="3" flavor2="0">
       </item>
       <item path="headfile/Consequence.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="headfile/DLP.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="headfile/DependenceGraph.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="headfile/GRS.h" ex="false" tool="3" flavor2="0">
+      <item path="headfile/GRSDLP.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headfile/GRSNLP.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="headfile/Loop.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="headfile/MaxU.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headfile/NLP.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="headfile/Rule.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -464,13 +527,19 @@
       </item>
       <item path="sources/Consequence.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="sources/DLP.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="sources/DependenceGraph.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="sources/GRS.cpp" ex="false" tool="1" flavor2="0">
+      <item path="sources/GRSDLP.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sources/GRSNLP.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="sources/Loop.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="sources/MaxU.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sources/NLP.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="sources/Rule.cpp" ex="false" tool="1" flavor2="0">
       </item>
