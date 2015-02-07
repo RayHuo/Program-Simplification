@@ -1,0 +1,17 @@
+Calculating the Greatest Reliable Set :
+Vocabulary atom list size = 247
+
+The lfp(W_P(L)) cost time : 0.800
+
+Final Consequence : start(0), arc(0, 3), arc(0, 5), arc(0, 10), arc(0, 12), arc(1, 2), arc(1, 3), arc(1, 10), arc(1, 13), arc(2, 1), arc(2, 4), arc(2, 6), arc(2, 8), arc(2, 9), arc(2, 10), arc(2, 13), arc(2, 14), arc(3, 0), arc(3, 1), arc(3, 5), arc(3, 10), arc(3, 13), arc(4, 2), arc(4, 7), arc(4, 8), arc(4, 9), arc(4, 14), arc(5, 0), arc(5, 3), arc(5, 6), arc(5, 12), arc(5, 13), arc(6, 2), arc(6, 5), arc(6, 8), arc(6, 13), arc(7, 4), arc(7, 8), arc(7, 11), arc(7, 14), arc(8, 2), arc(8, 4), arc(8, 6), arc(8, 7), arc(8, 9), arc(9, 2), arc(9, 4), arc(9, 8), arc(10, 0), arc(10, 1), arc(10, 2), arc(10, 3), arc(10, 12), arc(10, 14), arc(11, 7), arc(11, 12), arc(11, 14), arc(12, 0), arc(12, 5), arc(12, 10), arc(12, 11), arc(12, 14), arc(13, 1), arc(13, 2), arc(13, 3), arc(13, 5), arc(13, 6), arc(14, 2), arc(14, 4), arc(14, 7), arc(14, 10), arc(14, 11), arc(14, 12), vertex(0), vertex(1), vertex(2), vertex(3), vertex(4), vertex(5), vertex(6), vertex(7), vertex(8), vertex(9), vertex(10), vertex(11), vertex(12), vertex(13), vertex(14), reached(3), reached(5), reached(10), reached(12), reached(1), reached(13), reached(6), reached(2), reached(14), reached(11), reached(4), reached(8), reached(9), reached(7)
+Final Consequence size = 102
+
+GWRS cost time : 0.080
+
+The GWRS of DLP is : start(0) arc(0, 3) arc(0, 5) arc(0, 10) arc(0, 12) arc(1, 2) arc(1, 3) arc(1, 10) arc(1, 13) arc(2, 1) arc(2, 4) arc(2, 6) arc(2, 8) arc(2, 9) arc(2, 10) arc(2, 13) arc(2, 14) arc(3, 0) arc(3, 1) arc(3, 5) arc(3, 10) arc(3, 13) arc(4, 2) arc(4, 7) arc(4, 8) arc(4, 9) arc(4, 14) arc(5, 0) arc(5, 3) arc(5, 6) arc(5, 12) arc(5, 13) arc(6, 2) arc(6, 5) arc(6, 8) arc(6, 13) arc(7, 4) arc(7, 8) arc(7, 11) arc(7, 14) arc(8, 2) arc(8, 4) arc(8, 6) arc(8, 7) arc(8, 9) arc(9, 2) arc(9, 4) arc(9, 8) arc(10, 0) arc(10, 1) arc(10, 2) arc(10, 3) arc(10, 12) arc(10, 14) arc(11, 7) arc(11, 12) arc(11, 14) arc(12, 0) arc(12, 5) arc(12, 10) arc(12, 11) arc(12, 14) arc(13, 1) arc(13, 2) arc(13, 3) arc(13, 5) arc(13, 6) arc(14, 2) arc(14, 4) arc(14, 7) arc(14, 10) arc(14, 11) arc(14, 12) vertex(0) vertex(1) vertex(2) vertex(3) vertex(4) vertex(5) vertex(6) vertex(7) vertex(8) vertex(9) vertex(10) vertex(11) vertex(12) vertex(13) vertex(14) 
+The GWRS of DLP size is 88
+
+GSRS cost time : 0.030
+
+The GSRS of DLP is : start(0) arc(0, 3) arc(0, 5) arc(0, 10) arc(0, 12) arc(1, 2) arc(1, 3) arc(1, 10) arc(1, 13) arc(2, 1) arc(2, 4) arc(2, 6) arc(2, 8) arc(2, 9) arc(2, 10) arc(2, 13) arc(2, 14) arc(3, 0) arc(3, 1) arc(3, 5) arc(3, 10) arc(3, 13) arc(4, 2) arc(4, 7) arc(4, 8) arc(4, 9) arc(4, 14) arc(5, 0) arc(5, 3) arc(5, 6) arc(5, 12) arc(5, 13) arc(6, 2) arc(6, 5) arc(6, 8) arc(6, 13) arc(7, 4) arc(7, 8) arc(7, 11) arc(7, 14) arc(8, 2) arc(8, 4) arc(8, 6) arc(8, 7) arc(8, 9) arc(9, 2) arc(9, 4) arc(9, 8) arc(10, 0) arc(10, 1) arc(10, 2) arc(10, 3) arc(10, 12) arc(10, 14) arc(11, 7) arc(11, 12) arc(11, 14) arc(12, 0) arc(12, 5) arc(12, 10) arc(12, 11) arc(12, 14) arc(13, 1) arc(13, 2) arc(13, 3) arc(13, 5) arc(13, 6) arc(14, 2) arc(14, 4) arc(14, 7) arc(14, 10) arc(14, 11) arc(14, 12) vertex(0) vertex(1) vertex(2) vertex(3) vertex(4) vertex(5) vertex(6) vertex(7) vertex(8) vertex(9) vertex(10) vertex(11) vertex(12) vertex(13) vertex(14) 
+The GSRS of DLP size is 88

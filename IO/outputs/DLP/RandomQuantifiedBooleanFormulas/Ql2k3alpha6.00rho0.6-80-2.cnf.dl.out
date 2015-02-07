@@ -1,0 +1,17 @@
+Calculating the Greatest Reliable Set :
+Vocabulary atom list size = 161
+
+The lfp(W_P(L)) cost time : 0.090
+
+Final Consequence : true_v1, false_v1, unsat, true_v2, false_v2, true_v3, false_v3, true_v4, false_v4, true_v5, false_v5, true_v6, false_v6, true_v7, false_v7, true_v8, false_v8, true_v9, false_v9, true_v10, false_v10, true_v11, false_v11, true_v12, false_v12, true_v13, false_v13, true_v14, false_v14, true_v15, false_v15, true_v16, false_v16, true_v17, false_v17, true_v18, false_v18, true_v19, false_v19, true_v20, false_v20, true_v21, false_v21, true_v22, false_v22, true_v23, false_v23, true_v24, false_v24, true_v25, false_v25, true_v26, false_v26, true_v27, false_v27, true_v28, false_v28, true_v29, false_v29, true_v30, false_v30, true_v31, false_v31, true_v32, false_v32, true_v33, false_v33, true_v34, false_v34, true_v35, false_v35, true_v36, false_v36, true_v37, false_v37, true_v38, false_v38, true_v39, false_v39, true_v40, false_v40, true_v41, false_v41, true_v42, false_v42, true_v43, false_v43, true_v44, false_v44, true_v45, false_v45, true_v46, false_v46, true_v47, false_v47, true_v48, false_v48, true_v49, false_v49, true_v50, false_v50
+Final Consequence size = 101
+
+GWRS cost time : 0.040
+
+The GWRS of DLP is : true_v1 false_v1 true_v2 false_v2 true_v3 false_v3 true_v4 false_v4 true_v5 false_v5 true_v6 false_v6 true_v7 false_v7 true_v8 false_v8 true_v9 false_v9 true_v10 false_v10 true_v11 false_v11 true_v12 false_v12 true_v13 false_v13 true_v14 false_v14 true_v15 false_v15 true_v16 false_v16 true_v17 false_v17 true_v18 false_v18 true_v19 false_v19 true_v20 false_v20 true_v21 false_v21 true_v22 false_v22 true_v23 false_v23 true_v24 false_v24 true_v25 false_v25 true_v26 false_v26 true_v27 false_v27 true_v28 false_v28 true_v29 false_v29 true_v30 false_v30 true_v31 false_v31 true_v32 false_v32 true_v33 false_v33 true_v34 false_v34 true_v35 false_v35 true_v36 false_v36 true_v37 false_v37 true_v38 false_v38 true_v39 false_v39 true_v40 false_v40 true_v41 false_v41 true_v42 false_v42 true_v43 false_v43 true_v44 false_v44 true_v45 false_v45 true_v46 false_v46 true_v47 false_v47 true_v48 false_v48 true_v49 false_v49 true_v50 false_v50 
+The GWRS of DLP size is 100
+
+GSRS cost time : 0.000
+
+The GSRS of DLP is : 
+The GSRS of DLP size is 0

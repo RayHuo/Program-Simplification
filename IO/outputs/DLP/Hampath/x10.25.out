@@ -1,0 +1,17 @@
+Calculating the Greatest Reliable Set :
+Vocabulary atom list size = 135
+
+The lfp(W_P(L)) cost time : 0.210
+
+Final Consequence : start(0), arc(0, 2), arc(0, 4), arc(0, 9), arc(1, 2), arc(1, 6), arc(1, 8), arc(2, 0), arc(2, 1), arc(2, 3), arc(2, 6), arc(2, 8), arc(2, 9), arc(3, 2), arc(3, 5), arc(3, 7), arc(3, 8), arc(3, 9), arc(4, 0), arc(4, 5), arc(4, 9), arc(5, 3), arc(5, 4), arc(5, 7), arc(5, 9), arc(6, 1), arc(6, 2), arc(7, 3), arc(7, 5), arc(7, 8), arc(8, 1), arc(8, 2), arc(8, 3), arc(8, 7), arc(9, 0), arc(9, 2), arc(9, 3), arc(9, 4), arc(9, 5), vertex(0), vertex(1), vertex(2), vertex(3), vertex(4), vertex(5), vertex(6), vertex(7), vertex(8), vertex(9), reached(2), reached(4), reached(9), reached(1), reached(3), reached(6), reached(8), reached(5), reached(7)
+Final Consequence size = 58
+
+GWRS cost time : 0.020
+
+The GWRS of DLP is : start(0) arc(0, 2) arc(0, 4) arc(0, 9) arc(1, 2) arc(1, 6) arc(1, 8) arc(2, 0) arc(2, 1) arc(2, 3) arc(2, 6) arc(2, 8) arc(2, 9) arc(3, 2) arc(3, 5) arc(3, 7) arc(3, 8) arc(3, 9) arc(4, 0) arc(4, 5) arc(4, 9) arc(5, 3) arc(5, 4) arc(5, 7) arc(5, 9) arc(6, 1) arc(6, 2) arc(7, 3) arc(7, 5) arc(7, 8) arc(8, 1) arc(8, 2) arc(8, 3) arc(8, 7) arc(9, 0) arc(9, 2) arc(9, 3) arc(9, 4) arc(9, 5) vertex(0) vertex(1) vertex(2) vertex(3) vertex(4) vertex(5) vertex(6) vertex(7) vertex(8) vertex(9) 
+The GWRS of DLP size is 49
+
+GSRS cost time : 0.010
+
+The GSRS of DLP is : start(0) arc(0, 2) arc(0, 4) arc(0, 9) arc(1, 2) arc(1, 6) arc(1, 8) arc(2, 0) arc(2, 1) arc(2, 3) arc(2, 6) arc(2, 8) arc(2, 9) arc(3, 2) arc(3, 5) arc(3, 7) arc(3, 8) arc(3, 9) arc(4, 0) arc(4, 5) arc(4, 9) arc(5, 3) arc(5, 4) arc(5, 7) arc(5, 9) arc(6, 1) arc(6, 2) arc(7, 3) arc(7, 5) arc(7, 8) arc(8, 1) arc(8, 2) arc(8, 3) arc(8, 7) arc(9, 0) arc(9, 2) arc(9, 3) arc(9, 4) arc(9, 5) vertex(0) vertex(1) vertex(2) vertex(3) vertex(4) vertex(5) vertex(6) vertex(7) vertex(8) vertex(9) 
+The GSRS of DLP size is 49
