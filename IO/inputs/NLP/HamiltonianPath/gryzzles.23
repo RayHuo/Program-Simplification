@@ -1,0 +1,3870 @@
+reached(x12y10) :- inPath(x13y10,x12y10).
+reached(x13y10) :- inPath(x12y10,x13y10).
+reached(x11y10) :- inPath(x12y10,x11y10).
+reached(x12y10) :- inPath(x11y10,x12y10).
+reached(x8y10) :- inPath(x9y10,x8y10).
+reached(x9y10) :- inPath(x8y10,x9y10).
+reached(x5y10) :- inPath(x6y10,x5y10).
+reached(x6y10) :- inPath(x5y10,x6y10).
+reached(x4y10) :- inPath(x5y10,x4y10).
+reached(x5y10) :- inPath(x4y10,x5y10).
+reached(x3y10) :- inPath(x4y10,x3y10).
+reached(x4y10) :- inPath(x3y10,x4y10).
+reached(x2y10) :- inPath(x3y10,x2y10).
+reached(x3y10) :- inPath(x2y10,x3y10).
+reached(x1y10) :- inPath(x2y10,x1y10).
+reached(x2y10) :- inPath(x1y10,x2y10).
+reached(x13y9) :- inPath(x13y10,x13y9).
+reached(x13y10) :- inPath(x13y9,x13y10).
+reached(x13y9) :- inPath(x14y9,x13y9).
+reached(x14y9) :- inPath(x13y9,x14y9).
+reached(x11y9) :- inPath(x11y10,x11y9).
+reached(x11y10) :- inPath(x11y9,x11y10).
+reached(x10y9) :- inPath(x11y9,x10y9).
+reached(x11y9) :- inPath(x10y9,x11y9).
+reached(x9y9) :- inPath(x9y10,x9y9).
+reached(x9y10) :- inPath(x9y9,x9y10).
+reached(x9y9) :- inPath(x10y9,x9y9).
+reached(x10y9) :- inPath(x9y9,x10y9).
+reached(x8y9) :- inPath(x8y10,x8y9).
+reached(x8y10) :- inPath(x8y9,x8y10).
+reached(x8y9) :- inPath(x9y9,x8y9).
+reached(x9y9) :- inPath(x8y9,x9y9).
+reached(x7y9) :- inPath(x8y9,x7y9).
+reached(x8y9) :- inPath(x7y9,x8y9).
+reached(x6y9) :- inPath(x6y10,x6y9).
+reached(x6y10) :- inPath(x6y9,x6y10).
+reached(x6y9) :- inPath(x7y9,x6y9).
+reached(x7y9) :- inPath(x6y9,x7y9).
+reached(x5y9) :- inPath(x5y10,x5y9).
+reached(x5y10) :- inPath(x5y9,x5y10).
+reached(x5y9) :- inPath(x6y9,x5y9).
+reached(x6y9) :- inPath(x5y9,x6y9).
+reached(x4y9) :- inPath(x4y10,x4y9).
+reached(x4y10) :- inPath(x4y9,x4y10).
+reached(x4y9) :- inPath(x5y9,x4y9).
+reached(x5y9) :- inPath(x4y9,x5y9).
+reached(x3y9) :- inPath(x3y10,x3y9).
+reached(x3y10) :- inPath(x3y9,x3y10).
+reached(x3y9) :- inPath(x4y9,x3y9).
+reached(x4y9) :- inPath(x3y9,x4y9).
+reached(x2y9) :- inPath(x2y10,x2y9).
+reached(x2y10) :- inPath(x2y9,x2y10).
+reached(x2y9) :- inPath(x3y9,x2y9).
+reached(x3y9) :- inPath(x2y9,x3y9).
+reached(x1y9) :- inPath(x1y10,x1y9).
+reached(x1y10) :- inPath(x1y9,x1y10).
+reached(x1y9) :- inPath(x2y9,x1y9).
+reached(x2y9) :- inPath(x1y9,x2y9).
+reached(x15y8) :- inPath(x16y8,x15y8).
+reached(x16y8) :- inPath(x15y8,x16y8).
+reached(x14y8) :- inPath(x14y9,x14y8).
+reached(x14y9) :- inPath(x14y8,x14y9).
+reached(x14y8) :- inPath(x15y8,x14y8).
+reached(x15y8) :- inPath(x14y8,x15y8).
+reached(x13y8) :- inPath(x13y9,x13y8).
+reached(x13y9) :- inPath(x13y8,x13y9).
+reached(x13y8) :- inPath(x14y8,x13y8).
+reached(x14y8) :- inPath(x13y8,x14y8).
+reached(x12y8) :- inPath(x13y8,x12y8).
+reached(x13y8) :- inPath(x12y8,x13y8).
+reached(x11y8) :- inPath(x11y9,x11y8).
+reached(x11y9) :- inPath(x11y8,x11y9).
+reached(x11y8) :- inPath(x12y8,x11y8).
+reached(x12y8) :- inPath(x11y8,x12y8).
+reached(x10y8) :- inPath(x10y9,x10y8).
+reached(x10y9) :- inPath(x10y8,x10y9).
+reached(x10y8) :- inPath(x11y8,x10y8).
+reached(x11y8) :- inPath(x10y8,x11y8).
+reached(x9y8) :- inPath(x9y9,x9y8).
+reached(x9y9) :- inPath(x9y8,x9y9).
+reached(x9y8) :- inPath(x10y8,x9y8).
+reached(x10y8) :- inPath(x9y8,x10y8).
+reached(x7y8) :- inPath(x7y9,x7y8).
+reached(x7y9) :- inPath(x7y8,x7y9).
+reached(x6y8) :- inPath(x6y9,x6y8).
+reached(x6y9) :- inPath(x6y8,x6y9).
+reached(x6y8) :- inPath(x7y8,x6y8).
+reached(x7y8) :- inPath(x6y8,x7y8).
+reached(x5y8) :- inPath(x5y9,x5y8).
+reached(x5y9) :- inPath(x5y8,x5y9).
+reached(x5y8) :- inPath(x6y8,x5y8).
+reached(x6y8) :- inPath(x5y8,x6y8).
+reached(x4y8) :- inPath(x4y9,x4y8).
+reached(x4y9) :- inPath(x4y8,x4y9).
+reached(x4y8) :- inPath(x5y8,x4y8).
+reached(x5y8) :- inPath(x4y8,x5y8).
+reached(x3y8) :- inPath(x3y9,x3y8).
+reached(x3y9) :- inPath(x3y8,x3y9).
+reached(x3y8) :- inPath(x4y8,x3y8).
+reached(x4y8) :- inPath(x3y8,x4y8).
+reached(x2y8) :- inPath(x2y9,x2y8).
+reached(x2y9) :- inPath(x2y8,x2y9).
+reached(x2y8) :- inPath(x3y8,x2y8).
+reached(x3y8) :- inPath(x2y8,x3y8).
+reached(x1y8) :- inPath(x1y9,x1y8).
+reached(x1y9) :- inPath(x1y8,x1y9).
+reached(x1y8) :- inPath(x2y8,x1y8).
+reached(x2y8) :- inPath(x1y8,x2y8).
+reached(x16y7) :- inPath(x16y8,x16y7).
+reached(x16y8) :- inPath(x16y7,x16y8).
+reached(x15y7) :- inPath(x15y8,x15y7).
+reached(x15y8) :- inPath(x15y7,x15y8).
+reached(x15y7) :- inPath(x16y7,x15y7).
+reached(x16y7) :- inPath(x15y7,x16y7).
+reached(x14y7) :- inPath(x14y8,x14y7).
+reached(x14y8) :- inPath(x14y7,x14y8).
+reached(x14y7) :- inPath(x15y7,x14y7).
+reached(x15y7) :- inPath(x14y7,x15y7).
+reached(x13y7) :- inPath(x13y8,x13y7).
+reached(x13y8) :- inPath(x13y7,x13y8).
+reached(x13y7) :- inPath(x14y7,x13y7).
+reached(x14y7) :- inPath(x13y7,x14y7).
+reached(x12y7) :- inPath(x12y8,x12y7).
+reached(x12y8) :- inPath(x12y7,x12y8).
+reached(x12y7) :- inPath(x13y7,x12y7).
+reached(x13y7) :- inPath(x12y7,x13y7).
+reached(x11y7) :- inPath(x11y8,x11y7).
+reached(x11y8) :- inPath(x11y7,x11y8).
+reached(x11y7) :- inPath(x12y7,x11y7).
+reached(x12y7) :- inPath(x11y7,x12y7).
+reached(x10y7) :- inPath(x10y8,x10y7).
+reached(x10y8) :- inPath(x10y7,x10y8).
+reached(x10y7) :- inPath(x11y7,x10y7).
+reached(x11y7) :- inPath(x10y7,x11y7).
+reached(x9y7) :- inPath(x9y8,x9y7).
+reached(x9y8) :- inPath(x9y7,x9y8).
+reached(x9y7) :- inPath(x10y7,x9y7).
+reached(x10y7) :- inPath(x9y7,x10y7).
+reached(x7y7) :- inPath(x7y8,x7y7).
+reached(x7y8) :- inPath(x7y7,x7y8).
+reached(x6y7) :- inPath(x6y8,x6y7).
+reached(x6y8) :- inPath(x6y7,x6y8).
+reached(x6y7) :- inPath(x7y7,x6y7).
+reached(x7y7) :- inPath(x6y7,x7y7).
+reached(x5y7) :- inPath(x5y8,x5y7).
+reached(x5y8) :- inPath(x5y7,x5y8).
+reached(x5y7) :- inPath(x6y7,x5y7).
+reached(x6y7) :- inPath(x5y7,x6y7).
+reached(x4y7) :- inPath(x4y8,x4y7).
+reached(x4y8) :- inPath(x4y7,x4y8).
+reached(x4y7) :- inPath(x5y7,x4y7).
+reached(x5y7) :- inPath(x4y7,x5y7).
+reached(x3y7) :- inPath(x3y8,x3y7).
+reached(x3y8) :- inPath(x3y7,x3y8).
+reached(x3y7) :- inPath(x4y7,x3y7).
+reached(x4y7) :- inPath(x3y7,x4y7).
+reached(x2y7) :- inPath(x2y8,x2y7).
+reached(x2y8) :- inPath(x2y7,x2y8).
+reached(x2y7) :- inPath(x3y7,x2y7).
+reached(x3y7) :- inPath(x2y7,x3y7).
+reached(x15y6) :- inPath(x15y7,x15y6).
+reached(x15y7) :- inPath(x15y6,x15y7).
+reached(x14y6) :- inPath(x14y7,x14y6).
+reached(x14y7) :- inPath(x14y6,x14y7).
+reached(x14y6) :- inPath(x15y6,x14y6).
+reached(x15y6) :- inPath(x14y6,x15y6).
+reached(x13y6) :- inPath(x13y7,x13y6).
+reached(x13y7) :- inPath(x13y6,x13y7).
+reached(x13y6) :- inPath(x14y6,x13y6).
+reached(x14y6) :- inPath(x13y6,x14y6).
+reached(x12y6) :- inPath(x12y7,x12y6).
+reached(x12y7) :- inPath(x12y6,x12y7).
+reached(x12y6) :- inPath(x13y6,x12y6).
+reached(x13y6) :- inPath(x12y6,x13y6).
+reached(x11y6) :- inPath(x11y7,x11y6).
+reached(x11y7) :- inPath(x11y6,x11y7).
+reached(x11y6) :- inPath(x12y6,x11y6).
+reached(x12y6) :- inPath(x11y6,x12y6).
+reached(x10y6) :- inPath(x10y7,x10y6).
+reached(x10y7) :- inPath(x10y6,x10y7).
+reached(x10y6) :- inPath(x11y6,x10y6).
+reached(x11y6) :- inPath(x10y6,x11y6).
+reached(x9y6) :- inPath(x9y7,x9y6).
+reached(x9y7) :- inPath(x9y6,x9y7).
+reached(x9y6) :- inPath(x10y6,x9y6).
+reached(x10y6) :- inPath(x9y6,x10y6).
+reached(x8y6) :- inPath(x9y6,x8y6).
+reached(x9y6) :- inPath(x8y6,x9y6).
+reached(x7y6) :- inPath(x7y7,x7y6).
+reached(x7y7) :- inPath(x7y6,x7y7).
+reached(x7y6) :- inPath(x8y6,x7y6).
+reached(x8y6) :- inPath(x7y6,x8y6).
+reached(x6y6) :- inPath(x6y7,x6y6).
+reached(x6y7) :- inPath(x6y6,x6y7).
+reached(x6y6) :- inPath(x7y6,x6y6).
+reached(x7y6) :- inPath(x6y6,x7y6).
+reached(x5y6) :- inPath(x5y7,x5y6).
+reached(x5y7) :- inPath(x5y6,x5y7).
+reached(x5y6) :- inPath(x6y6,x5y6).
+reached(x6y6) :- inPath(x5y6,x6y6).
+reached(x3y6) :- inPath(x3y7,x3y6).
+reached(x3y7) :- inPath(x3y6,x3y7).
+reached(x2y6) :- inPath(x2y7,x2y6).
+reached(x2y7) :- inPath(x2y6,x2y7).
+reached(x2y6) :- inPath(x3y6,x2y6).
+reached(x3y6) :- inPath(x2y6,x3y6).
+reached(x15y5) :- inPath(x15y6,x15y5).
+reached(x15y6) :- inPath(x15y5,x15y6).
+reached(x15y5) :- inPath(x16y5,x15y5).
+reached(x16y5) :- inPath(x15y5,x16y5).
+reached(x14y5) :- inPath(x14y6,x14y5).
+reached(x14y6) :- inPath(x14y5,x14y6).
+reached(x14y5) :- inPath(x15y5,x14y5).
+reached(x15y5) :- inPath(x14y5,x15y5).
+reached(x13y5) :- inPath(x13y6,x13y5).
+reached(x13y6) :- inPath(x13y5,x13y6).
+reached(x13y5) :- inPath(x14y5,x13y5).
+reached(x14y5) :- inPath(x13y5,x14y5).
+reached(x11y5) :- inPath(x11y6,x11y5).
+reached(x11y6) :- inPath(x11y5,x11y6).
+reached(x10y5) :- inPath(x10y6,x10y5).
+reached(x10y6) :- inPath(x10y5,x10y6).
+reached(x10y5) :- inPath(x11y5,x10y5).
+reached(x11y5) :- inPath(x10y5,x11y5).
+reached(x9y5) :- inPath(x9y6,x9y5).
+reached(x9y6) :- inPath(x9y5,x9y6).
+reached(x9y5) :- inPath(x10y5,x9y5).
+reached(x10y5) :- inPath(x9y5,x10y5).
+reached(x8y5) :- inPath(x8y6,x8y5).
+reached(x8y6) :- inPath(x8y5,x8y6).
+reached(x8y5) :- inPath(x9y5,x8y5).
+reached(x9y5) :- inPath(x8y5,x9y5).
+reached(x7y5) :- inPath(x7y6,x7y5).
+reached(x7y6) :- inPath(x7y5,x7y6).
+reached(x7y5) :- inPath(x8y5,x7y5).
+reached(x8y5) :- inPath(x7y5,x8y5).
+reached(x6y5) :- inPath(x6y6,x6y5).
+reached(x6y6) :- inPath(x6y5,x6y6).
+reached(x6y5) :- inPath(x7y5,x6y5).
+reached(x7y5) :- inPath(x6y5,x7y5).
+reached(x5y5) :- inPath(x5y6,x5y5).
+reached(x5y6) :- inPath(x5y5,x5y6).
+reached(x5y5) :- inPath(x6y5,x5y5).
+reached(x6y5) :- inPath(x5y5,x6y5).
+reached(x3y5) :- inPath(x3y6,x3y5).
+reached(x3y6) :- inPath(x3y5,x3y6).
+reached(x2y5) :- inPath(x2y6,x2y5).
+reached(x2y6) :- inPath(x2y5,x2y6).
+reached(x2y5) :- inPath(x3y5,x2y5).
+reached(x3y5) :- inPath(x2y5,x3y5).
+reached(x1y5) :- inPath(x2y5,x1y5).
+reached(x2y5) :- inPath(x1y5,x2y5).
+reached(x16y4) :- inPath(x16y5,x16y4).
+reached(x16y5) :- inPath(x16y4,x16y5).
+reached(x14y4) :- inPath(x14y5,x14y4).
+reached(x14y5) :- inPath(x14y4,x14y5).
+reached(x13y4) :- inPath(x13y5,x13y4).
+reached(x13y5) :- inPath(x13y4,x13y5).
+reached(x13y4) :- inPath(x14y4,x13y4).
+reached(x14y4) :- inPath(x13y4,x14y4).
+reached(x11y4) :- inPath(x11y5,x11y4).
+reached(x11y5) :- inPath(x11y4,x11y5).
+reached(x10y4) :- inPath(x10y5,x10y4).
+reached(x10y5) :- inPath(x10y4,x10y5).
+reached(x10y4) :- inPath(x11y4,x10y4).
+reached(x11y4) :- inPath(x10y4,x11y4).
+reached(x7y4) :- inPath(x7y5,x7y4).
+reached(x7y5) :- inPath(x7y4,x7y5).
+reached(x6y4) :- inPath(x6y5,x6y4).
+reached(x6y5) :- inPath(x6y4,x6y5).
+reached(x6y4) :- inPath(x7y4,x6y4).
+reached(x7y4) :- inPath(x6y4,x7y4).
+reached(x5y4) :- inPath(x5y5,x5y4).
+reached(x5y5) :- inPath(x5y4,x5y5).
+reached(x5y4) :- inPath(x6y4,x5y4).
+reached(x6y4) :- inPath(x5y4,x6y4).
+reached(x4y4) :- inPath(x5y4,x4y4).
+reached(x5y4) :- inPath(x4y4,x5y4).
+reached(x3y4) :- inPath(x3y5,x3y4).
+reached(x3y5) :- inPath(x3y4,x3y5).
+reached(x3y4) :- inPath(x4y4,x3y4).
+reached(x4y4) :- inPath(x3y4,x4y4).
+reached(x1y4) :- inPath(x1y5,x1y4).
+reached(x1y5) :- inPath(x1y4,x1y5).
+reached(x16y3) :- inPath(x16y4,x16y3).
+reached(x16y4) :- inPath(x16y3,x16y4).
+reached(x14y3) :- inPath(x14y4,x14y3).
+reached(x14y4) :- inPath(x14y3,x14y4).
+reached(x13y3) :- inPath(x13y4,x13y3).
+reached(x13y4) :- inPath(x13y3,x13y4).
+reached(x13y3) :- inPath(x14y3,x13y3).
+reached(x14y3) :- inPath(x13y3,x14y3).
+reached(x12y3) :- inPath(x13y3,x12y3).
+reached(x13y3) :- inPath(x12y3,x13y3).
+reached(x11y3) :- inPath(x11y4,x11y3).
+reached(x11y4) :- inPath(x11y3,x11y4).
+reached(x11y3) :- inPath(x12y3,x11y3).
+reached(x12y3) :- inPath(x11y3,x12y3).
+reached(x10y3) :- inPath(x10y4,x10y3).
+reached(x10y4) :- inPath(x10y3,x10y4).
+reached(x10y3) :- inPath(x11y3,x10y3).
+reached(x11y3) :- inPath(x10y3,x11y3).
+reached(x7y3) :- inPath(x7y4,x7y3).
+reached(x7y4) :- inPath(x7y3,x7y4).
+reached(x7y3) :- inPath(x8y3,x7y3).
+reached(x8y3) :- inPath(x7y3,x8y3).
+reached(x5y3) :- inPath(x5y4,x5y3).
+reached(x5y4) :- inPath(x5y3,x5y4).
+reached(x4y3) :- inPath(x4y4,x4y3).
+reached(x4y4) :- inPath(x4y3,x4y4).
+reached(x4y3) :- inPath(x5y3,x4y3).
+reached(x5y3) :- inPath(x4y3,x5y3).
+reached(x3y3) :- inPath(x3y4,x3y3).
+reached(x3y4) :- inPath(x3y3,x3y4).
+reached(x3y3) :- inPath(x4y3,x3y3).
+reached(x4y3) :- inPath(x3y3,x4y3).
+reached(x2y3) :- inPath(x3y3,x2y3).
+reached(x3y3) :- inPath(x2y3,x3y3).
+reached(x1y3) :- inPath(x1y4,x1y3).
+reached(x1y4) :- inPath(x1y3,x1y4).
+reached(x1y3) :- inPath(x2y3,x1y3).
+reached(x2y3) :- inPath(x1y3,x2y3).
+reached(x16y2) :- inPath(x16y3,x16y2).
+reached(x16y3) :- inPath(x16y2,x16y3).
+reached(x15y2) :- inPath(x16y2,x15y2).
+reached(x16y2) :- inPath(x15y2,x16y2).
+reached(x14y2) :- inPath(x14y3,x14y2).
+reached(x14y3) :- inPath(x14y2,x14y3).
+reached(x14y2) :- inPath(x15y2,x14y2).
+reached(x15y2) :- inPath(x14y2,x15y2).
+reached(x13y2) :- inPath(x13y3,x13y2).
+reached(x13y3) :- inPath(x13y2,x13y3).
+reached(x13y2) :- inPath(x14y2,x13y2).
+reached(x14y2) :- inPath(x13y2,x14y2).
+reached(x12y2) :- inPath(x12y3,x12y2).
+reached(x12y3) :- inPath(x12y2,x12y3).
+reached(x12y2) :- inPath(x13y2,x12y2).
+reached(x13y2) :- inPath(x12y2,x13y2).
+reached(x11y2) :- inPath(x11y3,x11y2).
+reached(x11y3) :- inPath(x11y2,x11y3).
+reached(x11y2) :- inPath(x12y2,x11y2).
+reached(x12y2) :- inPath(x11y2,x12y2).
+reached(x10y2) :- inPath(x10y3,x10y2).
+reached(x10y3) :- inPath(x10y2,x10y3).
+reached(x10y2) :- inPath(x11y2,x10y2).
+reached(x11y2) :- inPath(x10y2,x11y2).
+reached(x9y2) :- inPath(x10y2,x9y2).
+reached(x10y2) :- inPath(x9y2,x10y2).
+reached(x8y2) :- inPath(x8y3,x8y2).
+reached(x8y3) :- inPath(x8y2,x8y3).
+reached(x8y2) :- inPath(x9y2,x8y2).
+reached(x9y2) :- inPath(x8y2,x9y2).
+reached(x7y2) :- inPath(x7y3,x7y2).
+reached(x7y3) :- inPath(x7y2,x7y3).
+reached(x7y2) :- inPath(x8y2,x7y2).
+reached(x8y2) :- inPath(x7y2,x8y2).
+reached(x6y2) :- inPath(x7y2,x6y2).
+reached(x7y2) :- inPath(x6y2,x7y2).
+reached(x5y2) :- inPath(x5y3,x5y2).
+reached(x5y3) :- inPath(x5y2,x5y3).
+reached(x5y2) :- inPath(x6y2,x5y2).
+reached(x6y2) :- inPath(x5y2,x6y2).
+reached(x4y2) :- inPath(x4y3,x4y2).
+reached(x4y3) :- inPath(x4y2,x4y3).
+reached(x4y2) :- inPath(x5y2,x4y2).
+reached(x5y2) :- inPath(x4y2,x5y2).
+reached(x3y2) :- inPath(x3y3,x3y2).
+reached(x3y3) :- inPath(x3y2,x3y3).
+reached(x3y2) :- inPath(x4y2,x3y2).
+reached(x4y2) :- inPath(x3y2,x4y2).
+reached(x2y2) :- inPath(x2y3,x2y2).
+reached(x2y3) :- inPath(x2y2,x2y3).
+reached(x2y2) :- inPath(x3y2,x2y2).
+reached(x3y2) :- inPath(x2y2,x3y2).
+reached(x15y1) :- inPath(x15y2,x15y1).
+reached(x15y2) :- inPath(x15y1,x15y2).
+reached(x14y1) :- inPath(x14y2,x14y1).
+reached(x14y2) :- inPath(x14y1,x14y2).
+reached(x14y1) :- inPath(x15y1,x14y1).
+reached(x15y1) :- inPath(x14y1,x15y1).
+reached(x13y1) :- inPath(x13y2,x13y1).
+reached(x13y2) :- inPath(x13y1,x13y2).
+reached(x13y1) :- inPath(x14y1,x13y1).
+reached(x14y1) :- inPath(x13y1,x14y1).
+reached(x12y1) :- inPath(x12y2,x12y1).
+reached(x12y2) :- inPath(x12y1,x12y2).
+reached(x12y1) :- inPath(x13y1,x12y1).
+reached(x13y1) :- inPath(x12y1,x13y1).
+reached(x11y1) :- inPath(x11y2,x11y1).
+reached(x11y2) :- inPath(x11y1,x11y2).
+reached(x11y1) :- inPath(x12y1,x11y1).
+reached(x12y1) :- inPath(x11y1,x12y1).
+reached(x10y1) :- inPath(x10y2,x10y1).
+reached(x10y2) :- inPath(x10y1,x10y2).
+reached(x10y1) :- inPath(x11y1,x10y1).
+reached(x11y1) :- inPath(x10y1,x11y1).
+reached(x9y1) :- inPath(x9y2,x9y1).
+reached(x9y2) :- inPath(x9y1,x9y2).
+reached(x9y1) :- inPath(x10y1,x9y1).
+reached(x10y1) :- inPath(x9y1,x10y1).
+reached(x8y1) :- inPath(x8y2,x8y1).
+reached(x8y2) :- inPath(x8y1,x8y2).
+reached(x8y1) :- inPath(x9y1,x8y1).
+reached(x9y1) :- inPath(x8y1,x9y1).
+reached(x7y1) :- inPath(x7y2,x7y1).
+reached(x7y2) :- inPath(x7y1,x7y2).
+reached(x7y1) :- inPath(x8y1,x7y1).
+reached(x8y1) :- inPath(x7y1,x8y1).
+reached(x5y1) :- inPath(x5y2,x5y1).
+reached(x5y2) :- inPath(x5y1,x5y2).
+reached(x4y1) :- inPath(x4y2,x4y1).
+reached(x4y2) :- inPath(x4y1,x4y2).
+reached(x4y1) :- inPath(x5y1,x4y1).
+reached(x5y1) :- inPath(x4y1,x5y1).
+edge(x13y10,x12y10).
+edge(x12y10,x13y10).
+edge(x12y10,x11y10).
+edge(x11y10,x12y10).
+edge(x9y10,x8y10).
+edge(x8y10,x9y10).
+edge(x6y10,x5y10).
+edge(x5y10,x6y10).
+edge(x5y10,x4y10).
+edge(x4y10,x5y10).
+edge(x4y10,x3y10).
+edge(x3y10,x4y10).
+edge(x3y10,x2y10).
+edge(x2y10,x3y10).
+edge(x2y10,x1y10).
+edge(x1y10,x2y10).
+edge(x13y10,x13y9).
+edge(x13y9,x13y10).
+edge(x14y9,x13y9).
+edge(x13y9,x14y9).
+edge(x11y10,x11y9).
+edge(x11y9,x11y10).
+edge(x11y9,x10y9).
+edge(x10y9,x11y9).
+edge(x9y10,x9y9).
+edge(x9y9,x9y10).
+edge(x10y9,x9y9).
+edge(x9y9,x10y9).
+edge(x8y10,x8y9).
+edge(x8y9,x8y10).
+edge(x9y9,x8y9).
+edge(x8y9,x9y9).
+edge(x8y9,x7y9).
+edge(x7y9,x8y9).
+edge(x6y10,x6y9).
+edge(x6y9,x6y10).
+edge(x7y9,x6y9).
+edge(x6y9,x7y9).
+edge(x5y10,x5y9).
+edge(x5y9,x5y10).
+edge(x6y9,x5y9).
+edge(x5y9,x6y9).
+edge(x4y10,x4y9).
+edge(x4y9,x4y10).
+edge(x5y9,x4y9).
+edge(x4y9,x5y9).
+edge(x3y10,x3y9).
+edge(x3y9,x3y10).
+edge(x4y9,x3y9).
+edge(x3y9,x4y9).
+edge(x2y10,x2y9).
+edge(x2y9,x2y10).
+edge(x3y9,x2y9).
+edge(x2y9,x3y9).
+edge(x1y10,x1y9).
+edge(x1y9,x1y10).
+edge(x2y9,x1y9).
+edge(x1y9,x2y9).
+edge(x16y8,x15y8).
+edge(x15y8,x16y8).
+edge(x14y9,x14y8).
+edge(x14y8,x14y9).
+edge(x15y8,x14y8).
+edge(x14y8,x15y8).
+edge(x13y9,x13y8).
+edge(x13y8,x13y9).
+edge(x14y8,x13y8).
+edge(x13y8,x14y8).
+edge(x13y8,x12y8).
+edge(x12y8,x13y8).
+edge(x11y9,x11y8).
+edge(x11y8,x11y9).
+edge(x12y8,x11y8).
+edge(x11y8,x12y8).
+edge(x10y9,x10y8).
+edge(x10y8,x10y9).
+edge(x11y8,x10y8).
+edge(x10y8,x11y8).
+edge(x9y9,x9y8).
+edge(x9y8,x9y9).
+edge(x10y8,x9y8).
+edge(x9y8,x10y8).
+edge(x7y9,x7y8).
+edge(x7y8,x7y9).
+edge(x6y9,x6y8).
+edge(x6y8,x6y9).
+edge(x7y8,x6y8).
+edge(x6y8,x7y8).
+edge(x5y9,x5y8).
+edge(x5y8,x5y9).
+edge(x6y8,x5y8).
+edge(x5y8,x6y8).
+edge(x4y9,x4y8).
+edge(x4y8,x4y9).
+edge(x5y8,x4y8).
+edge(x4y8,x5y8).
+edge(x3y9,x3y8).
+edge(x3y8,x3y9).
+edge(x4y8,x3y8).
+edge(x3y8,x4y8).
+edge(x2y9,x2y8).
+edge(x2y8,x2y9).
+edge(x3y8,x2y8).
+edge(x2y8,x3y8).
+edge(x1y9,x1y8).
+edge(x1y8,x1y9).
+edge(x2y8,x1y8).
+edge(x1y8,x2y8).
+edge(x16y8,x16y7).
+edge(x16y7,x16y8).
+edge(x15y8,x15y7).
+edge(x15y7,x15y8).
+edge(x16y7,x15y7).
+edge(x15y7,x16y7).
+edge(x14y8,x14y7).
+edge(x14y7,x14y8).
+edge(x15y7,x14y7).
+edge(x14y7,x15y7).
+edge(x13y8,x13y7).
+edge(x13y7,x13y8).
+edge(x14y7,x13y7).
+edge(x13y7,x14y7).
+edge(x12y8,x12y7).
+edge(x12y7,x12y8).
+edge(x13y7,x12y7).
+edge(x12y7,x13y7).
+edge(x11y8,x11y7).
+edge(x11y7,x11y8).
+edge(x12y7,x11y7).
+edge(x11y7,x12y7).
+edge(x10y8,x10y7).
+edge(x10y7,x10y8).
+edge(x11y7,x10y7).
+edge(x10y7,x11y7).
+edge(x9y8,x9y7).
+edge(x9y7,x9y8).
+edge(x10y7,x9y7).
+edge(x9y7,x10y7).
+edge(x7y8,x7y7).
+edge(x7y7,x7y8).
+edge(x6y8,x6y7).
+edge(x6y7,x6y8).
+edge(x7y7,x6y7).
+edge(x6y7,x7y7).
+edge(x5y8,x5y7).
+edge(x5y7,x5y8).
+edge(x6y7,x5y7).
+edge(x5y7,x6y7).
+edge(x4y8,x4y7).
+edge(x4y7,x4y8).
+edge(x5y7,x4y7).
+edge(x4y7,x5y7).
+edge(x3y8,x3y7).
+edge(x3y7,x3y8).
+edge(x4y7,x3y7).
+edge(x3y7,x4y7).
+edge(x2y8,x2y7).
+edge(x2y7,x2y8).
+edge(x3y7,x2y7).
+edge(x2y7,x3y7).
+edge(x15y7,x15y6).
+edge(x15y6,x15y7).
+edge(x14y7,x14y6).
+edge(x14y6,x14y7).
+edge(x15y6,x14y6).
+edge(x14y6,x15y6).
+edge(x13y7,x13y6).
+edge(x13y6,x13y7).
+edge(x14y6,x13y6).
+edge(x13y6,x14y6).
+edge(x12y7,x12y6).
+edge(x12y6,x12y7).
+edge(x13y6,x12y6).
+edge(x12y6,x13y6).
+edge(x11y7,x11y6).
+edge(x11y6,x11y7).
+edge(x12y6,x11y6).
+edge(x11y6,x12y6).
+edge(x10y7,x10y6).
+edge(x10y6,x10y7).
+edge(x11y6,x10y6).
+edge(x10y6,x11y6).
+edge(x9y7,x9y6).
+edge(x9y6,x9y7).
+edge(x10y6,x9y6).
+edge(x9y6,x10y6).
+edge(x9y6,x8y6).
+edge(x8y6,x9y6).
+edge(x7y7,x7y6).
+edge(x7y6,x7y7).
+edge(x8y6,x7y6).
+edge(x7y6,x8y6).
+edge(x6y7,x6y6).
+edge(x6y6,x6y7).
+edge(x7y6,x6y6).
+edge(x6y6,x7y6).
+edge(x5y7,x5y6).
+edge(x5y6,x5y7).
+edge(x6y6,x5y6).
+edge(x5y6,x6y6).
+edge(x3y7,x3y6).
+edge(x3y6,x3y7).
+edge(x2y7,x2y6).
+edge(x2y6,x2y7).
+edge(x3y6,x2y6).
+edge(x2y6,x3y6).
+edge(x15y6,x15y5).
+edge(x15y5,x15y6).
+edge(x16y5,x15y5).
+edge(x15y5,x16y5).
+edge(x14y6,x14y5).
+edge(x14y5,x14y6).
+edge(x15y5,x14y5).
+edge(x14y5,x15y5).
+edge(x13y6,x13y5).
+edge(x13y5,x13y6).
+edge(x14y5,x13y5).
+edge(x13y5,x14y5).
+edge(x11y6,x11y5).
+edge(x11y5,x11y6).
+edge(x10y6,x10y5).
+edge(x10y5,x10y6).
+edge(x11y5,x10y5).
+edge(x10y5,x11y5).
+edge(x9y6,x9y5).
+edge(x9y5,x9y6).
+edge(x10y5,x9y5).
+edge(x9y5,x10y5).
+edge(x8y6,x8y5).
+edge(x8y5,x8y6).
+edge(x9y5,x8y5).
+edge(x8y5,x9y5).
+edge(x7y6,x7y5).
+edge(x7y5,x7y6).
+edge(x8y5,x7y5).
+edge(x7y5,x8y5).
+edge(x6y6,x6y5).
+edge(x6y5,x6y6).
+edge(x7y5,x6y5).
+edge(x6y5,x7y5).
+edge(x5y6,x5y5).
+edge(x5y5,x5y6).
+edge(x6y5,x5y5).
+edge(x5y5,x6y5).
+edge(x3y6,x3y5).
+edge(x3y5,x3y6).
+edge(x2y6,x2y5).
+edge(x2y5,x2y6).
+edge(x3y5,x2y5).
+edge(x2y5,x3y5).
+edge(x2y5,x1y5).
+edge(x1y5,x2y5).
+edge(x16y5,x16y4).
+edge(x16y4,x16y5).
+edge(x14y5,x14y4).
+edge(x14y4,x14y5).
+edge(x13y5,x13y4).
+edge(x13y4,x13y5).
+edge(x14y4,x13y4).
+edge(x13y4,x14y4).
+edge(x11y5,x11y4).
+edge(x11y4,x11y5).
+edge(x10y5,x10y4).
+edge(x10y4,x10y5).
+edge(x11y4,x10y4).
+edge(x10y4,x11y4).
+edge(x7y5,x7y4).
+edge(x7y4,x7y5).
+edge(x6y5,x6y4).
+edge(x6y4,x6y5).
+edge(x7y4,x6y4).
+edge(x6y4,x7y4).
+edge(x5y5,x5y4).
+edge(x5y4,x5y5).
+edge(x6y4,x5y4).
+edge(x5y4,x6y4).
+edge(x5y4,x4y4).
+edge(x4y4,x5y4).
+edge(x3y5,x3y4).
+edge(x3y4,x3y5).
+edge(x4y4,x3y4).
+edge(x3y4,x4y4).
+edge(x1y5,x1y4).
+edge(x1y4,x1y5).
+edge(x16y4,x16y3).
+edge(x16y3,x16y4).
+edge(x14y4,x14y3).
+edge(x14y3,x14y4).
+edge(x13y4,x13y3).
+edge(x13y3,x13y4).
+edge(x14y3,x13y3).
+edge(x13y3,x14y3).
+edge(x13y3,x12y3).
+edge(x12y3,x13y3).
+edge(x11y4,x11y3).
+edge(x11y3,x11y4).
+edge(x12y3,x11y3).
+edge(x11y3,x12y3).
+edge(x10y4,x10y3).
+edge(x10y3,x10y4).
+edge(x11y3,x10y3).
+edge(x10y3,x11y3).
+edge(x7y4,x7y3).
+edge(x7y3,x7y4).
+edge(x8y3,x7y3).
+edge(x7y3,x8y3).
+edge(x5y4,x5y3).
+edge(x5y3,x5y4).
+edge(x4y4,x4y3).
+edge(x4y3,x4y4).
+edge(x5y3,x4y3).
+edge(x4y3,x5y3).
+edge(x3y4,x3y3).
+edge(x3y3,x3y4).
+edge(x4y3,x3y3).
+edge(x3y3,x4y3).
+edge(x3y3,x2y3).
+edge(x2y3,x3y3).
+edge(x1y4,x1y3).
+edge(x1y3,x1y4).
+edge(x2y3,x1y3).
+edge(x1y3,x2y3).
+edge(x16y3,x16y2).
+edge(x16y2,x16y3).
+edge(x16y2,x15y2).
+edge(x15y2,x16y2).
+edge(x14y3,x14y2).
+edge(x14y2,x14y3).
+edge(x15y2,x14y2).
+edge(x14y2,x15y2).
+edge(x13y3,x13y2).
+edge(x13y2,x13y3).
+edge(x14y2,x13y2).
+edge(x13y2,x14y2).
+edge(x12y3,x12y2).
+edge(x12y2,x12y3).
+edge(x13y2,x12y2).
+edge(x12y2,x13y2).
+edge(x11y3,x11y2).
+edge(x11y2,x11y3).
+edge(x12y2,x11y2).
+edge(x11y2,x12y2).
+edge(x10y3,x10y2).
+edge(x10y2,x10y3).
+edge(x11y2,x10y2).
+edge(x10y2,x11y2).
+edge(x10y2,x9y2).
+edge(x9y2,x10y2).
+edge(x8y3,x8y2).
+edge(x8y2,x8y3).
+edge(x9y2,x8y2).
+edge(x8y2,x9y2).
+edge(x7y3,x7y2).
+edge(x7y2,x7y3).
+edge(x8y2,x7y2).
+edge(x7y2,x8y2).
+edge(x7y2,x6y2).
+edge(x6y2,x7y2).
+edge(x5y3,x5y2).
+edge(x5y2,x5y3).
+edge(x6y2,x5y2).
+edge(x5y2,x6y2).
+edge(x4y3,x4y2).
+edge(x4y2,x4y3).
+edge(x5y2,x4y2).
+edge(x4y2,x5y2).
+edge(x3y3,x3y2).
+edge(x3y2,x3y3).
+edge(x4y2,x3y2).
+edge(x3y2,x4y2).
+edge(x2y3,x2y2).
+edge(x2y2,x2y3).
+edge(x3y2,x2y2).
+edge(x2y2,x3y2).
+edge(x15y2,x15y1).
+edge(x15y1,x15y2).
+edge(x14y2,x14y1).
+edge(x14y1,x14y2).
+edge(x15y1,x14y1).
+edge(x14y1,x15y1).
+edge(x13y2,x13y1).
+edge(x13y1,x13y2).
+edge(x14y1,x13y1).
+edge(x13y1,x14y1).
+edge(x12y2,x12y1).
+edge(x12y1,x12y2).
+edge(x13y1,x12y1).
+edge(x12y1,x13y1).
+edge(x11y2,x11y1).
+edge(x11y1,x11y2).
+edge(x12y1,x11y1).
+edge(x11y1,x12y1).
+edge(x10y2,x10y1).
+edge(x10y1,x10y2).
+edge(x11y1,x10y1).
+edge(x10y1,x11y1).
+edge(x9y2,x9y1).
+edge(x9y1,x9y2).
+edge(x10y1,x9y1).
+edge(x9y1,x10y1).
+edge(x8y2,x8y1).
+edge(x8y1,x8y2).
+edge(x9y1,x8y1).
+edge(x8y1,x9y1).
+edge(x7y2,x7y1).
+edge(x7y1,x7y2).
+edge(x8y1,x7y1).
+edge(x7y1,x8y1).
+edge(x5y2,x5y1).
+edge(x5y1,x5y2).
+edge(x4y2,x4y1).
+edge(x4y1,x4y2).
+edge(x5y1,x4y1).
+edge(x4y1,x5y1).
+inPath(x5y6,x5y7) :- not outPath(x5y6,x5y7).
+inPath(x5y6,x5y5) :- not outPath(x5y6,x5y5).
+inPath(x5y6,x6y6) :- not outPath(x5y6,x6y6).
+inPath(x13y10,x12y10) :- reached(x13y10), not outPath(x13y10,x12y10).
+inPath(x12y10,x13y10) :- reached(x12y10), not outPath(x12y10,x13y10).
+inPath(x12y10,x11y10) :- reached(x12y10), not outPath(x12y10,x11y10).
+inPath(x11y10,x12y10) :- reached(x11y10), not outPath(x11y10,x12y10).
+inPath(x9y10,x8y10) :- reached(x9y10), not outPath(x9y10,x8y10).
+inPath(x8y10,x9y10) :- reached(x8y10), not outPath(x8y10,x9y10).
+inPath(x6y10,x5y10) :- reached(x6y10), not outPath(x6y10,x5y10).
+inPath(x5y10,x6y10) :- reached(x5y10), not outPath(x5y10,x6y10).
+inPath(x5y10,x4y10) :- reached(x5y10), not outPath(x5y10,x4y10).
+inPath(x4y10,x5y10) :- reached(x4y10), not outPath(x4y10,x5y10).
+inPath(x4y10,x3y10) :- reached(x4y10), not outPath(x4y10,x3y10).
+inPath(x3y10,x4y10) :- reached(x3y10), not outPath(x3y10,x4y10).
+inPath(x3y10,x2y10) :- reached(x3y10), not outPath(x3y10,x2y10).
+inPath(x2y10,x3y10) :- reached(x2y10), not outPath(x2y10,x3y10).
+inPath(x2y10,x1y10) :- reached(x2y10), not outPath(x2y10,x1y10).
+inPath(x1y10,x2y10) :- reached(x1y10), not outPath(x1y10,x2y10).
+inPath(x13y10,x13y9) :- reached(x13y10), not outPath(x13y10,x13y9).
+inPath(x13y9,x13y10) :- reached(x13y9), not outPath(x13y9,x13y10).
+inPath(x14y9,x13y9) :- reached(x14y9), not outPath(x14y9,x13y9).
+inPath(x13y9,x14y9) :- reached(x13y9), not outPath(x13y9,x14y9).
+inPath(x11y10,x11y9) :- reached(x11y10), not outPath(x11y10,x11y9).
+inPath(x11y9,x11y10) :- reached(x11y9), not outPath(x11y9,x11y10).
+inPath(x11y9,x10y9) :- reached(x11y9), not outPath(x11y9,x10y9).
+inPath(x10y9,x11y9) :- reached(x10y9), not outPath(x10y9,x11y9).
+inPath(x9y10,x9y9) :- reached(x9y10), not outPath(x9y10,x9y9).
+inPath(x9y9,x9y10) :- reached(x9y9), not outPath(x9y9,x9y10).
+inPath(x10y9,x9y9) :- reached(x10y9), not outPath(x10y9,x9y9).
+inPath(x9y9,x10y9) :- reached(x9y9), not outPath(x9y9,x10y9).
+inPath(x8y10,x8y9) :- reached(x8y10), not outPath(x8y10,x8y9).
+inPath(x8y9,x8y10) :- reached(x8y9), not outPath(x8y9,x8y10).
+inPath(x9y9,x8y9) :- reached(x9y9), not outPath(x9y9,x8y9).
+inPath(x8y9,x9y9) :- reached(x8y9), not outPath(x8y9,x9y9).
+inPath(x8y9,x7y9) :- reached(x8y9), not outPath(x8y9,x7y9).
+inPath(x7y9,x8y9) :- reached(x7y9), not outPath(x7y9,x8y9).
+inPath(x6y10,x6y9) :- reached(x6y10), not outPath(x6y10,x6y9).
+inPath(x6y9,x6y10) :- reached(x6y9), not outPath(x6y9,x6y10).
+inPath(x7y9,x6y9) :- reached(x7y9), not outPath(x7y9,x6y9).
+inPath(x6y9,x7y9) :- reached(x6y9), not outPath(x6y9,x7y9).
+inPath(x5y10,x5y9) :- reached(x5y10), not outPath(x5y10,x5y9).
+inPath(x5y9,x5y10) :- reached(x5y9), not outPath(x5y9,x5y10).
+inPath(x6y9,x5y9) :- reached(x6y9), not outPath(x6y9,x5y9).
+inPath(x5y9,x6y9) :- reached(x5y9), not outPath(x5y9,x6y9).
+inPath(x4y10,x4y9) :- reached(x4y10), not outPath(x4y10,x4y9).
+inPath(x4y9,x4y10) :- reached(x4y9), not outPath(x4y9,x4y10).
+inPath(x5y9,x4y9) :- reached(x5y9), not outPath(x5y9,x4y9).
+inPath(x4y9,x5y9) :- reached(x4y9), not outPath(x4y9,x5y9).
+inPath(x3y10,x3y9) :- reached(x3y10), not outPath(x3y10,x3y9).
+inPath(x3y9,x3y10) :- reached(x3y9), not outPath(x3y9,x3y10).
+inPath(x4y9,x3y9) :- reached(x4y9), not outPath(x4y9,x3y9).
+inPath(x3y9,x4y9) :- reached(x3y9), not outPath(x3y9,x4y9).
+inPath(x2y10,x2y9) :- reached(x2y10), not outPath(x2y10,x2y9).
+inPath(x2y9,x2y10) :- reached(x2y9), not outPath(x2y9,x2y10).
+inPath(x3y9,x2y9) :- reached(x3y9), not outPath(x3y9,x2y9).
+inPath(x2y9,x3y9) :- reached(x2y9), not outPath(x2y9,x3y9).
+inPath(x1y10,x1y9) :- reached(x1y10), not outPath(x1y10,x1y9).
+inPath(x1y9,x1y10) :- reached(x1y9), not outPath(x1y9,x1y10).
+inPath(x2y9,x1y9) :- reached(x2y9), not outPath(x2y9,x1y9).
+inPath(x1y9,x2y9) :- reached(x1y9), not outPath(x1y9,x2y9).
+inPath(x16y8,x15y8) :- reached(x16y8), not outPath(x16y8,x15y8).
+inPath(x15y8,x16y8) :- reached(x15y8), not outPath(x15y8,x16y8).
+inPath(x14y9,x14y8) :- reached(x14y9), not outPath(x14y9,x14y8).
+inPath(x14y8,x14y9) :- reached(x14y8), not outPath(x14y8,x14y9).
+inPath(x15y8,x14y8) :- reached(x15y8), not outPath(x15y8,x14y8).
+inPath(x14y8,x15y8) :- reached(x14y8), not outPath(x14y8,x15y8).
+inPath(x13y9,x13y8) :- reached(x13y9), not outPath(x13y9,x13y8).
+inPath(x13y8,x13y9) :- reached(x13y8), not outPath(x13y8,x13y9).
+inPath(x14y8,x13y8) :- reached(x14y8), not outPath(x14y8,x13y8).
+inPath(x13y8,x14y8) :- reached(x13y8), not outPath(x13y8,x14y8).
+inPath(x13y8,x12y8) :- reached(x13y8), not outPath(x13y8,x12y8).
+inPath(x12y8,x13y8) :- reached(x12y8), not outPath(x12y8,x13y8).
+inPath(x11y9,x11y8) :- reached(x11y9), not outPath(x11y9,x11y8).
+inPath(x11y8,x11y9) :- reached(x11y8), not outPath(x11y8,x11y9).
+inPath(x12y8,x11y8) :- reached(x12y8), not outPath(x12y8,x11y8).
+inPath(x11y8,x12y8) :- reached(x11y8), not outPath(x11y8,x12y8).
+inPath(x10y9,x10y8) :- reached(x10y9), not outPath(x10y9,x10y8).
+inPath(x10y8,x10y9) :- reached(x10y8), not outPath(x10y8,x10y9).
+inPath(x11y8,x10y8) :- reached(x11y8), not outPath(x11y8,x10y8).
+inPath(x10y8,x11y8) :- reached(x10y8), not outPath(x10y8,x11y8).
+inPath(x9y9,x9y8) :- reached(x9y9), not outPath(x9y9,x9y8).
+inPath(x9y8,x9y9) :- reached(x9y8), not outPath(x9y8,x9y9).
+inPath(x10y8,x9y8) :- reached(x10y8), not outPath(x10y8,x9y8).
+inPath(x9y8,x10y8) :- reached(x9y8), not outPath(x9y8,x10y8).
+inPath(x7y9,x7y8) :- reached(x7y9), not outPath(x7y9,x7y8).
+inPath(x7y8,x7y9) :- reached(x7y8), not outPath(x7y8,x7y9).
+inPath(x6y9,x6y8) :- reached(x6y9), not outPath(x6y9,x6y8).
+inPath(x6y8,x6y9) :- reached(x6y8), not outPath(x6y8,x6y9).
+inPath(x7y8,x6y8) :- reached(x7y8), not outPath(x7y8,x6y8).
+inPath(x6y8,x7y8) :- reached(x6y8), not outPath(x6y8,x7y8).
+inPath(x5y9,x5y8) :- reached(x5y9), not outPath(x5y9,x5y8).
+inPath(x5y8,x5y9) :- reached(x5y8), not outPath(x5y8,x5y9).
+inPath(x6y8,x5y8) :- reached(x6y8), not outPath(x6y8,x5y8).
+inPath(x5y8,x6y8) :- reached(x5y8), not outPath(x5y8,x6y8).
+inPath(x4y9,x4y8) :- reached(x4y9), not outPath(x4y9,x4y8).
+inPath(x4y8,x4y9) :- reached(x4y8), not outPath(x4y8,x4y9).
+inPath(x5y8,x4y8) :- reached(x5y8), not outPath(x5y8,x4y8).
+inPath(x4y8,x5y8) :- reached(x4y8), not outPath(x4y8,x5y8).
+inPath(x3y9,x3y8) :- reached(x3y9), not outPath(x3y9,x3y8).
+inPath(x3y8,x3y9) :- reached(x3y8), not outPath(x3y8,x3y9).
+inPath(x4y8,x3y8) :- reached(x4y8), not outPath(x4y8,x3y8).
+inPath(x3y8,x4y8) :- reached(x3y8), not outPath(x3y8,x4y8).
+inPath(x2y9,x2y8) :- reached(x2y9), not outPath(x2y9,x2y8).
+inPath(x2y8,x2y9) :- reached(x2y8), not outPath(x2y8,x2y9).
+inPath(x3y8,x2y8) :- reached(x3y8), not outPath(x3y8,x2y8).
+inPath(x2y8,x3y8) :- reached(x2y8), not outPath(x2y8,x3y8).
+inPath(x1y9,x1y8) :- reached(x1y9), not outPath(x1y9,x1y8).
+inPath(x1y8,x1y9) :- reached(x1y8), not outPath(x1y8,x1y9).
+inPath(x2y8,x1y8) :- reached(x2y8), not outPath(x2y8,x1y8).
+inPath(x1y8,x2y8) :- reached(x1y8), not outPath(x1y8,x2y8).
+inPath(x16y8,x16y7) :- reached(x16y8), not outPath(x16y8,x16y7).
+inPath(x16y7,x16y8) :- reached(x16y7), not outPath(x16y7,x16y8).
+inPath(x15y8,x15y7) :- reached(x15y8), not outPath(x15y8,x15y7).
+inPath(x15y7,x15y8) :- reached(x15y7), not outPath(x15y7,x15y8).
+inPath(x16y7,x15y7) :- reached(x16y7), not outPath(x16y7,x15y7).
+inPath(x15y7,x16y7) :- reached(x15y7), not outPath(x15y7,x16y7).
+inPath(x14y8,x14y7) :- reached(x14y8), not outPath(x14y8,x14y7).
+inPath(x14y7,x14y8) :- reached(x14y7), not outPath(x14y7,x14y8).
+inPath(x15y7,x14y7) :- reached(x15y7), not outPath(x15y7,x14y7).
+inPath(x14y7,x15y7) :- reached(x14y7), not outPath(x14y7,x15y7).
+inPath(x13y8,x13y7) :- reached(x13y8), not outPath(x13y8,x13y7).
+inPath(x13y7,x13y8) :- reached(x13y7), not outPath(x13y7,x13y8).
+inPath(x14y7,x13y7) :- reached(x14y7), not outPath(x14y7,x13y7).
+inPath(x13y7,x14y7) :- reached(x13y7), not outPath(x13y7,x14y7).
+inPath(x12y8,x12y7) :- reached(x12y8), not outPath(x12y8,x12y7).
+inPath(x12y7,x12y8) :- reached(x12y7), not outPath(x12y7,x12y8).
+inPath(x13y7,x12y7) :- reached(x13y7), not outPath(x13y7,x12y7).
+inPath(x12y7,x13y7) :- reached(x12y7), not outPath(x12y7,x13y7).
+inPath(x11y8,x11y7) :- reached(x11y8), not outPath(x11y8,x11y7).
+inPath(x11y7,x11y8) :- reached(x11y7), not outPath(x11y7,x11y8).
+inPath(x12y7,x11y7) :- reached(x12y7), not outPath(x12y7,x11y7).
+inPath(x11y7,x12y7) :- reached(x11y7), not outPath(x11y7,x12y7).
+inPath(x10y8,x10y7) :- reached(x10y8), not outPath(x10y8,x10y7).
+inPath(x10y7,x10y8) :- reached(x10y7), not outPath(x10y7,x10y8).
+inPath(x11y7,x10y7) :- reached(x11y7), not outPath(x11y7,x10y7).
+inPath(x10y7,x11y7) :- reached(x10y7), not outPath(x10y7,x11y7).
+inPath(x9y8,x9y7) :- reached(x9y8), not outPath(x9y8,x9y7).
+inPath(x9y7,x9y8) :- reached(x9y7), not outPath(x9y7,x9y8).
+inPath(x10y7,x9y7) :- reached(x10y7), not outPath(x10y7,x9y7).
+inPath(x9y7,x10y7) :- reached(x9y7), not outPath(x9y7,x10y7).
+inPath(x7y8,x7y7) :- reached(x7y8), not outPath(x7y8,x7y7).
+inPath(x7y7,x7y8) :- reached(x7y7), not outPath(x7y7,x7y8).
+inPath(x6y8,x6y7) :- reached(x6y8), not outPath(x6y8,x6y7).
+inPath(x6y7,x6y8) :- reached(x6y7), not outPath(x6y7,x6y8).
+inPath(x7y7,x6y7) :- reached(x7y7), not outPath(x7y7,x6y7).
+inPath(x6y7,x7y7) :- reached(x6y7), not outPath(x6y7,x7y7).
+inPath(x5y8,x5y7) :- reached(x5y8), not outPath(x5y8,x5y7).
+inPath(x5y7,x5y8) :- reached(x5y7), not outPath(x5y7,x5y8).
+inPath(x6y7,x5y7) :- reached(x6y7), not outPath(x6y7,x5y7).
+inPath(x5y7,x6y7) :- reached(x5y7), not outPath(x5y7,x6y7).
+inPath(x4y8,x4y7) :- reached(x4y8), not outPath(x4y8,x4y7).
+inPath(x4y7,x4y8) :- reached(x4y7), not outPath(x4y7,x4y8).
+inPath(x5y7,x4y7) :- reached(x5y7), not outPath(x5y7,x4y7).
+inPath(x4y7,x5y7) :- reached(x4y7), not outPath(x4y7,x5y7).
+inPath(x3y8,x3y7) :- reached(x3y8), not outPath(x3y8,x3y7).
+inPath(x3y7,x3y8) :- reached(x3y7), not outPath(x3y7,x3y8).
+inPath(x4y7,x3y7) :- reached(x4y7), not outPath(x4y7,x3y7).
+inPath(x3y7,x4y7) :- reached(x3y7), not outPath(x3y7,x4y7).
+inPath(x2y8,x2y7) :- reached(x2y8), not outPath(x2y8,x2y7).
+inPath(x2y7,x2y8) :- reached(x2y7), not outPath(x2y7,x2y8).
+inPath(x3y7,x2y7) :- reached(x3y7), not outPath(x3y7,x2y7).
+inPath(x2y7,x3y7) :- reached(x2y7), not outPath(x2y7,x3y7).
+inPath(x15y7,x15y6) :- reached(x15y7), not outPath(x15y7,x15y6).
+inPath(x15y6,x15y7) :- reached(x15y6), not outPath(x15y6,x15y7).
+inPath(x14y7,x14y6) :- reached(x14y7), not outPath(x14y7,x14y6).
+inPath(x14y6,x14y7) :- reached(x14y6), not outPath(x14y6,x14y7).
+inPath(x15y6,x14y6) :- reached(x15y6), not outPath(x15y6,x14y6).
+inPath(x14y6,x15y6) :- reached(x14y6), not outPath(x14y6,x15y6).
+inPath(x13y7,x13y6) :- reached(x13y7), not outPath(x13y7,x13y6).
+inPath(x13y6,x13y7) :- reached(x13y6), not outPath(x13y6,x13y7).
+inPath(x14y6,x13y6) :- reached(x14y6), not outPath(x14y6,x13y6).
+inPath(x13y6,x14y6) :- reached(x13y6), not outPath(x13y6,x14y6).
+inPath(x12y7,x12y6) :- reached(x12y7), not outPath(x12y7,x12y6).
+inPath(x12y6,x12y7) :- reached(x12y6), not outPath(x12y6,x12y7).
+inPath(x13y6,x12y6) :- reached(x13y6), not outPath(x13y6,x12y6).
+inPath(x12y6,x13y6) :- reached(x12y6), not outPath(x12y6,x13y6).
+inPath(x11y7,x11y6) :- reached(x11y7), not outPath(x11y7,x11y6).
+inPath(x11y6,x11y7) :- reached(x11y6), not outPath(x11y6,x11y7).
+inPath(x12y6,x11y6) :- reached(x12y6), not outPath(x12y6,x11y6).
+inPath(x11y6,x12y6) :- reached(x11y6), not outPath(x11y6,x12y6).
+inPath(x10y7,x10y6) :- reached(x10y7), not outPath(x10y7,x10y6).
+inPath(x10y6,x10y7) :- reached(x10y6), not outPath(x10y6,x10y7).
+inPath(x11y6,x10y6) :- reached(x11y6), not outPath(x11y6,x10y6).
+inPath(x10y6,x11y6) :- reached(x10y6), not outPath(x10y6,x11y6).
+inPath(x9y7,x9y6) :- reached(x9y7), not outPath(x9y7,x9y6).
+inPath(x9y6,x9y7) :- reached(x9y6), not outPath(x9y6,x9y7).
+inPath(x10y6,x9y6) :- reached(x10y6), not outPath(x10y6,x9y6).
+inPath(x9y6,x10y6) :- reached(x9y6), not outPath(x9y6,x10y6).
+inPath(x9y6,x8y6) :- reached(x9y6), not outPath(x9y6,x8y6).
+inPath(x8y6,x9y6) :- reached(x8y6), not outPath(x8y6,x9y6).
+inPath(x7y7,x7y6) :- reached(x7y7), not outPath(x7y7,x7y6).
+inPath(x7y6,x7y7) :- reached(x7y6), not outPath(x7y6,x7y7).
+inPath(x8y6,x7y6) :- reached(x8y6), not outPath(x8y6,x7y6).
+inPath(x7y6,x8y6) :- reached(x7y6), not outPath(x7y6,x8y6).
+inPath(x6y7,x6y6) :- reached(x6y7), not outPath(x6y7,x6y6).
+inPath(x6y6,x6y7) :- reached(x6y6), not outPath(x6y6,x6y7).
+inPath(x7y6,x6y6) :- reached(x7y6), not outPath(x7y6,x6y6).
+inPath(x6y6,x7y6) :- reached(x6y6), not outPath(x6y6,x7y6).
+inPath(x5y7,x5y6) :- reached(x5y7), not outPath(x5y7,x5y6).
+inPath(x5y6,x5y7) :- reached(x5y6), not outPath(x5y6,x5y7).
+inPath(x6y6,x5y6) :- reached(x6y6), not outPath(x6y6,x5y6).
+inPath(x5y6,x6y6) :- reached(x5y6), not outPath(x5y6,x6y6).
+inPath(x3y7,x3y6) :- reached(x3y7), not outPath(x3y7,x3y6).
+inPath(x3y6,x3y7) :- reached(x3y6), not outPath(x3y6,x3y7).
+inPath(x2y7,x2y6) :- reached(x2y7), not outPath(x2y7,x2y6).
+inPath(x2y6,x2y7) :- reached(x2y6), not outPath(x2y6,x2y7).
+inPath(x3y6,x2y6) :- reached(x3y6), not outPath(x3y6,x2y6).
+inPath(x2y6,x3y6) :- reached(x2y6), not outPath(x2y6,x3y6).
+inPath(x15y6,x15y5) :- reached(x15y6), not outPath(x15y6,x15y5).
+inPath(x15y5,x15y6) :- reached(x15y5), not outPath(x15y5,x15y6).
+inPath(x16y5,x15y5) :- reached(x16y5), not outPath(x16y5,x15y5).
+inPath(x15y5,x16y5) :- reached(x15y5), not outPath(x15y5,x16y5).
+inPath(x14y6,x14y5) :- reached(x14y6), not outPath(x14y6,x14y5).
+inPath(x14y5,x14y6) :- reached(x14y5), not outPath(x14y5,x14y6).
+inPath(x15y5,x14y5) :- reached(x15y5), not outPath(x15y5,x14y5).
+inPath(x14y5,x15y5) :- reached(x14y5), not outPath(x14y5,x15y5).
+inPath(x13y6,x13y5) :- reached(x13y6), not outPath(x13y6,x13y5).
+inPath(x13y5,x13y6) :- reached(x13y5), not outPath(x13y5,x13y6).
+inPath(x14y5,x13y5) :- reached(x14y5), not outPath(x14y5,x13y5).
+inPath(x13y5,x14y5) :- reached(x13y5), not outPath(x13y5,x14y5).
+inPath(x11y6,x11y5) :- reached(x11y6), not outPath(x11y6,x11y5).
+inPath(x11y5,x11y6) :- reached(x11y5), not outPath(x11y5,x11y6).
+inPath(x10y6,x10y5) :- reached(x10y6), not outPath(x10y6,x10y5).
+inPath(x10y5,x10y6) :- reached(x10y5), not outPath(x10y5,x10y6).
+inPath(x11y5,x10y5) :- reached(x11y5), not outPath(x11y5,x10y5).
+inPath(x10y5,x11y5) :- reached(x10y5), not outPath(x10y5,x11y5).
+inPath(x9y6,x9y5) :- reached(x9y6), not outPath(x9y6,x9y5).
+inPath(x9y5,x9y6) :- reached(x9y5), not outPath(x9y5,x9y6).
+inPath(x10y5,x9y5) :- reached(x10y5), not outPath(x10y5,x9y5).
+inPath(x9y5,x10y5) :- reached(x9y5), not outPath(x9y5,x10y5).
+inPath(x8y6,x8y5) :- reached(x8y6), not outPath(x8y6,x8y5).
+inPath(x8y5,x8y6) :- reached(x8y5), not outPath(x8y5,x8y6).
+inPath(x9y5,x8y5) :- reached(x9y5), not outPath(x9y5,x8y5).
+inPath(x8y5,x9y5) :- reached(x8y5), not outPath(x8y5,x9y5).
+inPath(x7y6,x7y5) :- reached(x7y6), not outPath(x7y6,x7y5).
+inPath(x7y5,x7y6) :- reached(x7y5), not outPath(x7y5,x7y6).
+inPath(x8y5,x7y5) :- reached(x8y5), not outPath(x8y5,x7y5).
+inPath(x7y5,x8y5) :- reached(x7y5), not outPath(x7y5,x8y5).
+inPath(x6y6,x6y5) :- reached(x6y6), not outPath(x6y6,x6y5).
+inPath(x6y5,x6y6) :- reached(x6y5), not outPath(x6y5,x6y6).
+inPath(x7y5,x6y5) :- reached(x7y5), not outPath(x7y5,x6y5).
+inPath(x6y5,x7y5) :- reached(x6y5), not outPath(x6y5,x7y5).
+inPath(x5y6,x5y5) :- reached(x5y6), not outPath(x5y6,x5y5).
+inPath(x5y5,x5y6) :- reached(x5y5), not outPath(x5y5,x5y6).
+inPath(x6y5,x5y5) :- reached(x6y5), not outPath(x6y5,x5y5).
+inPath(x5y5,x6y5) :- reached(x5y5), not outPath(x5y5,x6y5).
+inPath(x3y6,x3y5) :- reached(x3y6), not outPath(x3y6,x3y5).
+inPath(x3y5,x3y6) :- reached(x3y5), not outPath(x3y5,x3y6).
+inPath(x2y6,x2y5) :- reached(x2y6), not outPath(x2y6,x2y5).
+inPath(x2y5,x2y6) :- reached(x2y5), not outPath(x2y5,x2y6).
+inPath(x3y5,x2y5) :- reached(x3y5), not outPath(x3y5,x2y5).
+inPath(x2y5,x3y5) :- reached(x2y5), not outPath(x2y5,x3y5).
+inPath(x2y5,x1y5) :- reached(x2y5), not outPath(x2y5,x1y5).
+inPath(x1y5,x2y5) :- reached(x1y5), not outPath(x1y5,x2y5).
+inPath(x16y5,x16y4) :- reached(x16y5), not outPath(x16y5,x16y4).
+inPath(x16y4,x16y5) :- reached(x16y4), not outPath(x16y4,x16y5).
+inPath(x14y5,x14y4) :- reached(x14y5), not outPath(x14y5,x14y4).
+inPath(x14y4,x14y5) :- reached(x14y4), not outPath(x14y4,x14y5).
+inPath(x13y5,x13y4) :- reached(x13y5), not outPath(x13y5,x13y4).
+inPath(x13y4,x13y5) :- reached(x13y4), not outPath(x13y4,x13y5).
+inPath(x14y4,x13y4) :- reached(x14y4), not outPath(x14y4,x13y4).
+inPath(x13y4,x14y4) :- reached(x13y4), not outPath(x13y4,x14y4).
+inPath(x11y5,x11y4) :- reached(x11y5), not outPath(x11y5,x11y4).
+inPath(x11y4,x11y5) :- reached(x11y4), not outPath(x11y4,x11y5).
+inPath(x10y5,x10y4) :- reached(x10y5), not outPath(x10y5,x10y4).
+inPath(x10y4,x10y5) :- reached(x10y4), not outPath(x10y4,x10y5).
+inPath(x11y4,x10y4) :- reached(x11y4), not outPath(x11y4,x10y4).
+inPath(x10y4,x11y4) :- reached(x10y4), not outPath(x10y4,x11y4).
+inPath(x7y5,x7y4) :- reached(x7y5), not outPath(x7y5,x7y4).
+inPath(x7y4,x7y5) :- reached(x7y4), not outPath(x7y4,x7y5).
+inPath(x6y5,x6y4) :- reached(x6y5), not outPath(x6y5,x6y4).
+inPath(x6y4,x6y5) :- reached(x6y4), not outPath(x6y4,x6y5).
+inPath(x7y4,x6y4) :- reached(x7y4), not outPath(x7y4,x6y4).
+inPath(x6y4,x7y4) :- reached(x6y4), not outPath(x6y4,x7y4).
+inPath(x5y5,x5y4) :- reached(x5y5), not outPath(x5y5,x5y4).
+inPath(x5y4,x5y5) :- reached(x5y4), not outPath(x5y4,x5y5).
+inPath(x6y4,x5y4) :- reached(x6y4), not outPath(x6y4,x5y4).
+inPath(x5y4,x6y4) :- reached(x5y4), not outPath(x5y4,x6y4).
+inPath(x5y4,x4y4) :- reached(x5y4), not outPath(x5y4,x4y4).
+inPath(x4y4,x5y4) :- reached(x4y4), not outPath(x4y4,x5y4).
+inPath(x3y5,x3y4) :- reached(x3y5), not outPath(x3y5,x3y4).
+inPath(x3y4,x3y5) :- reached(x3y4), not outPath(x3y4,x3y5).
+inPath(x4y4,x3y4) :- reached(x4y4), not outPath(x4y4,x3y4).
+inPath(x3y4,x4y4) :- reached(x3y4), not outPath(x3y4,x4y4).
+inPath(x1y5,x1y4) :- reached(x1y5), not outPath(x1y5,x1y4).
+inPath(x1y4,x1y5) :- reached(x1y4), not outPath(x1y4,x1y5).
+inPath(x16y4,x16y3) :- reached(x16y4), not outPath(x16y4,x16y3).
+inPath(x16y3,x16y4) :- reached(x16y3), not outPath(x16y3,x16y4).
+inPath(x14y4,x14y3) :- reached(x14y4), not outPath(x14y4,x14y3).
+inPath(x14y3,x14y4) :- reached(x14y3), not outPath(x14y3,x14y4).
+inPath(x13y4,x13y3) :- reached(x13y4), not outPath(x13y4,x13y3).
+inPath(x13y3,x13y4) :- reached(x13y3), not outPath(x13y3,x13y4).
+inPath(x14y3,x13y3) :- reached(x14y3), not outPath(x14y3,x13y3).
+inPath(x13y3,x14y3) :- reached(x13y3), not outPath(x13y3,x14y3).
+inPath(x13y3,x12y3) :- reached(x13y3), not outPath(x13y3,x12y3).
+inPath(x12y3,x13y3) :- reached(x12y3), not outPath(x12y3,x13y3).
+inPath(x11y4,x11y3) :- reached(x11y4), not outPath(x11y4,x11y3).
+inPath(x11y3,x11y4) :- reached(x11y3), not outPath(x11y3,x11y4).
+inPath(x12y3,x11y3) :- reached(x12y3), not outPath(x12y3,x11y3).
+inPath(x11y3,x12y3) :- reached(x11y3), not outPath(x11y3,x12y3).
+inPath(x10y4,x10y3) :- reached(x10y4), not outPath(x10y4,x10y3).
+inPath(x10y3,x10y4) :- reached(x10y3), not outPath(x10y3,x10y4).
+inPath(x11y3,x10y3) :- reached(x11y3), not outPath(x11y3,x10y3).
+inPath(x10y3,x11y3) :- reached(x10y3), not outPath(x10y3,x11y3).
+inPath(x7y4,x7y3) :- reached(x7y4), not outPath(x7y4,x7y3).
+inPath(x7y3,x7y4) :- reached(x7y3), not outPath(x7y3,x7y4).
+inPath(x8y3,x7y3) :- reached(x8y3), not outPath(x8y3,x7y3).
+inPath(x7y3,x8y3) :- reached(x7y3), not outPath(x7y3,x8y3).
+inPath(x5y4,x5y3) :- reached(x5y4), not outPath(x5y4,x5y3).
+inPath(x5y3,x5y4) :- reached(x5y3), not outPath(x5y3,x5y4).
+inPath(x4y4,x4y3) :- reached(x4y4), not outPath(x4y4,x4y3).
+inPath(x4y3,x4y4) :- reached(x4y3), not outPath(x4y3,x4y4).
+inPath(x5y3,x4y3) :- reached(x5y3), not outPath(x5y3,x4y3).
+inPath(x4y3,x5y3) :- reached(x4y3), not outPath(x4y3,x5y3).
+inPath(x3y4,x3y3) :- reached(x3y4), not outPath(x3y4,x3y3).
+inPath(x3y3,x3y4) :- reached(x3y3), not outPath(x3y3,x3y4).
+inPath(x4y3,x3y3) :- reached(x4y3), not outPath(x4y3,x3y3).
+inPath(x3y3,x4y3) :- reached(x3y3), not outPath(x3y3,x4y3).
+inPath(x3y3,x2y3) :- reached(x3y3), not outPath(x3y3,x2y3).
+inPath(x2y3,x3y3) :- reached(x2y3), not outPath(x2y3,x3y3).
+inPath(x1y4,x1y3) :- reached(x1y4), not outPath(x1y4,x1y3).
+inPath(x1y3,x1y4) :- reached(x1y3), not outPath(x1y3,x1y4).
+inPath(x2y3,x1y3) :- reached(x2y3), not outPath(x2y3,x1y3).
+inPath(x1y3,x2y3) :- reached(x1y3), not outPath(x1y3,x2y3).
+inPath(x16y3,x16y2) :- reached(x16y3), not outPath(x16y3,x16y2).
+inPath(x16y2,x16y3) :- reached(x16y2), not outPath(x16y2,x16y3).
+inPath(x16y2,x15y2) :- reached(x16y2), not outPath(x16y2,x15y2).
+inPath(x15y2,x16y2) :- reached(x15y2), not outPath(x15y2,x16y2).
+inPath(x14y3,x14y2) :- reached(x14y3), not outPath(x14y3,x14y2).
+inPath(x14y2,x14y3) :- reached(x14y2), not outPath(x14y2,x14y3).
+inPath(x15y2,x14y2) :- reached(x15y2), not outPath(x15y2,x14y2).
+inPath(x14y2,x15y2) :- reached(x14y2), not outPath(x14y2,x15y2).
+inPath(x13y3,x13y2) :- reached(x13y3), not outPath(x13y3,x13y2).
+inPath(x13y2,x13y3) :- reached(x13y2), not outPath(x13y2,x13y3).
+inPath(x14y2,x13y2) :- reached(x14y2), not outPath(x14y2,x13y2).
+inPath(x13y2,x14y2) :- reached(x13y2), not outPath(x13y2,x14y2).
+inPath(x12y3,x12y2) :- reached(x12y3), not outPath(x12y3,x12y2).
+inPath(x12y2,x12y3) :- reached(x12y2), not outPath(x12y2,x12y3).
+inPath(x13y2,x12y2) :- reached(x13y2), not outPath(x13y2,x12y2).
+inPath(x12y2,x13y2) :- reached(x12y2), not outPath(x12y2,x13y2).
+inPath(x11y3,x11y2) :- reached(x11y3), not outPath(x11y3,x11y2).
+inPath(x11y2,x11y3) :- reached(x11y2), not outPath(x11y2,x11y3).
+inPath(x12y2,x11y2) :- reached(x12y2), not outPath(x12y2,x11y2).
+inPath(x11y2,x12y2) :- reached(x11y2), not outPath(x11y2,x12y2).
+inPath(x10y3,x10y2) :- reached(x10y3), not outPath(x10y3,x10y2).
+inPath(x10y2,x10y3) :- reached(x10y2), not outPath(x10y2,x10y3).
+inPath(x11y2,x10y2) :- reached(x11y2), not outPath(x11y2,x10y2).
+inPath(x10y2,x11y2) :- reached(x10y2), not outPath(x10y2,x11y2).
+inPath(x10y2,x9y2) :- reached(x10y2), not outPath(x10y2,x9y2).
+inPath(x9y2,x10y2) :- reached(x9y2), not outPath(x9y2,x10y2).
+inPath(x8y3,x8y2) :- reached(x8y3), not outPath(x8y3,x8y2).
+inPath(x8y2,x8y3) :- reached(x8y2), not outPath(x8y2,x8y3).
+inPath(x9y2,x8y2) :- reached(x9y2), not outPath(x9y2,x8y2).
+inPath(x8y2,x9y2) :- reached(x8y2), not outPath(x8y2,x9y2).
+inPath(x7y3,x7y2) :- reached(x7y3), not outPath(x7y3,x7y2).
+inPath(x7y2,x7y3) :- reached(x7y2), not outPath(x7y2,x7y3).
+inPath(x8y2,x7y2) :- reached(x8y2), not outPath(x8y2,x7y2).
+inPath(x7y2,x8y2) :- reached(x7y2), not outPath(x7y2,x8y2).
+inPath(x7y2,x6y2) :- reached(x7y2), not outPath(x7y2,x6y2).
+inPath(x6y2,x7y2) :- reached(x6y2), not outPath(x6y2,x7y2).
+inPath(x5y3,x5y2) :- reached(x5y3), not outPath(x5y3,x5y2).
+inPath(x5y2,x5y3) :- reached(x5y2), not outPath(x5y2,x5y3).
+inPath(x6y2,x5y2) :- reached(x6y2), not outPath(x6y2,x5y2).
+inPath(x5y2,x6y2) :- reached(x5y2), not outPath(x5y2,x6y2).
+inPath(x4y3,x4y2) :- reached(x4y3), not outPath(x4y3,x4y2).
+inPath(x4y2,x4y3) :- reached(x4y2), not outPath(x4y2,x4y3).
+inPath(x5y2,x4y2) :- reached(x5y2), not outPath(x5y2,x4y2).
+inPath(x4y2,x5y2) :- reached(x4y2), not outPath(x4y2,x5y2).
+inPath(x3y3,x3y2) :- reached(x3y3), not outPath(x3y3,x3y2).
+inPath(x3y2,x3y3) :- reached(x3y2), not outPath(x3y2,x3y3).
+inPath(x4y2,x3y2) :- reached(x4y2), not outPath(x4y2,x3y2).
+inPath(x3y2,x4y2) :- reached(x3y2), not outPath(x3y2,x4y2).
+inPath(x2y3,x2y2) :- reached(x2y3), not outPath(x2y3,x2y2).
+inPath(x2y2,x2y3) :- reached(x2y2), not outPath(x2y2,x2y3).
+inPath(x3y2,x2y2) :- reached(x3y2), not outPath(x3y2,x2y2).
+inPath(x2y2,x3y2) :- reached(x2y2), not outPath(x2y2,x3y2).
+inPath(x15y2,x15y1) :- reached(x15y2), not outPath(x15y2,x15y1).
+inPath(x15y1,x15y2) :- reached(x15y1), not outPath(x15y1,x15y2).
+inPath(x14y2,x14y1) :- reached(x14y2), not outPath(x14y2,x14y1).
+inPath(x14y1,x14y2) :- reached(x14y1), not outPath(x14y1,x14y2).
+inPath(x15y1,x14y1) :- reached(x15y1), not outPath(x15y1,x14y1).
+inPath(x14y1,x15y1) :- reached(x14y1), not outPath(x14y1,x15y1).
+inPath(x13y2,x13y1) :- reached(x13y2), not outPath(x13y2,x13y1).
+inPath(x13y1,x13y2) :- reached(x13y1), not outPath(x13y1,x13y2).
+inPath(x14y1,x13y1) :- reached(x14y1), not outPath(x14y1,x13y1).
+inPath(x13y1,x14y1) :- reached(x13y1), not outPath(x13y1,x14y1).
+inPath(x12y2,x12y1) :- reached(x12y2), not outPath(x12y2,x12y1).
+inPath(x12y1,x12y2) :- reached(x12y1), not outPath(x12y1,x12y2).
+inPath(x13y1,x12y1) :- reached(x13y1), not outPath(x13y1,x12y1).
+inPath(x12y1,x13y1) :- reached(x12y1), not outPath(x12y1,x13y1).
+inPath(x11y2,x11y1) :- reached(x11y2), not outPath(x11y2,x11y1).
+inPath(x11y1,x11y2) :- reached(x11y1), not outPath(x11y1,x11y2).
+inPath(x12y1,x11y1) :- reached(x12y1), not outPath(x12y1,x11y1).
+inPath(x11y1,x12y1) :- reached(x11y1), not outPath(x11y1,x12y1).
+inPath(x10y2,x10y1) :- reached(x10y2), not outPath(x10y2,x10y1).
+inPath(x10y1,x10y2) :- reached(x10y1), not outPath(x10y1,x10y2).
+inPath(x11y1,x10y1) :- reached(x11y1), not outPath(x11y1,x10y1).
+inPath(x10y1,x11y1) :- reached(x10y1), not outPath(x10y1,x11y1).
+inPath(x9y2,x9y1) :- reached(x9y2), not outPath(x9y2,x9y1).
+inPath(x9y1,x9y2) :- reached(x9y1), not outPath(x9y1,x9y2).
+inPath(x10y1,x9y1) :- reached(x10y1), not outPath(x10y1,x9y1).
+inPath(x9y1,x10y1) :- reached(x9y1), not outPath(x9y1,x10y1).
+inPath(x8y2,x8y1) :- reached(x8y2), not outPath(x8y2,x8y1).
+inPath(x8y1,x8y2) :- reached(x8y1), not outPath(x8y1,x8y2).
+inPath(x9y1,x8y1) :- reached(x9y1), not outPath(x9y1,x8y1).
+inPath(x8y1,x9y1) :- reached(x8y1), not outPath(x8y1,x9y1).
+inPath(x7y2,x7y1) :- reached(x7y2), not outPath(x7y2,x7y1).
+inPath(x7y1,x7y2) :- reached(x7y1), not outPath(x7y1,x7y2).
+inPath(x8y1,x7y1) :- reached(x8y1), not outPath(x8y1,x7y1).
+inPath(x7y1,x8y1) :- reached(x7y1), not outPath(x7y1,x8y1).
+inPath(x5y2,x5y1) :- reached(x5y2), not outPath(x5y2,x5y1).
+inPath(x5y1,x5y2) :- reached(x5y1), not outPath(x5y1,x5y2).
+inPath(x4y2,x4y1) :- reached(x4y2), not outPath(x4y2,x4y1).
+inPath(x4y1,x4y2) :- reached(x4y1), not outPath(x4y1,x4y2).
+inPath(x5y1,x4y1) :- reached(x5y1), not outPath(x5y1,x4y1).
+inPath(x4y1,x5y1) :- reached(x4y1), not outPath(x4y1,x5y1).
+start(x5y6).
+vtx(x13y10).
+vtx(x12y10).
+vtx(x11y10).
+vtx(x9y10).
+vtx(x8y10).
+vtx(x6y10).
+vtx(x5y10).
+vtx(x4y10).
+vtx(x3y10).
+vtx(x2y10).
+vtx(x1y10).
+vtx(x14y9).
+vtx(x13y9).
+vtx(x11y9).
+vtx(x10y9).
+vtx(x9y9).
+vtx(x8y9).
+vtx(x7y9).
+vtx(x6y9).
+vtx(x5y9).
+vtx(x4y9).
+vtx(x3y9).
+vtx(x2y9).
+vtx(x1y9).
+vtx(x16y8).
+vtx(x15y8).
+vtx(x14y8).
+vtx(x13y8).
+vtx(x12y8).
+vtx(x11y8).
+vtx(x10y8).
+vtx(x9y8).
+vtx(x7y8).
+vtx(x6y8).
+vtx(x5y8).
+vtx(x4y8).
+vtx(x3y8).
+vtx(x2y8).
+vtx(x1y8).
+vtx(x16y7).
+vtx(x15y7).
+vtx(x14y7).
+vtx(x13y7).
+vtx(x12y7).
+vtx(x11y7).
+vtx(x10y7).
+vtx(x9y7).
+vtx(x7y7).
+vtx(x6y7).
+vtx(x5y7).
+vtx(x4y7).
+vtx(x3y7).
+vtx(x2y7).
+vtx(x15y6).
+vtx(x14y6).
+vtx(x13y6).
+vtx(x12y6).
+vtx(x11y6).
+vtx(x10y6).
+vtx(x9y6).
+vtx(x8y6).
+vtx(x7y6).
+vtx(x6y6).
+vtx(x5y6).
+vtx(x3y6).
+vtx(x2y6).
+vtx(x16y5).
+vtx(x15y5).
+vtx(x14y5).
+vtx(x13y5).
+vtx(x11y5).
+vtx(x10y5).
+vtx(x9y5).
+vtx(x8y5).
+vtx(x7y5).
+vtx(x6y5).
+vtx(x5y5).
+vtx(x3y5).
+vtx(x2y5).
+vtx(x1y5).
+vtx(x16y4).
+vtx(x14y4).
+vtx(x13y4).
+vtx(x11y4).
+vtx(x10y4).
+vtx(x7y4).
+vtx(x6y4).
+vtx(x5y4).
+vtx(x4y4).
+vtx(x3y4).
+vtx(x1y4).
+vtx(x16y3).
+vtx(x14y3).
+vtx(x13y3).
+vtx(x12y3).
+vtx(x11y3).
+vtx(x10y3).
+vtx(x8y3).
+vtx(x7y3).
+vtx(x5y3).
+vtx(x4y3).
+vtx(x3y3).
+vtx(x2y3).
+vtx(x1y3).
+vtx(x16y2).
+vtx(x15y2).
+vtx(x14y2).
+vtx(x13y2).
+vtx(x12y2).
+vtx(x11y2).
+vtx(x10y2).
+vtx(x9y2).
+vtx(x8y2).
+vtx(x7y2).
+vtx(x6y2).
+vtx(x5y2).
+vtx(x4y2).
+vtx(x3y2).
+vtx(x2y2).
+vtx(x15y1).
+vtx(x14y1).
+vtx(x13y1).
+vtx(x12y1).
+vtx(x11y1).
+vtx(x10y1).
+vtx(x9y1).
+vtx(x8y1).
+vtx(x7y1).
+vtx(x5y1).
+vtx(x4y1).
+ :- inPath(x13y10,x13y9), inPath(x13y10,x12y10).
+ :- inPath(x12y10,x11y10), inPath(x12y10,x13y10).
+ :- inPath(x12y10,x13y10), inPath(x12y10,x11y10).
+ :- inPath(x11y10,x11y9), inPath(x11y10,x12y10).
+ :- inPath(x9y10,x9y9), inPath(x9y10,x8y10).
+ :- inPath(x8y10,x8y9), inPath(x8y10,x9y10).
+ :- inPath(x6y10,x6y9), inPath(x6y10,x5y10).
+ :- inPath(x5y10,x5y9), inPath(x5y10,x6y10).
+ :- inPath(x5y10,x4y10), inPath(x5y10,x6y10).
+ :- inPath(x5y10,x6y10), inPath(x5y10,x4y10).
+ :- inPath(x5y10,x5y9), inPath(x5y10,x4y10).
+ :- inPath(x4y10,x4y9), inPath(x4y10,x5y10).
+ :- inPath(x4y10,x3y10), inPath(x4y10,x5y10).
+ :- inPath(x4y10,x5y10), inPath(x4y10,x3y10).
+ :- inPath(x4y10,x4y9), inPath(x4y10,x3y10).
+ :- inPath(x3y10,x3y9), inPath(x3y10,x4y10).
+ :- inPath(x3y10,x2y10), inPath(x3y10,x4y10).
+ :- inPath(x3y10,x4y10), inPath(x3y10,x2y10).
+ :- inPath(x3y10,x3y9), inPath(x3y10,x2y10).
+ :- inPath(x2y10,x2y9), inPath(x2y10,x3y10).
+ :- inPath(x2y10,x1y10), inPath(x2y10,x3y10).
+ :- inPath(x2y10,x3y10), inPath(x2y10,x1y10).
+ :- inPath(x2y10,x2y9), inPath(x2y10,x1y10).
+ :- inPath(x1y10,x1y9), inPath(x1y10,x2y10).
+ :- inPath(x13y10,x12y10), inPath(x13y10,x13y9).
+ :- inPath(x13y9,x13y8), inPath(x13y9,x13y10).
+ :- inPath(x13y9,x14y9), inPath(x13y9,x13y10).
+ :- inPath(x14y9,x14y8), inPath(x14y9,x13y9).
+ :- inPath(x13y9,x13y10), inPath(x13y9,x14y9).
+ :- inPath(x13y9,x13y8), inPath(x13y9,x14y9).
+ :- inPath(x11y10,x12y10), inPath(x11y10,x11y9).
+ :- inPath(x11y9,x11y8), inPath(x11y9,x11y10).
+ :- inPath(x11y9,x10y9), inPath(x11y9,x11y10).
+ :- inPath(x11y9,x11y10), inPath(x11y9,x10y9).
+ :- inPath(x11y9,x11y8), inPath(x11y9,x10y9).
+ :- inPath(x10y9,x10y8), inPath(x10y9,x11y9).
+ :- inPath(x10y9,x9y9), inPath(x10y9,x11y9).
+ :- inPath(x9y10,x8y10), inPath(x9y10,x9y9).
+ :- inPath(x9y9,x9y8), inPath(x9y9,x9y10).
+ :- inPath(x9y9,x8y9), inPath(x9y9,x9y10).
+ :- inPath(x9y9,x10y9), inPath(x9y9,x9y10).
+ :- inPath(x10y9,x11y9), inPath(x10y9,x9y9).
+ :- inPath(x10y9,x10y8), inPath(x10y9,x9y9).
+ :- inPath(x9y9,x9y10), inPath(x9y9,x10y9).
+ :- inPath(x9y9,x9y8), inPath(x9y9,x10y9).
+ :- inPath(x9y9,x8y9), inPath(x9y9,x10y9).
+ :- inPath(x8y10,x9y10), inPath(x8y10,x8y9).
+ :- inPath(x8y9,x7y9), inPath(x8y9,x8y10).
+ :- inPath(x8y9,x9y9), inPath(x8y9,x8y10).
+ :- inPath(x9y9,x9y10), inPath(x9y9,x8y9).
+ :- inPath(x9y9,x9y8), inPath(x9y9,x8y9).
+ :- inPath(x9y9,x10y9), inPath(x9y9,x8y9).
+ :- inPath(x8y9,x8y10), inPath(x8y9,x9y9).
+ :- inPath(x8y9,x7y9), inPath(x8y9,x9y9).
+ :- inPath(x8y9,x8y10), inPath(x8y9,x7y9).
+ :- inPath(x8y9,x9y9), inPath(x8y9,x7y9).
+ :- inPath(x7y9,x7y8), inPath(x7y9,x8y9).
+ :- inPath(x7y9,x6y9), inPath(x7y9,x8y9).
+ :- inPath(x6y10,x5y10), inPath(x6y10,x6y9).
+ :- inPath(x6y9,x6y8), inPath(x6y9,x6y10).
+ :- inPath(x6y9,x5y9), inPath(x6y9,x6y10).
+ :- inPath(x6y9,x7y9), inPath(x6y9,x6y10).
+ :- inPath(x7y9,x8y9), inPath(x7y9,x6y9).
+ :- inPath(x7y9,x7y8), inPath(x7y9,x6y9).
+ :- inPath(x6y9,x6y10), inPath(x6y9,x7y9).
+ :- inPath(x6y9,x6y8), inPath(x6y9,x7y9).
+ :- inPath(x6y9,x5y9), inPath(x6y9,x7y9).
+ :- inPath(x5y10,x6y10), inPath(x5y10,x5y9).
+ :- inPath(x5y10,x4y10), inPath(x5y10,x5y9).
+ :- inPath(x5y9,x5y8), inPath(x5y9,x5y10).
+ :- inPath(x5y9,x4y9), inPath(x5y9,x5y10).
+ :- inPath(x5y9,x6y9), inPath(x5y9,x5y10).
+ :- inPath(x6y9,x6y10), inPath(x6y9,x5y9).
+ :- inPath(x6y9,x6y8), inPath(x6y9,x5y9).
+ :- inPath(x6y9,x7y9), inPath(x6y9,x5y9).
+ :- inPath(x5y9,x5y10), inPath(x5y9,x6y9).
+ :- inPath(x5y9,x5y8), inPath(x5y9,x6y9).
+ :- inPath(x5y9,x4y9), inPath(x5y9,x6y9).
+ :- inPath(x4y10,x5y10), inPath(x4y10,x4y9).
+ :- inPath(x4y10,x3y10), inPath(x4y10,x4y9).
+ :- inPath(x4y9,x4y8), inPath(x4y9,x4y10).
+ :- inPath(x4y9,x3y9), inPath(x4y9,x4y10).
+ :- inPath(x4y9,x5y9), inPath(x4y9,x4y10).
+ :- inPath(x5y9,x5y10), inPath(x5y9,x4y9).
+ :- inPath(x5y9,x5y8), inPath(x5y9,x4y9).
+ :- inPath(x5y9,x6y9), inPath(x5y9,x4y9).
+ :- inPath(x4y9,x4y10), inPath(x4y9,x5y9).
+ :- inPath(x4y9,x4y8), inPath(x4y9,x5y9).
+ :- inPath(x4y9,x3y9), inPath(x4y9,x5y9).
+ :- inPath(x3y10,x4y10), inPath(x3y10,x3y9).
+ :- inPath(x3y10,x2y10), inPath(x3y10,x3y9).
+ :- inPath(x3y9,x3y8), inPath(x3y9,x3y10).
+ :- inPath(x3y9,x2y9), inPath(x3y9,x3y10).
+ :- inPath(x3y9,x4y9), inPath(x3y9,x3y10).
+ :- inPath(x4y9,x4y10), inPath(x4y9,x3y9).
+ :- inPath(x4y9,x4y8), inPath(x4y9,x3y9).
+ :- inPath(x4y9,x5y9), inPath(x4y9,x3y9).
+ :- inPath(x3y9,x3y10), inPath(x3y9,x4y9).
+ :- inPath(x3y9,x3y8), inPath(x3y9,x4y9).
+ :- inPath(x3y9,x2y9), inPath(x3y9,x4y9).
+ :- inPath(x2y10,x3y10), inPath(x2y10,x2y9).
+ :- inPath(x2y10,x1y10), inPath(x2y10,x2y9).
+ :- inPath(x2y9,x2y8), inPath(x2y9,x2y10).
+ :- inPath(x2y9,x1y9), inPath(x2y9,x2y10).
+ :- inPath(x2y9,x3y9), inPath(x2y9,x2y10).
+ :- inPath(x3y9,x3y10), inPath(x3y9,x2y9).
+ :- inPath(x3y9,x3y8), inPath(x3y9,x2y9).
+ :- inPath(x3y9,x4y9), inPath(x3y9,x2y9).
+ :- inPath(x2y9,x2y10), inPath(x2y9,x3y9).
+ :- inPath(x2y9,x2y8), inPath(x2y9,x3y9).
+ :- inPath(x2y9,x1y9), inPath(x2y9,x3y9).
+ :- inPath(x1y10,x2y10), inPath(x1y10,x1y9).
+ :- inPath(x1y9,x1y8), inPath(x1y9,x1y10).
+ :- inPath(x1y9,x2y9), inPath(x1y9,x1y10).
+ :- inPath(x2y9,x2y10), inPath(x2y9,x1y9).
+ :- inPath(x2y9,x2y8), inPath(x2y9,x1y9).
+ :- inPath(x2y9,x3y9), inPath(x2y9,x1y9).
+ :- inPath(x1y9,x1y10), inPath(x1y9,x2y9).
+ :- inPath(x1y9,x1y8), inPath(x1y9,x2y9).
+ :- inPath(x16y8,x16y7), inPath(x16y8,x15y8).
+ :- inPath(x15y8,x15y7), inPath(x15y8,x16y8).
+ :- inPath(x15y8,x14y8), inPath(x15y8,x16y8).
+ :- inPath(x14y9,x13y9), inPath(x14y9,x14y8).
+ :- inPath(x14y8,x14y7), inPath(x14y8,x14y9).
+ :- inPath(x14y8,x13y8), inPath(x14y8,x14y9).
+ :- inPath(x14y8,x15y8), inPath(x14y8,x14y9).
+ :- inPath(x15y8,x16y8), inPath(x15y8,x14y8).
+ :- inPath(x15y8,x15y7), inPath(x15y8,x14y8).
+ :- inPath(x14y8,x14y9), inPath(x14y8,x15y8).
+ :- inPath(x14y8,x14y7), inPath(x14y8,x15y8).
+ :- inPath(x14y8,x13y8), inPath(x14y8,x15y8).
+ :- inPath(x13y9,x13y10), inPath(x13y9,x13y8).
+ :- inPath(x13y9,x14y9), inPath(x13y9,x13y8).
+ :- inPath(x13y8,x13y7), inPath(x13y8,x13y9).
+ :- inPath(x13y8,x12y8), inPath(x13y8,x13y9).
+ :- inPath(x13y8,x14y8), inPath(x13y8,x13y9).
+ :- inPath(x14y8,x14y9), inPath(x14y8,x13y8).
+ :- inPath(x14y8,x14y7), inPath(x14y8,x13y8).
+ :- inPath(x14y8,x15y8), inPath(x14y8,x13y8).
+ :- inPath(x13y8,x13y9), inPath(x13y8,x14y8).
+ :- inPath(x13y8,x13y7), inPath(x13y8,x14y8).
+ :- inPath(x13y8,x12y8), inPath(x13y8,x14y8).
+ :- inPath(x13y8,x13y9), inPath(x13y8,x12y8).
+ :- inPath(x13y8,x13y7), inPath(x13y8,x12y8).
+ :- inPath(x13y8,x14y8), inPath(x13y8,x12y8).
+ :- inPath(x12y8,x12y7), inPath(x12y8,x13y8).
+ :- inPath(x12y8,x11y8), inPath(x12y8,x13y8).
+ :- inPath(x11y9,x11y10), inPath(x11y9,x11y8).
+ :- inPath(x11y9,x10y9), inPath(x11y9,x11y8).
+ :- inPath(x11y8,x11y7), inPath(x11y8,x11y9).
+ :- inPath(x11y8,x10y8), inPath(x11y8,x11y9).
+ :- inPath(x11y8,x12y8), inPath(x11y8,x11y9).
+ :- inPath(x12y8,x13y8), inPath(x12y8,x11y8).
+ :- inPath(x12y8,x12y7), inPath(x12y8,x11y8).
+ :- inPath(x11y8,x11y9), inPath(x11y8,x12y8).
+ :- inPath(x11y8,x11y7), inPath(x11y8,x12y8).
+ :- inPath(x11y8,x10y8), inPath(x11y8,x12y8).
+ :- inPath(x10y9,x11y9), inPath(x10y9,x10y8).
+ :- inPath(x10y9,x9y9), inPath(x10y9,x10y8).
+ :- inPath(x10y8,x10y7), inPath(x10y8,x10y9).
+ :- inPath(x10y8,x9y8), inPath(x10y8,x10y9).
+ :- inPath(x10y8,x11y8), inPath(x10y8,x10y9).
+ :- inPath(x11y8,x11y9), inPath(x11y8,x10y8).
+ :- inPath(x11y8,x11y7), inPath(x11y8,x10y8).
+ :- inPath(x11y8,x12y8), inPath(x11y8,x10y8).
+ :- inPath(x10y8,x10y9), inPath(x10y8,x11y8).
+ :- inPath(x10y8,x10y7), inPath(x10y8,x11y8).
+ :- inPath(x10y8,x9y8), inPath(x10y8,x11y8).
+ :- inPath(x9y9,x9y10), inPath(x9y9,x9y8).
+ :- inPath(x9y9,x8y9), inPath(x9y9,x9y8).
+ :- inPath(x9y9,x10y9), inPath(x9y9,x9y8).
+ :- inPath(x9y8,x9y7), inPath(x9y8,x9y9).
+ :- inPath(x9y8,x10y8), inPath(x9y8,x9y9).
+ :- inPath(x10y8,x10y9), inPath(x10y8,x9y8).
+ :- inPath(x10y8,x10y7), inPath(x10y8,x9y8).
+ :- inPath(x10y8,x11y8), inPath(x10y8,x9y8).
+ :- inPath(x9y8,x9y9), inPath(x9y8,x10y8).
+ :- inPath(x9y8,x9y7), inPath(x9y8,x10y8).
+ :- inPath(x7y9,x8y9), inPath(x7y9,x7y8).
+ :- inPath(x7y9,x6y9), inPath(x7y9,x7y8).
+ :- inPath(x7y8,x7y7), inPath(x7y8,x7y9).
+ :- inPath(x7y8,x6y8), inPath(x7y8,x7y9).
+ :- inPath(x6y9,x6y10), inPath(x6y9,x6y8).
+ :- inPath(x6y9,x5y9), inPath(x6y9,x6y8).
+ :- inPath(x6y9,x7y9), inPath(x6y9,x6y8).
+ :- inPath(x6y8,x6y7), inPath(x6y8,x6y9).
+ :- inPath(x6y8,x5y8), inPath(x6y8,x6y9).
+ :- inPath(x6y8,x7y8), inPath(x6y8,x6y9).
+ :- inPath(x7y8,x7y9), inPath(x7y8,x6y8).
+ :- inPath(x7y8,x7y7), inPath(x7y8,x6y8).
+ :- inPath(x6y8,x6y9), inPath(x6y8,x7y8).
+ :- inPath(x6y8,x6y7), inPath(x6y8,x7y8).
+ :- inPath(x6y8,x5y8), inPath(x6y8,x7y8).
+ :- inPath(x5y9,x5y10), inPath(x5y9,x5y8).
+ :- inPath(x5y9,x4y9), inPath(x5y9,x5y8).
+ :- inPath(x5y9,x6y9), inPath(x5y9,x5y8).
+ :- inPath(x5y8,x5y7), inPath(x5y8,x5y9).
+ :- inPath(x5y8,x4y8), inPath(x5y8,x5y9).
+ :- inPath(x5y8,x6y8), inPath(x5y8,x5y9).
+ :- inPath(x6y8,x6y9), inPath(x6y8,x5y8).
+ :- inPath(x6y8,x6y7), inPath(x6y8,x5y8).
+ :- inPath(x6y8,x7y8), inPath(x6y8,x5y8).
+ :- inPath(x5y8,x5y9), inPath(x5y8,x6y8).
+ :- inPath(x5y8,x5y7), inPath(x5y8,x6y8).
+ :- inPath(x5y8,x4y8), inPath(x5y8,x6y8).
+ :- inPath(x4y9,x4y10), inPath(x4y9,x4y8).
+ :- inPath(x4y9,x3y9), inPath(x4y9,x4y8).
+ :- inPath(x4y9,x5y9), inPath(x4y9,x4y8).
+ :- inPath(x4y8,x4y7), inPath(x4y8,x4y9).
+ :- inPath(x4y8,x3y8), inPath(x4y8,x4y9).
+ :- inPath(x4y8,x5y8), inPath(x4y8,x4y9).
+ :- inPath(x5y8,x5y9), inPath(x5y8,x4y8).
+ :- inPath(x5y8,x5y7), inPath(x5y8,x4y8).
+ :- inPath(x5y8,x6y8), inPath(x5y8,x4y8).
+ :- inPath(x4y8,x4y9), inPath(x4y8,x5y8).
+ :- inPath(x4y8,x4y7), inPath(x4y8,x5y8).
+ :- inPath(x4y8,x3y8), inPath(x4y8,x5y8).
+ :- inPath(x3y9,x3y10), inPath(x3y9,x3y8).
+ :- inPath(x3y9,x2y9), inPath(x3y9,x3y8).
+ :- inPath(x3y9,x4y9), inPath(x3y9,x3y8).
+ :- inPath(x3y8,x3y7), inPath(x3y8,x3y9).
+ :- inPath(x3y8,x2y8), inPath(x3y8,x3y9).
+ :- inPath(x3y8,x4y8), inPath(x3y8,x3y9).
+ :- inPath(x4y8,x4y9), inPath(x4y8,x3y8).
+ :- inPath(x4y8,x4y7), inPath(x4y8,x3y8).
+ :- inPath(x4y8,x5y8), inPath(x4y8,x3y8).
+ :- inPath(x3y8,x3y9), inPath(x3y8,x4y8).
+ :- inPath(x3y8,x3y7), inPath(x3y8,x4y8).
+ :- inPath(x3y8,x2y8), inPath(x3y8,x4y8).
+ :- inPath(x2y9,x2y10), inPath(x2y9,x2y8).
+ :- inPath(x2y9,x1y9), inPath(x2y9,x2y8).
+ :- inPath(x2y9,x3y9), inPath(x2y9,x2y8).
+ :- inPath(x2y8,x2y7), inPath(x2y8,x2y9).
+ :- inPath(x2y8,x1y8), inPath(x2y8,x2y9).
+ :- inPath(x2y8,x3y8), inPath(x2y8,x2y9).
+ :- inPath(x3y8,x3y9), inPath(x3y8,x2y8).
+ :- inPath(x3y8,x3y7), inPath(x3y8,x2y8).
+ :- inPath(x3y8,x4y8), inPath(x3y8,x2y8).
+ :- inPath(x2y8,x2y9), inPath(x2y8,x3y8).
+ :- inPath(x2y8,x2y7), inPath(x2y8,x3y8).
+ :- inPath(x2y8,x1y8), inPath(x2y8,x3y8).
+ :- inPath(x1y9,x1y10), inPath(x1y9,x1y8).
+ :- inPath(x1y9,x2y9), inPath(x1y9,x1y8).
+ :- inPath(x1y8,x2y8), inPath(x1y8,x1y9).
+ :- inPath(x2y8,x2y9), inPath(x2y8,x1y8).
+ :- inPath(x2y8,x2y7), inPath(x2y8,x1y8).
+ :- inPath(x2y8,x3y8), inPath(x2y8,x1y8).
+ :- inPath(x1y8,x1y9), inPath(x1y8,x2y8).
+ :- inPath(x16y8,x15y8), inPath(x16y8,x16y7).
+ :- inPath(x16y7,x15y7), inPath(x16y7,x16y8).
+ :- inPath(x15y8,x16y8), inPath(x15y8,x15y7).
+ :- inPath(x15y8,x14y8), inPath(x15y8,x15y7).
+ :- inPath(x15y7,x15y6), inPath(x15y7,x15y8).
+ :- inPath(x15y7,x14y7), inPath(x15y7,x15y8).
+ :- inPath(x15y7,x16y7), inPath(x15y7,x15y8).
+ :- inPath(x16y7,x16y8), inPath(x16y7,x15y7).
+ :- inPath(x15y7,x15y8), inPath(x15y7,x16y7).
+ :- inPath(x15y7,x15y6), inPath(x15y7,x16y7).
+ :- inPath(x15y7,x14y7), inPath(x15y7,x16y7).
+ :- inPath(x14y8,x14y9), inPath(x14y8,x14y7).
+ :- inPath(x14y8,x13y8), inPath(x14y8,x14y7).
+ :- inPath(x14y8,x15y8), inPath(x14y8,x14y7).
+ :- inPath(x14y7,x14y6), inPath(x14y7,x14y8).
+ :- inPath(x14y7,x13y7), inPath(x14y7,x14y8).
+ :- inPath(x14y7,x15y7), inPath(x14y7,x14y8).
+ :- inPath(x15y7,x15y8), inPath(x15y7,x14y7).
+ :- inPath(x15y7,x15y6), inPath(x15y7,x14y7).
+ :- inPath(x15y7,x16y7), inPath(x15y7,x14y7).
+ :- inPath(x14y7,x14y8), inPath(x14y7,x15y7).
+ :- inPath(x14y7,x14y6), inPath(x14y7,x15y7).
+ :- inPath(x14y7,x13y7), inPath(x14y7,x15y7).
+ :- inPath(x13y8,x13y9), inPath(x13y8,x13y7).
+ :- inPath(x13y8,x12y8), inPath(x13y8,x13y7).
+ :- inPath(x13y8,x14y8), inPath(x13y8,x13y7).
+ :- inPath(x13y7,x13y6), inPath(x13y7,x13y8).
+ :- inPath(x13y7,x12y7), inPath(x13y7,x13y8).
+ :- inPath(x13y7,x14y7), inPath(x13y7,x13y8).
+ :- inPath(x14y7,x14y8), inPath(x14y7,x13y7).
+ :- inPath(x14y7,x14y6), inPath(x14y7,x13y7).
+ :- inPath(x14y7,x15y7), inPath(x14y7,x13y7).
+ :- inPath(x13y7,x13y8), inPath(x13y7,x14y7).
+ :- inPath(x13y7,x13y6), inPath(x13y7,x14y7).
+ :- inPath(x13y7,x12y7), inPath(x13y7,x14y7).
+ :- inPath(x12y8,x13y8), inPath(x12y8,x12y7).
+ :- inPath(x12y8,x11y8), inPath(x12y8,x12y7).
+ :- inPath(x12y7,x12y6), inPath(x12y7,x12y8).
+ :- inPath(x12y7,x11y7), inPath(x12y7,x12y8).
+ :- inPath(x12y7,x13y7), inPath(x12y7,x12y8).
+ :- inPath(x13y7,x13y8), inPath(x13y7,x12y7).
+ :- inPath(x13y7,x13y6), inPath(x13y7,x12y7).
+ :- inPath(x13y7,x14y7), inPath(x13y7,x12y7).
+ :- inPath(x12y7,x12y8), inPath(x12y7,x13y7).
+ :- inPath(x12y7,x12y6), inPath(x12y7,x13y7).
+ :- inPath(x12y7,x11y7), inPath(x12y7,x13y7).
+ :- inPath(x11y8,x11y9), inPath(x11y8,x11y7).
+ :- inPath(x11y8,x10y8), inPath(x11y8,x11y7).
+ :- inPath(x11y8,x12y8), inPath(x11y8,x11y7).
+ :- inPath(x11y7,x11y6), inPath(x11y7,x11y8).
+ :- inPath(x11y7,x10y7), inPath(x11y7,x11y8).
+ :- inPath(x11y7,x12y7), inPath(x11y7,x11y8).
+ :- inPath(x12y7,x12y8), inPath(x12y7,x11y7).
+ :- inPath(x12y7,x12y6), inPath(x12y7,x11y7).
+ :- inPath(x12y7,x13y7), inPath(x12y7,x11y7).
+ :- inPath(x11y7,x11y8), inPath(x11y7,x12y7).
+ :- inPath(x11y7,x11y6), inPath(x11y7,x12y7).
+ :- inPath(x11y7,x10y7), inPath(x11y7,x12y7).
+ :- inPath(x10y8,x10y9), inPath(x10y8,x10y7).
+ :- inPath(x10y8,x9y8), inPath(x10y8,x10y7).
+ :- inPath(x10y8,x11y8), inPath(x10y8,x10y7).
+ :- inPath(x10y7,x10y6), inPath(x10y7,x10y8).
+ :- inPath(x10y7,x9y7), inPath(x10y7,x10y8).
+ :- inPath(x10y7,x11y7), inPath(x10y7,x10y8).
+ :- inPath(x11y7,x11y8), inPath(x11y7,x10y7).
+ :- inPath(x11y7,x11y6), inPath(x11y7,x10y7).
+ :- inPath(x11y7,x12y7), inPath(x11y7,x10y7).
+ :- inPath(x10y7,x10y8), inPath(x10y7,x11y7).
+ :- inPath(x10y7,x10y6), inPath(x10y7,x11y7).
+ :- inPath(x10y7,x9y7), inPath(x10y7,x11y7).
+ :- inPath(x9y8,x9y9), inPath(x9y8,x9y7).
+ :- inPath(x9y8,x10y8), inPath(x9y8,x9y7).
+ :- inPath(x9y7,x9y6), inPath(x9y7,x9y8).
+ :- inPath(x9y7,x10y7), inPath(x9y7,x9y8).
+ :- inPath(x10y7,x10y8), inPath(x10y7,x9y7).
+ :- inPath(x10y7,x10y6), inPath(x10y7,x9y7).
+ :- inPath(x10y7,x11y7), inPath(x10y7,x9y7).
+ :- inPath(x9y7,x9y8), inPath(x9y7,x10y7).
+ :- inPath(x9y7,x9y6), inPath(x9y7,x10y7).
+ :- inPath(x7y8,x7y9), inPath(x7y8,x7y7).
+ :- inPath(x7y8,x6y8), inPath(x7y8,x7y7).
+ :- inPath(x7y7,x7y6), inPath(x7y7,x7y8).
+ :- inPath(x7y7,x6y7), inPath(x7y7,x7y8).
+ :- inPath(x6y8,x6y9), inPath(x6y8,x6y7).
+ :- inPath(x6y8,x5y8), inPath(x6y8,x6y7).
+ :- inPath(x6y8,x7y8), inPath(x6y8,x6y7).
+ :- inPath(x6y7,x6y6), inPath(x6y7,x6y8).
+ :- inPath(x6y7,x5y7), inPath(x6y7,x6y8).
+ :- inPath(x6y7,x7y7), inPath(x6y7,x6y8).
+ :- inPath(x7y7,x7y8), inPath(x7y7,x6y7).
+ :- inPath(x7y7,x7y6), inPath(x7y7,x6y7).
+ :- inPath(x6y7,x6y8), inPath(x6y7,x7y7).
+ :- inPath(x6y7,x6y6), inPath(x6y7,x7y7).
+ :- inPath(x6y7,x5y7), inPath(x6y7,x7y7).
+ :- inPath(x5y8,x5y9), inPath(x5y8,x5y7).
+ :- inPath(x5y8,x4y8), inPath(x5y8,x5y7).
+ :- inPath(x5y8,x6y8), inPath(x5y8,x5y7).
+ :- inPath(x5y7,x5y6), inPath(x5y7,x5y8).
+ :- inPath(x5y7,x4y7), inPath(x5y7,x5y8).
+ :- inPath(x5y7,x6y7), inPath(x5y7,x5y8).
+ :- inPath(x6y7,x6y8), inPath(x6y7,x5y7).
+ :- inPath(x6y7,x6y6), inPath(x6y7,x5y7).
+ :- inPath(x6y7,x7y7), inPath(x6y7,x5y7).
+ :- inPath(x5y7,x5y8), inPath(x5y7,x6y7).
+ :- inPath(x5y7,x5y6), inPath(x5y7,x6y7).
+ :- inPath(x5y7,x4y7), inPath(x5y7,x6y7).
+ :- inPath(x4y8,x4y9), inPath(x4y8,x4y7).
+ :- inPath(x4y8,x3y8), inPath(x4y8,x4y7).
+ :- inPath(x4y8,x5y8), inPath(x4y8,x4y7).
+ :- inPath(x4y7,x3y7), inPath(x4y7,x4y8).
+ :- inPath(x4y7,x5y7), inPath(x4y7,x4y8).
+ :- inPath(x5y7,x5y8), inPath(x5y7,x4y7).
+ :- inPath(x5y7,x5y6), inPath(x5y7,x4y7).
+ :- inPath(x5y7,x6y7), inPath(x5y7,x4y7).
+ :- inPath(x4y7,x4y8), inPath(x4y7,x5y7).
+ :- inPath(x4y7,x3y7), inPath(x4y7,x5y7).
+ :- inPath(x3y8,x3y9), inPath(x3y8,x3y7).
+ :- inPath(x3y8,x2y8), inPath(x3y8,x3y7).
+ :- inPath(x3y8,x4y8), inPath(x3y8,x3y7).
+ :- inPath(x3y7,x3y6), inPath(x3y7,x3y8).
+ :- inPath(x3y7,x2y7), inPath(x3y7,x3y8).
+ :- inPath(x3y7,x4y7), inPath(x3y7,x3y8).
+ :- inPath(x4y7,x4y8), inPath(x4y7,x3y7).
+ :- inPath(x4y7,x5y7), inPath(x4y7,x3y7).
+ :- inPath(x3y7,x3y8), inPath(x3y7,x4y7).
+ :- inPath(x3y7,x3y6), inPath(x3y7,x4y7).
+ :- inPath(x3y7,x2y7), inPath(x3y7,x4y7).
+ :- inPath(x2y8,x2y9), inPath(x2y8,x2y7).
+ :- inPath(x2y8,x1y8), inPath(x2y8,x2y7).
+ :- inPath(x2y8,x3y8), inPath(x2y8,x2y7).
+ :- inPath(x2y7,x2y6), inPath(x2y7,x2y8).
+ :- inPath(x2y7,x3y7), inPath(x2y7,x2y8).
+ :- inPath(x3y7,x3y8), inPath(x3y7,x2y7).
+ :- inPath(x3y7,x3y6), inPath(x3y7,x2y7).
+ :- inPath(x3y7,x4y7), inPath(x3y7,x2y7).
+ :- inPath(x2y7,x2y8), inPath(x2y7,x3y7).
+ :- inPath(x2y7,x2y6), inPath(x2y7,x3y7).
+ :- inPath(x15y7,x15y8), inPath(x15y7,x15y6).
+ :- inPath(x15y7,x14y7), inPath(x15y7,x15y6).
+ :- inPath(x15y7,x16y7), inPath(x15y7,x15y6).
+ :- inPath(x15y6,x15y5), inPath(x15y6,x15y7).
+ :- inPath(x15y6,x14y6), inPath(x15y6,x15y7).
+ :- inPath(x14y7,x14y8), inPath(x14y7,x14y6).
+ :- inPath(x14y7,x13y7), inPath(x14y7,x14y6).
+ :- inPath(x14y7,x15y7), inPath(x14y7,x14y6).
+ :- inPath(x14y6,x14y5), inPath(x14y6,x14y7).
+ :- inPath(x14y6,x13y6), inPath(x14y6,x14y7).
+ :- inPath(x14y6,x15y6), inPath(x14y6,x14y7).
+ :- inPath(x15y6,x15y7), inPath(x15y6,x14y6).
+ :- inPath(x15y6,x15y5), inPath(x15y6,x14y6).
+ :- inPath(x14y6,x14y7), inPath(x14y6,x15y6).
+ :- inPath(x14y6,x14y5), inPath(x14y6,x15y6).
+ :- inPath(x14y6,x13y6), inPath(x14y6,x15y6).
+ :- inPath(x13y7,x13y8), inPath(x13y7,x13y6).
+ :- inPath(x13y7,x12y7), inPath(x13y7,x13y6).
+ :- inPath(x13y7,x14y7), inPath(x13y7,x13y6).
+ :- inPath(x13y6,x13y5), inPath(x13y6,x13y7).
+ :- inPath(x13y6,x12y6), inPath(x13y6,x13y7).
+ :- inPath(x13y6,x14y6), inPath(x13y6,x13y7).
+ :- inPath(x14y6,x14y7), inPath(x14y6,x13y6).
+ :- inPath(x14y6,x14y5), inPath(x14y6,x13y6).
+ :- inPath(x14y6,x15y6), inPath(x14y6,x13y6).
+ :- inPath(x13y6,x13y7), inPath(x13y6,x14y6).
+ :- inPath(x13y6,x13y5), inPath(x13y6,x14y6).
+ :- inPath(x13y6,x12y6), inPath(x13y6,x14y6).
+ :- inPath(x12y7,x12y8), inPath(x12y7,x12y6).
+ :- inPath(x12y7,x11y7), inPath(x12y7,x12y6).
+ :- inPath(x12y7,x13y7), inPath(x12y7,x12y6).
+ :- inPath(x12y6,x11y6), inPath(x12y6,x12y7).
+ :- inPath(x12y6,x13y6), inPath(x12y6,x12y7).
+ :- inPath(x13y6,x13y7), inPath(x13y6,x12y6).
+ :- inPath(x13y6,x13y5), inPath(x13y6,x12y6).
+ :- inPath(x13y6,x14y6), inPath(x13y6,x12y6).
+ :- inPath(x12y6,x12y7), inPath(x12y6,x13y6).
+ :- inPath(x12y6,x11y6), inPath(x12y6,x13y6).
+ :- inPath(x11y7,x11y8), inPath(x11y7,x11y6).
+ :- inPath(x11y7,x10y7), inPath(x11y7,x11y6).
+ :- inPath(x11y7,x12y7), inPath(x11y7,x11y6).
+ :- inPath(x11y6,x11y5), inPath(x11y6,x11y7).
+ :- inPath(x11y6,x10y6), inPath(x11y6,x11y7).
+ :- inPath(x11y6,x12y6), inPath(x11y6,x11y7).
+ :- inPath(x12y6,x12y7), inPath(x12y6,x11y6).
+ :- inPath(x12y6,x13y6), inPath(x12y6,x11y6).
+ :- inPath(x11y6,x11y7), inPath(x11y6,x12y6).
+ :- inPath(x11y6,x11y5), inPath(x11y6,x12y6).
+ :- inPath(x11y6,x10y6), inPath(x11y6,x12y6).
+ :- inPath(x10y7,x10y8), inPath(x10y7,x10y6).
+ :- inPath(x10y7,x9y7), inPath(x10y7,x10y6).
+ :- inPath(x10y7,x11y7), inPath(x10y7,x10y6).
+ :- inPath(x10y6,x10y5), inPath(x10y6,x10y7).
+ :- inPath(x10y6,x9y6), inPath(x10y6,x10y7).
+ :- inPath(x10y6,x11y6), inPath(x10y6,x10y7).
+ :- inPath(x11y6,x11y7), inPath(x11y6,x10y6).
+ :- inPath(x11y6,x11y5), inPath(x11y6,x10y6).
+ :- inPath(x11y6,x12y6), inPath(x11y6,x10y6).
+ :- inPath(x10y6,x10y7), inPath(x10y6,x11y6).
+ :- inPath(x10y6,x10y5), inPath(x10y6,x11y6).
+ :- inPath(x10y6,x9y6), inPath(x10y6,x11y6).
+ :- inPath(x9y7,x9y8), inPath(x9y7,x9y6).
+ :- inPath(x9y7,x10y7), inPath(x9y7,x9y6).
+ :- inPath(x9y6,x9y5), inPath(x9y6,x9y7).
+ :- inPath(x9y6,x8y6), inPath(x9y6,x9y7).
+ :- inPath(x9y6,x10y6), inPath(x9y6,x9y7).
+ :- inPath(x10y6,x10y7), inPath(x10y6,x9y6).
+ :- inPath(x10y6,x10y5), inPath(x10y6,x9y6).
+ :- inPath(x10y6,x11y6), inPath(x10y6,x9y6).
+ :- inPath(x9y6,x9y7), inPath(x9y6,x10y6).
+ :- inPath(x9y6,x9y5), inPath(x9y6,x10y6).
+ :- inPath(x9y6,x8y6), inPath(x9y6,x10y6).
+ :- inPath(x9y6,x9y7), inPath(x9y6,x8y6).
+ :- inPath(x9y6,x9y5), inPath(x9y6,x8y6).
+ :- inPath(x9y6,x10y6), inPath(x9y6,x8y6).
+ :- inPath(x8y6,x8y5), inPath(x8y6,x9y6).
+ :- inPath(x8y6,x7y6), inPath(x8y6,x9y6).
+ :- inPath(x7y7,x7y8), inPath(x7y7,x7y6).
+ :- inPath(x7y7,x6y7), inPath(x7y7,x7y6).
+ :- inPath(x7y6,x7y5), inPath(x7y6,x7y7).
+ :- inPath(x7y6,x6y6), inPath(x7y6,x7y7).
+ :- inPath(x7y6,x8y6), inPath(x7y6,x7y7).
+ :- inPath(x8y6,x9y6), inPath(x8y6,x7y6).
+ :- inPath(x8y6,x8y5), inPath(x8y6,x7y6).
+ :- inPath(x7y6,x7y7), inPath(x7y6,x8y6).
+ :- inPath(x7y6,x7y5), inPath(x7y6,x8y6).
+ :- inPath(x7y6,x6y6), inPath(x7y6,x8y6).
+ :- inPath(x6y7,x6y8), inPath(x6y7,x6y6).
+ :- inPath(x6y7,x5y7), inPath(x6y7,x6y6).
+ :- inPath(x6y7,x7y7), inPath(x6y7,x6y6).
+ :- inPath(x6y6,x6y5), inPath(x6y6,x6y7).
+ :- inPath(x6y6,x5y6), inPath(x6y6,x6y7).
+ :- inPath(x6y6,x7y6), inPath(x6y6,x6y7).
+ :- inPath(x7y6,x7y7), inPath(x7y6,x6y6).
+ :- inPath(x7y6,x7y5), inPath(x7y6,x6y6).
+ :- inPath(x7y6,x8y6), inPath(x7y6,x6y6).
+ :- inPath(x6y6,x6y7), inPath(x6y6,x7y6).
+ :- inPath(x6y6,x6y5), inPath(x6y6,x7y6).
+ :- inPath(x6y6,x5y6), inPath(x6y6,x7y6).
+ :- inPath(x5y7,x5y8), inPath(x5y7,x5y6).
+ :- inPath(x5y7,x4y7), inPath(x5y7,x5y6).
+ :- inPath(x5y7,x6y7), inPath(x5y7,x5y6).
+ :- inPath(x5y6,x5y5), inPath(x5y6,x5y7).
+ :- inPath(x5y6,x6y6), inPath(x5y6,x5y7).
+ :- inPath(x6y6,x6y7), inPath(x6y6,x5y6).
+ :- inPath(x6y6,x6y5), inPath(x6y6,x5y6).
+ :- inPath(x6y6,x7y6), inPath(x6y6,x5y6).
+ :- inPath(x5y6,x5y7), inPath(x5y6,x6y6).
+ :- inPath(x5y6,x5y5), inPath(x5y6,x6y6).
+ :- inPath(x3y7,x3y8), inPath(x3y7,x3y6).
+ :- inPath(x3y7,x2y7), inPath(x3y7,x3y6).
+ :- inPath(x3y7,x4y7), inPath(x3y7,x3y6).
+ :- inPath(x3y6,x3y5), inPath(x3y6,x3y7).
+ :- inPath(x3y6,x2y6), inPath(x3y6,x3y7).
+ :- inPath(x2y7,x2y8), inPath(x2y7,x2y6).
+ :- inPath(x2y7,x3y7), inPath(x2y7,x2y6).
+ :- inPath(x2y6,x2y5), inPath(x2y6,x2y7).
+ :- inPath(x2y6,x3y6), inPath(x2y6,x2y7).
+ :- inPath(x3y6,x3y7), inPath(x3y6,x2y6).
+ :- inPath(x3y6,x3y5), inPath(x3y6,x2y6).
+ :- inPath(x2y6,x2y7), inPath(x2y6,x3y6).
+ :- inPath(x2y6,x2y5), inPath(x2y6,x3y6).
+ :- inPath(x15y6,x15y7), inPath(x15y6,x15y5).
+ :- inPath(x15y6,x14y6), inPath(x15y6,x15y5).
+ :- inPath(x15y5,x14y5), inPath(x15y5,x15y6).
+ :- inPath(x15y5,x16y5), inPath(x15y5,x15y6).
+ :- inPath(x16y5,x16y4), inPath(x16y5,x15y5).
+ :- inPath(x15y5,x15y6), inPath(x15y5,x16y5).
+ :- inPath(x15y5,x14y5), inPath(x15y5,x16y5).
+ :- inPath(x14y6,x14y7), inPath(x14y6,x14y5).
+ :- inPath(x14y6,x13y6), inPath(x14y6,x14y5).
+ :- inPath(x14y6,x15y6), inPath(x14y6,x14y5).
+ :- inPath(x14y5,x14y4), inPath(x14y5,x14y6).
+ :- inPath(x14y5,x13y5), inPath(x14y5,x14y6).
+ :- inPath(x14y5,x15y5), inPath(x14y5,x14y6).
+ :- inPath(x15y5,x15y6), inPath(x15y5,x14y5).
+ :- inPath(x15y5,x16y5), inPath(x15y5,x14y5).
+ :- inPath(x14y5,x14y6), inPath(x14y5,x15y5).
+ :- inPath(x14y5,x14y4), inPath(x14y5,x15y5).
+ :- inPath(x14y5,x13y5), inPath(x14y5,x15y5).
+ :- inPath(x13y6,x13y7), inPath(x13y6,x13y5).
+ :- inPath(x13y6,x12y6), inPath(x13y6,x13y5).
+ :- inPath(x13y6,x14y6), inPath(x13y6,x13y5).
+ :- inPath(x13y5,x13y4), inPath(x13y5,x13y6).
+ :- inPath(x13y5,x14y5), inPath(x13y5,x13y6).
+ :- inPath(x14y5,x14y6), inPath(x14y5,x13y5).
+ :- inPath(x14y5,x14y4), inPath(x14y5,x13y5).
+ :- inPath(x14y5,x15y5), inPath(x14y5,x13y5).
+ :- inPath(x13y5,x13y6), inPath(x13y5,x14y5).
+ :- inPath(x13y5,x13y4), inPath(x13y5,x14y5).
+ :- inPath(x11y6,x11y7), inPath(x11y6,x11y5).
+ :- inPath(x11y6,x10y6), inPath(x11y6,x11y5).
+ :- inPath(x11y6,x12y6), inPath(x11y6,x11y5).
+ :- inPath(x11y5,x11y4), inPath(x11y5,x11y6).
+ :- inPath(x11y5,x10y5), inPath(x11y5,x11y6).
+ :- inPath(x10y6,x10y7), inPath(x10y6,x10y5).
+ :- inPath(x10y6,x9y6), inPath(x10y6,x10y5).
+ :- inPath(x10y6,x11y6), inPath(x10y6,x10y5).
+ :- inPath(x10y5,x10y4), inPath(x10y5,x10y6).
+ :- inPath(x10y5,x9y5), inPath(x10y5,x10y6).
+ :- inPath(x10y5,x11y5), inPath(x10y5,x10y6).
+ :- inPath(x11y5,x11y6), inPath(x11y5,x10y5).
+ :- inPath(x11y5,x11y4), inPath(x11y5,x10y5).
+ :- inPath(x10y5,x10y6), inPath(x10y5,x11y5).
+ :- inPath(x10y5,x10y4), inPath(x10y5,x11y5).
+ :- inPath(x10y5,x9y5), inPath(x10y5,x11y5).
+ :- inPath(x9y6,x9y7), inPath(x9y6,x9y5).
+ :- inPath(x9y6,x8y6), inPath(x9y6,x9y5).
+ :- inPath(x9y6,x10y6), inPath(x9y6,x9y5).
+ :- inPath(x9y5,x8y5), inPath(x9y5,x9y6).
+ :- inPath(x9y5,x10y5), inPath(x9y5,x9y6).
+ :- inPath(x10y5,x10y6), inPath(x10y5,x9y5).
+ :- inPath(x10y5,x10y4), inPath(x10y5,x9y5).
+ :- inPath(x10y5,x11y5), inPath(x10y5,x9y5).
+ :- inPath(x9y5,x9y6), inPath(x9y5,x10y5).
+ :- inPath(x9y5,x8y5), inPath(x9y5,x10y5).
+ :- inPath(x8y6,x9y6), inPath(x8y6,x8y5).
+ :- inPath(x8y6,x7y6), inPath(x8y6,x8y5).
+ :- inPath(x8y5,x7y5), inPath(x8y5,x8y6).
+ :- inPath(x8y5,x9y5), inPath(x8y5,x8y6).
+ :- inPath(x9y5,x9y6), inPath(x9y5,x8y5).
+ :- inPath(x9y5,x10y5), inPath(x9y5,x8y5).
+ :- inPath(x8y5,x8y6), inPath(x8y5,x9y5).
+ :- inPath(x8y5,x7y5), inPath(x8y5,x9y5).
+ :- inPath(x7y6,x7y7), inPath(x7y6,x7y5).
+ :- inPath(x7y6,x6y6), inPath(x7y6,x7y5).
+ :- inPath(x7y6,x8y6), inPath(x7y6,x7y5).
+ :- inPath(x7y5,x7y4), inPath(x7y5,x7y6).
+ :- inPath(x7y5,x6y5), inPath(x7y5,x7y6).
+ :- inPath(x7y5,x8y5), inPath(x7y5,x7y6).
+ :- inPath(x8y5,x8y6), inPath(x8y5,x7y5).
+ :- inPath(x8y5,x9y5), inPath(x8y5,x7y5).
+ :- inPath(x7y5,x7y6), inPath(x7y5,x8y5).
+ :- inPath(x7y5,x7y4), inPath(x7y5,x8y5).
+ :- inPath(x7y5,x6y5), inPath(x7y5,x8y5).
+ :- inPath(x6y6,x6y7), inPath(x6y6,x6y5).
+ :- inPath(x6y6,x5y6), inPath(x6y6,x6y5).
+ :- inPath(x6y6,x7y6), inPath(x6y6,x6y5).
+ :- inPath(x6y5,x6y4), inPath(x6y5,x6y6).
+ :- inPath(x6y5,x5y5), inPath(x6y5,x6y6).
+ :- inPath(x6y5,x7y5), inPath(x6y5,x6y6).
+ :- inPath(x7y5,x7y6), inPath(x7y5,x6y5).
+ :- inPath(x7y5,x7y4), inPath(x7y5,x6y5).
+ :- inPath(x7y5,x8y5), inPath(x7y5,x6y5).
+ :- inPath(x6y5,x6y6), inPath(x6y5,x7y5).
+ :- inPath(x6y5,x6y4), inPath(x6y5,x7y5).
+ :- inPath(x6y5,x5y5), inPath(x6y5,x7y5).
+ :- inPath(x5y6,x5y7), inPath(x5y6,x5y5).
+ :- inPath(x5y6,x6y6), inPath(x5y6,x5y5).
+ :- inPath(x5y5,x5y4), inPath(x5y5,x5y6).
+ :- inPath(x5y5,x6y5), inPath(x5y5,x5y6).
+ :- inPath(x6y5,x6y6), inPath(x6y5,x5y5).
+ :- inPath(x6y5,x6y4), inPath(x6y5,x5y5).
+ :- inPath(x6y5,x7y5), inPath(x6y5,x5y5).
+ :- inPath(x5y5,x5y6), inPath(x5y5,x6y5).
+ :- inPath(x5y5,x5y4), inPath(x5y5,x6y5).
+ :- inPath(x3y6,x3y7), inPath(x3y6,x3y5).
+ :- inPath(x3y6,x2y6), inPath(x3y6,x3y5).
+ :- inPath(x3y5,x3y4), inPath(x3y5,x3y6).
+ :- inPath(x3y5,x2y5), inPath(x3y5,x3y6).
+ :- inPath(x2y6,x2y7), inPath(x2y6,x2y5).
+ :- inPath(x2y6,x3y6), inPath(x2y6,x2y5).
+ :- inPath(x2y5,x1y5), inPath(x2y5,x2y6).
+ :- inPath(x2y5,x3y5), inPath(x2y5,x2y6).
+ :- inPath(x3y5,x3y6), inPath(x3y5,x2y5).
+ :- inPath(x3y5,x3y4), inPath(x3y5,x2y5).
+ :- inPath(x2y5,x2y6), inPath(x2y5,x3y5).
+ :- inPath(x2y5,x1y5), inPath(x2y5,x3y5).
+ :- inPath(x2y5,x2y6), inPath(x2y5,x1y5).
+ :- inPath(x2y5,x3y5), inPath(x2y5,x1y5).
+ :- inPath(x1y5,x1y4), inPath(x1y5,x2y5).
+ :- inPath(x16y5,x15y5), inPath(x16y5,x16y4).
+ :- inPath(x16y4,x16y3), inPath(x16y4,x16y5).
+ :- inPath(x14y5,x14y6), inPath(x14y5,x14y4).
+ :- inPath(x14y5,x13y5), inPath(x14y5,x14y4).
+ :- inPath(x14y5,x15y5), inPath(x14y5,x14y4).
+ :- inPath(x14y4,x14y3), inPath(x14y4,x14y5).
+ :- inPath(x14y4,x13y4), inPath(x14y4,x14y5).
+ :- inPath(x13y5,x13y6), inPath(x13y5,x13y4).
+ :- inPath(x13y5,x14y5), inPath(x13y5,x13y4).
+ :- inPath(x13y4,x13y3), inPath(x13y4,x13y5).
+ :- inPath(x13y4,x14y4), inPath(x13y4,x13y5).
+ :- inPath(x14y4,x14y5), inPath(x14y4,x13y4).
+ :- inPath(x14y4,x14y3), inPath(x14y4,x13y4).
+ :- inPath(x13y4,x13y5), inPath(x13y4,x14y4).
+ :- inPath(x13y4,x13y3), inPath(x13y4,x14y4).
+ :- inPath(x11y5,x11y6), inPath(x11y5,x11y4).
+ :- inPath(x11y5,x10y5), inPath(x11y5,x11y4).
+ :- inPath(x11y4,x11y3), inPath(x11y4,x11y5).
+ :- inPath(x11y4,x10y4), inPath(x11y4,x11y5).
+ :- inPath(x10y5,x10y6), inPath(x10y5,x10y4).
+ :- inPath(x10y5,x9y5), inPath(x10y5,x10y4).
+ :- inPath(x10y5,x11y5), inPath(x10y5,x10y4).
+ :- inPath(x10y4,x10y3), inPath(x10y4,x10y5).
+ :- inPath(x10y4,x11y4), inPath(x10y4,x10y5).
+ :- inPath(x11y4,x11y5), inPath(x11y4,x10y4).
+ :- inPath(x11y4,x11y3), inPath(x11y4,x10y4).
+ :- inPath(x10y4,x10y5), inPath(x10y4,x11y4).
+ :- inPath(x10y4,x10y3), inPath(x10y4,x11y4).
+ :- inPath(x7y5,x7y6), inPath(x7y5,x7y4).
+ :- inPath(x7y5,x6y5), inPath(x7y5,x7y4).
+ :- inPath(x7y5,x8y5), inPath(x7y5,x7y4).
+ :- inPath(x7y4,x7y3), inPath(x7y4,x7y5).
+ :- inPath(x7y4,x6y4), inPath(x7y4,x7y5).
+ :- inPath(x6y5,x6y6), inPath(x6y5,x6y4).
+ :- inPath(x6y5,x5y5), inPath(x6y5,x6y4).
+ :- inPath(x6y5,x7y5), inPath(x6y5,x6y4).
+ :- inPath(x6y4,x5y4), inPath(x6y4,x6y5).
+ :- inPath(x6y4,x7y4), inPath(x6y4,x6y5).
+ :- inPath(x7y4,x7y5), inPath(x7y4,x6y4).
+ :- inPath(x7y4,x7y3), inPath(x7y4,x6y4).
+ :- inPath(x6y4,x6y5), inPath(x6y4,x7y4).
+ :- inPath(x6y4,x5y4), inPath(x6y4,x7y4).
+ :- inPath(x5y5,x5y6), inPath(x5y5,x5y4).
+ :- inPath(x5y5,x6y5), inPath(x5y5,x5y4).
+ :- inPath(x5y4,x5y3), inPath(x5y4,x5y5).
+ :- inPath(x5y4,x4y4), inPath(x5y4,x5y5).
+ :- inPath(x5y4,x6y4), inPath(x5y4,x5y5).
+ :- inPath(x6y4,x6y5), inPath(x6y4,x5y4).
+ :- inPath(x6y4,x7y4), inPath(x6y4,x5y4).
+ :- inPath(x5y4,x5y5), inPath(x5y4,x6y4).
+ :- inPath(x5y4,x5y3), inPath(x5y4,x6y4).
+ :- inPath(x5y4,x4y4), inPath(x5y4,x6y4).
+ :- inPath(x5y4,x5y5), inPath(x5y4,x4y4).
+ :- inPath(x5y4,x5y3), inPath(x5y4,x4y4).
+ :- inPath(x5y4,x6y4), inPath(x5y4,x4y4).
+ :- inPath(x4y4,x4y3), inPath(x4y4,x5y4).
+ :- inPath(x4y4,x3y4), inPath(x4y4,x5y4).
+ :- inPath(x3y5,x3y6), inPath(x3y5,x3y4).
+ :- inPath(x3y5,x2y5), inPath(x3y5,x3y4).
+ :- inPath(x3y4,x3y3), inPath(x3y4,x3y5).
+ :- inPath(x3y4,x4y4), inPath(x3y4,x3y5).
+ :- inPath(x4y4,x5y4), inPath(x4y4,x3y4).
+ :- inPath(x4y4,x4y3), inPath(x4y4,x3y4).
+ :- inPath(x3y4,x3y5), inPath(x3y4,x4y4).
+ :- inPath(x3y4,x3y3), inPath(x3y4,x4y4).
+ :- inPath(x1y5,x2y5), inPath(x1y5,x1y4).
+ :- inPath(x1y4,x1y3), inPath(x1y4,x1y5).
+ :- inPath(x16y4,x16y5), inPath(x16y4,x16y3).
+ :- inPath(x16y3,x16y2), inPath(x16y3,x16y4).
+ :- inPath(x14y4,x14y5), inPath(x14y4,x14y3).
+ :- inPath(x14y4,x13y4), inPath(x14y4,x14y3).
+ :- inPath(x14y3,x14y2), inPath(x14y3,x14y4).
+ :- inPath(x14y3,x13y3), inPath(x14y3,x14y4).
+ :- inPath(x13y4,x13y5), inPath(x13y4,x13y3).
+ :- inPath(x13y4,x14y4), inPath(x13y4,x13y3).
+ :- inPath(x13y3,x13y2), inPath(x13y3,x13y4).
+ :- inPath(x13y3,x12y3), inPath(x13y3,x13y4).
+ :- inPath(x13y3,x14y3), inPath(x13y3,x13y4).
+ :- inPath(x14y3,x14y4), inPath(x14y3,x13y3).
+ :- inPath(x14y3,x14y2), inPath(x14y3,x13y3).
+ :- inPath(x13y3,x13y4), inPath(x13y3,x14y3).
+ :- inPath(x13y3,x13y2), inPath(x13y3,x14y3).
+ :- inPath(x13y3,x12y3), inPath(x13y3,x14y3).
+ :- inPath(x13y3,x13y4), inPath(x13y3,x12y3).
+ :- inPath(x13y3,x13y2), inPath(x13y3,x12y3).
+ :- inPath(x13y3,x14y3), inPath(x13y3,x12y3).
+ :- inPath(x12y3,x12y2), inPath(x12y3,x13y3).
+ :- inPath(x12y3,x11y3), inPath(x12y3,x13y3).
+ :- inPath(x11y4,x11y5), inPath(x11y4,x11y3).
+ :- inPath(x11y4,x10y4), inPath(x11y4,x11y3).
+ :- inPath(x11y3,x11y2), inPath(x11y3,x11y4).
+ :- inPath(x11y3,x10y3), inPath(x11y3,x11y4).
+ :- inPath(x11y3,x12y3), inPath(x11y3,x11y4).
+ :- inPath(x12y3,x13y3), inPath(x12y3,x11y3).
+ :- inPath(x12y3,x12y2), inPath(x12y3,x11y3).
+ :- inPath(x11y3,x11y4), inPath(x11y3,x12y3).
+ :- inPath(x11y3,x11y2), inPath(x11y3,x12y3).
+ :- inPath(x11y3,x10y3), inPath(x11y3,x12y3).
+ :- inPath(x10y4,x10y5), inPath(x10y4,x10y3).
+ :- inPath(x10y4,x11y4), inPath(x10y4,x10y3).
+ :- inPath(x10y3,x10y2), inPath(x10y3,x10y4).
+ :- inPath(x10y3,x11y3), inPath(x10y3,x10y4).
+ :- inPath(x11y3,x11y4), inPath(x11y3,x10y3).
+ :- inPath(x11y3,x11y2), inPath(x11y3,x10y3).
+ :- inPath(x11y3,x12y3), inPath(x11y3,x10y3).
+ :- inPath(x10y3,x10y4), inPath(x10y3,x11y3).
+ :- inPath(x10y3,x10y2), inPath(x10y3,x11y3).
+ :- inPath(x7y4,x7y5), inPath(x7y4,x7y3).
+ :- inPath(x7y4,x6y4), inPath(x7y4,x7y3).
+ :- inPath(x7y3,x7y2), inPath(x7y3,x7y4).
+ :- inPath(x7y3,x8y3), inPath(x7y3,x7y4).
+ :- inPath(x8y3,x8y2), inPath(x8y3,x7y3).
+ :- inPath(x7y3,x7y4), inPath(x7y3,x8y3).
+ :- inPath(x7y3,x7y2), inPath(x7y3,x8y3).
+ :- inPath(x5y4,x5y5), inPath(x5y4,x5y3).
+ :- inPath(x5y4,x4y4), inPath(x5y4,x5y3).
+ :- inPath(x5y4,x6y4), inPath(x5y4,x5y3).
+ :- inPath(x5y3,x5y2), inPath(x5y3,x5y4).
+ :- inPath(x5y3,x4y3), inPath(x5y3,x5y4).
+ :- inPath(x4y4,x5y4), inPath(x4y4,x4y3).
+ :- inPath(x4y4,x3y4), inPath(x4y4,x4y3).
+ :- inPath(x4y3,x4y2), inPath(x4y3,x4y4).
+ :- inPath(x4y3,x3y3), inPath(x4y3,x4y4).
+ :- inPath(x4y3,x5y3), inPath(x4y3,x4y4).
+ :- inPath(x5y3,x5y4), inPath(x5y3,x4y3).
+ :- inPath(x5y3,x5y2), inPath(x5y3,x4y3).
+ :- inPath(x4y3,x4y4), inPath(x4y3,x5y3).
+ :- inPath(x4y3,x4y2), inPath(x4y3,x5y3).
+ :- inPath(x4y3,x3y3), inPath(x4y3,x5y3).
+ :- inPath(x3y4,x3y5), inPath(x3y4,x3y3).
+ :- inPath(x3y4,x4y4), inPath(x3y4,x3y3).
+ :- inPath(x3y3,x3y2), inPath(x3y3,x3y4).
+ :- inPath(x3y3,x2y3), inPath(x3y3,x3y4).
+ :- inPath(x3y3,x4y3), inPath(x3y3,x3y4).
+ :- inPath(x4y3,x4y4), inPath(x4y3,x3y3).
+ :- inPath(x4y3,x4y2), inPath(x4y3,x3y3).
+ :- inPath(x4y3,x5y3), inPath(x4y3,x3y3).
+ :- inPath(x3y3,x3y4), inPath(x3y3,x4y3).
+ :- inPath(x3y3,x3y2), inPath(x3y3,x4y3).
+ :- inPath(x3y3,x2y3), inPath(x3y3,x4y3).
+ :- inPath(x3y3,x3y4), inPath(x3y3,x2y3).
+ :- inPath(x3y3,x3y2), inPath(x3y3,x2y3).
+ :- inPath(x3y3,x4y3), inPath(x3y3,x2y3).
+ :- inPath(x2y3,x2y2), inPath(x2y3,x3y3).
+ :- inPath(x2y3,x1y3), inPath(x2y3,x3y3).
+ :- inPath(x1y4,x1y5), inPath(x1y4,x1y3).
+ :- inPath(x1y3,x2y3), inPath(x1y3,x1y4).
+ :- inPath(x2y3,x3y3), inPath(x2y3,x1y3).
+ :- inPath(x2y3,x2y2), inPath(x2y3,x1y3).
+ :- inPath(x1y3,x1y4), inPath(x1y3,x2y3).
+ :- inPath(x16y3,x16y4), inPath(x16y3,x16y2).
+ :- inPath(x16y2,x15y2), inPath(x16y2,x16y3).
+ :- inPath(x16y2,x16y3), inPath(x16y2,x15y2).
+ :- inPath(x15y2,x15y1), inPath(x15y2,x16y2).
+ :- inPath(x15y2,x14y2), inPath(x15y2,x16y2).
+ :- inPath(x14y3,x14y4), inPath(x14y3,x14y2).
+ :- inPath(x14y3,x13y3), inPath(x14y3,x14y2).
+ :- inPath(x14y2,x14y1), inPath(x14y2,x14y3).
+ :- inPath(x14y2,x13y2), inPath(x14y2,x14y3).
+ :- inPath(x14y2,x15y2), inPath(x14y2,x14y3).
+ :- inPath(x15y2,x16y2), inPath(x15y2,x14y2).
+ :- inPath(x15y2,x15y1), inPath(x15y2,x14y2).
+ :- inPath(x14y2,x14y3), inPath(x14y2,x15y2).
+ :- inPath(x14y2,x14y1), inPath(x14y2,x15y2).
+ :- inPath(x14y2,x13y2), inPath(x14y2,x15y2).
+ :- inPath(x13y3,x13y4), inPath(x13y3,x13y2).
+ :- inPath(x13y3,x12y3), inPath(x13y3,x13y2).
+ :- inPath(x13y3,x14y3), inPath(x13y3,x13y2).
+ :- inPath(x13y2,x13y1), inPath(x13y2,x13y3).
+ :- inPath(x13y2,x12y2), inPath(x13y2,x13y3).
+ :- inPath(x13y2,x14y2), inPath(x13y2,x13y3).
+ :- inPath(x14y2,x14y3), inPath(x14y2,x13y2).
+ :- inPath(x14y2,x14y1), inPath(x14y2,x13y2).
+ :- inPath(x14y2,x15y2), inPath(x14y2,x13y2).
+ :- inPath(x13y2,x13y3), inPath(x13y2,x14y2).
+ :- inPath(x13y2,x13y1), inPath(x13y2,x14y2).
+ :- inPath(x13y2,x12y2), inPath(x13y2,x14y2).
+ :- inPath(x12y3,x13y3), inPath(x12y3,x12y2).
+ :- inPath(x12y3,x11y3), inPath(x12y3,x12y2).
+ :- inPath(x12y2,x12y1), inPath(x12y2,x12y3).
+ :- inPath(x12y2,x11y2), inPath(x12y2,x12y3).
+ :- inPath(x12y2,x13y2), inPath(x12y2,x12y3).
+ :- inPath(x13y2,x13y3), inPath(x13y2,x12y2).
+ :- inPath(x13y2,x13y1), inPath(x13y2,x12y2).
+ :- inPath(x13y2,x14y2), inPath(x13y2,x12y2).
+ :- inPath(x12y2,x12y3), inPath(x12y2,x13y2).
+ :- inPath(x12y2,x12y1), inPath(x12y2,x13y2).
+ :- inPath(x12y2,x11y2), inPath(x12y2,x13y2).
+ :- inPath(x11y3,x11y4), inPath(x11y3,x11y2).
+ :- inPath(x11y3,x10y3), inPath(x11y3,x11y2).
+ :- inPath(x11y3,x12y3), inPath(x11y3,x11y2).
+ :- inPath(x11y2,x11y1), inPath(x11y2,x11y3).
+ :- inPath(x11y2,x10y2), inPath(x11y2,x11y3).
+ :- inPath(x11y2,x12y2), inPath(x11y2,x11y3).
+ :- inPath(x12y2,x12y3), inPath(x12y2,x11y2).
+ :- inPath(x12y2,x12y1), inPath(x12y2,x11y2).
+ :- inPath(x12y2,x13y2), inPath(x12y2,x11y2).
+ :- inPath(x11y2,x11y3), inPath(x11y2,x12y2).
+ :- inPath(x11y2,x11y1), inPath(x11y2,x12y2).
+ :- inPath(x11y2,x10y2), inPath(x11y2,x12y2).
+ :- inPath(x10y3,x10y4), inPath(x10y3,x10y2).
+ :- inPath(x10y3,x11y3), inPath(x10y3,x10y2).
+ :- inPath(x10y2,x10y1), inPath(x10y2,x10y3).
+ :- inPath(x10y2,x9y2), inPath(x10y2,x10y3).
+ :- inPath(x10y2,x11y2), inPath(x10y2,x10y3).
+ :- inPath(x11y2,x11y3), inPath(x11y2,x10y2).
+ :- inPath(x11y2,x11y1), inPath(x11y2,x10y2).
+ :- inPath(x11y2,x12y2), inPath(x11y2,x10y2).
+ :- inPath(x10y2,x10y3), inPath(x10y2,x11y2).
+ :- inPath(x10y2,x10y1), inPath(x10y2,x11y2).
+ :- inPath(x10y2,x9y2), inPath(x10y2,x11y2).
+ :- inPath(x10y2,x10y3), inPath(x10y2,x9y2).
+ :- inPath(x10y2,x10y1), inPath(x10y2,x9y2).
+ :- inPath(x10y2,x11y2), inPath(x10y2,x9y2).
+ :- inPath(x9y2,x9y1), inPath(x9y2,x10y2).
+ :- inPath(x9y2,x8y2), inPath(x9y2,x10y2).
+ :- inPath(x8y3,x7y3), inPath(x8y3,x8y2).
+ :- inPath(x8y2,x8y1), inPath(x8y2,x8y3).
+ :- inPath(x8y2,x7y2), inPath(x8y2,x8y3).
+ :- inPath(x8y2,x9y2), inPath(x8y2,x8y3).
+ :- inPath(x9y2,x10y2), inPath(x9y2,x8y2).
+ :- inPath(x9y2,x9y1), inPath(x9y2,x8y2).
+ :- inPath(x8y2,x8y3), inPath(x8y2,x9y2).
+ :- inPath(x8y2,x8y1), inPath(x8y2,x9y2).
+ :- inPath(x8y2,x7y2), inPath(x8y2,x9y2).
+ :- inPath(x7y3,x7y4), inPath(x7y3,x7y2).
+ :- inPath(x7y3,x8y3), inPath(x7y3,x7y2).
+ :- inPath(x7y2,x7y1), inPath(x7y2,x7y3).
+ :- inPath(x7y2,x6y2), inPath(x7y2,x7y3).
+ :- inPath(x7y2,x8y2), inPath(x7y2,x7y3).
+ :- inPath(x8y2,x8y3), inPath(x8y2,x7y2).
+ :- inPath(x8y2,x8y1), inPath(x8y2,x7y2).
+ :- inPath(x8y2,x9y2), inPath(x8y2,x7y2).
+ :- inPath(x7y2,x7y3), inPath(x7y2,x8y2).
+ :- inPath(x7y2,x7y1), inPath(x7y2,x8y2).
+ :- inPath(x7y2,x6y2), inPath(x7y2,x8y2).
+ :- inPath(x7y2,x7y3), inPath(x7y2,x6y2).
+ :- inPath(x7y2,x7y1), inPath(x7y2,x6y2).
+ :- inPath(x7y2,x8y2), inPath(x7y2,x6y2).
+ :- inPath(x6y2,x5y2), inPath(x6y2,x7y2).
+ :- inPath(x5y3,x5y4), inPath(x5y3,x5y2).
+ :- inPath(x5y3,x4y3), inPath(x5y3,x5y2).
+ :- inPath(x5y2,x5y1), inPath(x5y2,x5y3).
+ :- inPath(x5y2,x4y2), inPath(x5y2,x5y3).
+ :- inPath(x5y2,x6y2), inPath(x5y2,x5y3).
+ :- inPath(x6y2,x7y2), inPath(x6y2,x5y2).
+ :- inPath(x5y2,x5y3), inPath(x5y2,x6y2).
+ :- inPath(x5y2,x5y1), inPath(x5y2,x6y2).
+ :- inPath(x5y2,x4y2), inPath(x5y2,x6y2).
+ :- inPath(x4y3,x4y4), inPath(x4y3,x4y2).
+ :- inPath(x4y3,x3y3), inPath(x4y3,x4y2).
+ :- inPath(x4y3,x5y3), inPath(x4y3,x4y2).
+ :- inPath(x4y2,x4y1), inPath(x4y2,x4y3).
+ :- inPath(x4y2,x3y2), inPath(x4y2,x4y3).
+ :- inPath(x4y2,x5y2), inPath(x4y2,x4y3).
+ :- inPath(x5y2,x5y3), inPath(x5y2,x4y2).
+ :- inPath(x5y2,x5y1), inPath(x5y2,x4y2).
+ :- inPath(x5y2,x6y2), inPath(x5y2,x4y2).
+ :- inPath(x4y2,x4y3), inPath(x4y2,x5y2).
+ :- inPath(x4y2,x4y1), inPath(x4y2,x5y2).
+ :- inPath(x4y2,x3y2), inPath(x4y2,x5y2).
+ :- inPath(x3y3,x3y4), inPath(x3y3,x3y2).
+ :- inPath(x3y3,x2y3), inPath(x3y3,x3y2).
+ :- inPath(x3y3,x4y3), inPath(x3y3,x3y2).
+ :- inPath(x3y2,x2y2), inPath(x3y2,x3y3).
+ :- inPath(x3y2,x4y2), inPath(x3y2,x3y3).
+ :- inPath(x4y2,x4y3), inPath(x4y2,x3y2).
+ :- inPath(x4y2,x4y1), inPath(x4y2,x3y2).
+ :- inPath(x4y2,x5y2), inPath(x4y2,x3y2).
+ :- inPath(x3y2,x3y3), inPath(x3y2,x4y2).
+ :- inPath(x3y2,x2y2), inPath(x3y2,x4y2).
+ :- inPath(x2y3,x3y3), inPath(x2y3,x2y2).
+ :- inPath(x2y3,x1y3), inPath(x2y3,x2y2).
+ :- inPath(x2y2,x3y2), inPath(x2y2,x2y3).
+ :- inPath(x3y2,x3y3), inPath(x3y2,x2y2).
+ :- inPath(x3y2,x4y2), inPath(x3y2,x2y2).
+ :- inPath(x2y2,x2y3), inPath(x2y2,x3y2).
+ :- inPath(x15y2,x16y2), inPath(x15y2,x15y1).
+ :- inPath(x15y2,x14y2), inPath(x15y2,x15y1).
+ :- inPath(x15y1,x14y1), inPath(x15y1,x15y2).
+ :- inPath(x14y2,x14y3), inPath(x14y2,x14y1).
+ :- inPath(x14y2,x13y2), inPath(x14y2,x14y1).
+ :- inPath(x14y2,x15y2), inPath(x14y2,x14y1).
+ :- inPath(x14y1,x13y1), inPath(x14y1,x14y2).
+ :- inPath(x14y1,x15y1), inPath(x14y1,x14y2).
+ :- inPath(x15y1,x15y2), inPath(x15y1,x14y1).
+ :- inPath(x14y1,x14y2), inPath(x14y1,x15y1).
+ :- inPath(x14y1,x13y1), inPath(x14y1,x15y1).
+ :- inPath(x13y2,x13y3), inPath(x13y2,x13y1).
+ :- inPath(x13y2,x12y2), inPath(x13y2,x13y1).
+ :- inPath(x13y2,x14y2), inPath(x13y2,x13y1).
+ :- inPath(x13y1,x12y1), inPath(x13y1,x13y2).
+ :- inPath(x13y1,x14y1), inPath(x13y1,x13y2).
+ :- inPath(x14y1,x14y2), inPath(x14y1,x13y1).
+ :- inPath(x14y1,x15y1), inPath(x14y1,x13y1).
+ :- inPath(x13y1,x13y2), inPath(x13y1,x14y1).
+ :- inPath(x13y1,x12y1), inPath(x13y1,x14y1).
+ :- inPath(x12y2,x12y3), inPath(x12y2,x12y1).
+ :- inPath(x12y2,x11y2), inPath(x12y2,x12y1).
+ :- inPath(x12y2,x13y2), inPath(x12y2,x12y1).
+ :- inPath(x12y1,x11y1), inPath(x12y1,x12y2).
+ :- inPath(x12y1,x13y1), inPath(x12y1,x12y2).
+ :- inPath(x13y1,x13y2), inPath(x13y1,x12y1).
+ :- inPath(x13y1,x14y1), inPath(x13y1,x12y1).
+ :- inPath(x12y1,x12y2), inPath(x12y1,x13y1).
+ :- inPath(x12y1,x11y1), inPath(x12y1,x13y1).
+ :- inPath(x11y2,x11y3), inPath(x11y2,x11y1).
+ :- inPath(x11y2,x10y2), inPath(x11y2,x11y1).
+ :- inPath(x11y2,x12y2), inPath(x11y2,x11y1).
+ :- inPath(x11y1,x10y1), inPath(x11y1,x11y2).
+ :- inPath(x11y1,x12y1), inPath(x11y1,x11y2).
+ :- inPath(x12y1,x12y2), inPath(x12y1,x11y1).
+ :- inPath(x12y1,x13y1), inPath(x12y1,x11y1).
+ :- inPath(x11y1,x11y2), inPath(x11y1,x12y1).
+ :- inPath(x11y1,x10y1), inPath(x11y1,x12y1).
+ :- inPath(x10y2,x10y3), inPath(x10y2,x10y1).
+ :- inPath(x10y2,x9y2), inPath(x10y2,x10y1).
+ :- inPath(x10y2,x11y2), inPath(x10y2,x10y1).
+ :- inPath(x10y1,x9y1), inPath(x10y1,x10y2).
+ :- inPath(x10y1,x11y1), inPath(x10y1,x10y2).
+ :- inPath(x11y1,x11y2), inPath(x11y1,x10y1).
+ :- inPath(x11y1,x12y1), inPath(x11y1,x10y1).
+ :- inPath(x10y1,x10y2), inPath(x10y1,x11y1).
+ :- inPath(x10y1,x9y1), inPath(x10y1,x11y1).
+ :- inPath(x9y2,x10y2), inPath(x9y2,x9y1).
+ :- inPath(x9y2,x8y2), inPath(x9y2,x9y1).
+ :- inPath(x9y1,x8y1), inPath(x9y1,x9y2).
+ :- inPath(x9y1,x10y1), inPath(x9y1,x9y2).
+ :- inPath(x10y1,x10y2), inPath(x10y1,x9y1).
+ :- inPath(x10y1,x11y1), inPath(x10y1,x9y1).
+ :- inPath(x9y1,x9y2), inPath(x9y1,x10y1).
+ :- inPath(x9y1,x8y1), inPath(x9y1,x10y1).
+ :- inPath(x8y2,x8y3), inPath(x8y2,x8y1).
+ :- inPath(x8y2,x7y2), inPath(x8y2,x8y1).
+ :- inPath(x8y2,x9y2), inPath(x8y2,x8y1).
+ :- inPath(x8y1,x7y1), inPath(x8y1,x8y2).
+ :- inPath(x8y1,x9y1), inPath(x8y1,x8y2).
+ :- inPath(x9y1,x9y2), inPath(x9y1,x8y1).
+ :- inPath(x9y1,x10y1), inPath(x9y1,x8y1).
+ :- inPath(x8y1,x8y2), inPath(x8y1,x9y1).
+ :- inPath(x8y1,x7y1), inPath(x8y1,x9y1).
+ :- inPath(x7y2,x7y3), inPath(x7y2,x7y1).
+ :- inPath(x7y2,x6y2), inPath(x7y2,x7y1).
+ :- inPath(x7y2,x8y2), inPath(x7y2,x7y1).
+ :- inPath(x7y1,x8y1), inPath(x7y1,x7y2).
+ :- inPath(x8y1,x8y2), inPath(x8y1,x7y1).
+ :- inPath(x8y1,x9y1), inPath(x8y1,x7y1).
+ :- inPath(x7y1,x7y2), inPath(x7y1,x8y1).
+ :- inPath(x5y2,x5y3), inPath(x5y2,x5y1).
+ :- inPath(x5y2,x4y2), inPath(x5y2,x5y1).
+ :- inPath(x5y2,x6y2), inPath(x5y2,x5y1).
+ :- inPath(x5y1,x4y1), inPath(x5y1,x5y2).
+ :- inPath(x4y2,x4y3), inPath(x4y2,x4y1).
+ :- inPath(x4y2,x3y2), inPath(x4y2,x4y1).
+ :- inPath(x4y2,x5y2), inPath(x4y2,x4y1).
+ :- inPath(x4y1,x5y1), inPath(x4y1,x4y2).
+ :- inPath(x5y1,x5y2), inPath(x5y1,x4y1).
+ :- inPath(x4y1,x4y2), inPath(x4y1,x5y1).
+ :- inPath(x11y10,x12y10), inPath(x13y10,x12y10).
+ :- inPath(x13y9,x13y10), inPath(x12y10,x13y10).
+ :- inPath(x11y9,x11y10), inPath(x12y10,x11y10).
+ :- inPath(x13y10,x12y10), inPath(x11y10,x12y10).
+ :- inPath(x8y9,x8y10), inPath(x9y10,x8y10).
+ :- inPath(x9y9,x9y10), inPath(x8y10,x9y10).
+ :- inPath(x5y9,x5y10), inPath(x6y10,x5y10).
+ :- inPath(x4y10,x5y10), inPath(x6y10,x5y10).
+ :- inPath(x6y9,x6y10), inPath(x5y10,x6y10).
+ :- inPath(x4y9,x4y10), inPath(x5y10,x4y10).
+ :- inPath(x3y10,x4y10), inPath(x5y10,x4y10).
+ :- inPath(x6y10,x5y10), inPath(x4y10,x5y10).
+ :- inPath(x5y9,x5y10), inPath(x4y10,x5y10).
+ :- inPath(x3y9,x3y10), inPath(x4y10,x3y10).
+ :- inPath(x2y10,x3y10), inPath(x4y10,x3y10).
+ :- inPath(x5y10,x4y10), inPath(x3y10,x4y10).
+ :- inPath(x4y9,x4y10), inPath(x3y10,x4y10).
+ :- inPath(x2y9,x2y10), inPath(x3y10,x2y10).
+ :- inPath(x1y10,x2y10), inPath(x3y10,x2y10).
+ :- inPath(x4y10,x3y10), inPath(x2y10,x3y10).
+ :- inPath(x3y9,x3y10), inPath(x2y10,x3y10).
+ :- inPath(x1y9,x1y10), inPath(x2y10,x1y10).
+ :- inPath(x3y10,x2y10), inPath(x1y10,x2y10).
+ :- inPath(x2y9,x2y10), inPath(x1y10,x2y10).
+ :- inPath(x13y8,x13y9), inPath(x13y10,x13y9).
+ :- inPath(x14y9,x13y9), inPath(x13y10,x13y9).
+ :- inPath(x12y10,x13y10), inPath(x13y9,x13y10).
+ :- inPath(x13y10,x13y9), inPath(x14y9,x13y9).
+ :- inPath(x13y8,x13y9), inPath(x14y9,x13y9).
+ :- inPath(x14y8,x14y9), inPath(x13y9,x14y9).
+ :- inPath(x11y8,x11y9), inPath(x11y10,x11y9).
+ :- inPath(x10y9,x11y9), inPath(x11y10,x11y9).
+ :- inPath(x12y10,x11y10), inPath(x11y9,x11y10).
+ :- inPath(x10y8,x10y9), inPath(x11y9,x10y9).
+ :- inPath(x9y9,x10y9), inPath(x11y9,x10y9).
+ :- inPath(x11y10,x11y9), inPath(x10y9,x11y9).
+ :- inPath(x11y8,x11y9), inPath(x10y9,x11y9).
+ :- inPath(x9y8,x9y9), inPath(x9y10,x9y9).
+ :- inPath(x8y9,x9y9), inPath(x9y10,x9y9).
+ :- inPath(x10y9,x9y9), inPath(x9y10,x9y9).
+ :- inPath(x8y10,x9y10), inPath(x9y9,x9y10).
+ :- inPath(x9y10,x9y9), inPath(x10y9,x9y9).
+ :- inPath(x9y8,x9y9), inPath(x10y9,x9y9).
+ :- inPath(x8y9,x9y9), inPath(x10y9,x9y9).
+ :- inPath(x11y9,x10y9), inPath(x9y9,x10y9).
+ :- inPath(x10y8,x10y9), inPath(x9y9,x10y9).
+ :- inPath(x7y9,x8y9), inPath(x8y10,x8y9).
+ :- inPath(x9y9,x8y9), inPath(x8y10,x8y9).
+ :- inPath(x9y10,x8y10), inPath(x8y9,x8y10).
+ :- inPath(x8y10,x8y9), inPath(x9y9,x8y9).
+ :- inPath(x7y9,x8y9), inPath(x9y9,x8y9).
+ :- inPath(x9y10,x9y9), inPath(x8y9,x9y9).
+ :- inPath(x9y8,x9y9), inPath(x8y9,x9y9).
+ :- inPath(x10y9,x9y9), inPath(x8y9,x9y9).
+ :- inPath(x7y8,x7y9), inPath(x8y9,x7y9).
+ :- inPath(x6y9,x7y9), inPath(x8y9,x7y9).
+ :- inPath(x8y10,x8y9), inPath(x7y9,x8y9).
+ :- inPath(x9y9,x8y9), inPath(x7y9,x8y9).
+ :- inPath(x6y8,x6y9), inPath(x6y10,x6y9).
+ :- inPath(x5y9,x6y9), inPath(x6y10,x6y9).
+ :- inPath(x7y9,x6y9), inPath(x6y10,x6y9).
+ :- inPath(x5y10,x6y10), inPath(x6y9,x6y10).
+ :- inPath(x6y10,x6y9), inPath(x7y9,x6y9).
+ :- inPath(x6y8,x6y9), inPath(x7y9,x6y9).
+ :- inPath(x5y9,x6y9), inPath(x7y9,x6y9).
+ :- inPath(x8y9,x7y9), inPath(x6y9,x7y9).
+ :- inPath(x7y8,x7y9), inPath(x6y9,x7y9).
+ :- inPath(x5y8,x5y9), inPath(x5y10,x5y9).
+ :- inPath(x4y9,x5y9), inPath(x5y10,x5y9).
+ :- inPath(x6y9,x5y9), inPath(x5y10,x5y9).
+ :- inPath(x6y10,x5y10), inPath(x5y9,x5y10).
+ :- inPath(x4y10,x5y10), inPath(x5y9,x5y10).
+ :- inPath(x5y10,x5y9), inPath(x6y9,x5y9).
+ :- inPath(x5y8,x5y9), inPath(x6y9,x5y9).
+ :- inPath(x4y9,x5y9), inPath(x6y9,x5y9).
+ :- inPath(x6y10,x6y9), inPath(x5y9,x6y9).
+ :- inPath(x6y8,x6y9), inPath(x5y9,x6y9).
+ :- inPath(x7y9,x6y9), inPath(x5y9,x6y9).
+ :- inPath(x4y8,x4y9), inPath(x4y10,x4y9).
+ :- inPath(x3y9,x4y9), inPath(x4y10,x4y9).
+ :- inPath(x5y9,x4y9), inPath(x4y10,x4y9).
+ :- inPath(x5y10,x4y10), inPath(x4y9,x4y10).
+ :- inPath(x3y10,x4y10), inPath(x4y9,x4y10).
+ :- inPath(x4y10,x4y9), inPath(x5y9,x4y9).
+ :- inPath(x4y8,x4y9), inPath(x5y9,x4y9).
+ :- inPath(x3y9,x4y9), inPath(x5y9,x4y9).
+ :- inPath(x5y10,x5y9), inPath(x4y9,x5y9).
+ :- inPath(x5y8,x5y9), inPath(x4y9,x5y9).
+ :- inPath(x6y9,x5y9), inPath(x4y9,x5y9).
+ :- inPath(x3y8,x3y9), inPath(x3y10,x3y9).
+ :- inPath(x2y9,x3y9), inPath(x3y10,x3y9).
+ :- inPath(x4y9,x3y9), inPath(x3y10,x3y9).
+ :- inPath(x4y10,x3y10), inPath(x3y9,x3y10).
+ :- inPath(x2y10,x3y10), inPath(x3y9,x3y10).
+ :- inPath(x3y10,x3y9), inPath(x4y9,x3y9).
+ :- inPath(x3y8,x3y9), inPath(x4y9,x3y9).
+ :- inPath(x2y9,x3y9), inPath(x4y9,x3y9).
+ :- inPath(x4y10,x4y9), inPath(x3y9,x4y9).
+ :- inPath(x4y8,x4y9), inPath(x3y9,x4y9).
+ :- inPath(x5y9,x4y9), inPath(x3y9,x4y9).
+ :- inPath(x2y8,x2y9), inPath(x2y10,x2y9).
+ :- inPath(x1y9,x2y9), inPath(x2y10,x2y9).
+ :- inPath(x3y9,x2y9), inPath(x2y10,x2y9).
+ :- inPath(x3y10,x2y10), inPath(x2y9,x2y10).
+ :- inPath(x1y10,x2y10), inPath(x2y9,x2y10).
+ :- inPath(x2y10,x2y9), inPath(x3y9,x2y9).
+ :- inPath(x2y8,x2y9), inPath(x3y9,x2y9).
+ :- inPath(x1y9,x2y9), inPath(x3y9,x2y9).
+ :- inPath(x3y10,x3y9), inPath(x2y9,x3y9).
+ :- inPath(x3y8,x3y9), inPath(x2y9,x3y9).
+ :- inPath(x4y9,x3y9), inPath(x2y9,x3y9).
+ :- inPath(x1y8,x1y9), inPath(x1y10,x1y9).
+ :- inPath(x2y9,x1y9), inPath(x1y10,x1y9).
+ :- inPath(x2y10,x1y10), inPath(x1y9,x1y10).
+ :- inPath(x1y10,x1y9), inPath(x2y9,x1y9).
+ :- inPath(x1y8,x1y9), inPath(x2y9,x1y9).
+ :- inPath(x2y10,x2y9), inPath(x1y9,x2y9).
+ :- inPath(x2y8,x2y9), inPath(x1y9,x2y9).
+ :- inPath(x3y9,x2y9), inPath(x1y9,x2y9).
+ :- inPath(x15y7,x15y8), inPath(x16y8,x15y8).
+ :- inPath(x14y8,x15y8), inPath(x16y8,x15y8).
+ :- inPath(x16y7,x16y8), inPath(x15y8,x16y8).
+ :- inPath(x14y7,x14y8), inPath(x14y9,x14y8).
+ :- inPath(x13y8,x14y8), inPath(x14y9,x14y8).
+ :- inPath(x15y8,x14y8), inPath(x14y9,x14y8).
+ :- inPath(x13y9,x14y9), inPath(x14y8,x14y9).
+ :- inPath(x14y9,x14y8), inPath(x15y8,x14y8).
+ :- inPath(x14y7,x14y8), inPath(x15y8,x14y8).
+ :- inPath(x13y8,x14y8), inPath(x15y8,x14y8).
+ :- inPath(x16y8,x15y8), inPath(x14y8,x15y8).
+ :- inPath(x15y7,x15y8), inPath(x14y8,x15y8).
+ :- inPath(x13y7,x13y8), inPath(x13y9,x13y8).
+ :- inPath(x12y8,x13y8), inPath(x13y9,x13y8).
+ :- inPath(x14y8,x13y8), inPath(x13y9,x13y8).
+ :- inPath(x13y10,x13y9), inPath(x13y8,x13y9).
+ :- inPath(x14y9,x13y9), inPath(x13y8,x13y9).
+ :- inPath(x13y9,x13y8), inPath(x14y8,x13y8).
+ :- inPath(x13y7,x13y8), inPath(x14y8,x13y8).
+ :- inPath(x12y8,x13y8), inPath(x14y8,x13y8).
+ :- inPath(x14y9,x14y8), inPath(x13y8,x14y8).
+ :- inPath(x14y7,x14y8), inPath(x13y8,x14y8).
+ :- inPath(x15y8,x14y8), inPath(x13y8,x14y8).
+ :- inPath(x12y7,x12y8), inPath(x13y8,x12y8).
+ :- inPath(x11y8,x12y8), inPath(x13y8,x12y8).
+ :- inPath(x13y9,x13y8), inPath(x12y8,x13y8).
+ :- inPath(x13y7,x13y8), inPath(x12y8,x13y8).
+ :- inPath(x14y8,x13y8), inPath(x12y8,x13y8).
+ :- inPath(x11y7,x11y8), inPath(x11y9,x11y8).
+ :- inPath(x10y8,x11y8), inPath(x11y9,x11y8).
+ :- inPath(x12y8,x11y8), inPath(x11y9,x11y8).
+ :- inPath(x11y10,x11y9), inPath(x11y8,x11y9).
+ :- inPath(x10y9,x11y9), inPath(x11y8,x11y9).
+ :- inPath(x11y9,x11y8), inPath(x12y8,x11y8).
+ :- inPath(x11y7,x11y8), inPath(x12y8,x11y8).
+ :- inPath(x10y8,x11y8), inPath(x12y8,x11y8).
+ :- inPath(x13y8,x12y8), inPath(x11y8,x12y8).
+ :- inPath(x12y7,x12y8), inPath(x11y8,x12y8).
+ :- inPath(x10y7,x10y8), inPath(x10y9,x10y8).
+ :- inPath(x9y8,x10y8), inPath(x10y9,x10y8).
+ :- inPath(x11y8,x10y8), inPath(x10y9,x10y8).
+ :- inPath(x11y9,x10y9), inPath(x10y8,x10y9).
+ :- inPath(x9y9,x10y9), inPath(x10y8,x10y9).
+ :- inPath(x10y9,x10y8), inPath(x11y8,x10y8).
+ :- inPath(x10y7,x10y8), inPath(x11y8,x10y8).
+ :- inPath(x9y8,x10y8), inPath(x11y8,x10y8).
+ :- inPath(x11y9,x11y8), inPath(x10y8,x11y8).
+ :- inPath(x11y7,x11y8), inPath(x10y8,x11y8).
+ :- inPath(x12y8,x11y8), inPath(x10y8,x11y8).
+ :- inPath(x9y7,x9y8), inPath(x9y9,x9y8).
+ :- inPath(x10y8,x9y8), inPath(x9y9,x9y8).
+ :- inPath(x9y10,x9y9), inPath(x9y8,x9y9).
+ :- inPath(x8y9,x9y9), inPath(x9y8,x9y9).
+ :- inPath(x10y9,x9y9), inPath(x9y8,x9y9).
+ :- inPath(x9y9,x9y8), inPath(x10y8,x9y8).
+ :- inPath(x9y7,x9y8), inPath(x10y8,x9y8).
+ :- inPath(x10y9,x10y8), inPath(x9y8,x10y8).
+ :- inPath(x10y7,x10y8), inPath(x9y8,x10y8).
+ :- inPath(x11y8,x10y8), inPath(x9y8,x10y8).
+ :- inPath(x7y7,x7y8), inPath(x7y9,x7y8).
+ :- inPath(x6y8,x7y8), inPath(x7y9,x7y8).
+ :- inPath(x8y9,x7y9), inPath(x7y8,x7y9).
+ :- inPath(x6y9,x7y9), inPath(x7y8,x7y9).
+ :- inPath(x6y7,x6y8), inPath(x6y9,x6y8).
+ :- inPath(x5y8,x6y8), inPath(x6y9,x6y8).
+ :- inPath(x7y8,x6y8), inPath(x6y9,x6y8).
+ :- inPath(x6y10,x6y9), inPath(x6y8,x6y9).
+ :- inPath(x5y9,x6y9), inPath(x6y8,x6y9).
+ :- inPath(x7y9,x6y9), inPath(x6y8,x6y9).
+ :- inPath(x6y9,x6y8), inPath(x7y8,x6y8).
+ :- inPath(x6y7,x6y8), inPath(x7y8,x6y8).
+ :- inPath(x5y8,x6y8), inPath(x7y8,x6y8).
+ :- inPath(x7y9,x7y8), inPath(x6y8,x7y8).
+ :- inPath(x7y7,x7y8), inPath(x6y8,x7y8).
+ :- inPath(x5y7,x5y8), inPath(x5y9,x5y8).
+ :- inPath(x4y8,x5y8), inPath(x5y9,x5y8).
+ :- inPath(x6y8,x5y8), inPath(x5y9,x5y8).
+ :- inPath(x5y10,x5y9), inPath(x5y8,x5y9).
+ :- inPath(x4y9,x5y9), inPath(x5y8,x5y9).
+ :- inPath(x6y9,x5y9), inPath(x5y8,x5y9).
+ :- inPath(x5y9,x5y8), inPath(x6y8,x5y8).
+ :- inPath(x5y7,x5y8), inPath(x6y8,x5y8).
+ :- inPath(x4y8,x5y8), inPath(x6y8,x5y8).
+ :- inPath(x6y9,x6y8), inPath(x5y8,x6y8).
+ :- inPath(x6y7,x6y8), inPath(x5y8,x6y8).
+ :- inPath(x7y8,x6y8), inPath(x5y8,x6y8).
+ :- inPath(x4y7,x4y8), inPath(x4y9,x4y8).
+ :- inPath(x3y8,x4y8), inPath(x4y9,x4y8).
+ :- inPath(x5y8,x4y8), inPath(x4y9,x4y8).
+ :- inPath(x4y10,x4y9), inPath(x4y8,x4y9).
+ :- inPath(x3y9,x4y9), inPath(x4y8,x4y9).
+ :- inPath(x5y9,x4y9), inPath(x4y8,x4y9).
+ :- inPath(x4y9,x4y8), inPath(x5y8,x4y8).
+ :- inPath(x4y7,x4y8), inPath(x5y8,x4y8).
+ :- inPath(x3y8,x4y8), inPath(x5y8,x4y8).
+ :- inPath(x5y9,x5y8), inPath(x4y8,x5y8).
+ :- inPath(x5y7,x5y8), inPath(x4y8,x5y8).
+ :- inPath(x6y8,x5y8), inPath(x4y8,x5y8).
+ :- inPath(x3y7,x3y8), inPath(x3y9,x3y8).
+ :- inPath(x2y8,x3y8), inPath(x3y9,x3y8).
+ :- inPath(x4y8,x3y8), inPath(x3y9,x3y8).
+ :- inPath(x3y10,x3y9), inPath(x3y8,x3y9).
+ :- inPath(x2y9,x3y9), inPath(x3y8,x3y9).
+ :- inPath(x4y9,x3y9), inPath(x3y8,x3y9).
+ :- inPath(x3y9,x3y8), inPath(x4y8,x3y8).
+ :- inPath(x3y7,x3y8), inPath(x4y8,x3y8).
+ :- inPath(x2y8,x3y8), inPath(x4y8,x3y8).
+ :- inPath(x4y9,x4y8), inPath(x3y8,x4y8).
+ :- inPath(x4y7,x4y8), inPath(x3y8,x4y8).
+ :- inPath(x5y8,x4y8), inPath(x3y8,x4y8).
+ :- inPath(x2y7,x2y8), inPath(x2y9,x2y8).
+ :- inPath(x1y8,x2y8), inPath(x2y9,x2y8).
+ :- inPath(x3y8,x2y8), inPath(x2y9,x2y8).
+ :- inPath(x2y10,x2y9), inPath(x2y8,x2y9).
+ :- inPath(x1y9,x2y9), inPath(x2y8,x2y9).
+ :- inPath(x3y9,x2y9), inPath(x2y8,x2y9).
+ :- inPath(x2y9,x2y8), inPath(x3y8,x2y8).
+ :- inPath(x2y7,x2y8), inPath(x3y8,x2y8).
+ :- inPath(x1y8,x2y8), inPath(x3y8,x2y8).
+ :- inPath(x3y9,x3y8), inPath(x2y8,x3y8).
+ :- inPath(x3y7,x3y8), inPath(x2y8,x3y8).
+ :- inPath(x4y8,x3y8), inPath(x2y8,x3y8).
+ :- inPath(x2y8,x1y8), inPath(x1y9,x1y8).
+ :- inPath(x1y10,x1y9), inPath(x1y8,x1y9).
+ :- inPath(x2y9,x1y9), inPath(x1y8,x1y9).
+ :- inPath(x1y9,x1y8), inPath(x2y8,x1y8).
+ :- inPath(x2y9,x2y8), inPath(x1y8,x2y8).
+ :- inPath(x2y7,x2y8), inPath(x1y8,x2y8).
+ :- inPath(x3y8,x2y8), inPath(x1y8,x2y8).
+ :- inPath(x15y7,x16y7), inPath(x16y8,x16y7).
+ :- inPath(x15y8,x16y8), inPath(x16y7,x16y8).
+ :- inPath(x15y6,x15y7), inPath(x15y8,x15y7).
+ :- inPath(x14y7,x15y7), inPath(x15y8,x15y7).
+ :- inPath(x16y7,x15y7), inPath(x15y8,x15y7).
+ :- inPath(x16y8,x15y8), inPath(x15y7,x15y8).
+ :- inPath(x14y8,x15y8), inPath(x15y7,x15y8).
+ :- inPath(x15y8,x15y7), inPath(x16y7,x15y7).
+ :- inPath(x15y6,x15y7), inPath(x16y7,x15y7).
+ :- inPath(x14y7,x15y7), inPath(x16y7,x15y7).
+ :- inPath(x16y8,x16y7), inPath(x15y7,x16y7).
+ :- inPath(x14y6,x14y7), inPath(x14y8,x14y7).
+ :- inPath(x13y7,x14y7), inPath(x14y8,x14y7).
+ :- inPath(x15y7,x14y7), inPath(x14y8,x14y7).
+ :- inPath(x14y9,x14y8), inPath(x14y7,x14y8).
+ :- inPath(x13y8,x14y8), inPath(x14y7,x14y8).
+ :- inPath(x15y8,x14y8), inPath(x14y7,x14y8).
+ :- inPath(x14y8,x14y7), inPath(x15y7,x14y7).
+ :- inPath(x14y6,x14y7), inPath(x15y7,x14y7).
+ :- inPath(x13y7,x14y7), inPath(x15y7,x14y7).
+ :- inPath(x15y8,x15y7), inPath(x14y7,x15y7).
+ :- inPath(x15y6,x15y7), inPath(x14y7,x15y7).
+ :- inPath(x16y7,x15y7), inPath(x14y7,x15y7).
+ :- inPath(x13y6,x13y7), inPath(x13y8,x13y7).
+ :- inPath(x12y7,x13y7), inPath(x13y8,x13y7).
+ :- inPath(x14y7,x13y7), inPath(x13y8,x13y7).
+ :- inPath(x13y9,x13y8), inPath(x13y7,x13y8).
+ :- inPath(x12y8,x13y8), inPath(x13y7,x13y8).
+ :- inPath(x14y8,x13y8), inPath(x13y7,x13y8).
+ :- inPath(x13y8,x13y7), inPath(x14y7,x13y7).
+ :- inPath(x13y6,x13y7), inPath(x14y7,x13y7).
+ :- inPath(x12y7,x13y7), inPath(x14y7,x13y7).
+ :- inPath(x14y8,x14y7), inPath(x13y7,x14y7).
+ :- inPath(x14y6,x14y7), inPath(x13y7,x14y7).
+ :- inPath(x15y7,x14y7), inPath(x13y7,x14y7).
+ :- inPath(x12y6,x12y7), inPath(x12y8,x12y7).
+ :- inPath(x11y7,x12y7), inPath(x12y8,x12y7).
+ :- inPath(x13y7,x12y7), inPath(x12y8,x12y7).
+ :- inPath(x13y8,x12y8), inPath(x12y7,x12y8).
+ :- inPath(x11y8,x12y8), inPath(x12y7,x12y8).
+ :- inPath(x12y8,x12y7), inPath(x13y7,x12y7).
+ :- inPath(x12y6,x12y7), inPath(x13y7,x12y7).
+ :- inPath(x11y7,x12y7), inPath(x13y7,x12y7).
+ :- inPath(x13y8,x13y7), inPath(x12y7,x13y7).
+ :- inPath(x13y6,x13y7), inPath(x12y7,x13y7).
+ :- inPath(x14y7,x13y7), inPath(x12y7,x13y7).
+ :- inPath(x11y6,x11y7), inPath(x11y8,x11y7).
+ :- inPath(x10y7,x11y7), inPath(x11y8,x11y7).
+ :- inPath(x12y7,x11y7), inPath(x11y8,x11y7).
+ :- inPath(x11y9,x11y8), inPath(x11y7,x11y8).
+ :- inPath(x10y8,x11y8), inPath(x11y7,x11y8).
+ :- inPath(x12y8,x11y8), inPath(x11y7,x11y8).
+ :- inPath(x11y8,x11y7), inPath(x12y7,x11y7).
+ :- inPath(x11y6,x11y7), inPath(x12y7,x11y7).
+ :- inPath(x10y7,x11y7), inPath(x12y7,x11y7).
+ :- inPath(x12y8,x12y7), inPath(x11y7,x12y7).
+ :- inPath(x12y6,x12y7), inPath(x11y7,x12y7).
+ :- inPath(x13y7,x12y7), inPath(x11y7,x12y7).
+ :- inPath(x10y6,x10y7), inPath(x10y8,x10y7).
+ :- inPath(x9y7,x10y7), inPath(x10y8,x10y7).
+ :- inPath(x11y7,x10y7), inPath(x10y8,x10y7).
+ :- inPath(x10y9,x10y8), inPath(x10y7,x10y8).
+ :- inPath(x9y8,x10y8), inPath(x10y7,x10y8).
+ :- inPath(x11y8,x10y8), inPath(x10y7,x10y8).
+ :- inPath(x10y8,x10y7), inPath(x11y7,x10y7).
+ :- inPath(x10y6,x10y7), inPath(x11y7,x10y7).
+ :- inPath(x9y7,x10y7), inPath(x11y7,x10y7).
+ :- inPath(x11y8,x11y7), inPath(x10y7,x11y7).
+ :- inPath(x11y6,x11y7), inPath(x10y7,x11y7).
+ :- inPath(x12y7,x11y7), inPath(x10y7,x11y7).
+ :- inPath(x9y6,x9y7), inPath(x9y8,x9y7).
+ :- inPath(x10y7,x9y7), inPath(x9y8,x9y7).
+ :- inPath(x9y9,x9y8), inPath(x9y7,x9y8).
+ :- inPath(x10y8,x9y8), inPath(x9y7,x9y8).
+ :- inPath(x9y8,x9y7), inPath(x10y7,x9y7).
+ :- inPath(x9y6,x9y7), inPath(x10y7,x9y7).
+ :- inPath(x10y8,x10y7), inPath(x9y7,x10y7).
+ :- inPath(x10y6,x10y7), inPath(x9y7,x10y7).
+ :- inPath(x11y7,x10y7), inPath(x9y7,x10y7).
+ :- inPath(x7y6,x7y7), inPath(x7y8,x7y7).
+ :- inPath(x6y7,x7y7), inPath(x7y8,x7y7).
+ :- inPath(x7y9,x7y8), inPath(x7y7,x7y8).
+ :- inPath(x6y8,x7y8), inPath(x7y7,x7y8).
+ :- inPath(x6y6,x6y7), inPath(x6y8,x6y7).
+ :- inPath(x5y7,x6y7), inPath(x6y8,x6y7).
+ :- inPath(x7y7,x6y7), inPath(x6y8,x6y7).
+ :- inPath(x6y9,x6y8), inPath(x6y7,x6y8).
+ :- inPath(x5y8,x6y8), inPath(x6y7,x6y8).
+ :- inPath(x7y8,x6y8), inPath(x6y7,x6y8).
+ :- inPath(x6y8,x6y7), inPath(x7y7,x6y7).
+ :- inPath(x6y6,x6y7), inPath(x7y7,x6y7).
+ :- inPath(x5y7,x6y7), inPath(x7y7,x6y7).
+ :- inPath(x7y8,x7y7), inPath(x6y7,x7y7).
+ :- inPath(x7y6,x7y7), inPath(x6y7,x7y7).
+ :- inPath(x5y6,x5y7), inPath(x5y8,x5y7).
+ :- inPath(x4y7,x5y7), inPath(x5y8,x5y7).
+ :- inPath(x6y7,x5y7), inPath(x5y8,x5y7).
+ :- inPath(x5y9,x5y8), inPath(x5y7,x5y8).
+ :- inPath(x4y8,x5y8), inPath(x5y7,x5y8).
+ :- inPath(x6y8,x5y8), inPath(x5y7,x5y8).
+ :- inPath(x5y8,x5y7), inPath(x6y7,x5y7).
+ :- inPath(x5y6,x5y7), inPath(x6y7,x5y7).
+ :- inPath(x4y7,x5y7), inPath(x6y7,x5y7).
+ :- inPath(x6y8,x6y7), inPath(x5y7,x6y7).
+ :- inPath(x6y6,x6y7), inPath(x5y7,x6y7).
+ :- inPath(x7y7,x6y7), inPath(x5y7,x6y7).
+ :- inPath(x3y7,x4y7), inPath(x4y8,x4y7).
+ :- inPath(x5y7,x4y7), inPath(x4y8,x4y7).
+ :- inPath(x4y9,x4y8), inPath(x4y7,x4y8).
+ :- inPath(x3y8,x4y8), inPath(x4y7,x4y8).
+ :- inPath(x5y8,x4y8), inPath(x4y7,x4y8).
+ :- inPath(x4y8,x4y7), inPath(x5y7,x4y7).
+ :- inPath(x3y7,x4y7), inPath(x5y7,x4y7).
+ :- inPath(x5y8,x5y7), inPath(x4y7,x5y7).
+ :- inPath(x5y6,x5y7), inPath(x4y7,x5y7).
+ :- inPath(x6y7,x5y7), inPath(x4y7,x5y7).
+ :- inPath(x3y6,x3y7), inPath(x3y8,x3y7).
+ :- inPath(x2y7,x3y7), inPath(x3y8,x3y7).
+ :- inPath(x4y7,x3y7), inPath(x3y8,x3y7).
+ :- inPath(x3y9,x3y8), inPath(x3y7,x3y8).
+ :- inPath(x2y8,x3y8), inPath(x3y7,x3y8).
+ :- inPath(x4y8,x3y8), inPath(x3y7,x3y8).
+ :- inPath(x3y8,x3y7), inPath(x4y7,x3y7).
+ :- inPath(x3y6,x3y7), inPath(x4y7,x3y7).
+ :- inPath(x2y7,x3y7), inPath(x4y7,x3y7).
+ :- inPath(x4y8,x4y7), inPath(x3y7,x4y7).
+ :- inPath(x5y7,x4y7), inPath(x3y7,x4y7).
+ :- inPath(x2y6,x2y7), inPath(x2y8,x2y7).
+ :- inPath(x3y7,x2y7), inPath(x2y8,x2y7).
+ :- inPath(x2y9,x2y8), inPath(x2y7,x2y8).
+ :- inPath(x1y8,x2y8), inPath(x2y7,x2y8).
+ :- inPath(x3y8,x2y8), inPath(x2y7,x2y8).
+ :- inPath(x2y8,x2y7), inPath(x3y7,x2y7).
+ :- inPath(x2y6,x2y7), inPath(x3y7,x2y7).
+ :- inPath(x3y8,x3y7), inPath(x2y7,x3y7).
+ :- inPath(x3y6,x3y7), inPath(x2y7,x3y7).
+ :- inPath(x4y7,x3y7), inPath(x2y7,x3y7).
+ :- inPath(x15y5,x15y6), inPath(x15y7,x15y6).
+ :- inPath(x14y6,x15y6), inPath(x15y7,x15y6).
+ :- inPath(x15y8,x15y7), inPath(x15y6,x15y7).
+ :- inPath(x14y7,x15y7), inPath(x15y6,x15y7).
+ :- inPath(x16y7,x15y7), inPath(x15y6,x15y7).
+ :- inPath(x14y5,x14y6), inPath(x14y7,x14y6).
+ :- inPath(x13y6,x14y6), inPath(x14y7,x14y6).
+ :- inPath(x15y6,x14y6), inPath(x14y7,x14y6).
+ :- inPath(x14y8,x14y7), inPath(x14y6,x14y7).
+ :- inPath(x13y7,x14y7), inPath(x14y6,x14y7).
+ :- inPath(x15y7,x14y7), inPath(x14y6,x14y7).
+ :- inPath(x14y7,x14y6), inPath(x15y6,x14y6).
+ :- inPath(x14y5,x14y6), inPath(x15y6,x14y6).
+ :- inPath(x13y6,x14y6), inPath(x15y6,x14y6).
+ :- inPath(x15y7,x15y6), inPath(x14y6,x15y6).
+ :- inPath(x15y5,x15y6), inPath(x14y6,x15y6).
+ :- inPath(x13y5,x13y6), inPath(x13y7,x13y6).
+ :- inPath(x12y6,x13y6), inPath(x13y7,x13y6).
+ :- inPath(x14y6,x13y6), inPath(x13y7,x13y6).
+ :- inPath(x13y8,x13y7), inPath(x13y6,x13y7).
+ :- inPath(x12y7,x13y7), inPath(x13y6,x13y7).
+ :- inPath(x14y7,x13y7), inPath(x13y6,x13y7).
+ :- inPath(x13y7,x13y6), inPath(x14y6,x13y6).
+ :- inPath(x13y5,x13y6), inPath(x14y6,x13y6).
+ :- inPath(x12y6,x13y6), inPath(x14y6,x13y6).
+ :- inPath(x14y7,x14y6), inPath(x13y6,x14y6).
+ :- inPath(x14y5,x14y6), inPath(x13y6,x14y6).
+ :- inPath(x15y6,x14y6), inPath(x13y6,x14y6).
+ :- inPath(x11y6,x12y6), inPath(x12y7,x12y6).
+ :- inPath(x13y6,x12y6), inPath(x12y7,x12y6).
+ :- inPath(x12y8,x12y7), inPath(x12y6,x12y7).
+ :- inPath(x11y7,x12y7), inPath(x12y6,x12y7).
+ :- inPath(x13y7,x12y7), inPath(x12y6,x12y7).
+ :- inPath(x12y7,x12y6), inPath(x13y6,x12y6).
+ :- inPath(x11y6,x12y6), inPath(x13y6,x12y6).
+ :- inPath(x13y7,x13y6), inPath(x12y6,x13y6).
+ :- inPath(x13y5,x13y6), inPath(x12y6,x13y6).
+ :- inPath(x14y6,x13y6), inPath(x12y6,x13y6).
+ :- inPath(x11y5,x11y6), inPath(x11y7,x11y6).
+ :- inPath(x10y6,x11y6), inPath(x11y7,x11y6).
+ :- inPath(x12y6,x11y6), inPath(x11y7,x11y6).
+ :- inPath(x11y8,x11y7), inPath(x11y6,x11y7).
+ :- inPath(x10y7,x11y7), inPath(x11y6,x11y7).
+ :- inPath(x12y7,x11y7), inPath(x11y6,x11y7).
+ :- inPath(x11y7,x11y6), inPath(x12y6,x11y6).
+ :- inPath(x11y5,x11y6), inPath(x12y6,x11y6).
+ :- inPath(x10y6,x11y6), inPath(x12y6,x11y6).
+ :- inPath(x12y7,x12y6), inPath(x11y6,x12y6).
+ :- inPath(x13y6,x12y6), inPath(x11y6,x12y6).
+ :- inPath(x10y5,x10y6), inPath(x10y7,x10y6).
+ :- inPath(x9y6,x10y6), inPath(x10y7,x10y6).
+ :- inPath(x11y6,x10y6), inPath(x10y7,x10y6).
+ :- inPath(x10y8,x10y7), inPath(x10y6,x10y7).
+ :- inPath(x9y7,x10y7), inPath(x10y6,x10y7).
+ :- inPath(x11y7,x10y7), inPath(x10y6,x10y7).
+ :- inPath(x10y7,x10y6), inPath(x11y6,x10y6).
+ :- inPath(x10y5,x10y6), inPath(x11y6,x10y6).
+ :- inPath(x9y6,x10y6), inPath(x11y6,x10y6).
+ :- inPath(x11y7,x11y6), inPath(x10y6,x11y6).
+ :- inPath(x11y5,x11y6), inPath(x10y6,x11y6).
+ :- inPath(x12y6,x11y6), inPath(x10y6,x11y6).
+ :- inPath(x9y5,x9y6), inPath(x9y7,x9y6).
+ :- inPath(x8y6,x9y6), inPath(x9y7,x9y6).
+ :- inPath(x10y6,x9y6), inPath(x9y7,x9y6).
+ :- inPath(x9y8,x9y7), inPath(x9y6,x9y7).
+ :- inPath(x10y7,x9y7), inPath(x9y6,x9y7).
+ :- inPath(x9y7,x9y6), inPath(x10y6,x9y6).
+ :- inPath(x9y5,x9y6), inPath(x10y6,x9y6).
+ :- inPath(x8y6,x9y6), inPath(x10y6,x9y6).
+ :- inPath(x10y7,x10y6), inPath(x9y6,x10y6).
+ :- inPath(x10y5,x10y6), inPath(x9y6,x10y6).
+ :- inPath(x11y6,x10y6), inPath(x9y6,x10y6).
+ :- inPath(x8y5,x8y6), inPath(x9y6,x8y6).
+ :- inPath(x7y6,x8y6), inPath(x9y6,x8y6).
+ :- inPath(x9y7,x9y6), inPath(x8y6,x9y6).
+ :- inPath(x9y5,x9y6), inPath(x8y6,x9y6).
+ :- inPath(x10y6,x9y6), inPath(x8y6,x9y6).
+ :- inPath(x7y5,x7y6), inPath(x7y7,x7y6).
+ :- inPath(x6y6,x7y6), inPath(x7y7,x7y6).
+ :- inPath(x8y6,x7y6), inPath(x7y7,x7y6).
+ :- inPath(x7y8,x7y7), inPath(x7y6,x7y7).
+ :- inPath(x6y7,x7y7), inPath(x7y6,x7y7).
+ :- inPath(x7y7,x7y6), inPath(x8y6,x7y6).
+ :- inPath(x7y5,x7y6), inPath(x8y6,x7y6).
+ :- inPath(x6y6,x7y6), inPath(x8y6,x7y6).
+ :- inPath(x9y6,x8y6), inPath(x7y6,x8y6).
+ :- inPath(x8y5,x8y6), inPath(x7y6,x8y6).
+ :- inPath(x6y5,x6y6), inPath(x6y7,x6y6).
+ :- inPath(x5y6,x6y6), inPath(x6y7,x6y6).
+ :- inPath(x7y6,x6y6), inPath(x6y7,x6y6).
+ :- inPath(x6y8,x6y7), inPath(x6y6,x6y7).
+ :- inPath(x5y7,x6y7), inPath(x6y6,x6y7).
+ :- inPath(x7y7,x6y7), inPath(x6y6,x6y7).
+ :- inPath(x6y7,x6y6), inPath(x7y6,x6y6).
+ :- inPath(x6y5,x6y6), inPath(x7y6,x6y6).
+ :- inPath(x5y6,x6y6), inPath(x7y6,x6y6).
+ :- inPath(x7y7,x7y6), inPath(x6y6,x7y6).
+ :- inPath(x7y5,x7y6), inPath(x6y6,x7y6).
+ :- inPath(x8y6,x7y6), inPath(x6y6,x7y6).
+ :- inPath(x5y5,x5y6), inPath(x5y7,x5y6).
+ :- inPath(x6y6,x5y6), inPath(x5y7,x5y6).
+ :- inPath(x5y8,x5y7), inPath(x5y6,x5y7).
+ :- inPath(x4y7,x5y7), inPath(x5y6,x5y7).
+ :- inPath(x6y7,x5y7), inPath(x5y6,x5y7).
+ :- inPath(x5y7,x5y6), inPath(x6y6,x5y6).
+ :- inPath(x5y5,x5y6), inPath(x6y6,x5y6).
+ :- inPath(x6y7,x6y6), inPath(x5y6,x6y6).
+ :- inPath(x6y5,x6y6), inPath(x5y6,x6y6).
+ :- inPath(x7y6,x6y6), inPath(x5y6,x6y6).
+ :- inPath(x3y5,x3y6), inPath(x3y7,x3y6).
+ :- inPath(x2y6,x3y6), inPath(x3y7,x3y6).
+ :- inPath(x3y8,x3y7), inPath(x3y6,x3y7).
+ :- inPath(x2y7,x3y7), inPath(x3y6,x3y7).
+ :- inPath(x4y7,x3y7), inPath(x3y6,x3y7).
+ :- inPath(x2y5,x2y6), inPath(x2y7,x2y6).
+ :- inPath(x3y6,x2y6), inPath(x2y7,x2y6).
+ :- inPath(x2y8,x2y7), inPath(x2y6,x2y7).
+ :- inPath(x3y7,x2y7), inPath(x2y6,x2y7).
+ :- inPath(x2y7,x2y6), inPath(x3y6,x2y6).
+ :- inPath(x2y5,x2y6), inPath(x3y6,x2y6).
+ :- inPath(x3y7,x3y6), inPath(x2y6,x3y6).
+ :- inPath(x3y5,x3y6), inPath(x2y6,x3y6).
+ :- inPath(x14y5,x15y5), inPath(x15y6,x15y5).
+ :- inPath(x16y5,x15y5), inPath(x15y6,x15y5).
+ :- inPath(x15y7,x15y6), inPath(x15y5,x15y6).
+ :- inPath(x14y6,x15y6), inPath(x15y5,x15y6).
+ :- inPath(x15y6,x15y5), inPath(x16y5,x15y5).
+ :- inPath(x14y5,x15y5), inPath(x16y5,x15y5).
+ :- inPath(x16y4,x16y5), inPath(x15y5,x16y5).
+ :- inPath(x14y4,x14y5), inPath(x14y6,x14y5).
+ :- inPath(x13y5,x14y5), inPath(x14y6,x14y5).
+ :- inPath(x15y5,x14y5), inPath(x14y6,x14y5).
+ :- inPath(x14y7,x14y6), inPath(x14y5,x14y6).
+ :- inPath(x13y6,x14y6), inPath(x14y5,x14y6).
+ :- inPath(x15y6,x14y6), inPath(x14y5,x14y6).
+ :- inPath(x14y6,x14y5), inPath(x15y5,x14y5).
+ :- inPath(x14y4,x14y5), inPath(x15y5,x14y5).
+ :- inPath(x13y5,x14y5), inPath(x15y5,x14y5).
+ :- inPath(x15y6,x15y5), inPath(x14y5,x15y5).
+ :- inPath(x16y5,x15y5), inPath(x14y5,x15y5).
+ :- inPath(x13y4,x13y5), inPath(x13y6,x13y5).
+ :- inPath(x14y5,x13y5), inPath(x13y6,x13y5).
+ :- inPath(x13y7,x13y6), inPath(x13y5,x13y6).
+ :- inPath(x12y6,x13y6), inPath(x13y5,x13y6).
+ :- inPath(x14y6,x13y6), inPath(x13y5,x13y6).
+ :- inPath(x13y6,x13y5), inPath(x14y5,x13y5).
+ :- inPath(x13y4,x13y5), inPath(x14y5,x13y5).
+ :- inPath(x14y6,x14y5), inPath(x13y5,x14y5).
+ :- inPath(x14y4,x14y5), inPath(x13y5,x14y5).
+ :- inPath(x15y5,x14y5), inPath(x13y5,x14y5).
+ :- inPath(x11y4,x11y5), inPath(x11y6,x11y5).
+ :- inPath(x10y5,x11y5), inPath(x11y6,x11y5).
+ :- inPath(x11y7,x11y6), inPath(x11y5,x11y6).
+ :- inPath(x10y6,x11y6), inPath(x11y5,x11y6).
+ :- inPath(x12y6,x11y6), inPath(x11y5,x11y6).
+ :- inPath(x10y4,x10y5), inPath(x10y6,x10y5).
+ :- inPath(x9y5,x10y5), inPath(x10y6,x10y5).
+ :- inPath(x11y5,x10y5), inPath(x10y6,x10y5).
+ :- inPath(x10y7,x10y6), inPath(x10y5,x10y6).
+ :- inPath(x9y6,x10y6), inPath(x10y5,x10y6).
+ :- inPath(x11y6,x10y6), inPath(x10y5,x10y6).
+ :- inPath(x10y6,x10y5), inPath(x11y5,x10y5).
+ :- inPath(x10y4,x10y5), inPath(x11y5,x10y5).
+ :- inPath(x9y5,x10y5), inPath(x11y5,x10y5).
+ :- inPath(x11y6,x11y5), inPath(x10y5,x11y5).
+ :- inPath(x11y4,x11y5), inPath(x10y5,x11y5).
+ :- inPath(x8y5,x9y5), inPath(x9y6,x9y5).
+ :- inPath(x10y5,x9y5), inPath(x9y6,x9y5).
+ :- inPath(x9y7,x9y6), inPath(x9y5,x9y6).
+ :- inPath(x8y6,x9y6), inPath(x9y5,x9y6).
+ :- inPath(x10y6,x9y6), inPath(x9y5,x9y6).
+ :- inPath(x9y6,x9y5), inPath(x10y5,x9y5).
+ :- inPath(x8y5,x9y5), inPath(x10y5,x9y5).
+ :- inPath(x10y6,x10y5), inPath(x9y5,x10y5).
+ :- inPath(x10y4,x10y5), inPath(x9y5,x10y5).
+ :- inPath(x11y5,x10y5), inPath(x9y5,x10y5).
+ :- inPath(x7y5,x8y5), inPath(x8y6,x8y5).
+ :- inPath(x9y5,x8y5), inPath(x8y6,x8y5).
+ :- inPath(x9y6,x8y6), inPath(x8y5,x8y6).
+ :- inPath(x7y6,x8y6), inPath(x8y5,x8y6).
+ :- inPath(x8y6,x8y5), inPath(x9y5,x8y5).
+ :- inPath(x7y5,x8y5), inPath(x9y5,x8y5).
+ :- inPath(x9y6,x9y5), inPath(x8y5,x9y5).
+ :- inPath(x10y5,x9y5), inPath(x8y5,x9y5).
+ :- inPath(x7y4,x7y5), inPath(x7y6,x7y5).
+ :- inPath(x6y5,x7y5), inPath(x7y6,x7y5).
+ :- inPath(x8y5,x7y5), inPath(x7y6,x7y5).
+ :- inPath(x7y7,x7y6), inPath(x7y5,x7y6).
+ :- inPath(x6y6,x7y6), inPath(x7y5,x7y6).
+ :- inPath(x8y6,x7y6), inPath(x7y5,x7y6).
+ :- inPath(x7y6,x7y5), inPath(x8y5,x7y5).
+ :- inPath(x7y4,x7y5), inPath(x8y5,x7y5).
+ :- inPath(x6y5,x7y5), inPath(x8y5,x7y5).
+ :- inPath(x8y6,x8y5), inPath(x7y5,x8y5).
+ :- inPath(x9y5,x8y5), inPath(x7y5,x8y5).
+ :- inPath(x6y4,x6y5), inPath(x6y6,x6y5).
+ :- inPath(x5y5,x6y5), inPath(x6y6,x6y5).
+ :- inPath(x7y5,x6y5), inPath(x6y6,x6y5).
+ :- inPath(x6y7,x6y6), inPath(x6y5,x6y6).
+ :- inPath(x5y6,x6y6), inPath(x6y5,x6y6).
+ :- inPath(x7y6,x6y6), inPath(x6y5,x6y6).
+ :- inPath(x6y6,x6y5), inPath(x7y5,x6y5).
+ :- inPath(x6y4,x6y5), inPath(x7y5,x6y5).
+ :- inPath(x5y5,x6y5), inPath(x7y5,x6y5).
+ :- inPath(x7y6,x7y5), inPath(x6y5,x7y5).
+ :- inPath(x7y4,x7y5), inPath(x6y5,x7y5).
+ :- inPath(x8y5,x7y5), inPath(x6y5,x7y5).
+ :- inPath(x5y4,x5y5), inPath(x5y6,x5y5).
+ :- inPath(x6y5,x5y5), inPath(x5y6,x5y5).
+ :- inPath(x5y7,x5y6), inPath(x5y5,x5y6).
+ :- inPath(x6y6,x5y6), inPath(x5y5,x5y6).
+ :- inPath(x5y6,x5y5), inPath(x6y5,x5y5).
+ :- inPath(x5y4,x5y5), inPath(x6y5,x5y5).
+ :- inPath(x6y6,x6y5), inPath(x5y5,x6y5).
+ :- inPath(x6y4,x6y5), inPath(x5y5,x6y5).
+ :- inPath(x7y5,x6y5), inPath(x5y5,x6y5).
+ :- inPath(x3y4,x3y5), inPath(x3y6,x3y5).
+ :- inPath(x2y5,x3y5), inPath(x3y6,x3y5).
+ :- inPath(x3y7,x3y6), inPath(x3y5,x3y6).
+ :- inPath(x2y6,x3y6), inPath(x3y5,x3y6).
+ :- inPath(x1y5,x2y5), inPath(x2y6,x2y5).
+ :- inPath(x3y5,x2y5), inPath(x2y6,x2y5).
+ :- inPath(x2y7,x2y6), inPath(x2y5,x2y6).
+ :- inPath(x3y6,x2y6), inPath(x2y5,x2y6).
+ :- inPath(x2y6,x2y5), inPath(x3y5,x2y5).
+ :- inPath(x1y5,x2y5), inPath(x3y5,x2y5).
+ :- inPath(x3y6,x3y5), inPath(x2y5,x3y5).
+ :- inPath(x3y4,x3y5), inPath(x2y5,x3y5).
+ :- inPath(x1y4,x1y5), inPath(x2y5,x1y5).
+ :- inPath(x2y6,x2y5), inPath(x1y5,x2y5).
+ :- inPath(x3y5,x2y5), inPath(x1y5,x2y5).
+ :- inPath(x16y3,x16y4), inPath(x16y5,x16y4).
+ :- inPath(x15y5,x16y5), inPath(x16y4,x16y5).
+ :- inPath(x14y3,x14y4), inPath(x14y5,x14y4).
+ :- inPath(x13y4,x14y4), inPath(x14y5,x14y4).
+ :- inPath(x14y6,x14y5), inPath(x14y4,x14y5).
+ :- inPath(x13y5,x14y5), inPath(x14y4,x14y5).
+ :- inPath(x15y5,x14y5), inPath(x14y4,x14y5).
+ :- inPath(x13y3,x13y4), inPath(x13y5,x13y4).
+ :- inPath(x14y4,x13y4), inPath(x13y5,x13y4).
+ :- inPath(x13y6,x13y5), inPath(x13y4,x13y5).
+ :- inPath(x14y5,x13y5), inPath(x13y4,x13y5).
+ :- inPath(x13y5,x13y4), inPath(x14y4,x13y4).
+ :- inPath(x13y3,x13y4), inPath(x14y4,x13y4).
+ :- inPath(x14y5,x14y4), inPath(x13y4,x14y4).
+ :- inPath(x14y3,x14y4), inPath(x13y4,x14y4).
+ :- inPath(x11y3,x11y4), inPath(x11y5,x11y4).
+ :- inPath(x10y4,x11y4), inPath(x11y5,x11y4).
+ :- inPath(x11y6,x11y5), inPath(x11y4,x11y5).
+ :- inPath(x10y5,x11y5), inPath(x11y4,x11y5).
+ :- inPath(x10y3,x10y4), inPath(x10y5,x10y4).
+ :- inPath(x11y4,x10y4), inPath(x10y5,x10y4).
+ :- inPath(x10y6,x10y5), inPath(x10y4,x10y5).
+ :- inPath(x9y5,x10y5), inPath(x10y4,x10y5).
+ :- inPath(x11y5,x10y5), inPath(x10y4,x10y5).
+ :- inPath(x10y5,x10y4), inPath(x11y4,x10y4).
+ :- inPath(x10y3,x10y4), inPath(x11y4,x10y4).
+ :- inPath(x11y5,x11y4), inPath(x10y4,x11y4).
+ :- inPath(x11y3,x11y4), inPath(x10y4,x11y4).
+ :- inPath(x7y3,x7y4), inPath(x7y5,x7y4).
+ :- inPath(x6y4,x7y4), inPath(x7y5,x7y4).
+ :- inPath(x7y6,x7y5), inPath(x7y4,x7y5).
+ :- inPath(x6y5,x7y5), inPath(x7y4,x7y5).
+ :- inPath(x8y5,x7y5), inPath(x7y4,x7y5).
+ :- inPath(x5y4,x6y4), inPath(x6y5,x6y4).
+ :- inPath(x7y4,x6y4), inPath(x6y5,x6y4).
+ :- inPath(x6y6,x6y5), inPath(x6y4,x6y5).
+ :- inPath(x5y5,x6y5), inPath(x6y4,x6y5).
+ :- inPath(x7y5,x6y5), inPath(x6y4,x6y5).
+ :- inPath(x6y5,x6y4), inPath(x7y4,x6y4).
+ :- inPath(x5y4,x6y4), inPath(x7y4,x6y4).
+ :- inPath(x7y5,x7y4), inPath(x6y4,x7y4).
+ :- inPath(x7y3,x7y4), inPath(x6y4,x7y4).
+ :- inPath(x5y3,x5y4), inPath(x5y5,x5y4).
+ :- inPath(x4y4,x5y4), inPath(x5y5,x5y4).
+ :- inPath(x6y4,x5y4), inPath(x5y5,x5y4).
+ :- inPath(x5y6,x5y5), inPath(x5y4,x5y5).
+ :- inPath(x6y5,x5y5), inPath(x5y4,x5y5).
+ :- inPath(x5y5,x5y4), inPath(x6y4,x5y4).
+ :- inPath(x5y3,x5y4), inPath(x6y4,x5y4).
+ :- inPath(x4y4,x5y4), inPath(x6y4,x5y4).
+ :- inPath(x6y5,x6y4), inPath(x5y4,x6y4).
+ :- inPath(x7y4,x6y4), inPath(x5y4,x6y4).
+ :- inPath(x4y3,x4y4), inPath(x5y4,x4y4).
+ :- inPath(x3y4,x4y4), inPath(x5y4,x4y4).
+ :- inPath(x5y5,x5y4), inPath(x4y4,x5y4).
+ :- inPath(x5y3,x5y4), inPath(x4y4,x5y4).
+ :- inPath(x6y4,x5y4), inPath(x4y4,x5y4).
+ :- inPath(x3y3,x3y4), inPath(x3y5,x3y4).
+ :- inPath(x4y4,x3y4), inPath(x3y5,x3y4).
+ :- inPath(x3y6,x3y5), inPath(x3y4,x3y5).
+ :- inPath(x2y5,x3y5), inPath(x3y4,x3y5).
+ :- inPath(x3y5,x3y4), inPath(x4y4,x3y4).
+ :- inPath(x3y3,x3y4), inPath(x4y4,x3y4).
+ :- inPath(x5y4,x4y4), inPath(x3y4,x4y4).
+ :- inPath(x4y3,x4y4), inPath(x3y4,x4y4).
+ :- inPath(x1y3,x1y4), inPath(x1y5,x1y4).
+ :- inPath(x2y5,x1y5), inPath(x1y4,x1y5).
+ :- inPath(x16y2,x16y3), inPath(x16y4,x16y3).
+ :- inPath(x16y5,x16y4), inPath(x16y3,x16y4).
+ :- inPath(x14y2,x14y3), inPath(x14y4,x14y3).
+ :- inPath(x13y3,x14y3), inPath(x14y4,x14y3).
+ :- inPath(x14y5,x14y4), inPath(x14y3,x14y4).
+ :- inPath(x13y4,x14y4), inPath(x14y3,x14y4).
+ :- inPath(x13y2,x13y3), inPath(x13y4,x13y3).
+ :- inPath(x12y3,x13y3), inPath(x13y4,x13y3).
+ :- inPath(x14y3,x13y3), inPath(x13y4,x13y3).
+ :- inPath(x13y5,x13y4), inPath(x13y3,x13y4).
+ :- inPath(x14y4,x13y4), inPath(x13y3,x13y4).
+ :- inPath(x13y4,x13y3), inPath(x14y3,x13y3).
+ :- inPath(x13y2,x13y3), inPath(x14y3,x13y3).
+ :- inPath(x12y3,x13y3), inPath(x14y3,x13y3).
+ :- inPath(x14y4,x14y3), inPath(x13y3,x14y3).
+ :- inPath(x14y2,x14y3), inPath(x13y3,x14y3).
+ :- inPath(x12y2,x12y3), inPath(x13y3,x12y3).
+ :- inPath(x11y3,x12y3), inPath(x13y3,x12y3).
+ :- inPath(x13y4,x13y3), inPath(x12y3,x13y3).
+ :- inPath(x13y2,x13y3), inPath(x12y3,x13y3).
+ :- inPath(x14y3,x13y3), inPath(x12y3,x13y3).
+ :- inPath(x11y2,x11y3), inPath(x11y4,x11y3).
+ :- inPath(x10y3,x11y3), inPath(x11y4,x11y3).
+ :- inPath(x12y3,x11y3), inPath(x11y4,x11y3).
+ :- inPath(x11y5,x11y4), inPath(x11y3,x11y4).
+ :- inPath(x10y4,x11y4), inPath(x11y3,x11y4).
+ :- inPath(x11y4,x11y3), inPath(x12y3,x11y3).
+ :- inPath(x11y2,x11y3), inPath(x12y3,x11y3).
+ :- inPath(x10y3,x11y3), inPath(x12y3,x11y3).
+ :- inPath(x13y3,x12y3), inPath(x11y3,x12y3).
+ :- inPath(x12y2,x12y3), inPath(x11y3,x12y3).
+ :- inPath(x10y2,x10y3), inPath(x10y4,x10y3).
+ :- inPath(x11y3,x10y3), inPath(x10y4,x10y3).
+ :- inPath(x10y5,x10y4), inPath(x10y3,x10y4).
+ :- inPath(x11y4,x10y4), inPath(x10y3,x10y4).
+ :- inPath(x10y4,x10y3), inPath(x11y3,x10y3).
+ :- inPath(x10y2,x10y3), inPath(x11y3,x10y3).
+ :- inPath(x11y4,x11y3), inPath(x10y3,x11y3).
+ :- inPath(x11y2,x11y3), inPath(x10y3,x11y3).
+ :- inPath(x12y3,x11y3), inPath(x10y3,x11y3).
+ :- inPath(x7y2,x7y3), inPath(x7y4,x7y3).
+ :- inPath(x8y3,x7y3), inPath(x7y4,x7y3).
+ :- inPath(x7y5,x7y4), inPath(x7y3,x7y4).
+ :- inPath(x6y4,x7y4), inPath(x7y3,x7y4).
+ :- inPath(x7y4,x7y3), inPath(x8y3,x7y3).
+ :- inPath(x7y2,x7y3), inPath(x8y3,x7y3).
+ :- inPath(x8y2,x8y3), inPath(x7y3,x8y3).
+ :- inPath(x5y2,x5y3), inPath(x5y4,x5y3).
+ :- inPath(x4y3,x5y3), inPath(x5y4,x5y3).
+ :- inPath(x5y5,x5y4), inPath(x5y3,x5y4).
+ :- inPath(x4y4,x5y4), inPath(x5y3,x5y4).
+ :- inPath(x6y4,x5y4), inPath(x5y3,x5y4).
+ :- inPath(x4y2,x4y3), inPath(x4y4,x4y3).
+ :- inPath(x3y3,x4y3), inPath(x4y4,x4y3).
+ :- inPath(x5y3,x4y3), inPath(x4y4,x4y3).
+ :- inPath(x5y4,x4y4), inPath(x4y3,x4y4).
+ :- inPath(x3y4,x4y4), inPath(x4y3,x4y4).
+ :- inPath(x4y4,x4y3), inPath(x5y3,x4y3).
+ :- inPath(x4y2,x4y3), inPath(x5y3,x4y3).
+ :- inPath(x3y3,x4y3), inPath(x5y3,x4y3).
+ :- inPath(x5y4,x5y3), inPath(x4y3,x5y3).
+ :- inPath(x5y2,x5y3), inPath(x4y3,x5y3).
+ :- inPath(x3y2,x3y3), inPath(x3y4,x3y3).
+ :- inPath(x2y3,x3y3), inPath(x3y4,x3y3).
+ :- inPath(x4y3,x3y3), inPath(x3y4,x3y3).
+ :- inPath(x3y5,x3y4), inPath(x3y3,x3y4).
+ :- inPath(x4y4,x3y4), inPath(x3y3,x3y4).
+ :- inPath(x3y4,x3y3), inPath(x4y3,x3y3).
+ :- inPath(x3y2,x3y3), inPath(x4y3,x3y3).
+ :- inPath(x2y3,x3y3), inPath(x4y3,x3y3).
+ :- inPath(x4y4,x4y3), inPath(x3y3,x4y3).
+ :- inPath(x4y2,x4y3), inPath(x3y3,x4y3).
+ :- inPath(x5y3,x4y3), inPath(x3y3,x4y3).
+ :- inPath(x2y2,x2y3), inPath(x3y3,x2y3).
+ :- inPath(x1y3,x2y3), inPath(x3y3,x2y3).
+ :- inPath(x3y4,x3y3), inPath(x2y3,x3y3).
+ :- inPath(x3y2,x3y3), inPath(x2y3,x3y3).
+ :- inPath(x4y3,x3y3), inPath(x2y3,x3y3).
+ :- inPath(x2y3,x1y3), inPath(x1y4,x1y3).
+ :- inPath(x1y5,x1y4), inPath(x1y3,x1y4).
+ :- inPath(x1y4,x1y3), inPath(x2y3,x1y3).
+ :- inPath(x3y3,x2y3), inPath(x1y3,x2y3).
+ :- inPath(x2y2,x2y3), inPath(x1y3,x2y3).
+ :- inPath(x15y2,x16y2), inPath(x16y3,x16y2).
+ :- inPath(x16y4,x16y3), inPath(x16y2,x16y3).
+ :- inPath(x15y1,x15y2), inPath(x16y2,x15y2).
+ :- inPath(x14y2,x15y2), inPath(x16y2,x15y2).
+ :- inPath(x16y3,x16y2), inPath(x15y2,x16y2).
+ :- inPath(x14y1,x14y2), inPath(x14y3,x14y2).
+ :- inPath(x13y2,x14y2), inPath(x14y3,x14y2).
+ :- inPath(x15y2,x14y2), inPath(x14y3,x14y2).
+ :- inPath(x14y4,x14y3), inPath(x14y2,x14y3).
+ :- inPath(x13y3,x14y3), inPath(x14y2,x14y3).
+ :- inPath(x14y3,x14y2), inPath(x15y2,x14y2).
+ :- inPath(x14y1,x14y2), inPath(x15y2,x14y2).
+ :- inPath(x13y2,x14y2), inPath(x15y2,x14y2).
+ :- inPath(x16y2,x15y2), inPath(x14y2,x15y2).
+ :- inPath(x15y1,x15y2), inPath(x14y2,x15y2).
+ :- inPath(x13y1,x13y2), inPath(x13y3,x13y2).
+ :- inPath(x12y2,x13y2), inPath(x13y3,x13y2).
+ :- inPath(x14y2,x13y2), inPath(x13y3,x13y2).
+ :- inPath(x13y4,x13y3), inPath(x13y2,x13y3).
+ :- inPath(x12y3,x13y3), inPath(x13y2,x13y3).
+ :- inPath(x14y3,x13y3), inPath(x13y2,x13y3).
+ :- inPath(x13y3,x13y2), inPath(x14y2,x13y2).
+ :- inPath(x13y1,x13y2), inPath(x14y2,x13y2).
+ :- inPath(x12y2,x13y2), inPath(x14y2,x13y2).
+ :- inPath(x14y3,x14y2), inPath(x13y2,x14y2).
+ :- inPath(x14y1,x14y2), inPath(x13y2,x14y2).
+ :- inPath(x15y2,x14y2), inPath(x13y2,x14y2).
+ :- inPath(x12y1,x12y2), inPath(x12y3,x12y2).
+ :- inPath(x11y2,x12y2), inPath(x12y3,x12y2).
+ :- inPath(x13y2,x12y2), inPath(x12y3,x12y2).
+ :- inPath(x13y3,x12y3), inPath(x12y2,x12y3).
+ :- inPath(x11y3,x12y3), inPath(x12y2,x12y3).
+ :- inPath(x12y3,x12y2), inPath(x13y2,x12y2).
+ :- inPath(x12y1,x12y2), inPath(x13y2,x12y2).
+ :- inPath(x11y2,x12y2), inPath(x13y2,x12y2).
+ :- inPath(x13y3,x13y2), inPath(x12y2,x13y2).
+ :- inPath(x13y1,x13y2), inPath(x12y2,x13y2).
+ :- inPath(x14y2,x13y2), inPath(x12y2,x13y2).
+ :- inPath(x11y1,x11y2), inPath(x11y3,x11y2).
+ :- inPath(x10y2,x11y2), inPath(x11y3,x11y2).
+ :- inPath(x12y2,x11y2), inPath(x11y3,x11y2).
+ :- inPath(x11y4,x11y3), inPath(x11y2,x11y3).
+ :- inPath(x10y3,x11y3), inPath(x11y2,x11y3).
+ :- inPath(x12y3,x11y3), inPath(x11y2,x11y3).
+ :- inPath(x11y3,x11y2), inPath(x12y2,x11y2).
+ :- inPath(x11y1,x11y2), inPath(x12y2,x11y2).
+ :- inPath(x10y2,x11y2), inPath(x12y2,x11y2).
+ :- inPath(x12y3,x12y2), inPath(x11y2,x12y2).
+ :- inPath(x12y1,x12y2), inPath(x11y2,x12y2).
+ :- inPath(x13y2,x12y2), inPath(x11y2,x12y2).
+ :- inPath(x10y1,x10y2), inPath(x10y3,x10y2).
+ :- inPath(x9y2,x10y2), inPath(x10y3,x10y2).
+ :- inPath(x11y2,x10y2), inPath(x10y3,x10y2).
+ :- inPath(x10y4,x10y3), inPath(x10y2,x10y3).
+ :- inPath(x11y3,x10y3), inPath(x10y2,x10y3).
+ :- inPath(x10y3,x10y2), inPath(x11y2,x10y2).
+ :- inPath(x10y1,x10y2), inPath(x11y2,x10y2).
+ :- inPath(x9y2,x10y2), inPath(x11y2,x10y2).
+ :- inPath(x11y3,x11y2), inPath(x10y2,x11y2).
+ :- inPath(x11y1,x11y2), inPath(x10y2,x11y2).
+ :- inPath(x12y2,x11y2), inPath(x10y2,x11y2).
+ :- inPath(x9y1,x9y2), inPath(x10y2,x9y2).
+ :- inPath(x8y2,x9y2), inPath(x10y2,x9y2).
+ :- inPath(x10y3,x10y2), inPath(x9y2,x10y2).
+ :- inPath(x10y1,x10y2), inPath(x9y2,x10y2).
+ :- inPath(x11y2,x10y2), inPath(x9y2,x10y2).
+ :- inPath(x8y1,x8y2), inPath(x8y3,x8y2).
+ :- inPath(x7y2,x8y2), inPath(x8y3,x8y2).
+ :- inPath(x9y2,x8y2), inPath(x8y3,x8y2).
+ :- inPath(x7y3,x8y3), inPath(x8y2,x8y3).
+ :- inPath(x8y3,x8y2), inPath(x9y2,x8y2).
+ :- inPath(x8y1,x8y2), inPath(x9y2,x8y2).
+ :- inPath(x7y2,x8y2), inPath(x9y2,x8y2).
+ :- inPath(x10y2,x9y2), inPath(x8y2,x9y2).
+ :- inPath(x9y1,x9y2), inPath(x8y2,x9y2).
+ :- inPath(x7y1,x7y2), inPath(x7y3,x7y2).
+ :- inPath(x6y2,x7y2), inPath(x7y3,x7y2).
+ :- inPath(x8y2,x7y2), inPath(x7y3,x7y2).
+ :- inPath(x7y4,x7y3), inPath(x7y2,x7y3).
+ :- inPath(x8y3,x7y3), inPath(x7y2,x7y3).
+ :- inPath(x7y3,x7y2), inPath(x8y2,x7y2).
+ :- inPath(x7y1,x7y2), inPath(x8y2,x7y2).
+ :- inPath(x6y2,x7y2), inPath(x8y2,x7y2).
+ :- inPath(x8y3,x8y2), inPath(x7y2,x8y2).
+ :- inPath(x8y1,x8y2), inPath(x7y2,x8y2).
+ :- inPath(x9y2,x8y2), inPath(x7y2,x8y2).
+ :- inPath(x5y2,x6y2), inPath(x7y2,x6y2).
+ :- inPath(x7y3,x7y2), inPath(x6y2,x7y2).
+ :- inPath(x7y1,x7y2), inPath(x6y2,x7y2).
+ :- inPath(x8y2,x7y2), inPath(x6y2,x7y2).
+ :- inPath(x5y1,x5y2), inPath(x5y3,x5y2).
+ :- inPath(x4y2,x5y2), inPath(x5y3,x5y2).
+ :- inPath(x6y2,x5y2), inPath(x5y3,x5y2).
+ :- inPath(x5y4,x5y3), inPath(x5y2,x5y3).
+ :- inPath(x4y3,x5y3), inPath(x5y2,x5y3).
+ :- inPath(x5y3,x5y2), inPath(x6y2,x5y2).
+ :- inPath(x5y1,x5y2), inPath(x6y2,x5y2).
+ :- inPath(x4y2,x5y2), inPath(x6y2,x5y2).
+ :- inPath(x7y2,x6y2), inPath(x5y2,x6y2).
+ :- inPath(x4y1,x4y2), inPath(x4y3,x4y2).
+ :- inPath(x3y2,x4y2), inPath(x4y3,x4y2).
+ :- inPath(x5y2,x4y2), inPath(x4y3,x4y2).
+ :- inPath(x4y4,x4y3), inPath(x4y2,x4y3).
+ :- inPath(x3y3,x4y3), inPath(x4y2,x4y3).
+ :- inPath(x5y3,x4y3), inPath(x4y2,x4y3).
+ :- inPath(x4y3,x4y2), inPath(x5y2,x4y2).
+ :- inPath(x4y1,x4y2), inPath(x5y2,x4y2).
+ :- inPath(x3y2,x4y2), inPath(x5y2,x4y2).
+ :- inPath(x5y3,x5y2), inPath(x4y2,x5y2).
+ :- inPath(x5y1,x5y2), inPath(x4y2,x5y2).
+ :- inPath(x6y2,x5y2), inPath(x4y2,x5y2).
+ :- inPath(x2y2,x3y2), inPath(x3y3,x3y2).
+ :- inPath(x4y2,x3y2), inPath(x3y3,x3y2).
+ :- inPath(x3y4,x3y3), inPath(x3y2,x3y3).
+ :- inPath(x2y3,x3y3), inPath(x3y2,x3y3).
+ :- inPath(x4y3,x3y3), inPath(x3y2,x3y3).
+ :- inPath(x3y3,x3y2), inPath(x4y2,x3y2).
+ :- inPath(x2y2,x3y2), inPath(x4y2,x3y2).
+ :- inPath(x4y3,x4y2), inPath(x3y2,x4y2).
+ :- inPath(x4y1,x4y2), inPath(x3y2,x4y2).
+ :- inPath(x5y2,x4y2), inPath(x3y2,x4y2).
+ :- inPath(x3y2,x2y2), inPath(x2y3,x2y2).
+ :- inPath(x3y3,x2y3), inPath(x2y2,x2y3).
+ :- inPath(x1y3,x2y3), inPath(x2y2,x2y3).
+ :- inPath(x2y3,x2y2), inPath(x3y2,x2y2).
+ :- inPath(x3y3,x3y2), inPath(x2y2,x3y2).
+ :- inPath(x4y2,x3y2), inPath(x2y2,x3y2).
+ :- inPath(x14y1,x15y1), inPath(x15y2,x15y1).
+ :- inPath(x16y2,x15y2), inPath(x15y1,x15y2).
+ :- inPath(x14y2,x15y2), inPath(x15y1,x15y2).
+ :- inPath(x13y1,x14y1), inPath(x14y2,x14y1).
+ :- inPath(x15y1,x14y1), inPath(x14y2,x14y1).
+ :- inPath(x14y3,x14y2), inPath(x14y1,x14y2).
+ :- inPath(x13y2,x14y2), inPath(x14y1,x14y2).
+ :- inPath(x15y2,x14y2), inPath(x14y1,x14y2).
+ :- inPath(x14y2,x14y1), inPath(x15y1,x14y1).
+ :- inPath(x13y1,x14y1), inPath(x15y1,x14y1).
+ :- inPath(x15y2,x15y1), inPath(x14y1,x15y1).
+ :- inPath(x12y1,x13y1), inPath(x13y2,x13y1).
+ :- inPath(x14y1,x13y1), inPath(x13y2,x13y1).
+ :- inPath(x13y3,x13y2), inPath(x13y1,x13y2).
+ :- inPath(x12y2,x13y2), inPath(x13y1,x13y2).
+ :- inPath(x14y2,x13y2), inPath(x13y1,x13y2).
+ :- inPath(x13y2,x13y1), inPath(x14y1,x13y1).
+ :- inPath(x12y1,x13y1), inPath(x14y1,x13y1).
+ :- inPath(x14y2,x14y1), inPath(x13y1,x14y1).
+ :- inPath(x15y1,x14y1), inPath(x13y1,x14y1).
+ :- inPath(x11y1,x12y1), inPath(x12y2,x12y1).
+ :- inPath(x13y1,x12y1), inPath(x12y2,x12y1).
+ :- inPath(x12y3,x12y2), inPath(x12y1,x12y2).
+ :- inPath(x11y2,x12y2), inPath(x12y1,x12y2).
+ :- inPath(x13y2,x12y2), inPath(x12y1,x12y2).
+ :- inPath(x12y2,x12y1), inPath(x13y1,x12y1).
+ :- inPath(x11y1,x12y1), inPath(x13y1,x12y1).
+ :- inPath(x13y2,x13y1), inPath(x12y1,x13y1).
+ :- inPath(x14y1,x13y1), inPath(x12y1,x13y1).
+ :- inPath(x10y1,x11y1), inPath(x11y2,x11y1).
+ :- inPath(x12y1,x11y1), inPath(x11y2,x11y1).
+ :- inPath(x11y3,x11y2), inPath(x11y1,x11y2).
+ :- inPath(x10y2,x11y2), inPath(x11y1,x11y2).
+ :- inPath(x12y2,x11y2), inPath(x11y1,x11y2).
+ :- inPath(x11y2,x11y1), inPath(x12y1,x11y1).
+ :- inPath(x10y1,x11y1), inPath(x12y1,x11y1).
+ :- inPath(x12y2,x12y1), inPath(x11y1,x12y1).
+ :- inPath(x13y1,x12y1), inPath(x11y1,x12y1).
+ :- inPath(x9y1,x10y1), inPath(x10y2,x10y1).
+ :- inPath(x11y1,x10y1), inPath(x10y2,x10y1).
+ :- inPath(x10y3,x10y2), inPath(x10y1,x10y2).
+ :- inPath(x9y2,x10y2), inPath(x10y1,x10y2).
+ :- inPath(x11y2,x10y2), inPath(x10y1,x10y2).
+ :- inPath(x10y2,x10y1), inPath(x11y1,x10y1).
+ :- inPath(x9y1,x10y1), inPath(x11y1,x10y1).
+ :- inPath(x11y2,x11y1), inPath(x10y1,x11y1).
+ :- inPath(x12y1,x11y1), inPath(x10y1,x11y1).
+ :- inPath(x8y1,x9y1), inPath(x9y2,x9y1).
+ :- inPath(x10y1,x9y1), inPath(x9y2,x9y1).
+ :- inPath(x10y2,x9y2), inPath(x9y1,x9y2).
+ :- inPath(x8y2,x9y2), inPath(x9y1,x9y2).
+ :- inPath(x9y2,x9y1), inPath(x10y1,x9y1).
+ :- inPath(x8y1,x9y1), inPath(x10y1,x9y1).
+ :- inPath(x10y2,x10y1), inPath(x9y1,x10y1).
+ :- inPath(x11y1,x10y1), inPath(x9y1,x10y1).
+ :- inPath(x7y1,x8y1), inPath(x8y2,x8y1).
+ :- inPath(x9y1,x8y1), inPath(x8y2,x8y1).
+ :- inPath(x8y3,x8y2), inPath(x8y1,x8y2).
+ :- inPath(x7y2,x8y2), inPath(x8y1,x8y2).
+ :- inPath(x9y2,x8y2), inPath(x8y1,x8y2).
+ :- inPath(x8y2,x8y1), inPath(x9y1,x8y1).
+ :- inPath(x7y1,x8y1), inPath(x9y1,x8y1).
+ :- inPath(x9y2,x9y1), inPath(x8y1,x9y1).
+ :- inPath(x10y1,x9y1), inPath(x8y1,x9y1).
+ :- inPath(x8y1,x7y1), inPath(x7y2,x7y1).
+ :- inPath(x7y3,x7y2), inPath(x7y1,x7y2).
+ :- inPath(x6y2,x7y2), inPath(x7y1,x7y2).
+ :- inPath(x8y2,x7y2), inPath(x7y1,x7y2).
+ :- inPath(x7y2,x7y1), inPath(x8y1,x7y1).
+ :- inPath(x8y2,x8y1), inPath(x7y1,x8y1).
+ :- inPath(x9y1,x8y1), inPath(x7y1,x8y1).
+ :- inPath(x4y1,x5y1), inPath(x5y2,x5y1).
+ :- inPath(x5y3,x5y2), inPath(x5y1,x5y2).
+ :- inPath(x4y2,x5y2), inPath(x5y1,x5y2).
+ :- inPath(x6y2,x5y2), inPath(x5y1,x5y2).
+ :- inPath(x5y1,x4y1), inPath(x4y2,x4y1).
+ :- inPath(x4y3,x4y2), inPath(x4y1,x4y2).
+ :- inPath(x3y2,x4y2), inPath(x4y1,x4y2).
+ :- inPath(x5y2,x4y2), inPath(x4y1,x4y2).
+ :- inPath(x4y2,x4y1), inPath(x5y1,x4y1).
+ :- inPath(x5y2,x5y1), inPath(x4y1,x5y1).
+ :- not reached(x13y10).
+ :- not reached(x12y10).
+ :- not reached(x11y10).
+ :- not reached(x9y10).
+ :- not reached(x8y10).
+ :- not reached(x6y10).
+ :- not reached(x5y10).
+ :- not reached(x4y10).
+ :- not reached(x3y10).
+ :- not reached(x2y10).
+ :- not reached(x1y10).
+ :- not reached(x14y9).
+ :- not reached(x13y9).
+ :- not reached(x11y9).
+ :- not reached(x10y9).
+ :- not reached(x9y9).
+ :- not reached(x8y9).
+ :- not reached(x7y9).
+ :- not reached(x6y9).
+ :- not reached(x5y9).
+ :- not reached(x4y9).
+ :- not reached(x3y9).
+ :- not reached(x2y9).
+ :- not reached(x1y9).
+ :- not reached(x16y8).
+ :- not reached(x15y8).
+ :- not reached(x14y8).
+ :- not reached(x13y8).
+ :- not reached(x12y8).
+ :- not reached(x11y8).
+ :- not reached(x10y8).
+ :- not reached(x9y8).
+ :- not reached(x7y8).
+ :- not reached(x6y8).
+ :- not reached(x5y8).
+ :- not reached(x4y8).
+ :- not reached(x3y8).
+ :- not reached(x2y8).
+ :- not reached(x1y8).
+ :- not reached(x16y7).
+ :- not reached(x15y7).
+ :- not reached(x14y7).
+ :- not reached(x13y7).
+ :- not reached(x12y7).
+ :- not reached(x11y7).
+ :- not reached(x10y7).
+ :- not reached(x9y7).
+ :- not reached(x7y7).
+ :- not reached(x6y7).
+ :- not reached(x5y7).
+ :- not reached(x4y7).
+ :- not reached(x3y7).
+ :- not reached(x2y7).
+ :- not reached(x15y6).
+ :- not reached(x14y6).
+ :- not reached(x13y6).
+ :- not reached(x12y6).
+ :- not reached(x11y6).
+ :- not reached(x10y6).
+ :- not reached(x9y6).
+ :- not reached(x8y6).
+ :- not reached(x7y6).
+ :- not reached(x6y6).
+ :- not reached(x3y6).
+ :- not reached(x2y6).
+ :- not reached(x16y5).
+ :- not reached(x15y5).
+ :- not reached(x14y5).
+ :- not reached(x13y5).
+ :- not reached(x11y5).
+ :- not reached(x10y5).
+ :- not reached(x9y5).
+ :- not reached(x8y5).
+ :- not reached(x7y5).
+ :- not reached(x6y5).
+ :- not reached(x5y5).
+ :- not reached(x3y5).
+ :- not reached(x2y5).
+ :- not reached(x1y5).
+ :- not reached(x16y4).
+ :- not reached(x14y4).
+ :- not reached(x13y4).
+ :- not reached(x11y4).
+ :- not reached(x10y4).
+ :- not reached(x7y4).
+ :- not reached(x6y4).
+ :- not reached(x5y4).
+ :- not reached(x4y4).
+ :- not reached(x3y4).
+ :- not reached(x1y4).
+ :- not reached(x16y3).
+ :- not reached(x14y3).
+ :- not reached(x13y3).
+ :- not reached(x12y3).
+ :- not reached(x11y3).
+ :- not reached(x10y3).
+ :- not reached(x8y3).
+ :- not reached(x7y3).
+ :- not reached(x5y3).
+ :- not reached(x4y3).
+ :- not reached(x3y3).
+ :- not reached(x2y3).
+ :- not reached(x1y3).
+ :- not reached(x16y2).
+ :- not reached(x15y2).
+ :- not reached(x14y2).
+ :- not reached(x13y2).
+ :- not reached(x12y2).
+ :- not reached(x11y2).
+ :- not reached(x10y2).
+ :- not reached(x9y2).
+ :- not reached(x8y2).
+ :- not reached(x7y2).
+ :- not reached(x6y2).
+ :- not reached(x5y2).
+ :- not reached(x4y2).
+ :- not reached(x3y2).
+ :- not reached(x2y2).
+ :- not reached(x15y1).
+ :- not reached(x14y1).
+ :- not reached(x13y1).
+ :- not reached(x12y1).
+ :- not reached(x11y1).
+ :- not reached(x10y1).
+ :- not reached(x9y1).
+ :- not reached(x8y1).
+ :- not reached(x7y1).
+ :- not reached(x5y1).
+ :- not reached(x4y1).
+outPath(x5y6,x5y7) :- not inPath(x5y6,x5y7).
+outPath(x5y6,x5y5) :- not inPath(x5y6,x5y5).
+outPath(x5y6,x6y6) :- not inPath(x5y6,x6y6).
+outPath(x13y10,x12y10) :- reached(x13y10), not inPath(x13y10,x12y10).
+outPath(x12y10,x13y10) :- reached(x12y10), not inPath(x12y10,x13y10).
+outPath(x12y10,x11y10) :- reached(x12y10), not inPath(x12y10,x11y10).
+outPath(x11y10,x12y10) :- reached(x11y10), not inPath(x11y10,x12y10).
+outPath(x9y10,x8y10) :- reached(x9y10), not inPath(x9y10,x8y10).
+outPath(x8y10,x9y10) :- reached(x8y10), not inPath(x8y10,x9y10).
+outPath(x6y10,x5y10) :- reached(x6y10), not inPath(x6y10,x5y10).
+outPath(x5y10,x6y10) :- reached(x5y10), not inPath(x5y10,x6y10).
+outPath(x5y10,x4y10) :- reached(x5y10), not inPath(x5y10,x4y10).
+outPath(x4y10,x5y10) :- reached(x4y10), not inPath(x4y10,x5y10).
+outPath(x4y10,x3y10) :- reached(x4y10), not inPath(x4y10,x3y10).
+outPath(x3y10,x4y10) :- reached(x3y10), not inPath(x3y10,x4y10).
+outPath(x3y10,x2y10) :- reached(x3y10), not inPath(x3y10,x2y10).
+outPath(x2y10,x3y10) :- reached(x2y10), not inPath(x2y10,x3y10).
+outPath(x2y10,x1y10) :- reached(x2y10), not inPath(x2y10,x1y10).
+outPath(x1y10,x2y10) :- reached(x1y10), not inPath(x1y10,x2y10).
+outPath(x13y10,x13y9) :- reached(x13y10), not inPath(x13y10,x13y9).
+outPath(x13y9,x13y10) :- reached(x13y9), not inPath(x13y9,x13y10).
+outPath(x14y9,x13y9) :- reached(x14y9), not inPath(x14y9,x13y9).
+outPath(x13y9,x14y9) :- reached(x13y9), not inPath(x13y9,x14y9).
+outPath(x11y10,x11y9) :- reached(x11y10), not inPath(x11y10,x11y9).
+outPath(x11y9,x11y10) :- reached(x11y9), not inPath(x11y9,x11y10).
+outPath(x11y9,x10y9) :- reached(x11y9), not inPath(x11y9,x10y9).
+outPath(x10y9,x11y9) :- reached(x10y9), not inPath(x10y9,x11y9).
+outPath(x9y10,x9y9) :- reached(x9y10), not inPath(x9y10,x9y9).
+outPath(x9y9,x9y10) :- reached(x9y9), not inPath(x9y9,x9y10).
+outPath(x10y9,x9y9) :- reached(x10y9), not inPath(x10y9,x9y9).
+outPath(x9y9,x10y9) :- reached(x9y9), not inPath(x9y9,x10y9).
+outPath(x8y10,x8y9) :- reached(x8y10), not inPath(x8y10,x8y9).
+outPath(x8y9,x8y10) :- reached(x8y9), not inPath(x8y9,x8y10).
+outPath(x9y9,x8y9) :- reached(x9y9), not inPath(x9y9,x8y9).
+outPath(x8y9,x9y9) :- reached(x8y9), not inPath(x8y9,x9y9).
+outPath(x8y9,x7y9) :- reached(x8y9), not inPath(x8y9,x7y9).
+outPath(x7y9,x8y9) :- reached(x7y9), not inPath(x7y9,x8y9).
+outPath(x6y10,x6y9) :- reached(x6y10), not inPath(x6y10,x6y9).
+outPath(x6y9,x6y10) :- reached(x6y9), not inPath(x6y9,x6y10).
+outPath(x7y9,x6y9) :- reached(x7y9), not inPath(x7y9,x6y9).
+outPath(x6y9,x7y9) :- reached(x6y9), not inPath(x6y9,x7y9).
+outPath(x5y10,x5y9) :- reached(x5y10), not inPath(x5y10,x5y9).
+outPath(x5y9,x5y10) :- reached(x5y9), not inPath(x5y9,x5y10).
+outPath(x6y9,x5y9) :- reached(x6y9), not inPath(x6y9,x5y9).
+outPath(x5y9,x6y9) :- reached(x5y9), not inPath(x5y9,x6y9).
+outPath(x4y10,x4y9) :- reached(x4y10), not inPath(x4y10,x4y9).
+outPath(x4y9,x4y10) :- reached(x4y9), not inPath(x4y9,x4y10).
+outPath(x5y9,x4y9) :- reached(x5y9), not inPath(x5y9,x4y9).
+outPath(x4y9,x5y9) :- reached(x4y9), not inPath(x4y9,x5y9).
+outPath(x3y10,x3y9) :- reached(x3y10), not inPath(x3y10,x3y9).
+outPath(x3y9,x3y10) :- reached(x3y9), not inPath(x3y9,x3y10).
+outPath(x4y9,x3y9) :- reached(x4y9), not inPath(x4y9,x3y9).
+outPath(x3y9,x4y9) :- reached(x3y9), not inPath(x3y9,x4y9).
+outPath(x2y10,x2y9) :- reached(x2y10), not inPath(x2y10,x2y9).
+outPath(x2y9,x2y10) :- reached(x2y9), not inPath(x2y9,x2y10).
+outPath(x3y9,x2y9) :- reached(x3y9), not inPath(x3y9,x2y9).
+outPath(x2y9,x3y9) :- reached(x2y9), not inPath(x2y9,x3y9).
+outPath(x1y10,x1y9) :- reached(x1y10), not inPath(x1y10,x1y9).
+outPath(x1y9,x1y10) :- reached(x1y9), not inPath(x1y9,x1y10).
+outPath(x2y9,x1y9) :- reached(x2y9), not inPath(x2y9,x1y9).
+outPath(x1y9,x2y9) :- reached(x1y9), not inPath(x1y9,x2y9).
+outPath(x16y8,x15y8) :- reached(x16y8), not inPath(x16y8,x15y8).
+outPath(x15y8,x16y8) :- reached(x15y8), not inPath(x15y8,x16y8).
+outPath(x14y9,x14y8) :- reached(x14y9), not inPath(x14y9,x14y8).
+outPath(x14y8,x14y9) :- reached(x14y8), not inPath(x14y8,x14y9).
+outPath(x15y8,x14y8) :- reached(x15y8), not inPath(x15y8,x14y8).
+outPath(x14y8,x15y8) :- reached(x14y8), not inPath(x14y8,x15y8).
+outPath(x13y9,x13y8) :- reached(x13y9), not inPath(x13y9,x13y8).
+outPath(x13y8,x13y9) :- reached(x13y8), not inPath(x13y8,x13y9).
+outPath(x14y8,x13y8) :- reached(x14y8), not inPath(x14y8,x13y8).
+outPath(x13y8,x14y8) :- reached(x13y8), not inPath(x13y8,x14y8).
+outPath(x13y8,x12y8) :- reached(x13y8), not inPath(x13y8,x12y8).
+outPath(x12y8,x13y8) :- reached(x12y8), not inPath(x12y8,x13y8).
+outPath(x11y9,x11y8) :- reached(x11y9), not inPath(x11y9,x11y8).
+outPath(x11y8,x11y9) :- reached(x11y8), not inPath(x11y8,x11y9).
+outPath(x12y8,x11y8) :- reached(x12y8), not inPath(x12y8,x11y8).
+outPath(x11y8,x12y8) :- reached(x11y8), not inPath(x11y8,x12y8).
+outPath(x10y9,x10y8) :- reached(x10y9), not inPath(x10y9,x10y8).
+outPath(x10y8,x10y9) :- reached(x10y8), not inPath(x10y8,x10y9).
+outPath(x11y8,x10y8) :- reached(x11y8), not inPath(x11y8,x10y8).
+outPath(x10y8,x11y8) :- reached(x10y8), not inPath(x10y8,x11y8).
+outPath(x9y9,x9y8) :- reached(x9y9), not inPath(x9y9,x9y8).
+outPath(x9y8,x9y9) :- reached(x9y8), not inPath(x9y8,x9y9).
+outPath(x10y8,x9y8) :- reached(x10y8), not inPath(x10y8,x9y8).
+outPath(x9y8,x10y8) :- reached(x9y8), not inPath(x9y8,x10y8).
+outPath(x7y9,x7y8) :- reached(x7y9), not inPath(x7y9,x7y8).
+outPath(x7y8,x7y9) :- reached(x7y8), not inPath(x7y8,x7y9).
+outPath(x6y9,x6y8) :- reached(x6y9), not inPath(x6y9,x6y8).
+outPath(x6y8,x6y9) :- reached(x6y8), not inPath(x6y8,x6y9).
+outPath(x7y8,x6y8) :- reached(x7y8), not inPath(x7y8,x6y8).
+outPath(x6y8,x7y8) :- reached(x6y8), not inPath(x6y8,x7y8).
+outPath(x5y9,x5y8) :- reached(x5y9), not inPath(x5y9,x5y8).
+outPath(x5y8,x5y9) :- reached(x5y8), not inPath(x5y8,x5y9).
+outPath(x6y8,x5y8) :- reached(x6y8), not inPath(x6y8,x5y8).
+outPath(x5y8,x6y8) :- reached(x5y8), not inPath(x5y8,x6y8).
+outPath(x4y9,x4y8) :- reached(x4y9), not inPath(x4y9,x4y8).
+outPath(x4y8,x4y9) :- reached(x4y8), not inPath(x4y8,x4y9).
+outPath(x5y8,x4y8) :- reached(x5y8), not inPath(x5y8,x4y8).
+outPath(x4y8,x5y8) :- reached(x4y8), not inPath(x4y8,x5y8).
+outPath(x3y9,x3y8) :- reached(x3y9), not inPath(x3y9,x3y8).
+outPath(x3y8,x3y9) :- reached(x3y8), not inPath(x3y8,x3y9).
+outPath(x4y8,x3y8) :- reached(x4y8), not inPath(x4y8,x3y8).
+outPath(x3y8,x4y8) :- reached(x3y8), not inPath(x3y8,x4y8).
+outPath(x2y9,x2y8) :- reached(x2y9), not inPath(x2y9,x2y8).
+outPath(x2y8,x2y9) :- reached(x2y8), not inPath(x2y8,x2y9).
+outPath(x3y8,x2y8) :- reached(x3y8), not inPath(x3y8,x2y8).
+outPath(x2y8,x3y8) :- reached(x2y8), not inPath(x2y8,x3y8).
+outPath(x1y9,x1y8) :- reached(x1y9), not inPath(x1y9,x1y8).
+outPath(x1y8,x1y9) :- reached(x1y8), not inPath(x1y8,x1y9).
+outPath(x2y8,x1y8) :- reached(x2y8), not inPath(x2y8,x1y8).
+outPath(x1y8,x2y8) :- reached(x1y8), not inPath(x1y8,x2y8).
+outPath(x16y8,x16y7) :- reached(x16y8), not inPath(x16y8,x16y7).
+outPath(x16y7,x16y8) :- reached(x16y7), not inPath(x16y7,x16y8).
+outPath(x15y8,x15y7) :- reached(x15y8), not inPath(x15y8,x15y7).
+outPath(x15y7,x15y8) :- reached(x15y7), not inPath(x15y7,x15y8).
+outPath(x16y7,x15y7) :- reached(x16y7), not inPath(x16y7,x15y7).
+outPath(x15y7,x16y7) :- reached(x15y7), not inPath(x15y7,x16y7).
+outPath(x14y8,x14y7) :- reached(x14y8), not inPath(x14y8,x14y7).
+outPath(x14y7,x14y8) :- reached(x14y7), not inPath(x14y7,x14y8).
+outPath(x15y7,x14y7) :- reached(x15y7), not inPath(x15y7,x14y7).
+outPath(x14y7,x15y7) :- reached(x14y7), not inPath(x14y7,x15y7).
+outPath(x13y8,x13y7) :- reached(x13y8), not inPath(x13y8,x13y7).
+outPath(x13y7,x13y8) :- reached(x13y7), not inPath(x13y7,x13y8).
+outPath(x14y7,x13y7) :- reached(x14y7), not inPath(x14y7,x13y7).
+outPath(x13y7,x14y7) :- reached(x13y7), not inPath(x13y7,x14y7).
+outPath(x12y8,x12y7) :- reached(x12y8), not inPath(x12y8,x12y7).
+outPath(x12y7,x12y8) :- reached(x12y7), not inPath(x12y7,x12y8).
+outPath(x13y7,x12y7) :- reached(x13y7), not inPath(x13y7,x12y7).
+outPath(x12y7,x13y7) :- reached(x12y7), not inPath(x12y7,x13y7).
+outPath(x11y8,x11y7) :- reached(x11y8), not inPath(x11y8,x11y7).
+outPath(x11y7,x11y8) :- reached(x11y7), not inPath(x11y7,x11y8).
+outPath(x12y7,x11y7) :- reached(x12y7), not inPath(x12y7,x11y7).
+outPath(x11y7,x12y7) :- reached(x11y7), not inPath(x11y7,x12y7).
+outPath(x10y8,x10y7) :- reached(x10y8), not inPath(x10y8,x10y7).
+outPath(x10y7,x10y8) :- reached(x10y7), not inPath(x10y7,x10y8).
+outPath(x11y7,x10y7) :- reached(x11y7), not inPath(x11y7,x10y7).
+outPath(x10y7,x11y7) :- reached(x10y7), not inPath(x10y7,x11y7).
+outPath(x9y8,x9y7) :- reached(x9y8), not inPath(x9y8,x9y7).
+outPath(x9y7,x9y8) :- reached(x9y7), not inPath(x9y7,x9y8).
+outPath(x10y7,x9y7) :- reached(x10y7), not inPath(x10y7,x9y7).
+outPath(x9y7,x10y7) :- reached(x9y7), not inPath(x9y7,x10y7).
+outPath(x7y8,x7y7) :- reached(x7y8), not inPath(x7y8,x7y7).
+outPath(x7y7,x7y8) :- reached(x7y7), not inPath(x7y7,x7y8).
+outPath(x6y8,x6y7) :- reached(x6y8), not inPath(x6y8,x6y7).
+outPath(x6y7,x6y8) :- reached(x6y7), not inPath(x6y7,x6y8).
+outPath(x7y7,x6y7) :- reached(x7y7), not inPath(x7y7,x6y7).
+outPath(x6y7,x7y7) :- reached(x6y7), not inPath(x6y7,x7y7).
+outPath(x5y8,x5y7) :- reached(x5y8), not inPath(x5y8,x5y7).
+outPath(x5y7,x5y8) :- reached(x5y7), not inPath(x5y7,x5y8).
+outPath(x6y7,x5y7) :- reached(x6y7), not inPath(x6y7,x5y7).
+outPath(x5y7,x6y7) :- reached(x5y7), not inPath(x5y7,x6y7).
+outPath(x4y8,x4y7) :- reached(x4y8), not inPath(x4y8,x4y7).
+outPath(x4y7,x4y8) :- reached(x4y7), not inPath(x4y7,x4y8).
+outPath(x5y7,x4y7) :- reached(x5y7), not inPath(x5y7,x4y7).
+outPath(x4y7,x5y7) :- reached(x4y7), not inPath(x4y7,x5y7).
+outPath(x3y8,x3y7) :- reached(x3y8), not inPath(x3y8,x3y7).
+outPath(x3y7,x3y8) :- reached(x3y7), not inPath(x3y7,x3y8).
+outPath(x4y7,x3y7) :- reached(x4y7), not inPath(x4y7,x3y7).
+outPath(x3y7,x4y7) :- reached(x3y7), not inPath(x3y7,x4y7).
+outPath(x2y8,x2y7) :- reached(x2y8), not inPath(x2y8,x2y7).
+outPath(x2y7,x2y8) :- reached(x2y7), not inPath(x2y7,x2y8).
+outPath(x3y7,x2y7) :- reached(x3y7), not inPath(x3y7,x2y7).
+outPath(x2y7,x3y7) :- reached(x2y7), not inPath(x2y7,x3y7).
+outPath(x15y7,x15y6) :- reached(x15y7), not inPath(x15y7,x15y6).
+outPath(x15y6,x15y7) :- reached(x15y6), not inPath(x15y6,x15y7).
+outPath(x14y7,x14y6) :- reached(x14y7), not inPath(x14y7,x14y6).
+outPath(x14y6,x14y7) :- reached(x14y6), not inPath(x14y6,x14y7).
+outPath(x15y6,x14y6) :- reached(x15y6), not inPath(x15y6,x14y6).
+outPath(x14y6,x15y6) :- reached(x14y6), not inPath(x14y6,x15y6).
+outPath(x13y7,x13y6) :- reached(x13y7), not inPath(x13y7,x13y6).
+outPath(x13y6,x13y7) :- reached(x13y6), not inPath(x13y6,x13y7).
+outPath(x14y6,x13y6) :- reached(x14y6), not inPath(x14y6,x13y6).
+outPath(x13y6,x14y6) :- reached(x13y6), not inPath(x13y6,x14y6).
+outPath(x12y7,x12y6) :- reached(x12y7), not inPath(x12y7,x12y6).
+outPath(x12y6,x12y7) :- reached(x12y6), not inPath(x12y6,x12y7).
+outPath(x13y6,x12y6) :- reached(x13y6), not inPath(x13y6,x12y6).
+outPath(x12y6,x13y6) :- reached(x12y6), not inPath(x12y6,x13y6).
+outPath(x11y7,x11y6) :- reached(x11y7), not inPath(x11y7,x11y6).
+outPath(x11y6,x11y7) :- reached(x11y6), not inPath(x11y6,x11y7).
+outPath(x12y6,x11y6) :- reached(x12y6), not inPath(x12y6,x11y6).
+outPath(x11y6,x12y6) :- reached(x11y6), not inPath(x11y6,x12y6).
+outPath(x10y7,x10y6) :- reached(x10y7), not inPath(x10y7,x10y6).
+outPath(x10y6,x10y7) :- reached(x10y6), not inPath(x10y6,x10y7).
+outPath(x11y6,x10y6) :- reached(x11y6), not inPath(x11y6,x10y6).
+outPath(x10y6,x11y6) :- reached(x10y6), not inPath(x10y6,x11y6).
+outPath(x9y7,x9y6) :- reached(x9y7), not inPath(x9y7,x9y6).
+outPath(x9y6,x9y7) :- reached(x9y6), not inPath(x9y6,x9y7).
+outPath(x10y6,x9y6) :- reached(x10y6), not inPath(x10y6,x9y6).
+outPath(x9y6,x10y6) :- reached(x9y6), not inPath(x9y6,x10y6).
+outPath(x9y6,x8y6) :- reached(x9y6), not inPath(x9y6,x8y6).
+outPath(x8y6,x9y6) :- reached(x8y6), not inPath(x8y6,x9y6).
+outPath(x7y7,x7y6) :- reached(x7y7), not inPath(x7y7,x7y6).
+outPath(x7y6,x7y7) :- reached(x7y6), not inPath(x7y6,x7y7).
+outPath(x8y6,x7y6) :- reached(x8y6), not inPath(x8y6,x7y6).
+outPath(x7y6,x8y6) :- reached(x7y6), not inPath(x7y6,x8y6).
+outPath(x6y7,x6y6) :- reached(x6y7), not inPath(x6y7,x6y6).
+outPath(x6y6,x6y7) :- reached(x6y6), not inPath(x6y6,x6y7).
+outPath(x7y6,x6y6) :- reached(x7y6), not inPath(x7y6,x6y6).
+outPath(x6y6,x7y6) :- reached(x6y6), not inPath(x6y6,x7y6).
+outPath(x5y7,x5y6) :- reached(x5y7), not inPath(x5y7,x5y6).
+outPath(x5y6,x5y7) :- reached(x5y6), not inPath(x5y6,x5y7).
+outPath(x6y6,x5y6) :- reached(x6y6), not inPath(x6y6,x5y6).
+outPath(x5y6,x6y6) :- reached(x5y6), not inPath(x5y6,x6y6).
+outPath(x3y7,x3y6) :- reached(x3y7), not inPath(x3y7,x3y6).
+outPath(x3y6,x3y7) :- reached(x3y6), not inPath(x3y6,x3y7).
+outPath(x2y7,x2y6) :- reached(x2y7), not inPath(x2y7,x2y6).
+outPath(x2y6,x2y7) :- reached(x2y6), not inPath(x2y6,x2y7).
+outPath(x3y6,x2y6) :- reached(x3y6), not inPath(x3y6,x2y6).
+outPath(x2y6,x3y6) :- reached(x2y6), not inPath(x2y6,x3y6).
+outPath(x15y6,x15y5) :- reached(x15y6), not inPath(x15y6,x15y5).
+outPath(x15y5,x15y6) :- reached(x15y5), not inPath(x15y5,x15y6).
+outPath(x16y5,x15y5) :- reached(x16y5), not inPath(x16y5,x15y5).
+outPath(x15y5,x16y5) :- reached(x15y5), not inPath(x15y5,x16y5).
+outPath(x14y6,x14y5) :- reached(x14y6), not inPath(x14y6,x14y5).
+outPath(x14y5,x14y6) :- reached(x14y5), not inPath(x14y5,x14y6).
+outPath(x15y5,x14y5) :- reached(x15y5), not inPath(x15y5,x14y5).
+outPath(x14y5,x15y5) :- reached(x14y5), not inPath(x14y5,x15y5).
+outPath(x13y6,x13y5) :- reached(x13y6), not inPath(x13y6,x13y5).
+outPath(x13y5,x13y6) :- reached(x13y5), not inPath(x13y5,x13y6).
+outPath(x14y5,x13y5) :- reached(x14y5), not inPath(x14y5,x13y5).
+outPath(x13y5,x14y5) :- reached(x13y5), not inPath(x13y5,x14y5).
+outPath(x11y6,x11y5) :- reached(x11y6), not inPath(x11y6,x11y5).
+outPath(x11y5,x11y6) :- reached(x11y5), not inPath(x11y5,x11y6).
+outPath(x10y6,x10y5) :- reached(x10y6), not inPath(x10y6,x10y5).
+outPath(x10y5,x10y6) :- reached(x10y5), not inPath(x10y5,x10y6).
+outPath(x11y5,x10y5) :- reached(x11y5), not inPath(x11y5,x10y5).
+outPath(x10y5,x11y5) :- reached(x10y5), not inPath(x10y5,x11y5).
+outPath(x9y6,x9y5) :- reached(x9y6), not inPath(x9y6,x9y5).
+outPath(x9y5,x9y6) :- reached(x9y5), not inPath(x9y5,x9y6).
+outPath(x10y5,x9y5) :- reached(x10y5), not inPath(x10y5,x9y5).
+outPath(x9y5,x10y5) :- reached(x9y5), not inPath(x9y5,x10y5).
+outPath(x8y6,x8y5) :- reached(x8y6), not inPath(x8y6,x8y5).
+outPath(x8y5,x8y6) :- reached(x8y5), not inPath(x8y5,x8y6).
+outPath(x9y5,x8y5) :- reached(x9y5), not inPath(x9y5,x8y5).
+outPath(x8y5,x9y5) :- reached(x8y5), not inPath(x8y5,x9y5).
+outPath(x7y6,x7y5) :- reached(x7y6), not inPath(x7y6,x7y5).
+outPath(x7y5,x7y6) :- reached(x7y5), not inPath(x7y5,x7y6).
+outPath(x8y5,x7y5) :- reached(x8y5), not inPath(x8y5,x7y5).
+outPath(x7y5,x8y5) :- reached(x7y5), not inPath(x7y5,x8y5).
+outPath(x6y6,x6y5) :- reached(x6y6), not inPath(x6y6,x6y5).
+outPath(x6y5,x6y6) :- reached(x6y5), not inPath(x6y5,x6y6).
+outPath(x7y5,x6y5) :- reached(x7y5), not inPath(x7y5,x6y5).
+outPath(x6y5,x7y5) :- reached(x6y5), not inPath(x6y5,x7y5).
+outPath(x5y6,x5y5) :- reached(x5y6), not inPath(x5y6,x5y5).
+outPath(x5y5,x5y6) :- reached(x5y5), not inPath(x5y5,x5y6).
+outPath(x6y5,x5y5) :- reached(x6y5), not inPath(x6y5,x5y5).
+outPath(x5y5,x6y5) :- reached(x5y5), not inPath(x5y5,x6y5).
+outPath(x3y6,x3y5) :- reached(x3y6), not inPath(x3y6,x3y5).
+outPath(x3y5,x3y6) :- reached(x3y5), not inPath(x3y5,x3y6).
+outPath(x2y6,x2y5) :- reached(x2y6), not inPath(x2y6,x2y5).
+outPath(x2y5,x2y6) :- reached(x2y5), not inPath(x2y5,x2y6).
+outPath(x3y5,x2y5) :- reached(x3y5), not inPath(x3y5,x2y5).
+outPath(x2y5,x3y5) :- reached(x2y5), not inPath(x2y5,x3y5).
+outPath(x2y5,x1y5) :- reached(x2y5), not inPath(x2y5,x1y5).
+outPath(x1y5,x2y5) :- reached(x1y5), not inPath(x1y5,x2y5).
+outPath(x16y5,x16y4) :- reached(x16y5), not inPath(x16y5,x16y4).
+outPath(x16y4,x16y5) :- reached(x16y4), not inPath(x16y4,x16y5).
+outPath(x14y5,x14y4) :- reached(x14y5), not inPath(x14y5,x14y4).
+outPath(x14y4,x14y5) :- reached(x14y4), not inPath(x14y4,x14y5).
+outPath(x13y5,x13y4) :- reached(x13y5), not inPath(x13y5,x13y4).
+outPath(x13y4,x13y5) :- reached(x13y4), not inPath(x13y4,x13y5).
+outPath(x14y4,x13y4) :- reached(x14y4), not inPath(x14y4,x13y4).
+outPath(x13y4,x14y4) :- reached(x13y4), not inPath(x13y4,x14y4).
+outPath(x11y5,x11y4) :- reached(x11y5), not inPath(x11y5,x11y4).
+outPath(x11y4,x11y5) :- reached(x11y4), not inPath(x11y4,x11y5).
+outPath(x10y5,x10y4) :- reached(x10y5), not inPath(x10y5,x10y4).
+outPath(x10y4,x10y5) :- reached(x10y4), not inPath(x10y4,x10y5).
+outPath(x11y4,x10y4) :- reached(x11y4), not inPath(x11y4,x10y4).
+outPath(x10y4,x11y4) :- reached(x10y4), not inPath(x10y4,x11y4).
+outPath(x7y5,x7y4) :- reached(x7y5), not inPath(x7y5,x7y4).
+outPath(x7y4,x7y5) :- reached(x7y4), not inPath(x7y4,x7y5).
+outPath(x6y5,x6y4) :- reached(x6y5), not inPath(x6y5,x6y4).
+outPath(x6y4,x6y5) :- reached(x6y4), not inPath(x6y4,x6y5).
+outPath(x7y4,x6y4) :- reached(x7y4), not inPath(x7y4,x6y4).
+outPath(x6y4,x7y4) :- reached(x6y4), not inPath(x6y4,x7y4).
+outPath(x5y5,x5y4) :- reached(x5y5), not inPath(x5y5,x5y4).
+outPath(x5y4,x5y5) :- reached(x5y4), not inPath(x5y4,x5y5).
+outPath(x6y4,x5y4) :- reached(x6y4), not inPath(x6y4,x5y4).
+outPath(x5y4,x6y4) :- reached(x5y4), not inPath(x5y4,x6y4).
+outPath(x5y4,x4y4) :- reached(x5y4), not inPath(x5y4,x4y4).
+outPath(x4y4,x5y4) :- reached(x4y4), not inPath(x4y4,x5y4).
+outPath(x3y5,x3y4) :- reached(x3y5), not inPath(x3y5,x3y4).
+outPath(x3y4,x3y5) :- reached(x3y4), not inPath(x3y4,x3y5).
+outPath(x4y4,x3y4) :- reached(x4y4), not inPath(x4y4,x3y4).
+outPath(x3y4,x4y4) :- reached(x3y4), not inPath(x3y4,x4y4).
+outPath(x1y5,x1y4) :- reached(x1y5), not inPath(x1y5,x1y4).
+outPath(x1y4,x1y5) :- reached(x1y4), not inPath(x1y4,x1y5).
+outPath(x16y4,x16y3) :- reached(x16y4), not inPath(x16y4,x16y3).
+outPath(x16y3,x16y4) :- reached(x16y3), not inPath(x16y3,x16y4).
+outPath(x14y4,x14y3) :- reached(x14y4), not inPath(x14y4,x14y3).
+outPath(x14y3,x14y4) :- reached(x14y3), not inPath(x14y3,x14y4).
+outPath(x13y4,x13y3) :- reached(x13y4), not inPath(x13y4,x13y3).
+outPath(x13y3,x13y4) :- reached(x13y3), not inPath(x13y3,x13y4).
+outPath(x14y3,x13y3) :- reached(x14y3), not inPath(x14y3,x13y3).
+outPath(x13y3,x14y3) :- reached(x13y3), not inPath(x13y3,x14y3).
+outPath(x13y3,x12y3) :- reached(x13y3), not inPath(x13y3,x12y3).
+outPath(x12y3,x13y3) :- reached(x12y3), not inPath(x12y3,x13y3).
+outPath(x11y4,x11y3) :- reached(x11y4), not inPath(x11y4,x11y3).
+outPath(x11y3,x11y4) :- reached(x11y3), not inPath(x11y3,x11y4).
+outPath(x12y3,x11y3) :- reached(x12y3), not inPath(x12y3,x11y3).
+outPath(x11y3,x12y3) :- reached(x11y3), not inPath(x11y3,x12y3).
+outPath(x10y4,x10y3) :- reached(x10y4), not inPath(x10y4,x10y3).
+outPath(x10y3,x10y4) :- reached(x10y3), not inPath(x10y3,x10y4).
+outPath(x11y3,x10y3) :- reached(x11y3), not inPath(x11y3,x10y3).
+outPath(x10y3,x11y3) :- reached(x10y3), not inPath(x10y3,x11y3).
+outPath(x7y4,x7y3) :- reached(x7y4), not inPath(x7y4,x7y3).
+outPath(x7y3,x7y4) :- reached(x7y3), not inPath(x7y3,x7y4).
+outPath(x8y3,x7y3) :- reached(x8y3), not inPath(x8y3,x7y3).
+outPath(x7y3,x8y3) :- reached(x7y3), not inPath(x7y3,x8y3).
+outPath(x5y4,x5y3) :- reached(x5y4), not inPath(x5y4,x5y3).
+outPath(x5y3,x5y4) :- reached(x5y3), not inPath(x5y3,x5y4).
+outPath(x4y4,x4y3) :- reached(x4y4), not inPath(x4y4,x4y3).
+outPath(x4y3,x4y4) :- reached(x4y3), not inPath(x4y3,x4y4).
+outPath(x5y3,x4y3) :- reached(x5y3), not inPath(x5y3,x4y3).
+outPath(x4y3,x5y3) :- reached(x4y3), not inPath(x4y3,x5y3).
+outPath(x3y4,x3y3) :- reached(x3y4), not inPath(x3y4,x3y3).
+outPath(x3y3,x3y4) :- reached(x3y3), not inPath(x3y3,x3y4).
+outPath(x4y3,x3y3) :- reached(x4y3), not inPath(x4y3,x3y3).
+outPath(x3y3,x4y3) :- reached(x3y3), not inPath(x3y3,x4y3).
+outPath(x3y3,x2y3) :- reached(x3y3), not inPath(x3y3,x2y3).
+outPath(x2y3,x3y3) :- reached(x2y3), not inPath(x2y3,x3y3).
+outPath(x1y4,x1y3) :- reached(x1y4), not inPath(x1y4,x1y3).
+outPath(x1y3,x1y4) :- reached(x1y3), not inPath(x1y3,x1y4).
+outPath(x2y3,x1y3) :- reached(x2y3), not inPath(x2y3,x1y3).
+outPath(x1y3,x2y3) :- reached(x1y3), not inPath(x1y3,x2y3).
+outPath(x16y3,x16y2) :- reached(x16y3), not inPath(x16y3,x16y2).
+outPath(x16y2,x16y3) :- reached(x16y2), not inPath(x16y2,x16y3).
+outPath(x16y2,x15y2) :- reached(x16y2), not inPath(x16y2,x15y2).
+outPath(x15y2,x16y2) :- reached(x15y2), not inPath(x15y2,x16y2).
+outPath(x14y3,x14y2) :- reached(x14y3), not inPath(x14y3,x14y2).
+outPath(x14y2,x14y3) :- reached(x14y2), not inPath(x14y2,x14y3).
+outPath(x15y2,x14y2) :- reached(x15y2), not inPath(x15y2,x14y2).
+outPath(x14y2,x15y2) :- reached(x14y2), not inPath(x14y2,x15y2).
+outPath(x13y3,x13y2) :- reached(x13y3), not inPath(x13y3,x13y2).
+outPath(x13y2,x13y3) :- reached(x13y2), not inPath(x13y2,x13y3).
+outPath(x14y2,x13y2) :- reached(x14y2), not inPath(x14y2,x13y2).
+outPath(x13y2,x14y2) :- reached(x13y2), not inPath(x13y2,x14y2).
+outPath(x12y3,x12y2) :- reached(x12y3), not inPath(x12y3,x12y2).
+outPath(x12y2,x12y3) :- reached(x12y2), not inPath(x12y2,x12y3).
+outPath(x13y2,x12y2) :- reached(x13y2), not inPath(x13y2,x12y2).
+outPath(x12y2,x13y2) :- reached(x12y2), not inPath(x12y2,x13y2).
+outPath(x11y3,x11y2) :- reached(x11y3), not inPath(x11y3,x11y2).
+outPath(x11y2,x11y3) :- reached(x11y2), not inPath(x11y2,x11y3).
+outPath(x12y2,x11y2) :- reached(x12y2), not inPath(x12y2,x11y2).
+outPath(x11y2,x12y2) :- reached(x11y2), not inPath(x11y2,x12y2).
+outPath(x10y3,x10y2) :- reached(x10y3), not inPath(x10y3,x10y2).
+outPath(x10y2,x10y3) :- reached(x10y2), not inPath(x10y2,x10y3).
+outPath(x11y2,x10y2) :- reached(x11y2), not inPath(x11y2,x10y2).
+outPath(x10y2,x11y2) :- reached(x10y2), not inPath(x10y2,x11y2).
+outPath(x10y2,x9y2) :- reached(x10y2), not inPath(x10y2,x9y2).
+outPath(x9y2,x10y2) :- reached(x9y2), not inPath(x9y2,x10y2).
+outPath(x8y3,x8y2) :- reached(x8y3), not inPath(x8y3,x8y2).
+outPath(x8y2,x8y3) :- reached(x8y2), not inPath(x8y2,x8y3).
+outPath(x9y2,x8y2) :- reached(x9y2), not inPath(x9y2,x8y2).
+outPath(x8y2,x9y2) :- reached(x8y2), not inPath(x8y2,x9y2).
+outPath(x7y3,x7y2) :- reached(x7y3), not inPath(x7y3,x7y2).
+outPath(x7y2,x7y3) :- reached(x7y2), not inPath(x7y2,x7y3).
+outPath(x8y2,x7y2) :- reached(x8y2), not inPath(x8y2,x7y2).
+outPath(x7y2,x8y2) :- reached(x7y2), not inPath(x7y2,x8y2).
+outPath(x7y2,x6y2) :- reached(x7y2), not inPath(x7y2,x6y2).
+outPath(x6y2,x7y2) :- reached(x6y2), not inPath(x6y2,x7y2).
+outPath(x5y3,x5y2) :- reached(x5y3), not inPath(x5y3,x5y2).
+outPath(x5y2,x5y3) :- reached(x5y2), not inPath(x5y2,x5y3).
+outPath(x6y2,x5y2) :- reached(x6y2), not inPath(x6y2,x5y2).
+outPath(x5y2,x6y2) :- reached(x5y2), not inPath(x5y2,x6y2).
+outPath(x4y3,x4y2) :- reached(x4y3), not inPath(x4y3,x4y2).
+outPath(x4y2,x4y3) :- reached(x4y2), not inPath(x4y2,x4y3).
+outPath(x5y2,x4y2) :- reached(x5y2), not inPath(x5y2,x4y2).
+outPath(x4y2,x5y2) :- reached(x4y2), not inPath(x4y2,x5y2).
+outPath(x3y3,x3y2) :- reached(x3y3), not inPath(x3y3,x3y2).
+outPath(x3y2,x3y3) :- reached(x3y2), not inPath(x3y2,x3y3).
+outPath(x4y2,x3y2) :- reached(x4y2), not inPath(x4y2,x3y2).
+outPath(x3y2,x4y2) :- reached(x3y2), not inPath(x3y2,x4y2).
+outPath(x2y3,x2y2) :- reached(x2y3), not inPath(x2y3,x2y2).
+outPath(x2y2,x2y3) :- reached(x2y2), not inPath(x2y2,x2y3).
+outPath(x3y2,x2y2) :- reached(x3y2), not inPath(x3y2,x2y2).
+outPath(x2y2,x3y2) :- reached(x2y2), not inPath(x2y2,x3y2).
+outPath(x15y2,x15y1) :- reached(x15y2), not inPath(x15y2,x15y1).
+outPath(x15y1,x15y2) :- reached(x15y1), not inPath(x15y1,x15y2).
+outPath(x14y2,x14y1) :- reached(x14y2), not inPath(x14y2,x14y1).
+outPath(x14y1,x14y2) :- reached(x14y1), not inPath(x14y1,x14y2).
+outPath(x15y1,x14y1) :- reached(x15y1), not inPath(x15y1,x14y1).
+outPath(x14y1,x15y1) :- reached(x14y1), not inPath(x14y1,x15y1).
+outPath(x13y2,x13y1) :- reached(x13y2), not inPath(x13y2,x13y1).
+outPath(x13y1,x13y2) :- reached(x13y1), not inPath(x13y1,x13y2).
+outPath(x14y1,x13y1) :- reached(x14y1), not inPath(x14y1,x13y1).
+outPath(x13y1,x14y1) :- reached(x13y1), not inPath(x13y1,x14y1).
+outPath(x12y2,x12y1) :- reached(x12y2), not inPath(x12y2,x12y1).
+outPath(x12y1,x12y2) :- reached(x12y1), not inPath(x12y1,x12y2).
+outPath(x13y1,x12y1) :- reached(x13y1), not inPath(x13y1,x12y1).
+outPath(x12y1,x13y1) :- reached(x12y1), not inPath(x12y1,x13y1).
+outPath(x11y2,x11y1) :- reached(x11y2), not inPath(x11y2,x11y1).
+outPath(x11y1,x11y2) :- reached(x11y1), not inPath(x11y1,x11y2).
+outPath(x12y1,x11y1) :- reached(x12y1), not inPath(x12y1,x11y1).
+outPath(x11y1,x12y1) :- reached(x11y1), not inPath(x11y1,x12y1).
+outPath(x10y2,x10y1) :- reached(x10y2), not inPath(x10y2,x10y1).
+outPath(x10y1,x10y2) :- reached(x10y1), not inPath(x10y1,x10y2).
+outPath(x11y1,x10y1) :- reached(x11y1), not inPath(x11y1,x10y1).
+outPath(x10y1,x11y1) :- reached(x10y1), not inPath(x10y1,x11y1).
+outPath(x9y2,x9y1) :- reached(x9y2), not inPath(x9y2,x9y1).
+outPath(x9y1,x9y2) :- reached(x9y1), not inPath(x9y1,x9y2).
+outPath(x10y1,x9y1) :- reached(x10y1), not inPath(x10y1,x9y1).
+outPath(x9y1,x10y1) :- reached(x9y1), not inPath(x9y1,x10y1).
+outPath(x8y2,x8y1) :- reached(x8y2), not inPath(x8y2,x8y1).
+outPath(x8y1,x8y2) :- reached(x8y1), not inPath(x8y1,x8y2).
+outPath(x9y1,x8y1) :- reached(x9y1), not inPath(x9y1,x8y1).
+outPath(x8y1,x9y1) :- reached(x8y1), not inPath(x8y1,x9y1).
+outPath(x7y2,x7y1) :- reached(x7y2), not inPath(x7y2,x7y1).
+outPath(x7y1,x7y2) :- reached(x7y1), not inPath(x7y1,x7y2).
+outPath(x8y1,x7y1) :- reached(x8y1), not inPath(x8y1,x7y1).
+outPath(x7y1,x8y1) :- reached(x7y1), not inPath(x7y1,x8y1).
+outPath(x5y2,x5y1) :- reached(x5y2), not inPath(x5y2,x5y1).
+outPath(x5y1,x5y2) :- reached(x5y1), not inPath(x5y1,x5y2).
+outPath(x4y2,x4y1) :- reached(x4y2), not inPath(x4y2,x4y1).
+outPath(x4y1,x4y2) :- reached(x4y1), not inPath(x4y1,x4y2).
+outPath(x5y1,x4y1) :- reached(x5y1), not inPath(x5y1,x4y1).
+outPath(x4y1,x5y1) :- reached(x4y1), not inPath(x4y1,x5y1).

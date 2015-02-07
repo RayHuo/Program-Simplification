@@ -1,0 +1,1500 @@
+a76 :- a134, not a9.
+a76 :- a119, not a9.
+a76 :- not a88, not a11.
+a76 :- a81, not a138.
+a76 :- not a134, not a131.
+a76 :- a75, a161.
+a76 :- a110, not a149.
+a76 :- a37, not a179.
+a37 :- a27, not a193.
+a37 :- a116, a194.
+a37 :- a113, not a69.
+a37 :- a174, not a61.
+a37 :- a14, a102.
+a37 :- a78, a167.
+a37 :- a75, a96.
+a179 :- not a71, not a69.
+a179 :- a83, not a63.
+a179 :- a134, not a121.
+a179 :- a152, a183.
+a179 :- not a196, not a101.
+a61 :- a183, not a144.
+a61 :- a131, a188.
+a61 :- a57, a198.
+a61 :- a34, a42.
+a61 :- not a136, not a26.
+a61 :- a127, not a199.
+a61 :- a129, not a151.
+a61 :- a77, a92.
+a61 :- a87, not a34.
+a61 :- not a122, not a11.
+a11 :- a50, not a79.
+a11 :- a49, not a54.
+a11 :- a10, a48.
+a11 :- a120, not a115.
+a11 :- a41, not a147.
+a11 :- not a200, not a171.
+a11 :- not a70, not a40.
+a11 :- a77, not a129.
+a11 :- a121, not a3.
+a122 :- a30, not a27.
+a122 :- a42, not a163.
+a122 :- not a164, not a3.
+a122 :- a81, not a2.
+a122 :- a27, not a103.
+a122 :- a130, not a126.
+a122 :- not a97, not a73.
+a122 :- a57, a87.
+a122 :- a89, not a24.
+a122 :- not a170, not a100.
+a122 :- a53, not a194.
+a111 :- a190, not a37.
+a111 :- a83, a188.
+a111 :- not a159, not a128.
+a111 :- a25, not a41.
+a111 :- not a176, not a35.
+a111 :- not a77, not a40.
+a111 :- a104, not a100.
+a111 :- a169, not a175.
+a111 :- not a94, not a84.
+a111 :- a38, not a175.
+a38 :- a31, not a40.
+a38 :- a19, a79.
+a38 :- a3, not a165.
+a38 :- a110, a132.
+a175 :- not a166, not a146.
+a175 :- not a132, not a120.
+a175 :- a30, a161.
+a175 :- a102, not a1.
+a175 :- a81, a143.
+a175 :- not a173, not a114.
+a67 :- a58, not a34.
+a67 :- not a97, not a75.
+a67 :- a94, a126.
+a67 :- a111, a181.
+a67 :- a58, not a75.
+a67 :- a64, a160.
+a67 :- a124, not a61.
+a124 :- not a124, not a8.
+a124 :- not a130, not a85.
+a124 :- a191, not a14.
+a124 :- a73, a188.
+a124 :- not a131, not a130.
+a124 :- a70, not a171.
+a124 :- a38, not a2.
+a124 :- a93, not a169.
+a124 :- not a188, not a165.
+a124 :- a77, not a57.
+a124 :- a171, not a98.
+a23 :- a174, not a111.
+a23 :- a1, a88.
+a23 :- a89, a196.
+a23 :- a186, not a187.
+a23 :- a41, not a95.
+a23 :- a5, a151.
+a23 :- not a28, not a19.
+a23 :- a197, not a185.
+a23 :- a147, not a186.
+a23 :- a51, not a7.
+a23 :- not a191, not a11.
+a23 :- not a199, not a131.
+a23 :- a41, not a173.
+a41 :- a174, not a179.
+a41 :- not a157, not a84.
+a41 :- a176, a178.
+a41 :- a69, a128.
+a41 :- a5, a72.
+a41 :- a161, not a61.
+a41 :- not a176, not a107.
+a41 :- a140, not a71.
+a41 :- a109, not a192.
+a173 :- a132, not a137.
+a173 :- not a158, not a97.
+a173 :- a6, not a173.
+a173 :- a30, not a41.
+a173 :- a147, a159.
+a173 :- a105, not a198.
+a173 :- a142, not a152.
+a173 :- a112, a134.
+a173 :- not a114, not a96.
+a150 :- a22, not a161.
+a150 :- a50, not a128.
+a150 :- a167, not a115.
+a150 :- a177, not a4.
+a150 :- a72, not a166.
+a150 :- a177, not a27.
+a150 :- a17, not a193.
+a150 :- not a195, not a173.
+a150 :- a3, a37.
+a150 :- not a180, not a8.
+a8 :- a81, not a38.
+a8 :- not a146, not a91.
+a8 :- a192, not a9.
+a8 :- a114, not a126.
+a8 :- a181, not a161.
+a180 :- a88, not a191.
+a180 :- a143, a178.
+a180 :- not a165, not a120.
+a180 :- a167, not a45.
+a180 :- a177, not a73.
+a3 :- not a184, not a172.
+a3 :- a127, a142.
+a3 :- a31, a105.
+a3 :- a165, not a110.
+a3 :- a169, not a96.
+a3 :- a117, a186.
+a3 :- not a117, not a102.
+a3 :- a61, not a163.
+a3 :- a182, not a59.
+a3 :- not a185, not a111.
+a3 :- a34, a51.
+a3 :- a185, not a174.
+a3 :- not a138, not a3.
+a3 :- a120, not a45.
+a120 :- a183, a196.
+a120 :- a67, a124.
+a120 :- a124, not a136.
+a120 :- a129, a174.
+a45 :- a29, not a166.
+a45 :- a131, a161.
+a45 :- a185, not a136.
+a45 :- a69, a171.
+a45 :- not a46, not a9.
+a62 :- not a184, not a93.
+a62 :- a110, a125.
+a62 :- a85, a189.
+a62 :- a75, a189.
+a62 :- not a182, not a123.
+a62 :- a133, not a32.
+a62 :- a23, not a133.
+a62 :- a8, not a118.
+a62 :- a170, not a83.
+a62 :- a121, not a97.
+a62 :- a173, not a168.
+a62 :- a159, not a90.
+a159 :- a122, not a53.
+a159 :- a79, not a103.
+a159 :- a39, a179.
+a159 :- a83, not a65.
+a159 :- a109, not a147.
+a90 :- not a106, not a47.
+a90 :- a184, not a13.
+a90 :- not a99, not a75.
+a90 :- a63, not a128.
+a90 :- a78, not a164.
+a90 :- not a110, not a95.
+a90 :- a86, not a85.
+a90 :- not a126, not a50.
+a90 :- a38, not a159.
+a90 :- not a77, not a75.
+a87 :- a81, a119.
+a34 :- a10, a47.
+a34 :- a79, not a71.
+a34 :- a138, not a181.
+a34 :- a124, not a11.
+a34 :- a34, a49.
+a34 :- not a150, not a47.
+a34 :- a114, a172.
+a34 :- not a145, not a138.
+a34 :- a134, not a30.
+a34 :- a156, not a157.
+a72 :- a65, a111.
+a72 :- a43, not a191.
+a72 :- not a102, not a36.
+a72 :- a145, a165.
+a72 :- a154, not a93.
+a72 :- a119, not a39.
+a72 :- a174, not a152.
+a72 :- a115, not a153.
+a72 :- not a182, not a24.
+a24 :- a86, a186.
+a24 :- a6, not a177.
+a24 :- a57, not a191.
+a24 :- a32, not a112.
+a24 :- a64, not a40.
+a24 :- a176, not a182.
+a24 :- a106, not a75.
+a182 :- a82, not a185.
+a182 :- a35, not a61.
+a182 :- a26, not a161.
+a182 :- a26, a114.
+a182 :- a181, not a186.
+a182 :- not a185, not a133.
+a182 :- not a188, not a14.
+a182 :- a78, not a128.
+a84 :- a3, a97.
+a84 :- not a190, not a122.
+a84 :- not a183, not a162.
+a84 :- a43, not a183.
+a84 :- not a193, not a140.
+a84 :- a3, a140.
+a84 :- a175, not a122.
+a84 :- a109, not a162.
+a84 :- not a16, not a6.
+a84 :- not a156, not a58.
+a84 :- a87, a109.
+a94 :- not a156, not a127.
+a94 :- a136, a188.
+a94 :- a95, a124.
+a94 :- a110, not a180.
+a94 :- a137, not a135.
+a94 :- not a145, not a133.
+a94 :- a30, not a101.
+a94 :- a85, a167.
+a42 :- a183, not a48.
+a42 :- a163, not a61.
+a42 :- a24, a76.
+a42 :- not a24, not a15.
+a42 :- a43, a196.
+a42 :- a1, a36.
+a42 :- a157, not a122.
+a42 :- a52, not a70.
+a52 :- not a184, not a77.
+a52 :- a118, a165.
+a52 :- a2, a47.
+a52 :- a9, a71.
+a52 :- a194, not a139.
+a52 :- a74, a121.
+a70 :- a130, not a95.
+a70 :- a50, a123.
+a70 :- a178, not a119.
+a70 :- a27, a115.
+a70 :- a185, not a163.
+a70 :- a199, not a20.
+a70 :- a72, a99.
+a70 :- a55, not a120.
+a70 :- a18, not a168.
+a70 :- not a160, not a100.
+a70 :- a33, not a74.
+a70 :- a26, a132.
+a138 :- a45, not a132.
+a138 :- a103, not a54.
+a138 :- not a141, not a6.
+a138 :- not a117, not a95.
+a138 :- not a147, not a2.
+a138 :- a78, not a92.
+a78 :- a87, a181.
+a78 :- a63, not a69.
+a78 :- a44, not a70.
+a78 :- a88, a118.
+a78 :- a70, a176.
+a78 :- a167, not a49.
+a78 :- a67, not a97.
+a92 :- not a199, not a17.
+a92 :- a59, not a200.
+a92 :- a101, a186.
+a92 :- not a162, not a33.
+a92 :- not a65, not a2.
+a92 :- a39, a122.
+a92 :- not a109, not a10.
+a92 :- a191, not a17.
+a92 :- a56, not a49.
+a92 :- a50, a105.
+a170 :- a36, not a10.
+a170 :- a123, not a147.
+a170 :- not a167, not a13.
+a170 :- a74, a85.
+a170 :- a64, a75.
+a170 :- a21, not a18.
+a170 :- a147, not a7.
+a170 :- a125, a147.
+a170 :- a172, not a71.
+a170 :- a21, not a79.
+a170 :- not a121, not a25.
+a25 :- a73, a154.
+a25 :- a96, a116.
+a25 :- a86, not a165.
+a25 :- a187, not a2.
+a25 :- not a189, not a24.
+a25 :- a97, a177.
+a121 :- a33, a197.
+a121 :- a17, not a166.
+a121 :- a6, not a155.
+a121 :- a8, a191.
+a121 :- a62, not a172.
+a121 :- not a200, not a82.
+a121 :- a19, not a156.
+a121 :- a94, not a38.
+a121 :- a29, not a162.
+a121 :- a20, a119.
+a121 :- a59, not a153.
+a121 :- a10, a150.
+a121 :- not a106, not a14.
+a4 :- not a198, not a160.
+a4 :- not a151, not a39.
+a4 :- a200, not a152.
+a4 :- a16, not a163.
+a4 :- a16, not a11.
+a4 :- a179, a198.
+a4 :- a127, not a12.
+a4 :- not a149, not a135.
+a4 :- a144, not a93.
+a144 :- a68, not a107.
+a144 :- a3, not a137.
+a144 :- not a168, not a165.
+a144 :- a180, a181.
+a144 :- a156, not a62.
+a93 :- a66, not a40.
+a93 :- a127, not a18.
+a93 :- a40, not a87.
+a93 :- a140, not a72.
+a153 :- a111, a185.
+a153 :- a93, not a101.
+a153 :- not a101, not a79.
+a153 :- not a76, not a71.
+a153 :- a182, a185.
+a153 :- a139, not a111.
+a153 :- not a198, not a9.
+a9 :- a24, not a48.
+a9 :- a44, not a121.
+a9 :- a113, not a89.
+a198 :- not a177, not a34.
+a198 :- a62, a175.
+a198 :- not a93, not a16.
+a198 :- a69, a85.
+a198 :- a99, a196.
+a198 :- not a118, not a114.
+a198 :- a126, a156.
+a188 :- a134, not a106.
+a188 :- a76, not a125.
+a188 :- a44, not a45.
+a188 :- a28, a196.
+a188 :- a125, not a139.
+a188 :- a163, not a111.
+a188 :- a97, not a99.
+a188 :- not a119, not a71.
+a188 :- not a143, not a91.
+a188 :- a26, a66.
+a188 :- a94, not a35.
+a35 :- not a70, not a30.
+a35 :- a183, not a124.
+a35 :- a34, a185.
+a35 :- a21, a89.
+a110 :- a95, not a199.
+a110 :- a133, not a138.
+a110 :- not a110, not a103.
+a110 :- a125, not a159.
+a110 :- not a159, not a24.
+a110 :- a55, a67.
+a110 :- not a190, not a41.
+a110 :- a68, not a88.
+a149 :- a107, not a21.
+a149 :- a78, not a9.
+a149 :- a133, a196.
+a149 :- a87, not a138.
+a149 :- a19, not a108.
+a149 :- not a186, not a183.
+a149 :- not a146, not a13.
+a149 :- a31, a48.
+a149 :- a162, not a77.
+a14 :- a64, not a84.
+a14 :- a135, not a131.
+a14 :- a155, a177.
+a14 :- a158, not a188.
+a14 :- a27, a84.
+a14 :- a80, a106.
+a14 :- not a159, not a13.
+a14 :- a135, not a49.
+a14 :- a83, not a180.
+a106 :- a44, not a21.
+a106 :- a72, a102.
+a106 :- a47, not a28.
+a131 :- a124, a173.
+a131 :- a177, not a159.
+a131 :- a104, not a9.
+a131 :- a68, a123.
+a131 :- a149, a178.
+a131 :- a15, a136.
+a199 :- a7, a105.
+a199 :- not a164, not a132.
+a199 :- a162, not a67.
+a199 :- a54, not a53.
+a199 :- a74, not a5.
+a199 :- a147, a152.
+a199 :- a74, not a19.
+a199 :- a3, a121.
+a56 :- a145, a155.
+a56 :- not a100, not a71.
+a56 :- a72, not a80.
+a56 :- a8, not a91.
+a56 :- a101, a118.
+a56 :- a158, not a57.
+a56 :- a90, not a28.
+a56 :- a99, not a104.
+a56 :- a152, not a105.
+a56 :- a98, not a19.
+a56 :- a109, not a35.
+a109 :- a78, not a12.
+a109 :- a114, not a95.
+a109 :- a46, not a192.
+a109 :- a187, not a104.
+a109 :- a85, a181.
+a109 :- a154, not a2.
+a109 :- a14, a167.
+a46 :- a113, a143.
+a46 :- a82, not a188.
+a46 :- a172, not a182.
+a46 :- a11, not a174.
+a46 :- a142, not a143.
+a46 :- a4, not a25.
+a46 :- a93, not a16.
+a104 :- not a135, not a3.
+a104 :- a54, a195.
+a104 :- a122, not a177.
+a104 :- not a127, not a116.
+a104 :- a14, not a156.
+a104 :- a187, not a130.
+a104 :- not a123, not a3.
+a104 :- not a67, not a19.
+a104 :- a41, a146.
+a104 :- a132, not a1.
+a104 :- not a171, not a142.
+a104 :- not a179, not a70.
+a104 :- a112, a121.
+a112 :- a94, a182.
+a112 :- a2, not a91.
+a112 :- a180, not a91.
+a112 :- not a153, not a147.
+a112 :- a31, a83.
+a112 :- a152, a179.
+a112 :- a21, a60.
+a59 :- a195, not a180.
+a59 :- a30, a137.
+a59 :- not a128, not a35.
+a128 :- not a171, not a71.
+a128 :- a131, not a99.
+a128 :- a187, not a136.
+a128 :- a169, not a104.
+a128 :- a146, a180.
+a88 :- a171, not a1.
+a88 :- a37, a78.
+a88 :- not a164, not a79.
+a88 :- a87, a130.
+a88 :- a68, not a129.
+a88 :- a187, not a60.
+a88 :- a100, a144.
+a100 :- a56, not a171.
+a100 :- a44, not a14.
+a100 :- a46, not a139.
+a100 :- a21, not a22.
+a100 :- a153, not a86.
+a100 :- not a198, not a97.
+a7 :- a136, not a23.
+a7 :- a2, not a10.
+a7 :- a35, a43.
+a7 :- a15, a115.
+a7 :- a109, not a157.
+a7 :- a144, not a18.
+a7 :- a122, a187.
+a7 :- not a179, not a10.
+a10 :- a85, a97.
+a10 :- a186, not a173.
+a10 :- a48, a190.
+a10 :- a4, not a153.
+a10 :- not a172, not a150.
+a10 :- a180, a182.
+a10 :- a171, not a145.
+a10 :- a178, not a189.
+a169 :- a18, not a7.
+a169 :- a198, not a182.
+a169 :- a134, not a145.
+a169 :- not a156, not a111.
+a169 :- a48, not a35.
+a48 :- a182, not a169.
+a48 :- a141, not a8.
+a48 :- not a117, not a83.
+a48 :- not a111, not a73.
+a48 :- not a177, not a110.
+a48 :- a32, a104.
+a48 :- a90, not a126.
+a48 :- a86, not a31.
+a48 :- a133, a180.
+a117 :- a25, a142.
+a117 :- a86, not a12.
+a117 :- a27, not a114.
+a117 :- not a199, not a30.
+a117 :- a169, not a71.
+a117 :- a116, not a174.
+a117 :- a58, a127.
+a127 :- not a28, not a4.
+a127 :- a183, not a108.
+a127 :- a19, not a92.
+a127 :- not a125, not a66.
+a127 :- a194, not a164.
+a58 :- a107, not a124.
+a58 :- a3, a23.
+a58 :- a80, not a163.
+a58 :- not a161, not a69.
+a58 :- a181, not a59.
+a21 :- a67, a105.
+a21 :- not a153, not a79.
+a21 :- not a24, not a12.
+a21 :- a25, a166.
+a21 :- a40, not a158.
+a21 :- a159, not a169.
+a21 :- a52, a76.
+a21 :- a165, not a153.
+a21 :- a71, a119.
+a21 :- not a173, not a16.
+a21 :- a66, not a152.
+a21 :- a66, not a98.
+a21 :- a60, not a69.
+a60 :- not a175, not a26.
+a60 :- not a62, not a14.
+a60 :- a38, a143.
+a60 :- not a155, not a30.
+a60 :- not a85, not a26.
+a60 :- a90, not a200.
+a60 :- a151, not a10.
+a69 :- a132, not a179.
+a69 :- a160, not a65.
+a69 :- a2, not a50.
+a69 :- not a165, not a18.
+a69 :- a151, a177.
+a69 :- not a98, not a60.
+a69 :- a126, a154.
+a69 :- a80, not a8.
+a69 :- a30, not a25.
+a69 :- not a118, not a44.
+a186 :- a131, not a48.
+a186 :- a173, not a121.
+a186 :- a108, not a29.
+a186 :- a23, not a81.
+a186 :- a100, not a137.
+a186 :- a97, not a116.
+a186 :- a78, not a88.
+a186 :- not a128, not a119.
+a186 :- a43, a79.
+a186 :- not a105, not a30.
+a30 :- not a140, not a105.
+a30 :- not a70, not a51.
+a30 :- a30, a81.
+a30 :- a194, not a164.
+a30 :- a198, not a21.
+a30 :- a57, not a29.
+a30 :- a145, not a148.
+a105 :- a14, a186.
+a105 :- a59, not a130.
+a105 :- a59, not a169.
+a105 :- a180, a183.
+a105 :- a135, not a146.
+a105 :- not a36, not a12.
+a105 :- a172, not a123.
+a105 :- a151, not a165.
+a105 :- a84, not a135.
+a105 :- a1, a139.
+a89 :- not a140, not a131.
+a89 :- a32, not a150.
+a89 :- not a182, not a86.
+a89 :- a43, not a68.
+a89 :- a8, not a119.
+a89 :- a8, not a177.
+a156 :- a182, not a50.
+a156 :- a19, a85.
+a156 :- not a73, not a60.
+a156 :- not a42, not a8.
+a156 :- a59, not a145.
+a156 :- not a139, not a42.
+a156 :- not a81, not a41.
+a156 :- not a154, not a75.
+a75 :- a34, a129.
+a75 :- a35, a172.
+a75 :- a3, a182.
+a75 :- a72, not a189.
+a75 :- a62, a63.
+a75 :- a44, not a139.
+a75 :- a164, not a18.
+a75 :- not a162, not a103.
+a75 :- a19, a98.
+a75 :- not a77, not a63.
+a154 :- a14, not a191.
+a154 :- not a84, not a51.
+a154 :- a152, a190.
+a189 :- a173, not a53.
+a189 :- a133, not a113.
+a189 :- a127, not a145.
+a189 :- a101, not a20.
+a189 :- a54, not a66.
+a189 :- a23, a191.
+a189 :- a89, not a184.
+a189 :- not a190, not a87.
+a189 :- a119, a172.
+a189 :- a60, not a65.
+a189 :- not a114, not a13.
+a13 :- a77, a164.
+a13 :- a137, not a36.
+a13 :- a189, not a64.
+a13 :- a70, not a173.
+a13 :- a151, not a122.
+a13 :- a22, not a8.
+a114 :- not a149, not a72.
+a114 :- a9, not a166.
+a114 :- a195, not a159.
+a114 :- a118, not a46.
+a114 :- a74, not a15.
+a114 :- not a143, not a127.
+a113 :- not a177, not a136.
+a113 :- not a187, not a45.
+a113 :- a147, not a177.
+a113 :- not a51, not a25.
+a113 :- not a149, not a90.
+a6 :- not a155, not a69.
+a6 :- a106, a164.
+a6 :- a113, not a131.
+a6 :- a6, not a21.
+a6 :- not a134, not a119.
+a6 :- a24, a198.
+a6 :- a25, not a1.
+a6 :- a9, a138.
+a6 :- a176, not a93.
+a6 :- a170, not a49.
+a6 :- a80, not a25.
+a6 :- a12, not a7.
+a12 :- a54, a93.
+a12 :- not a199, not a5.
+a12 :- a181, not a10.
+a12 :- a60, a173.
+a132 :- a18, not a58.
+a132 :- not a181, not a47.
+a132 :- a131, not a13.
+a132 :- not a159, not a72.
+a132 :- a37, a67.
+a132 :- a54, not a34.
+a26 :- a129, not a133.
+a26 :- a20, not a104.
+a26 :- a33, not a197.
+a26 :- a193, not a64.
+a26 :- a35, not a109.
+a26 :- not a178, not a126.
+a26 :- a96, not a62.
+a26 :- a94, not a165.
+a26 :- not a149, not a43.
+a65 :- a101, not a140.
+a176 :- a198, not a165.
+a176 :- not a34, not a22.
+a176 :- a26, not a3.
+a176 :- a12, a119.
+a176 :- not a88, not a81.
+a176 :- not a112, not a17.
+a176 :- a16, a147.
+a176 :- a13, not a49.
+a49 :- a126, not a3.
+a49 :- not a119, not a35.
+a49 :- a92, not a55.
+a49 :- a127, not a40.
+a49 :- a50, not a153.
+a49 :- not a111, not a76.
+a49 :- not a72, not a6.
+a49 :- a134, a187.
+a49 :- a84, not a18.
+a49 :- a8, not a65.
+a49 :- a33, a143.
+a145 :- a90, not a102.
+a145 :- a60, not a126.
+a145 :- a129, not a53.
+a145 :- a143, not a35.
+a145 :- a121, not a156.
+a145 :- a74, not a155.
+a145 :- a117, not a153.
+a145 :- a153, not a147.
+a145 :- a76, not a177.
+a177 :- a156, not a39.
+a177 :- a48, not a9.
+a177 :- not a192, not a177.
+a177 :- not a36, not a20.
+a177 :- a67, not a108.
+a177 :- a80, not a25.
+a177 :- a33, not a150.
+a177 :- not a139, not a66.
+a177 :- a48, not a75.
+a177 :- not a115, not a30.
+a177 :- not a153, not a119.
+a77 :- not a23, not a13.
+a77 :- not a170, not a33.
+a77 :- a116, a123.
+a77 :- a24, not a68.
+a77 :- a43, a198.
+a77 :- not a93, not a78.
+a77 :- a89, a145.
+a66 :- a187, not a166.
+a66 :- a134, not a159.
+a66 :- a84, not a200.
+a66 :- a135, not a138.
+a66 :- a64, not a52.
+a66 :- a114, not a58.
+a66 :- a59, not a185.
+a66 :- a122, not a92.
+a98 :- not a183, not a111.
+a98 :- not a146, not a127.
+a98 :- a89, a138.
+a98 :- a119, a174.
+a98 :- not a173, not a66.
+a98 :- a193, not a52.
+a80 :- a73, not a133.
+a80 :- a107, a194.
+a80 :- a13, a195.
+a80 :- a11, not a133.
+a80 :- a26, not a75.
+a80 :- not a190, not a15.
+a80 :- not a166, not a116.
+a80 :- a179, not a86.
+a80 :- a129, not a53.
+a80 :- a142, a154.
+a142 :- not a177, not a127.
+a142 :- a111, not a191.
+a142 :- a21, a147.
+a142 :- a171, not a17.
+a142 :- a103, not a118.
+a142 :- a155, not a87.
+a142 :- a47, a167.
+a142 :- a88, a166.
+a148 :- a61, not a112.
+a148 :- a98, a181.
+a148 :- a186, not a80.
+a148 :- a23, a88.
+a148 :- a155, a179.
+a148 :- a156, not a64.
+a148 :- a184, not a168.
+a148 :- a20, not a190.
+a148 :- a99, not a112.
+a148 :- not a76, not a53.
+a148 :- a30, a186.
+a148 :- a124, not a40.
+a148 :- a64, not a46.
+a148 :- a55, not a72.
+a55 :- a193, not a98.
+a55 :- a22, not a1.
+a55 :- not a184, not a113.
+a55 :- a41, not a112.
+a55 :- a8, a104.
+a55 :- not a136, not a97.
+a55 :- a43, not a161.
+a33 :- a78, not a130.
+a33 :- a46, not a62.
+a33 :- a62, not a148.
+a33 :- a96, not a129.
+a33 :- not a140, not a115.
+a74 :- a103, a134.
+a74 :- a6, not a37.
+a74 :- a116, not a67.
+a74 :- a36, not a157.
+a74 :- a158, not a26.
+a74 :- a3, not a166.
+a74 :- not a151, not a22.
+a74 :- not a111, not a2.
+a74 :- a85, not a12.
+a74 :- a92, not a170.
+a74 :- a148, not a28.
+a193 :- a96, a106.
+a193 :- not a172, not a167.
+a193 :- not a188, not a91.
+a193 :- a60, not a167.
+a167 :- a146, not a10.
+a167 :- a124, not a185.
+a167 :- a59, a110.
+a167 :- a114, a199.
+a167 :- not a82, not a81.
+a167 :- a54, a61.
+a167 :- a45, a54.
+a167 :- a62, a167.
+a167 :- a81, a111.
+a167 :- not a128, not a37.
+a167 :- a158, not a20.
+a167 :- a87, a178.
+a96 :- not a49, not a2.
+a96 :- a1, not a81.
+a96 :- a105, not a149.
+a96 :- a172, a192.
+a96 :- a67, a179.
+a96 :- a34, a186.
+a96 :- not a37, not a35.
+a96 :- not a118, not a19.
+a96 :- a2, not a81.
+a96 :- a118, not a20.
+a96 :- a117, not a184.
+a96 :- a94, not a103.
+a96 :- a27, a60.
+a96 :- a63, a141.
+a96 :- a79, a145.
+a96 :- not a198, not a6.
+a96 :- a115, not a154.
+a53 :- a74, a118.
+a53 :- a35, not a196.
+a53 :- a64, not a46.
+a53 :- a73, not a79.
+a53 :- a52, not a80.
+a53 :- a74, a163.
+a53 :- a5, not a100.
+a53 :- a158, not a77.
+a53 :- a53, a70.
+a44 :- a38, a101.
+a44 :- not a89, not a3.
+a44 :- a64, not a18.
+a44 :- a136, not a117.
+a44 :- not a74, not a28.
+a44 :- a35, a193.
+a44 :- a52, not a36.
+a44 :- a121, not a138.
+a44 :- a14, a77.
+a152 :- a63, a87.
+a152 :- a36, a182.
+a152 :- not a150, not a62.
+a152 :- not a194, not a53.
+a152 :- a39, not a185.
+a43 :- not a134, not a88.
+a43 :- a137, not a86.
+a43 :- not a148, not a81.
+a43 :- a27, not a63.
+a43 :- a167, not a122.
+a43 :- not a54, not a31.
+a43 :- a56, not a179.
+a43 :- a142, not a21.
+a43 :- a92, not a81.
+a43 :- a43, a78.
+a200 :- a66, a167.
+a200 :- a185, not a184.
+a200 :- not a191, not a82.
+a200 :- a71, not a38.
+a71 :- a80, not a10.
+a71 :- a149, not a52.
+a71 :- a170, not a114.
+a71 :- a17, a126.
+a71 :- a152, not a46.
+a71 :- a157, not a127.
+a195 :- not a27, not a12.
+a195 :- a85, not a85.
+a195 :- a28, a135.
+a195 :- a99, not a118.
+a195 :- a131, not a132.
+a195 :- a96, not a22.
+a195 :- a57, not a171.
+a57 :- a121, not a137.
+a57 :- a116, a131.
+a57 :- a9, a140.
+a57 :- a190, not a119.
+a57 :- not a178, not a130.
+a57 :- not a17, not a7.
+a57 :- a187, not a192.
+a57 :- a133, not a99.
+a57 :- a76, not a69.
+a171 :- not a80, not a55.
+a171 :- a158, not a189.
+a171 :- a137, not a182.
+a171 :- a192, not a143.
+a171 :- a53, a174.
+a171 :- a197, not a148.
+a171 :- a34, not a84.
+a171 :- not a177, not a37.
+a171 :- a22, a35.
+a197 :- a60, a123.
+a197 :- a107, a122.
+a197 :- a134, a197.
+a134 :- a77, not a127.
+a134 :- not a93, not a58.
+a134 :- not a135, not a35.
+a126 :- a8, not a6.
+a126 :- a35, a88.
+a126 :- a90, a163.
+a126 :- not a123, not a66.
+a126 :- a73, not a128.
+a126 :- a126, a150.
+a95 :- a60, a109.
+a95 :- a178, not a189.
+a95 :- not a177, not a2.
+a95 :- a94, a138.
+a95 :- a80, a189.
+a160 :- a1, a104.
+a64 :- a13, not a115.
+a64 :- a197, not a2.
+a64 :- not a115, not a84.
+a64 :- a130, not a137.
+a64 :- a119, not a12.
+a64 :- a157, a191.
+a64 :- not a159, not a89.
+a64 :- not a20, not a15.
+a64 :- a12, a131.
+a64 :- a8, a117.
+a64 :- a50, not a28.
+a64 :- not a163, not a159.
+a47 :- a48, a149.
+a47 :- a167, not a120.
+a47 :- a55, not a172.
+a47 :- a36, a92.
+a47 :- a33, a183.
+a47 :- a162, not a138.
+a47 :- not a197, not a167.
+a166 :- a4, a31.
+a166 :- not a63, not a2.
+a166 :- a11, not a56.
+a166 :- a138, not a179.
+a166 :- a50, not a14.
+a166 :- not a169, not a51.
+a166 :- a73, not a100.
+a166 :- a165, not a198.
+a166 :- a187, not a84.
+a166 :- not a92, not a60.
+a18 :- a189, not a75.
+a18 :- a19, not a55.
+a18 :- not a68, not a4.
+a18 :- a144, not a9.
+a18 :- not a152, not a55.
+a18 :- a13, a65.
+a18 :- not a142, not a90.
+a18 :- not a145, not a142.
+a18 :- not a200, not a72.
+a141 :- a16, not a174.
+a141 :- not a188, not a174.
+a141 :- a117, not a2.
+a141 :- not a127, not a54.
+a141 :- a162, not a152.
+a162 :- a142, not a74.
+a162 :- a16, not a154.
+a162 :- a151, a168.
+a162 :- a192, not a138.
+a162 :- not a162, not a129.
+a162 :- a38, not a84.
+a162 :- a110, a184.
+a103 :- a87, a110.
+a103 :- a169, a189.
+a103 :- a94, a152.
+a103 :- not a48, not a11.
+a103 :- not a127, not a2.
+a103 :- a59, a129.
+a103 :- a79, a117.
+a103 :- a147, not a198.
+a147 :- a66, a197.
+a147 :- a21, not a25.
+a147 :- a160, a197.
+a147 :- a49, not a98.
+a22 :- a81, a157.
+a22 :- a67, a103.
+a22 :- a66, a154.
+a27 :- a65, not a12.
+a27 :- a111, not a93.
+a27 :- not a198, not a92.
+a27 :- a108, not a101.
+a27 :- not a192, not a90.
+a27 :- not a195, not a185.
+a27 :- a155, not a129.
+a27 :- a71, a157.
+a27 :- a107, not a72.
+a27 :- a152, not a60.
+a39 :- a157, not a178.
+a39 :- not a188, not a82.
+a39 :- a88, a181.
+a39 :- a90, not a175.
+a39 :- a77, not a33.
+a39 :- not a39, not a34.
+a39 :- not a31, not a13.
+a39 :- not a55, not a27.
+a39 :- a30, a95.
+a39 :- a165, not a104.
+a165 :- a129, not a118.
+a165 :- a80, not a154.
+a165 :- a175, not a32.
+a165 :- a157, not a142.
+a165 :- a61, not a31.
+a165 :- not a99, not a79.
+a165 :- a103, not a165.
+a107 :- a114, a115.
+a107 :- a166, not a136.
+a107 :- a114, not a183.
+a107 :- not a156, not a38.
+a107 :- not a187, not a156.
+a107 :- a136, not a25.
+a107 :- a147, not a15.
+a32 :- not a81, not a61.
+a32 :- a150, a182.
+a32 :- not a186, not a179.
+a32 :- a42, a197.
+a32 :- not a71, not a69.
+a32 :- not a133, not a56.
+a133 :- a9, a67.
+a133 :- a24, a63.
+a133 :- not a55, not a46.
+a133 :- not a78, not a29.
+a133 :- not a112, not a85.
+a133 :- not a134, not a116.
+a133 :- a173, a185.
+a133 :- a189, not a59.
+a133 :- not a138, not a27.
+a86 :- a174, a181.
+a86 :- not a161, not a58.
+a86 :- a48, a85.
+a86 :- a128, a139.
+a86 :- a20, not a176.
+a86 :- a115, not a134.
+a86 :- a16, not a170.
+a86 :- a173, not a3.
+a86 :- a27, a56.
+a86 :- a4, a114.
+a86 :- a158, not a159.
+a86 :- a127, not a3.
+a86 :- a65, not a191.
+a191 :- not a132, not a107.
+a191 :- not a107, not a73.
+a191 :- a157, not a117.
+a191 :- not a99, not a4.
+a191 :- a137, a157.
+a130 :- a83, not a54.
+a130 :- a63, not a124.
+a130 :- a53, not a54.
+a130 :- a195, not a84.
+a130 :- a16, not a22.
+a130 :- a50, not a99.
+a130 :- a119, not a28.
+a130 :- not a196, not a30.
+a130 :- not a163, not a98.
+a163 :- a60, a164.
+a163 :- not a96, not a74.
+a163 :- a32, not a175.
+a163 :- a22, not a132.
+a163 :- not a157, not a84.
+a163 :- a36, not a78.
+a163 :- not a162, not a153.
+a163 :- a136, not a12.
+a15 :- a130, not a134.
+a15 :- a17, not a34.
+a15 :- a179, not a166.
+a97 :- not a198, not a190.
+a97 :- not a155, not a63.
+a97 :- not a104, not a34.
+a97 :- a130, not a50.
+a97 :- a36, a83.
+a97 :- a28, a99.
+a97 :- a46, a95.
+a97 :- a113, a199.
+a187 :- a97, a132.
+a187 :- not a200, not a11.
+a187 :- a121, not a36.
+a187 :- a75, a96.
+a187 :- a149, not a92.
+a187 :- a115, not a156.
+a187 :- a108, a111.
+a187 :- a127, a196.
+a161 :- a83, a104.
+a161 :- not a77, not a15.
+a161 :- not a190, not a84.
+a161 :- a147, not a173.
+a161 :- not a195, not a128.
+a161 :- a6, not a173.
+a36 :- a121, not a71.
+a36 :- a118, a135.
+a36 :- a56, a192.
+a36 :- not a146, not a121.
+a36 :- a22, not a62.
+a36 :- a63, a95.
+a36 :- a93, not a152.
+a36 :- not a151, not a47.
+a151 :- a83, not a43.
+a151 :- not a127, not a31.
+a151 :- a30, a170.
+a151 :- a111, not a109.
+a151 :- not a198, not a57.
+a151 :- a197, not a42.
+a151 :- a45, a143.
+a68 :- a117, a187.
+a68 :- not a95, not a55.
+a68 :- not a95, not a6.
+a68 :- not a106, not a82.
+a68 :- a190, not a53.
+a192 :- a72, a107.
+a192 :- a35, a173.
+a101 :- a34, not a115.
+a101 :- a77, a160.
+a101 :- not a63, not a30.
+a101 :- a8, not a176.
+a101 :- a75, not a12.
+a101 :- a162, not a126.
+a196 :- a158, not a167.
+a196 :- not a139, not a86.
+a19 :- a54, not a176.
+a19 :- a103, not a165.
+a19 :- a71, not a20.
+a19 :- a69, a83.
+a19 :- a25, not a144.
+a140 :- not a31, not a2.
+a140 :- a121, not a24.
+a140 :- a197, not a155.
+a140 :- a56, not a59.
+a140 :- not a168, not a149.
+a140 :- a71, a141.
+a140 :- a134, not a170.
+a140 :- a32, a127.
+a140 :- not a199, not a134.
+a16 :- not a171, not a23.
+a16 :- a40, not a77.
+a16 :- a4, a91.
+a16 :- a140, not a102.
+a16 :- a23, a91.
+a16 :- not a66, not a43.
+a54 :- not a64, not a27.
+a54 :- a38, not a158.
+a54 :- not a137, not a62.
+a54 :- a124, not a60.
+a54 :- a173, not a88.
+a54 :- a47, a116.
+a54 :- a33, not a158.
+a54 :- a46, a114.
+a129 :- a120, not a17.
+a129 :- a142, not a65.
+a129 :- not a70, not a37.
+a129 :- a69, a136.
+a129 :- not a186, not a32.
+a174 :- not a69, not a15.
+a174 :- not a76, not a48.
+a174 :- a91, not a11.
+a174 :- a81, a107.
+a174 :- a53, a163.
+a174 :- a15, not a171.
+a174 :- a26, a124.
+a174 :- a109, a141.
+a174 :- a175, not a102.
+a174 :- not a151, not a141.
+a174 :- a15, not a164.
+a164 :- a39, a150.
+a164 :- a138, not a28.
+a164 :- a82, not a71.
+a164 :- not a96, not a5.
+a164 :- a12, a180.
+a83 :- not a103, not a54.
+a83 :- a2, not a175.
+a83 :- not a173, not a53.
+a83 :- a36, not a149.
+a83 :- not a173, not a93.
+a83 :- a111, a198.
+a83 :- a35, not a21.
+a85 :- a15, not a128.
+a85 :- not a73, not a68.
+a85 :- not a195, not a115.
+a85 :- a170, not a60.
+a85 :- a182, not a186.
+a85 :- a95, not a117.
+a85 :- a175, not a121.
+a139 :- not a131, not a19.
+a139 :- a96, a134.
+a139 :- a126, not a104.
+a139 :- a57, not a71.
+a139 :- a11, a63.
+a139 :- a49, not a33.
+a139 :- not a152, not a79.
+a139 :- not a187, not a169.
+a139 :- a11, not a148.
+a139 :- a81, a188.
+a139 :- a13, not a3.
+a139 :- a157, not a187.
+a1 :- a102, not a76.
+a1 :- a192, not a165.
+a1 :- not a180, not a152.
+a1 :- a3, a18.
+a146 :- a169, not a168.
+a146 :- a100, not a102.
+a146 :- not a165, not a39.
+a146 :- not a96, not a20.
+a146 :- not a167, not a111.
+a146 :- a13, not a133.
+a146 :- not a73, not a56.
+a146 :- a47, not a98.
+a146 :- a57, not a87.
+a146 :- a21, a65.
+a146 :- not a164, not a148.
+a108 :- a57, not a26.
+a108 :- a3, not a40.
+a108 :- a107, not a43.
+a108 :- not a131, not a130.
+a108 :- not a150, not a63.
+a108 :- a100, not a75.
+a108 :- a87, a92.
+a108 :- a35, not a105.
+a108 :- a79, not a133.
+a108 :- a172, not a47.
+a172 :- a21, not a71.
+a172 :- not a168, not a81.
+a172 :- not a196, not a59.
+a172 :- not a101, not a59.
+a172 :- a42, not a192.
+a172 :- a54, not a158.
+a172 :- a65, not a146.
+a172 :- a131, not a31.
+a172 :- a102, not a175.
+a172 :- a186, not a141.
+a172 :- a30, not a77.
+a137 :- not a172, not a134.
+a137 :- a135, not a106.
+a137 :- a28, a78.
+a137 :- not a45, not a27.
+a137 :- not a160, not a156.
+a137 :- a34, not a73.
+a137 :- not a191, not a93.
+a137 :- not a126, not a32.
+a137 :- a193, not a41.
+a185 :- a73, not a171.
+a185 :- a187, not a104.
+a185 :- a16, not a175.
+a185 :- a80, not a99.
+a185 :- not a72, not a33.
+a185 :- a120, not a39.
+a136 :- a17, not a121.
+a136 :- not a82, not a29.
+a136 :- a134, a152.
+a136 :- a1, a86.
+a136 :- a38, a109.
+a136 :- a195, not a154.
+a136 :- a138, not a97.
+a73 :- not a56, not a5.
+a73 :- a198, not a105.
+a73 :- a14, a53.
+a73 :- a175, a178.
+a73 :- a1, a7.
+a73 :- a146, not a194.
+a73 :- not a195, not a149.
+a73 :- not a172, not a140.
+a73 :- not a189, not a63.
+a73 :- not a127, not a13.
+a73 :- not a199, not a24.
+a73 :- a176, not a47.
+a73 :- a59, not a8.
+a73 :- a10, not a161.
+a73 :- a51, a93.
+a73 :- a27, not a11.
+a168 :- a109, not a3.
+a168 :- a41, a117.
+a168 :- a145, not a73.
+a168 :- not a170, not a75.
+a168 :- a89, not a127.
+a168 :- a78, not a167.
+a168 :- not a186, not a61.
+a168 :- not a164, not a106.
+a168 :- not a116, not a66.
+a168 :- a40, a197.
+a155 :- a143, not a28.
+a155 :- a9, not a144.
+a155 :- a3, not a26.
+a155 :- a177, a195.
+a155 :- a101, not a128.
+a155 :- not a133, not a105.
+a155 :- a2, a155.
+a155 :- a83, a86.
+a155 :- a94, not a138.
+a155 :- not a133, not a54.
+a155 :- not a90, not a43.
+a2 :- a90, not a33.
+a2 :- a142, not a149.
+a2 :- a78, not a27.
+a119 :- a2, not a80.
+a119 :- a119, a171.
+a119 :- a94, not a160.
+a119 :- a50, not a148.
+a119 :- not a144, not a129.
+a119 :- not a73, not a23.
+a119 :- not a69, not a45.
+a119 :- a58, not a170.
+a119 :- not a41, not a34.
+a119 :- a9, a177.
+a119 :- a166, not a64.
+a81 :- a4, a70.
+a81 :- not a41, not a38.
+a81 :- a137, a162.
+a81 :- a57, a144.
+a81 :- not a170, not a139.
+a81 :- a86, not a117.
+a51 :- a61, a152.
+a51 :- not a167, not a45.
+a51 :- not a100, not a62.
+a178 :- a143, a165.
+a178 :- a157, not a84.
+a178 :- a31, not a146.
+a178 :- a75, not a112.
+a178 :- not a189, not a85.
+a178 :- a184, not a184.
+a178 :- a200, not a92.
+a178 :- a120, not a147.
+a178 :- a115, not a74.
+a63 :- a21, not a40.
+a63 :- a98, not a45.
+a63 :- a82, a95.
+a63 :- not a160, not a17.
+a115 :- a133, not a130.
+a115 :- a141, a179.
+a115 :- a134, not a37.
+a115 :- a31, a86.
+a115 :- a19, not a122.
+a115 :- not a143, not a70.
+a115 :- not a162, not a94.
+a115 :- a179, not a81.
+a115 :- a14, a87.
+a115 :- a38, a163.
+a115 :- not a162, not a55.
+a115 :- a8, not a105.
+a115 :- not a138, not a18.
+a116 :- not a189, not a83.
+a116 :- a29, a115.
+a116 :- a113, a149.
+a116 :- a152, not a38.
+a116 :- a143, not a125.
+a116 :- a34, a127.
+a116 :- a45, not a4.
+a116 :- a126, a144.
+a79 :- a15, not a102.
+a79 :- a29, a188.
+a79 :- not a105, not a51.
+a79 :- a17, not a101.
+a79 :- not a156, not a59.
+a102 :- a64, not a36.
+a102 :- a114, a181.
+a102 :- a97, not a110.
+a102 :- a147, a183.
+a102 :- not a71, not a51.
+a102 :- not a147, not a16.
+a102 :- a178, not a83.
+a102 :- not a197, not a63.
+a102 :- a10, not a165.
+a102 :- not a195, not a132.
+a102 :- a162, not a98.
+a102 :- a102, not a92.
+a40 :- a97, a195.
+a40 :- a136, not a97.
+a40 :- a10, a26.
+a40 :- a53, a100.
+a40 :- not a157, not a27.
+a40 :- not a61, not a39.
+a40 :- a9, not a166.
+a157 :- a84, not a45.
+a157 :- not a156, not a109.
+a157 :- not a140, not a53.
+a157 :- a6, not a22.
+a157 :- a36, not a197.
+a157 :- not a140, not a67.
+a157 :- not a169, not a56.
+a157 :- not a31, not a18.
+a157 :- not a178, not a115.
+a157 :- a93, a116.
+a157 :- not a42, not a11.
+a157 :- not a175, not a157.
+a158 :- a106, not a23.
+a158 :- not a196, not a39.
+a158 :- a194, not a131.
+a158 :- a199, not a67.
+a158 :- a41, a153.
+a158 :- a18, not a52.
+a158 :- a89, not a26.
+a20 :- a138, not a199.
+a20 :- a74, not a154.
+a20 :- a25, a149.
+a20 :- a9, a75.
+a20 :- a43, not a82.
+a20 :- not a178, not a143.
+a99 :- not a81, not a22.
+a99 :- a125, not a125.
+a99 :- a77, a169.
+a99 :- a111, not a56.
+a99 :- not a157, not a61.
+a99 :- not a89, not a4.
+a99 :- not a165, not a12.
+a99 :- a150, a189.
+a99 :- not a85, not a45.
+a194 :- a111, a184.
+a194 :- a101, a198.
+a194 :- a38, a145.
+a194 :- a115, not a152.
+a194 :- a30, not a129.
+a194 :- a56, a97.
+a194 :- a83, a99.
+a91 :- a45, not a16.
+a91 :- a52, not a58.
+a91 :- a23, a110.
+a91 :- a122, not a90.
+a91 :- a181, not a48.
+a135 :- not a126, not a35.
+a135 :- a139, not a111.
+a135 :- a76, not a176.
+a135 :- a98, not a17.
+a135 :- a71, a154.
+a118 :- a167, not a179.
+a118 :- a129, not a91.
+a118 :- a68, not a32.
+a118 :- a19, not a194.
+a118 :- a50, not a33.
+a143 :- a44, a157.
+a5 :- a78, a186.
+a5 :- a106, not a169.
+a5 :- a22, not a102.
+a5 :- a95, a114.
+a5 :- a163, not a151.
+a5 :- a83, not a58.
+a17 :- a99, a195.
+a17 :- a116, a142.
+a17 :- a53, a181.
+a17 :- not a13, not a4.
+a17 :- a70, not a164.
+a17 :- a198, not a45.
+a17 :- a69, a143.
+a31 :- a31, a75.
+a31 :- a168, not a82.
+a31 :- a12, not a48.
+a31 :- not a146, not a1.
+a31 :- a28, not a25.
+a31 :- a42, a77.
+a31 :- a7, not a92.
+a181 :- a77, not a14.
+a181 :- a49, a151.
+a181 :- a45, not a13.
+a181 :- a94, a171.
+a181 :- a34, not a134.
+a181 :- a66, not a145.
+a181 :- a31, a36.
+a181 :- a77, not a97.
+a184 :- a147, not a105.
+a184 :- a115, not a9.
+a184 :- a90, not a74.
+a184 :- a152, not a34.
+a184 :- a73, not a69.
+a183 :- a196, not a173.
+a183 :- a193, not a65.
+a183 :- not a174, not a5.
+a183 :- not a51, not a29.
+a183 :- a196, not a175.
+a183 :- a139, not a104.
+a183 :- a100, not a5.
+a183 :- a13, not a64.
+a183 :- a184, not a127.
+a190 :- a164, not a147.
+a190 :- a10, a96.
+a190 :- a93, a106.
+a190 :- not a171, not a20.
+a190 :- a124, not a90.
+a50 :- a52, a161.
+a50 :- a157, not a144.
+a50 :- a134, not a136.
+a28 :- a62, a131.
+a28 :- a62, a145.
+a28 :- a28, a138.
+a28 :- a20, a77.
+a28 :- not a197, not a135.
+a28 :- a77, not a83.
+a29 :- a83, a91.
+a123 :- a52, a167.
+a123 :- a138, a166.
+a123 :- a195, not a115.
+a123 :- a72, not a19.
+a123 :- a53, not a31.
+a123 :- a22, not a91.
+a123 :- a89, not a107.
+a123 :- a181, a182.
+a123 :- not a159, not a11.
+a123 :- a84, not a95.
+a123 :- not a148, not a57.
+a123 :- a47, not a93.
+a82 :- not a69, not a66.
+a82 :- not a57, not a26.
+a82 :- not a194, not a27.
+a82 :- not a49, not a36.
+a82 :- a161, a178.
+a82 :- not a65, not a39.
+a125 :- not a188, not a24.
+a125 :- a64, not a136.
+a125 :- a183, not a165.
+a125 :- not a182, not a170.
+a125 :- not a198, not a135.
+a125 :- a100, not a186.
+a125 :- a19, not a130.

@@ -53,8 +53,9 @@ int main(int argc, char** argv) {
         exit(0);
     }
     
-    string tmp(argv[1]);
-    string filename = tmp.substr(0, tmp.find_last_of("."));
+//    string tmp(argv[1]);
+//    string filename = tmp.substr(0, tmp.find_last_of("."));
+    string filename(argv[1]);
 //    cout << filename << endl;
     filename.replace(3, 6, "outputs");
 //    cout << filename << endl;
@@ -218,12 +219,24 @@ int main(int argc, char** argv) {
     }
     fprintf(fout, "\nFinal Consequence size = %d\n", L.size());fflush(fout);
     
+    
     int type = atoi(argv[2]);       // 0 for NLP, 1 for DLP
+    
+    
+    // 在计算GWRS和GSRS的过程中，需要忽略原程序中的所有fact，
+    // 因为这些fact相当于是WFM中已经算出来的部分，必须去除这部分后，GWRS和GSRS不为空才有意义。
+    // 而去掉这些fact的操作是在进行GWRS的计算过程中就忽略掉这些fact，所以这里弄一个没有fact的
+    vector<Rule> inputRules;
+    for(vector<Rule>::const_iterator grit = G_Rules.begin(); grit != G_Rules.end(); grit++) {
+        if(grit->type != FACT)
+            inputRules.push_back(*grit);
+    }
+    
     
     // NLP 当前情况：顺利跑完，中间逻辑貌似没错，但尚未详细检查输出的过程！！！！！！！！
     // 计算NLP的greatest strong(and weak) reliable set，注意输入文件是否NLP
     if(type == 0) {
-        NLP nlp(G_Rules, L);
+        NLP nlp(inputRules, L);
         long gwrsStart = clock();
         set<int> gwrs = nlp.GWRS(fout);
         long gwrsEnd = clock();
@@ -256,7 +269,7 @@ int main(int argc, char** argv) {
     // DLP 当前情况：顺利跑完，中间逻辑貌似没错，但尚未详细检查输出的过程！！！！！！！！
     // 计算DLP的greatest strong(and weak) reliable set，注意输入文件是否DLP
     if(type == 1) {
-        DLP dlp(G_Rules, L);
+        DLP dlp(inputRules, L);
         set<int> gwrs = dlp.GWRS(fout);
         fprintf(fout, "\nThe GWRS of DLP is : ");
         for(set<int>::const_iterator it = gwrs.begin(); it != gwrs.end(); it++) {

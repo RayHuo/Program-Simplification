@@ -1,0 +1,15 @@
+Calculating the Greatest Reliable Set :
+Vocabulary atom list size = 60
+
+The lfp(W_P(L)) cost time : 0.180
+
+Final Consequence : a_3
+Final Consequence size = 1
+
+The GWRS of NLP is : 
+The GWRS size of NLP = 0
+The GWRS cost time = 0.010
+
+The GSRS of NLP is : 
+The GSRS size of NLP = 0
+The GSRS cost time = 0.000

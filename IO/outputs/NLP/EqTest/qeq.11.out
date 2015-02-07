@@ -1,0 +1,15 @@
+Calculating the Greatest Reliable Set :
+Vocabulary atom list size = 511
+
+The lfp(W_P(L)) cost time : 9.780
+
+Final Consequence : ~int1, int511, d(11), d(10), d(9), d(8), d(7), d(6), d(5), d(4), d(3), d(2), d(1), d_other(11), d_other(10), d_other(9), d_other(8), d_other(7), d_other(6), d_other(5), d_other(4), d_other(3), d_other(2), d_other(1)
+Final Consequence size = 24
+
+The GWRS of NLP is : d(11) d(10) d(9) d(8) d(7) d(6) d(5) d(4) d(3) d(2) d(1) d_other(11) d_other(10) d_other(9) d_other(8) d_other(7) d_other(6) d_other(5) d_other(4) d_other(3) d_other(2) d_other(1) 
+The GWRS size of NLP = 22
+The GWRS cost time = 0.230
+
+The GSRS of NLP is : d(11) d(10) d(9) d(8) d(7) d(6) d(5) d(4) d(3) d(2) d(1) d_other(11) d_other(10) d_other(9) d_other(8) d_other(7) d_other(6) d_other(5) d_other(4) d_other(3) d_other(2) d_other(1) 
+The GSRS size of NLP = 22
+The GSRS cost time = 0.140

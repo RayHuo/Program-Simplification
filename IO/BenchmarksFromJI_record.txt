@@ -1,0 +1,67 @@
+Benchmarks from Dr. Ji record:
+
+running time cost : slow/middle/fast
+result : positive/negative simply for good and bad
+
+
+=============================================================
+
+NLP : 
+
+Benchmarks          Situation
+-------------------------------------------------------------
+EqTest              very fast and positive
+HamiltonianPath     middle and positive
+RandomNonTight      very fast but negative, all GWRS and GSRS are empty
+RLP-150             very fast but negative, all GWRS and GSRS are empty
+RLP-200             very fast but negative, all GWRS and GSRS are empty
+SchurNumbers        middle and positive
+
+Factoring           very slow, run again
+15-Puzzle           very slow, run again
+BlockedN-Queens     very slow, run again, may too large, ignore
+
+
+
+=============================================================
+
+DLP : 
+
+Benchmarks                          Situation
+-------------------------------------------------------------
+Hampath                             very fast and positive            
+RandomQuantifiedBooleanFormulas     very fast and GWRS is positive, GSRS is empty
+StrategicCompanies                  middle and positive
+
+Mutex                               very slow, run again 
+DisjunctiveLoops                    some very slow, run again
+
+
+=============================================================
+
+clasp : 
+
+Benchmarks              Situation
+-------------------------------------------------------------
+Blocksworld             very slow, run again, may too large, ignore
+Boundsmodels            there is "1 { p(1) }", cannot read
+HamiltonPath-Clumpy     only logic program, no facts, cannot grounding ,cannot read
+HamiltonPath-Gryzzles   only logic program, no facts, cannot grounding ,cannot read
+Sokoban                 very slow, run again, may too large, ignore
+Toast-variableWordLength there is "compute 1 { not _false }.", cannot read
+
+=============================================================
+
+
+Rerun : 
+
+Benchmarks              Situation
+-------------------------------------------------------------
+Factoring               very slow, run again
+15-Puzzle               very slow, run again
+BlockedN-Queens         very slow, run again, may too large, ignore
+Mutex                               very slow, run again 
+DisjunctiveLoops                    some very slow, run again
+Blocksworld             very slow, run again, may too large, ignore
+Sokoban                 very slow, run again, may too large, ignore
+labyrinth               very slow, run again
