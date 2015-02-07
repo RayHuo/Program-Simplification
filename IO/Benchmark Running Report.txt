@@ -1,0 +1,53 @@
+All the following benchmarks can run finished correctlly.
+======================================================================
+
+NLP : 
+Benchmark                          Runtime
+----------------------------------------------------------------------
+2009/channelRouting1.in            1m 35s  (complete GWRS and GSRS)
+2011/labyrinth000.in               > 30m   (stuck in lookahead)
+2009/hanoi30.in                    parser error
+
+before 2013, NLP only get three real benchmark. And both of them came out with suck data.
+
+
+
+======================================================================
+
+DLP :
+Benchmark                          Runtime
+----------------------------------------------------------------------
+Hampath/x5.24.ground               > 30m (stuck in RSW(P, L), foreach p \in C, makes C \subseteq RSWPL(X \cup {p}), almost dead loop)
+DisjunctiveLoops/dln5000           250ms (complete GWRS and GSRS)
+RandomQuantifiedBooleanFormulas/Ql2k3alpha5.00rho0.8-79-2.cnf.dl.lparse   > 30m (stuck in RSW(P, L), foreach p \in C, makes C \subseteq RSWPL(X \cup {p}), almost dead loop)
+
+
+
+==========================================================================
+Analysis : 
+
+NLP : 
+2009/channelRouting1.in     total 1m 33s = 93s  (complete GWRS and GSRS, include print time)
+    total 280 atoms
+    1) lfp(W_P(L)) time = 1.110s       get :   Step 1 to 3 out Consequence size = 154,   The atoms left size = 126
+    2) Lookahead cost time = 89.430s   get :   Lookahead Consequence size = 154, the same as the result of step 1 to 3 
+    3) The GWRS cost time = 0.200s     get :   The GWRS of the input program, size of the GWRS is 145
+    4) The GSRS cost time = 0.100s     get :   The GSRS of the input program, size of the GSRS is 145
+    most time cost part is lookahead.  126 left atom, no added atom at last, so 126x2 = 252 times W_P({p}) is calculating, and W_P(L) will contain a lfp calculation in GUS(P, L), that makes lookahead takes the largest part of total cost time.
+
+2011/labyrinth000.in        total 28m 25s = 1705s  (complete GWRS and GSRS, include print time)
+    total 628 atoms
+    1) lfp(W_P(L)) time = 9.090s       get :   Step 1 to 3 out Consequence size = 224,   The atoms left size = 404
+    2) Lookahead cost time = 1691.460s   get :   Lookahead Consequence size = 224, the same as the result of step 1 to 3 
+    3) The GWRS cost time = 0.240s     get :   The GWRS of the input program, size of the GWRS is 222
+    4) The GSRS cost time = 0.120s     get :   The GSRS of the input program, size of the GSRS is 222
+    most time cost part is lookahead.
+
+
+
+DLP :
+
+
+
+
+

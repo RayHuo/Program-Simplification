@@ -1,0 +1,20 @@
+#!/bin/bash
+
+DIRNAME=`dirname $0`
+SOLVER="$DIRNAME/dl.bin -silent --"
+ENCODING=$DIRNAME/constraint.asp
+
+systemResult=$(cat /dev/stdin | $SOLVER $ENCODING)
+if [[ $? -ne 0 ]]
+then
+	echo "WARN"
+	echo "Unrecognized input stream or general checker failure." >&2
+	exit 1
+fi
+
+if [ "$systemResult" == "" ]; then
+	echo "FAIL"
+else
+	echo "OK"
+fi
+

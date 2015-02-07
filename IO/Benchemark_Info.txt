@@ -1,0 +1,133 @@
+All situations : 
+
+2009 ASP Competition Benchmarks  :
+-------------------------------------------------------------------------------------------------------------
+Branch					Name		 									State 				Detail
+-------------------------------------------------------------------------------------------------------------
+Potassco/Decision		15-puzzle_decision								unable to use 		with count
+Potassco/Decision		blocked-n-queens_decision						unable to use 		with count
+Potassco/Decision		cds_decision									unable to use 		with count
+Potassco/Decision		channel-routing_decision						unable to use 		with count
+Potassco/Decision		company-controls_decision						unable to use 		with sum
+Potassco/Decision		disjunctive-scheduling_decision.clingcon 		unable to use 		unable to gringo
+Potassco/Decision		disjunctive-scheduling_decision.gringo 			unable to use 		unable to gringo
+Potassco/Decision		edge-matching_decision							unable to use 		with count
+Potassco/Decision		fastfood_decision 								unable to use 		unable to gringo
+Potassco/Decision		gbie_decision 									unable to use 		all facts after gringo
+Potassco/Decision		graph-coloring_decision 						unable to use 		with count
+Potassco/Decision		hampath_decision 								unable to use 		with count
+Potassco/Decision		hierarchical-clustering_decision				unable to use		with count
+Potassco/Decision		hydraulic-leaking_decision						unable to use		unable to gringo
+Potassco/Decision		hydraulic-planning_decision						unable to use		unable to gringo
+Potassco/Decision		knights-tour_decision							unable to use		with count			
+Potassco/Decision		labyrinth_path_decision							unable to use		with count
+Potassco/Decision		maze-generation_decision						unable to use		with count
+Potassco/Decision		partitioning_decision							unable to use		with count
+Potassco/Decision		reachability_decision.bingo						unable to use 		all facts after gringo
+Potassco/Decision		reachability_decision.gringo					unable to use 		all facts after gringo
+Potassco/Decision		schur_decision									unable to use		with count
+Potassco/Decision		slitherlink_decision							unable to use		with count
+Potassco/Decision		sokoban_decision								unable to use		with count
+Potassco/Decision		solitaire_decision								unable to use		with count
+Potassco/Decision		strategic-companies_decision					unable to use		with dlv
+Potassco/Decision		sudoku_decision									unable to use		with count
+Potassco/Decision		toh_decision-tuned								unable to use		with count
+Potassco/Decision		tsp_decision									unable to use		with count
+Potassco/Decision		wbds_decision									unable to use		with count
+Potassco/Decision		wire-routing_decision							unable to use		with count
+---------------------------------------------------------------------------------------------------------------
+Potassco/Optimization	all with count
+---------------------------------------------------------------------------------------------------------------
+Potassco/benchASperix	15Puzzle 									 	able to use			but too large, claspD can not work
+Potassco/benchASperix   blockednqueens                                  able to use         but too large, claspD can not work
+Potassco/benchASperix   channelRouting                                  able to use         0.000s, claspD time. 41 answer sets
+Potassco/benchASperix   disjunctiveScheduling                           able to use         infinity answer sets, 94.3m after gringo
+Potassco/benchASperix   grammarbasedinformationextraction               unable to use       all facts after gringo
+Potassco/benchASperix   hanoi                                           able to use         0.010s, claspD time. 1 answer set. Our parser error
+Potassco/benchASperix   hydraulicleaking                                uable to use        more 1GB size after gringo
+Potassco/benchASperix   hydraulicplanning                               uable to use        more 1GB size after gringo
+Potassco/benchASperix   reachability                                    uable to use        can not be gringo
+Potassco/benchASperix   schurnumbers                                    uable to use        can not be gringo
+Potassco/benchASperix   sokoban                                         able to use         7.470s claspD time. 0 answer set
+Potassco/benchASperix   sudoku                                          uable to use        can not be gringo
+---------------------------------------------------------------------------------------------------------------
+Potassco/DLV            not NLP
+---------------------------------------------------------------------------------------------------------------
+
+
+
+2011 ASP Competition Benchmarks  :
+---------------------------------------------------------------------------------------------------------------
+Name                                                      State                    Detail
+---------------------------------------------------------------------------------------------------------------
+02-Reachability                                           unable to use            all facts after gringo
+06-Grammar-BasedInformationExtraction                     unable to use            all facts after gringo
+08-FastfoodOptimalityCheck                                unable to use            with count
+10-SokobanDecision                                        able to use              4.580s claspD time, 0 answer set. And too large
+12-KnightTour                                             unable to use            DLP in the program.
+13-DisjunctiveScheduling                                  able to use              infinity answer sets. 64.5MB size after gringo.
+14-PackingProblem                                         unable to use            size more than 1GB after gringo
+17-Labyrinth                                              able to use              0.010s claspD time, 2 answer set, proper size.
+18-MinimalDiagnosis                                       unable to use            DLP in the program.
+19-MultiContextSystemQuerying                             unable to use            DLP in the program.
+20-Numberlink                                             unabel to use            unable to gringo
+22-HanoiTower                                             unable to use            DLP in the program.
+23-MagicSquareSets                                        unable to use            DLP in the program.
+25-GraphColouring                                         unable to use            DLP in the program.
+26-Solitaire                                              unable to use            unable to gringo
+28-Weight-AssignmentTree                                  unable to use            DLP in the program. unable to gringo
+30-HydraulicLeaking                                       unable to use            too large after gringo
+31-HydraulicPlanning                                      able to use              18.4MB after gringo. 1 answer set, 0.540s claspD time.
+32-StableMarriage                                         unable to use            unable to gringo
+33-MazeGeneration                                         unable to use            DLP in the program.
+34-PartnerUnitsPolynomial                                 able to use              infinity answer sets. 23MB size after gringo.
+---------------------------------------------------------------------------------------------------------------
+
+***************************************************************************************************************
+***************************************************************************************************************
+***************************************************************************************************************
+
+
+
+Able to use : 
+---------------------------------------------------------------------------------------------------------------
+
+2009 ASP Competition Benchmarks : 
+---------------------------------------------------------------------------------------------------------------
+Name                                                      State               Detail
+---------------------------------------------------------------------------------------------------------------
+Potassco/benchASperix   15Puzzle                          able to use         but too large, and claspD can not work
+Potassco/benchASperix   blockednqueens                    able to use         but too large, and claspD can not work
+Potassco/benchASperix   channelRouting                    able to use         0.000s, claspD time. 41 answer sets
+Potassco/benchASperix   disjunctiveScheduling             able to use         infinity answer sets, 90MB or more, too large
+Potassco/benchASperix   hanoi                             able to use         0.010s, claspD time. 1 answer set, parser Error 
+Potassco/benchASperix   sokoban                           able to use         7.470s claspD time. 0 answer set
+
+
+2011 ASP Competition Benchmarks : 
+---------------------------------------------------------------------------------------------------------------
+Name                                   State               Detail
+---------------------------------------------------------------------------------------------------------------
+10-SokobanDecision                     able to use              4.580s claspD time, 0 answer set. And too large, parser error
+13-DisjunctiveScheduling               able to use              infinity answer sets. 64.5MB size after gringo.
+17-Labyrinth                           able to use              0.010s claspD time, 2 answer set, proper size.
+31-HydraulicPlanning                   able to use              18.4MB after gringo. 1 answer set, 0.540s claspD time.
+34-PartnerUnitsPolynomial              able to use              infinity answer sets. 23MB size after gringo.
+
+To sum up, the finity size benchmarks with finity answer sets is little. "17-Labyrinth" may be the only one perfect benchmark in both 2009 and 2011 ASP Competition.
+
+
+
+clasp 
+--------------------------------------------------------------------------------------------------------------------
+Site                Name                State                   download
+--------------------------------------------------------------------------------------------------------------------
+project.tar.gz      clumpy.lp           0 answer set            http://www.cs.uni-potsdam.de/clasp/projection.tar.gz            
+clasp-benchmark     Blocksworld         0 answer set            http://www.cs.uni-potsdam.de/clasp/Download/clasp-benchmarks.tgz
+clasp-benchmark     Toast-variableWord  infinity answer set     same of above
+rc4-system          3lp200              0 answer set            http://www.cs.uni-potsdam.de/clasp/Download/rc4-system.tgz
+rc4-system          random              0 answer set            http://www.cs.uni-potsdam.de/clasp/Download/rc4-system.tgz
+rc4-enum            ---                 ---                     http://www.cs.uni-potsdam.de/clasp/Download/rc4-enum.tgz
+
+
+

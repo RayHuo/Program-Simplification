@@ -1,0 +1,29 @@
+claspD:
+使用gringo来进行logic program的grounded工作，使用命令：
+gringo hcfact1.fact hc.lp | claspD 0
+其中hcfact1.fact为事实文件，hc.lp为logic program。然后使用管道（即 | ）把gringo结果传给claspD来运算，参数0表示输出所有结果。
+也可以把输出结果存在一个文件中，则命令改为：
+gringo hcfact1.fact hc.lp | claspD 0 > claspDOut.out
+其中claspDOut.out可以不存在，由该命令一道创建。
+
+smodels：
+lparse hcfact1.fact hc.lp | smodels 0 > smodelsOut.out
+跟claspD差不多，注意，如果不加0，则会只输出一个结果。
+
+cmodels：
+lparse hcfact1.fact hc.lp | cmodels 0 > cmodelsOut.out
+
+ASSAT：
+lparse hcfact1.fact hc.lp | assat -sat satz-rand
+如果不加后面的-sat则会默认使用chaff2这个SAT求解器，但目前没有找到任何有效链接获取这个SAT求解器，而能下载到的satz-rand则无法有效使用，目前是报错的。
+
+Minisat：直接在minisat所在目录下，输入命令：
+minisat	example1.in example1.out
+其中example1.in为输入文件，example1.out为输出文件。注意这里的输出文件example1.out并不是用重定向“>”来弄的，而是minisat自身的命令参数，结果只会保存在以这种命令参数形式的输出文件中，如果上诉命令写成：minisat example1.in > example1.out。则会报错。
+example1.in里边的形式是：
+1 3 0
+1 -2 0
+其中必须以0结尾，而这个输入的意义是：
+a | c
+a | ~b
+1,2,3分别表示a,b,c。-2表示~b

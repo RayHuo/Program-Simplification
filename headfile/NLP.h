@@ -28,7 +28,7 @@ private:
     vector<Rule> program;
     set<int> Atoms_P;
     set<int> L;
-    set<int> NL;        // { ~p | ~p \in L},  即 L \ L+，其中L+ = {p | ~p \in L}，注意论文中的 L- = {p | ~p \in L}，与这里的NL不一样
+    set<int> NL;        // { ~p | ~p \in L},  即 L \ L+，其中L+ = {p | p \in L}，注意论文中的 L- = {p | ~p \in L}，与这里的NL不一样
 public:
     NLP();
     NLP(vector<Rule> p, set<int> l);

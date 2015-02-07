@@ -1,0 +1,282 @@
+Calculating the Greatest Reliable Set :
+Vocabulary atom list size = 280
+
+lfp(W_P(L)) time = 1.120
+
+lfp(W_P(L)) calls Phi(L) 6 times
+UP(L, P) in lfp(W_P(L)) cost 0.050
+sGUS(P,L) in lfp(W_P(L)) cost 1.070
+s
+Step 1 to 3 out Consequence : layers(1), tracks(7), connect(n1, top, 1), connect(n1, top, 2), connect(n2, bot, 1), connect(n2, bot, 3), connect(n2, top, 4), connect(n3, bot, 2), connect(n3, top, 5), connect(n3, top, 7), connect(n4, top, 3), connect(n4, top, 6), connect(n4, bot, 7), connect(n5, bot, 5), connect(n5, top, 9), connect(n5, top, 11), connect(n6, bot, 6), connect(n6, top, 8), connect(n6, bot, 9), connect(n7, bot, 8), connect(n7, bot, 12), connect(n8, top, 10), connect(n8, bot, 11), connect(n9, bot, 10), connect(n9, top, 12), connectTop(n9, 12), connectTop(n8, 10), connectTop(n6, 8), connectTop(n5, 11), connectTop(n5, 9), connectTop(n4, 6), connectTop(n4, 3), connectTop(n3, 7), connectTop(n3, 5), connectTop(n2, 4), connectTop(n1, 2), connectTop(n1, 1), connectBot(n9, 10), connectBot(n8, 11), connectBot(n7, 12), connectBot(n7, 8), connectBot(n6, 9), connectBot(n6, 6), connectBot(n5, 5), connectBot(n4, 7), connectBot(n3, 2), connectBot(n2, 3), connectBot(n2, 1), nminX(n9, 12), nminX(n8, 11), nminX(n7, 12), nminX(n6, 9), nminX(n6, 8), nminX(n5, 11), nminX(n5, 9), nminX(n4, 7), nminX(n4, 6), nminX(n3, 7), nminX(n3, 5), nminX(n2, 4), nminX(n2, 3), nminX(n1, 2), minX(n9, 10), minX(n8, 10), minX(n7, 8), minX(n6, 6), minX(n5, 5), minX(n4, 3), minX(n3, 2), minX(n2, 1), minX(n1, 1), nmaxX(n9, 10), nmaxX(n8, 10), nmaxX(n7, 8), nmaxX(n6, 8), nmaxX(n6, 6), nmaxX(n5, 9), nmaxX(n5, 5), nmaxX(n4, 6), nmaxX(n4, 3), nmaxX(n3, 5), nmaxX(n3, 2), nmaxX(n2, 3), nmaxX(n2, 1), nmaxX(n1, 1), maxX(n9, 12), maxX(n8, 11), maxX(n7, 12), maxX(n6, 9), maxX(n5, 11), maxX(n4, 7), maxX(n3, 7), maxX(n2, 4), maxX(n1, 2), net(n1), net(n2), net(n3), net(n4), net(n5), net(n6), net(n7), net(n8), net(n9), inter(n7, n9), inter(n5, n9), inter(n8, n9), inter(n5, n8), inter(n7, n8), inter(n9, n8), inter(n9, n7), inter(n5, n7), inter(n6, n7), inter(n5, n6), inter(n7, n6), inter(n3, n6), inter(n4, n6), inter(n7, n5), inter(n8, n5), inter(n9, n5), inter(n6, n5), inter(n3, n5), inter(n4, n5), inter(n3, n4), inter(n5, n4), inter(n6, n4), inter(n2, n4), inter(n4, n3), inter(n5, n3), inter(n6, n3), inter(n1, n3), inter(n2, n3), inter(n3, n2), inter(n4, n2), inter(n1, n2), inter(n2, n1), inter(n3, n1), inter(n8, n7), layer(1), track(1), track(2), track(3), track(4), track(5), track(6), track(7), oknet(n1), oknet(n2), oknet(n3), oknet(n4), oknet(n5), oknet(n6), oknet(n7), oknet(n8), oknet(n9)
+Step 1 to 3 out Consequence size = 154
+
+The atoms left size = 126
+
+1. Guessing atom pos(n9, 1, 7) :
+
+2. Guessing atom nopos(n9, 1, 7) :
+
+3. Guessing atom pos(n8, 1, 7) :
+
+4. Guessing atom nopos(n8, 1, 7) :
+
+5. Guessing atom pos(n7, 1, 7) :
+
+6. Guessing atom nopos(n7, 1, 7) :
+
+7. Guessing atom pos(n6, 1, 7) :
+
+8. Guessing atom nopos(n6, 1, 7) :
+
+9. Guessing atom pos(n5, 1, 7) :
+
+10. Guessing atom nopos(n5, 1, 7) :
+
+11. Guessing atom pos(n4, 1, 7) :
+
+12. Guessing atom nopos(n4, 1, 7) :
+
+13. Guessing atom pos(n3, 1, 7) :
+
+14. Guessing atom nopos(n3, 1, 7) :
+
+15. Guessing atom pos(n2, 1, 7) :
+
+16. Guessing atom nopos(n2, 1, 7) :
+
+17. Guessing atom pos(n1, 1, 7) :
+
+18. Guessing atom nopos(n1, 1, 7) :
+
+19. Guessing atom pos(n9, 1, 6) :
+
+20. Guessing atom nopos(n9, 1, 6) :
+
+21. Guessing atom pos(n8, 1, 6) :
+
+22. Guessing atom nopos(n8, 1, 6) :
+
+23. Guessing atom pos(n7, 1, 6) :
+
+24. Guessing atom nopos(n7, 1, 6) :
+
+25. Guessing atom pos(n6, 1, 6) :
+
+26. Guessing atom nopos(n6, 1, 6) :
+
+27. Guessing atom pos(n5, 1, 6) :
+
+28. Guessing atom nopos(n5, 1, 6) :
+
+29. Guessing atom pos(n4, 1, 6) :
+
+30. Guessing atom nopos(n4, 1, 6) :
+
+31. Guessing atom pos(n3, 1, 6) :
+
+32. Guessing atom nopos(n3, 1, 6) :
+
+33. Guessing atom pos(n2, 1, 6) :
+
+34. Guessing atom nopos(n2, 1, 6) :
+
+35. Guessing atom pos(n1, 1, 6) :
+
+36. Guessing atom nopos(n1, 1, 6) :
+
+37. Guessing atom pos(n9, 1, 5) :
+
+38. Guessing atom nopos(n9, 1, 5) :
+
+39. Guessing atom pos(n8, 1, 5) :
+
+40. Guessing atom nopos(n8, 1, 5) :
+
+41. Guessing atom pos(n7, 1, 5) :
+
+42. Guessing atom nopos(n7, 1, 5) :
+
+43. Guessing atom pos(n6, 1, 5) :
+
+44. Guessing atom nopos(n6, 1, 5) :
+
+45. Guessing atom pos(n5, 1, 5) :
+
+46. Guessing atom nopos(n5, 1, 5) :
+
+47. Guessing atom pos(n4, 1, 5) :
+
+48. Guessing atom nopos(n4, 1, 5) :
+
+49. Guessing atom pos(n3, 1, 5) :
+
+50. Guessing atom nopos(n3, 1, 5) :
+
+51. Guessing atom pos(n2, 1, 5) :
+
+52. Guessing atom nopos(n2, 1, 5) :
+
+53. Guessing atom pos(n1, 1, 5) :
+
+54. Guessing atom nopos(n1, 1, 5) :
+
+55. Guessing atom pos(n9, 1, 4) :
+
+56. Guessing atom nopos(n9, 1, 4) :
+
+57. Guessing atom pos(n8, 1, 4) :
+
+58. Guessing atom nopos(n8, 1, 4) :
+
+59. Guessing atom pos(n7, 1, 4) :
+
+60. Guessing atom nopos(n7, 1, 4) :
+
+61. Guessing atom pos(n6, 1, 4) :
+
+62. Guessing atom nopos(n6, 1, 4) :
+
+63. Guessing atom pos(n5, 1, 4) :
+
+64. Guessing atom nopos(n5, 1, 4) :
+
+65. Guessing atom pos(n4, 1, 4) :
+
+66. Guessing atom nopos(n4, 1, 4) :
+
+67. Guessing atom pos(n3, 1, 4) :
+
+68. Guessing atom nopos(n3, 1, 4) :
+
+69. Guessing atom pos(n2, 1, 4) :
+
+70. Guessing atom nopos(n2, 1, 4) :
+
+71. Guessing atom pos(n1, 1, 4) :
+
+72. Guessing atom nopos(n1, 1, 4) :
+
+73. Guessing atom pos(n9, 1, 3) :
+
+74. Guessing atom nopos(n9, 1, 3) :
+
+75. Guessing atom pos(n8, 1, 3) :
+
+76. Guessing atom nopos(n8, 1, 3) :
+
+77. Guessing atom pos(n7, 1, 3) :
+
+78. Guessing atom nopos(n7, 1, 3) :
+
+79. Guessing atom pos(n6, 1, 3) :
+
+80. Guessing atom nopos(n6, 1, 3) :
+
+81. Guessing atom pos(n5, 1, 3) :
+
+82. Guessing atom nopos(n5, 1, 3) :
+
+83. Guessing atom pos(n4, 1, 3) :
+
+84. Guessing atom nopos(n4, 1, 3) :
+
+85. Guessing atom pos(n3, 1, 3) :
+
+86. Guessing atom nopos(n3, 1, 3) :
+
+87. Guessing atom pos(n2, 1, 3) :
+
+88. Guessing atom nopos(n2, 1, 3) :
+
+89. Guessing atom pos(n1, 1, 3) :
+
+90. Guessing atom nopos(n1, 1, 3) :
+
+91. Guessing atom pos(n9, 1, 2) :
+
+92. Guessing atom nopos(n9, 1, 2) :
+
+93. Guessing atom pos(n8, 1, 2) :
+
+94. Guessing atom nopos(n8, 1, 2) :
+
+95. Guessing atom pos(n7, 1, 2) :
+
+96. Guessing atom nopos(n7, 1, 2) :
+
+97. Guessing atom pos(n6, 1, 2) :
+
+98. Guessing atom nopos(n6, 1, 2) :
+
+99. Guessing atom pos(n5, 1, 2) :
+
+100. Guessing atom nopos(n5, 1, 2) :
+
+101. Guessing atom pos(n4, 1, 2) :
+
+102. Guessing atom nopos(n4, 1, 2) :
+
+103. Guessing atom pos(n3, 1, 2) :
+
+104. Guessing atom nopos(n3, 1, 2) :
+
+105. Guessing atom pos(n2, 1, 2) :
+
+106. Guessing atom nopos(n2, 1, 2) :
+
+107. Guessing atom pos(n1, 1, 2) :
+
+108. Guessing atom nopos(n1, 1, 2) :
+
+109. Guessing atom pos(n9, 1, 1) :
+
+110. Guessing atom nopos(n9, 1, 1) :
+
+111. Guessing atom pos(n8, 1, 1) :
+
+112. Guessing atom nopos(n8, 1, 1) :
+
+113. Guessing atom pos(n7, 1, 1) :
+
+114. Guessing atom nopos(n7, 1, 1) :
+
+115. Guessing atom pos(n6, 1, 1) :
+
+116. Guessing atom nopos(n6, 1, 1) :
+
+117. Guessing atom pos(n5, 1, 1) :
+
+118. Guessing atom nopos(n5, 1, 1) :
+
+119. Guessing atom pos(n4, 1, 1) :
+
+120. Guessing atom nopos(n4, 1, 1) :
+
+121. Guessing atom pos(n3, 1, 1) :
+
+122. Guessing atom nopos(n3, 1, 1) :
+
+123. Guessing atom pos(n2, 1, 1) :
+
+124. Guessing atom nopos(n2, 1, 1) :
+
+125. Guessing atom pos(n1, 1, 1) :
+
+126. Guessing atom nopos(n1, 1, 1) :
+
+Lookahead cost time = 89.860
+
+Lookahead calls Phi(L) 756 times
+UP(L, P) in Lookahead cost 7.940
+sGUS(P,L) in Lookahead cost 81.860
+s
+Final Consequence : layers(1), tracks(7), connect(n1, top, 1), connect(n1, top, 2), connect(n2, bot, 1), connect(n2, bot, 3), connect(n2, top, 4), connect(n3, bot, 2), connect(n3, top, 5), connect(n3, top, 7), connect(n4, top, 3), connect(n4, top, 6), connect(n4, bot, 7), connect(n5, bot, 5), connect(n5, top, 9), connect(n5, top, 11), connect(n6, bot, 6), connect(n6, top, 8), connect(n6, bot, 9), connect(n7, bot, 8), connect(n7, bot, 12), connect(n8, top, 10), connect(n8, bot, 11), connect(n9, bot, 10), connect(n9, top, 12), connectTop(n9, 12), connectTop(n8, 10), connectTop(n6, 8), connectTop(n5, 11), connectTop(n5, 9), connectTop(n4, 6), connectTop(n4, 3), connectTop(n3, 7), connectTop(n3, 5), connectTop(n2, 4), connectTop(n1, 2), connectTop(n1, 1), connectBot(n9, 10), connectBot(n8, 11), connectBot(n7, 12), connectBot(n7, 8), connectBot(n6, 9), connectBot(n6, 6), connectBot(n5, 5), connectBot(n4, 7), connectBot(n3, 2), connectBot(n2, 3), connectBot(n2, 1), nminX(n9, 12), nminX(n8, 11), nminX(n7, 12), nminX(n6, 9), nminX(n6, 8), nminX(n5, 11), nminX(n5, 9), nminX(n4, 7), nminX(n4, 6), nminX(n3, 7), nminX(n3, 5), nminX(n2, 4), nminX(n2, 3), nminX(n1, 2), minX(n9, 10), minX(n8, 10), minX(n7, 8), minX(n6, 6), minX(n5, 5), minX(n4, 3), minX(n3, 2), minX(n2, 1), minX(n1, 1), nmaxX(n9, 10), nmaxX(n8, 10), nmaxX(n7, 8), nmaxX(n6, 8), nmaxX(n6, 6), nmaxX(n5, 9), nmaxX(n5, 5), nmaxX(n4, 6), nmaxX(n4, 3), nmaxX(n3, 5), nmaxX(n3, 2), nmaxX(n2, 3), nmaxX(n2, 1), nmaxX(n1, 1), maxX(n9, 12), maxX(n8, 11), maxX(n7, 12), maxX(n6, 9), maxX(n5, 11), maxX(n4, 7), maxX(n3, 7), maxX(n2, 4), maxX(n1, 2), net(n1), net(n2), net(n3), net(n4), net(n5), net(n6), net(n7), net(n8), net(n9), inter(n7, n9), inter(n5, n9), inter(n8, n9), inter(n5, n8), inter(n7, n8), inter(n9, n8), inter(n9, n7), inter(n5, n7), inter(n6, n7), inter(n5, n6), inter(n7, n6), inter(n3, n6), inter(n4, n6), inter(n7, n5), inter(n8, n5), inter(n9, n5), inter(n6, n5), inter(n3, n5), inter(n4, n5), inter(n3, n4), inter(n5, n4), inter(n6, n4), inter(n2, n4), inter(n4, n3), inter(n5, n3), inter(n6, n3), inter(n1, n3), inter(n2, n3), inter(n3, n2), inter(n4, n2), inter(n1, n2), inter(n2, n1), inter(n3, n1), inter(n8, n7), layer(1), track(1), track(2), track(3), track(4), track(5), track(6), track(7), oknet(n1), oknet(n2), oknet(n3), oknet(n4), oknet(n5), oknet(n6), oknet(n7), oknet(n8), oknet(n9)
+Final Consequence size = 154
+
+The GWRS of NLP is : layers(1) tracks(7) connect(n1, top, 1) connect(n1, top, 2) connect(n2, bot, 1) connect(n2, bot, 3) connect(n2, top, 4) connect(n3, bot, 2) connect(n3, top, 5) connect(n3, top, 7) connect(n4, top, 3) connect(n4, top, 6) connect(n4, bot, 7) connect(n5, bot, 5) connect(n5, top, 9) connect(n5, top, 11) connect(n6, bot, 6) connect(n6, top, 8) connect(n6, bot, 9) connect(n7, bot, 8) connect(n7, bot, 12) connect(n8, top, 10) connect(n8, bot, 11) connect(n9, bot, 10) connect(n9, top, 12) connectTop(n9, 12) connectTop(n8, 10) connectTop(n6, 8) connectTop(n5, 11) connectTop(n5, 9) connectTop(n4, 6) connectTop(n4, 3) connectTop(n3, 7) connectTop(n3, 5) connectTop(n2, 4) connectTop(n1, 2) connectTop(n1, 1) connectBot(n9, 10) connectBot(n8, 11) connectBot(n7, 12) connectBot(n7, 8) connectBot(n6, 9) connectBot(n6, 6) connectBot(n5, 5) connectBot(n4, 7) connectBot(n3, 2) connectBot(n2, 3) connectBot(n2, 1) nminX(n9, 12) nminX(n8, 11) nminX(n7, 12) nminX(n6, 9) nminX(n6, 8) nminX(n5, 11) nminX(n5, 9) nminX(n4, 7) nminX(n4, 6) nminX(n3, 7) nminX(n3, 5) nminX(n2, 4) nminX(n2, 3) nminX(n1, 2) minX(n9, 10) minX(n8, 10) minX(n7, 8) minX(n6, 6) minX(n5, 5) minX(n4, 3) minX(n3, 2) minX(n2, 1) minX(n1, 1) nmaxX(n9, 10) nmaxX(n8, 10) nmaxX(n7, 8) nmaxX(n6, 8) nmaxX(n6, 6) nmaxX(n5, 9) nmaxX(n5, 5) nmaxX(n4, 6) nmaxX(n4, 3) nmaxX(n3, 5) nmaxX(n3, 2) nmaxX(n2, 3) nmaxX(n2, 1) nmaxX(n1, 1) maxX(n9, 12) maxX(n8, 11) maxX(n7, 12) maxX(n6, 9) maxX(n5, 11) maxX(n4, 7) maxX(n3, 7) maxX(n2, 4) maxX(n1, 2) net(n1) net(n2) net(n3) net(n4) net(n5) net(n6) net(n7) net(n8) net(n9) inter(n7, n9) inter(n5, n9) inter(n8, n9) inter(n5, n8) inter(n7, n8) inter(n9, n8) inter(n9, n7) inter(n5, n7) inter(n6, n7) inter(n5, n6) inter(n7, n6) inter(n3, n6) inter(n4, n6) inter(n7, n5) inter(n8, n5) inter(n9, n5) inter(n6, n5) inter(n3, n5) inter(n4, n5) inter(n3, n4) inter(n5, n4) inter(n6, n4) inter(n2, n4) inter(n4, n3) inter(n5, n3) inter(n6, n3) inter(n1, n3) inter(n2, n3) inter(n3, n2) inter(n4, n2) inter(n1, n2) inter(n2, n1) inter(n3, n1) inter(n8, n7) layer(1) track(1) track(2) track(3) track(4) track(5) track(6) track(7) 
+The GWRS size of NLP = 145
+The GWRS cost time = 0.210
+
+The GSRS of NLP is : layers(1) tracks(7) connect(n1, top, 1) connect(n1, top, 2) connect(n2, bot, 1) connect(n2, bot, 3) connect(n2, top, 4) connect(n3, bot, 2) connect(n3, top, 5) connect(n3, top, 7) connect(n4, top, 3) connect(n4, top, 6) connect(n4, bot, 7) connect(n5, bot, 5) connect(n5, top, 9) connect(n5, top, 11) connect(n6, bot, 6) connect(n6, top, 8) connect(n6, bot, 9) connect(n7, bot, 8) connect(n7, bot, 12) connect(n8, top, 10) connect(n8, bot, 11) connect(n9, bot, 10) connect(n9, top, 12) connectTop(n9, 12) connectTop(n8, 10) connectTop(n6, 8) connectTop(n5, 11) connectTop(n5, 9) connectTop(n4, 6) connectTop(n4, 3) connectTop(n3, 7) connectTop(n3, 5) connectTop(n2, 4) connectTop(n1, 2) connectTop(n1, 1) connectBot(n9, 10) connectBot(n8, 11) connectBot(n7, 12) connectBot(n7, 8) connectBot(n6, 9) connectBot(n6, 6) connectBot(n5, 5) connectBot(n4, 7) connectBot(n3, 2) connectBot(n2, 3) connectBot(n2, 1) nminX(n9, 12) nminX(n8, 11) nminX(n7, 12) nminX(n6, 9) nminX(n6, 8) nminX(n5, 11) nminX(n5, 9) nminX(n4, 7) nminX(n4, 6) nminX(n3, 7) nminX(n3, 5) nminX(n2, 4) nminX(n2, 3) nminX(n1, 2) minX(n9, 10) minX(n8, 10) minX(n7, 8) minX(n6, 6) minX(n5, 5) minX(n4, 3) minX(n3, 2) minX(n2, 1) minX(n1, 1) nmaxX(n9, 10) nmaxX(n8, 10) nmaxX(n7, 8) nmaxX(n6, 8) nmaxX(n6, 6) nmaxX(n5, 9) nmaxX(n5, 5) nmaxX(n4, 6) nmaxX(n4, 3) nmaxX(n3, 5) nmaxX(n3, 2) nmaxX(n2, 3) nmaxX(n2, 1) nmaxX(n1, 1) maxX(n9, 12) maxX(n8, 11) maxX(n7, 12) maxX(n6, 9) maxX(n5, 11) maxX(n4, 7) maxX(n3, 7) maxX(n2, 4) maxX(n1, 2) net(n1) net(n2) net(n3) net(n4) net(n5) net(n6) net(n7) net(n8) net(n9) inter(n7, n9) inter(n5, n9) inter(n8, n9) inter(n5, n8) inter(n7, n8) inter(n9, n8) inter(n9, n7) inter(n5, n7) inter(n6, n7) inter(n5, n6) inter(n7, n6) inter(n3, n6) inter(n4, n6) inter(n7, n5) inter(n8, n5) inter(n9, n5) inter(n6, n5) inter(n3, n5) inter(n4, n5) inter(n3, n4) inter(n5, n4) inter(n6, n4) inter(n2, n4) inter(n4, n3) inter(n5, n3) inter(n6, n3) inter(n1, n3) inter(n2, n3) inter(n3, n2) inter(n4, n2) inter(n1, n2) inter(n2, n1) inter(n3, n1) inter(n8, n7) layer(1) track(1) track(2) track(3) track(4) track(5) track(6) track(7) 
+The GSRS size of NLP = 145
+The GSRS cost time = 0.100

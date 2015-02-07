@@ -30,6 +30,10 @@ private:
     set<int> L;
     set<int> NL;        // {～p | ~p \in L}，用于表示 L \ L+。这个与论文中定义的 L- = {p | ~p \in L} 不同 
     set<int> LM;        // {p | ~p \in L}，LM 即 L minus， 论文中定义的 L- = {p | ~p \in L} 
+    int rswpl_time;
+    int rsspl_time;
+    int all_c_in_rswpl_time;
+    int all_c_in_rsspl_time;
 public:
     DLP();
     DLP(vector<Rule> p, set<int> l);

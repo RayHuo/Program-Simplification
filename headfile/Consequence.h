@@ -29,6 +29,10 @@ private:
     set<int> Atoms_P;           // Atoms(P)
     set<int> consequence;       // 最后的结果
     bool conflict;              // 判断是否出现矛盾
+    
+    int cal_phi_times;          // 辅助程序耗时判断，记录每步中调用phi的次数
+    double upCost;              // 记录up操作的总耗时
+    double gusCost;             // 记录gus操作的总耗时
 public:
     Consequence();
     Consequence(vector<Rule> p);

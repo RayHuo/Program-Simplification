@@ -75,13 +75,13 @@ set<int> NLP::TWPL(set<int> X, FILE* out) {
         set_difference(r->heads.begin(), r->heads.end(), pb.begin(), pb.end(), inserter(h_pb, h_pb.begin()));
         
         
-        fprintf(out, "\n++++++++++++++++++\nhead(r) \\ body^+(r) : ");
-        for(set<int>::const_iterator xit = h_pb.begin(); xit != h_pb.end(); xit++) {
-            if(*xit < 0)
-                fprintf(out, "~");
-            fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*xit)));
-        }
-        fprintf(out, "\n");     fflush(out);
+//        fprintf(out, "\n++++++++++++++++++\nhead(r) \\ body^+(r) : ");
+//        for(set<int>::const_iterator xit = h_pb.begin(); xit != h_pb.end(); xit++) {
+//            if(*xit < 0)
+//                fprintf(out, "~");
+//            fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*xit)));
+//        }
+//        fprintf(out, "\n");     fflush(out);
         
         
         // 遍历每一个满足 p \in head(r) 且 p \notin body^+(r) 的原子p
@@ -89,13 +89,15 @@ set<int> NLP::TWPL(set<int> X, FILE* out) {
             set<int> LX;        // L \cup X
             set_union(L.begin(), L.end(), X.begin(), X.end(), inserter(LX, LX.begin()));
             
-            fprintf(out, "\nL \\cup X : ");
-            for(set<int>::const_iterator xit = LX.begin(); xit != LX.end(); xit++) {
-                if(*xit < 0)
-                    fprintf(out, "~");
-                fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*xit)));
-            }
-            fprintf(out, "\n");     fflush(out);
+            
+//            fprintf(out, "\nL \\cup X : ");
+//            for(set<int>::const_iterator xit = LX.begin(); xit != LX.end(); xit++) {
+//                if(*xit < 0)
+//                    fprintf(out, "~");
+//                fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*xit)));
+//            }
+//            fprintf(out, "\n");     fflush(out);
+            
             
             set<int> p_set;     p_set.insert(*p);       // 把 p 弄成 {p}
             set<int> h_pset;    // head(r) \ {p}
@@ -107,13 +109,14 @@ set<int> NLP::TWPL(set<int> X, FILE* out) {
             set<int> b_qs;      // body(r) \cup qs
             set_union(r->bodys.begin(), r->bodys.end(), qs.begin(), qs.end(), inserter(b_qs, b_qs.end()));
             
-            fprintf(out, "\nbody(r) \\cup qs : ");
-            for(set<int>::const_iterator xit = b_qs.begin(); xit != b_qs.end(); xit++) {
-                if(*xit < 0)
-                    fprintf(out, "~");
-                fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*xit)));
-            }
-            fprintf(out, "\n");     fflush(out);
+            
+//            fprintf(out, "\nbody(r) \\cup qs : ");
+//            for(set<int>::const_iterator xit = b_qs.begin(); xit != b_qs.end(); xit++) {
+//                if(*xit < 0)
+//                    fprintf(out, "~");
+//                fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*xit)));
+//            }
+//            fprintf(out, "\n");     fflush(out);
             
             
             // 判断是否满足 L \cup X |= body(r) \cup qs，这个可以直接使用集合包含关系判断
@@ -142,13 +145,13 @@ set<int> NLP::TSPL(set<int> X, FILE* out) {
         set_difference(r->heads.begin(), r->heads.end(), pb.begin(), pb.end(), inserter(h_pb, h_pb.begin()));
         
         
-        fprintf(out, "\n++++++++++++++++++\nhead(r) \\ body^+(r) : ");
-        for(set<int>::const_iterator xit = h_pb.begin(); xit != h_pb.end(); xit++) {
-            if(*xit < 0)
-                fprintf(out, "~");
-            fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*xit)));
-        }
-        fprintf(out, "\n");     fflush(out);
+//        fprintf(out, "\n++++++++++++++++++\nhead(r) \\ body^+(r) : ");
+//        for(set<int>::const_iterator xit = h_pb.begin(); xit != h_pb.end(); xit++) {
+//            if(*xit < 0)
+//                fprintf(out, "~");
+//            fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*xit)));
+//        }
+//        fprintf(out, "\n");     fflush(out);
         
         
         
@@ -164,13 +167,13 @@ set<int> NLP::TSPL(set<int> X, FILE* out) {
             set_union(NL.begin(), NL.end(), X.begin(), X.end(), inserter(NLX, NLX.begin()));
             
             
-            fprintf(out, "\n(L \\ L^+) \\cup X : ");
-            for(set<int>::const_iterator xit = NLX.begin(); xit != NLX.end(); xit++) {
-                if(*xit < 0)
-                    fprintf(out, "~");
-                fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*xit)));
-            }
-            fprintf(out, "\n");     fflush(out);
+//            fprintf(out, "\n(L \\ L^+) \\cup X : ");
+//            for(set<int>::const_iterator xit = NLX.begin(); xit != NLX.end(); xit++) {
+//                if(*xit < 0)
+//                    fprintf(out, "~");
+//                fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*xit)));
+//            }
+//            fprintf(out, "\n");     fflush(out);
             
             
             set<int> p_set;     p_set.insert(*p);       // 把 p 弄成 {p}
@@ -183,13 +186,14 @@ set<int> NLP::TSPL(set<int> X, FILE* out) {
             set<int> b_qs;      // body(r) \cup qs
             set_union(r->bodys.begin(), r->bodys.end(), qs.begin(), qs.end(), inserter(b_qs, b_qs.end()));
             
-            fprintf(out, "\nbody(r) \\cup qs : ");
-            for(set<int>::const_iterator xit = b_qs.begin(); xit != b_qs.end(); xit++) {
-                if(*xit < 0)
-                    fprintf(out, "~");
-                fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*xit)));
-            }
-            fprintf(out, "\n");     fflush(out);
+            
+//            fprintf(out, "\nbody(r) \\cup qs : ");
+//            for(set<int>::const_iterator xit = b_qs.begin(); xit != b_qs.end(); xit++) {
+//                if(*xit < 0)
+//                    fprintf(out, "~");
+//                fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*xit)));
+//            }
+//            fprintf(out, "\n");     fflush(out);
             
             
             // 判断是否满足 (L \ L^+) \cup X |= body(r) \cup qs，这个可以直接使用集合包含关系判断
@@ -209,24 +213,29 @@ set<int> NLP::TW(FILE* out) {
     set<int> X;    X.clear();  // 计算极小不动点，故X从空集开始
     
     while(true) {
-        fprintf(out, "\n---------------------------\nTW :\n");
-        fprintf(out, "\nTW X : ");
-        for(set<int>::const_iterator xit = X.begin(); xit != X.end(); xit++) {
-            if(*xit < 0)
-                fprintf(out, "~");
-            fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*xit)));
-        }
-        fprintf(out, "\n");     fflush(out);
+        
+        
+//        fprintf(out, "\n---------------------------\nTW :\n");
+//        fprintf(out, "\nTW X : ");
+//        for(set<int>::const_iterator xit = X.begin(); xit != X.end(); xit++) {
+//            if(*xit < 0)
+//                fprintf(out, "~");
+//            fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*xit)));
+//        }
+//        fprintf(out, "\n");     fflush(out);
+        
         
         set<int> twpl = TWPL(X, out);
         
-        fprintf(out, "\nTW twpl : ");
-        for(set<int>::const_iterator xit = twpl.begin(); xit != twpl.end(); xit++) {
-            if(*xit < 0)
-                fprintf(out, "~");
-            fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*xit)));
-        }
-        fprintf(out, "\n");     fflush(out);
+        
+//        fprintf(out, "\nTW twpl : ");
+//        for(set<int>::const_iterator xit = twpl.begin(); xit != twpl.end(); xit++) {
+//            if(*xit < 0)
+//                fprintf(out, "~");
+//            fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*xit)));
+//        }
+//        fprintf(out, "\n");     fflush(out);
+        
         
         if(twpl.size() == X.size() && includes(twpl.begin(), twpl.end(), X.begin(), X.end()))
             return twpl;
@@ -243,24 +252,28 @@ set<int> NLP::TS(FILE* out) {
     set<int> X;    X.clear();  // 计算极小不动点，故X从空集开始
     
     while(true) {
-        fprintf(out, "\n---------------------------\nTS :\n");
-        fprintf(out, "\nTS X : ");
-        for(set<int>::const_iterator xit = X.begin(); xit != X.end(); xit++) {
-            if(*xit < 0)
-                fprintf(out, "~");
-            fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*xit)));
-        }
-        fprintf(out, "\n");     fflush(out);
+        
+//        fprintf(out, "\n---------------------------\nTS :\n");
+//        fprintf(out, "\nTS X : ");
+//        for(set<int>::const_iterator xit = X.begin(); xit != X.end(); xit++) {
+//            if(*xit < 0)
+//                fprintf(out, "~");
+//            fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*xit)));
+//        }
+//        fprintf(out, "\n");     fflush(out);
+        
         
         set<int> tspl = TSPL(X, out);
         
-        fprintf(out, "\nTS tspl : ");
-        for(set<int>::const_iterator xit = tspl.begin(); xit != tspl.end(); xit++) {
-            if(*xit < 0)
-                fprintf(out, "~");
-            fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*xit)));
-        }
-        fprintf(out, "\n");     fflush(out);
+        
+//        fprintf(out, "\nTS tspl : ");
+//        for(set<int>::const_iterator xit = tspl.begin(); xit != tspl.end(); xit++) {
+//            if(*xit < 0)
+//                fprintf(out, "~");
+//            fprintf(out, "%s ", Vocabulary::instance().getAtomName(abs(*xit)));
+//        }
+//        fprintf(out, "\n");     fflush(out);
+        
         
         if(tspl.size() == X.size() && includes(tspl.begin(), tspl.end(), X.begin(), X.end()))
             return tspl;
@@ -274,7 +287,7 @@ set<int> NLP::TS(FILE* out) {
  * 直接调用TW()
  */
 set<int> NLP::GWRS(FILE* out) {
-    fprintf(out, "\n=============================\nStart NLP GWRS : \n");
+//    fprintf(out, "\n=============================\nStart NLP GWRS : \n");
     set<int> gwrs = TW(out);
     return gwrs;
 }
@@ -284,7 +297,7 @@ set<int> NLP::GWRS(FILE* out) {
  * 直接调用TS()
  */
 set<int> NLP::GSRS(FILE* out) {
-    fprintf(out, "\n=============================\nStart NLP GSRS : \n");
+//    fprintf(out, "\n=============================\nStart NLP GSRS : \n");
     set<int> gsrs = TS(out);
     return gsrs;
 }

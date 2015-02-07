@@ -10,6 +10,7 @@
 #include <vector>
 #include <set>
 #include <algorithm>
+#include <ctime>
 
 using namespace std;
 
@@ -23,6 +24,9 @@ Consequence::Consequence() {
     Atoms_P.clear();
     consequence.clear();
     conflict = false;
+    cal_phi_times = 0;
+    upCost = 0;
+    gusCost = 0;
 }
 
 
@@ -50,6 +54,9 @@ Consequence::Consequence(vector<Rule> p) : program(p) {
     
     consequence.clear();
     conflict = false;
+    cal_phi_times = 0;
+    upCost = 0;
+    gusCost = 0;
 }
 
 
@@ -62,6 +69,9 @@ Consequence::~Consequence() {
     Atoms_P.clear();
     consequence.clear();
     conflict = false;
+    cal_phi_times = 0;
+    upCost = 0;
+    gusCost = 0;
 }
 
 
@@ -85,7 +95,7 @@ set<int> Consequence::UnitPropagation(set<set<int> > clauses) {
     const set<int> empty_set;
     if (clauses.find(empty_set) != clauses.end()) {
         conflict = true;        // 有矛盾
-        printf("\nUnit Propagation Conflict\n");
+//        printf("\nUnit Propagation Conflict\n");
         // return Lit
         return Lit();
     }
@@ -182,7 +192,7 @@ set<int> Consequence::GUS(FILE* out, vector<Rule> P, set<int> L) {
  */
 set<int> Consequence::PhiL(FILE* out, vector<Rule> P, set<int> L, set<int> X) {
     set<int> phi;
-    fprintf(out, "\nSatisfy rules :\n"); fflush(out);
+//    fprintf(out, "\nSatisfy rules :\n"); fflush(out);
     for(vector<Rule>::iterator pit = P.begin(); pit != P.end(); pit++) {
         set<int> head_L;
         set_intersection((pit->heads).begin(), (pit->heads).end(), L.begin(), L.end(), inserter(head_L, head_L.begin()));
@@ -214,7 +224,7 @@ set<int> Consequence::PhiL(FILE* out, vector<Rule> P, set<int> L, set<int> X) {
                     for(set<int>::iterator hit = (pit->heads).begin(); hit != (pit->heads).end(); hit++) {
                         if(NL.find(*hit) == NL.end()) {  // 5. a \notin { p | ~p \in L }
                             if(!is_print) {
-                                (*pit).output(out); fflush(out);
+//                                (*pit).output(out); fflush(out);
                                 is_print = true;
                             }
                             phi.insert(*hit);
@@ -241,26 +251,26 @@ set<int> Consequence::lfp_PhiL(FILE* out, vector<Rule> P, set<int> L) {
         if(*it >= 0)
             Ls.insert(*it);
     
-    fprintf(out, "\n------------------------\nPhiL Start:\n\n");
+//    fprintf(out, "\n------------------------\nPhiL Start:\n\n");
     while(true) {    
-        fprintf(out, "\nX : ");
-        for(set<int>::iterator xit = X.begin(); xit != X.end(); xit++) {
-            fprintf(out, "%s", Vocabulary::instance().getAtomName(*xit));
-            if(xit != --(X.end()))
-                fprintf(out, ", ");
-        }
-        fprintf(out, "\n");     fflush(out);
+//        fprintf(out, "\nX : ");
+//        for(set<int>::iterator xit = X.begin(); xit != X.end(); xit++) {
+//            fprintf(out, "%s", Vocabulary::instance().getAtomName(*xit));
+//            if(xit != --(X.end()))
+//                fprintf(out, ", ");
+//        }
+//        fprintf(out, "\n");     fflush(out);
         
-        set<int> phi = PhiL(out, P, L, X);   
+        set<int> phi = PhiL(out, P, L, X);   cal_phi_times++;
         set<int> phi_L;
         set_union(phi.begin(), phi.end(), Ls.begin(), Ls.end(), inserter(phi_L, phi_L.begin()));
-        fprintf(out, "\nPhi out :\n");
-        for(set<int>::iterator pit = phi_L.begin(); pit != phi_L.end(); pit++) {
-            fprintf(out, "%s", Vocabulary::instance().getAtomName(*pit));
-            if(pit != --(phi_L.end()))
-                fprintf(out, ", ");
-        }
-        fprintf(out, "\n");     fflush(out);
+//        fprintf(out, "\nPhi out :\n");
+//        for(set<int>::iterator pit = phi_L.begin(); pit != phi_L.end(); pit++) {
+//            fprintf(out, "%s", Vocabulary::instance().getAtomName(*pit));
+//            if(pit != --(phi_L.end()))
+//                fprintf(out, ", ");
+//        }
+//        fprintf(out, "\n");     fflush(out);
         
         set<int> X_phi_L;
         set_difference(X.begin(), X.end(), phi_L.begin(), phi_L.end(), inserter(X_phi_L, X_phi_L.begin()));
@@ -277,55 +287,60 @@ set<int> Consequence::lfp_PhiL(FILE* out, vector<Rule> P, set<int> L) {
  * WP(L) = UP(L, P) \cup ~GUS(P, L) 算子
  */
 set<int> Consequence::W_P(FILE* out, set<int> L) {
-    fprintf(out, "\n=============================\nW_P(L) Start : \n");
-    fprintf(out, "L : ");
-    for(set<int>::const_iterator lit = L.begin(); lit != L.end(); lit++) {
-        int id = *lit;
-        if(id < 0) {
-            fprintf(out, "~");
-            id *= -1;
-        }
-        fprintf(out, "%s", Vocabulary::instance().getAtomName(id));
-        if(lit != --(L.end()))
-            fprintf(out, ", ");
-    }
-    fprintf(out, "\n");
+//    fprintf(out, "\n=============================\nW_P(L) Start : \n");
+//    fprintf(out, "L : ");
+//    for(set<int>::const_iterator lit = L.begin(); lit != L.end(); lit++) {
+//        int id = *lit;
+//        if(id < 0) {
+//            fprintf(out, "~");
+//            id *= -1;
+//        }
+//        fprintf(out, "%s", Vocabulary::instance().getAtomName(id));
+//        if(lit != --(L.end()))
+//            fprintf(out, ", ");
+//    }
+//    fprintf(out, "\n");
     
+    long upStart = clock();
     set<int> up = UnitPropagation(L, clauses);
-    fprintf(out, "\nUP(L, P) : ");
-    for(set<int>::iterator lit = up.begin(); lit != up.end(); lit++) {
-        int id = *lit;
-        if(id < 0) {
-            fprintf(out, "~");
-            id *= -1;
-        }
-        fprintf(out, "%s", Vocabulary::instance().getAtomName(id));
-        if(lit != --(up.end()))
-            fprintf(out, ",");
-    }
-    fprintf(out, "\n");     fflush(out);
+    long upEnd = clock();
+    upCost += (double)(upEnd - upStart) / CLOCKS_PER_SEC;
+//    fprintf(out, "\nUP(L, P) : ");
+//    for(set<int>::iterator lit = up.begin(); lit != up.end(); lit++) {
+//        int id = *lit;
+//        if(id < 0) {
+//            fprintf(out, "~");
+//            id *= -1;
+//        }
+//        fprintf(out, "%s", Vocabulary::instance().getAtomName(id));
+//        if(lit != --(up.end()))
+//            fprintf(out, ",");
+//    }
+//    fprintf(out, "\n");     fflush(out);
     
-    
+    long gusStart = clock();
     set<int> gus = GUS(out, program, L);
-    fprintf(out, "\nGUS : ");
-    for(set<int>::iterator lit = gus.begin(); lit != gus.end(); lit++) {
-        int id = *lit;
-        if(id < 0) {
-            fprintf(out, "~");
-            id *= -1;
-        }
-        fprintf(out, "%s", Vocabulary::instance().getAtomName(id));
-        if(lit != --(gus.end()))
-            fprintf(out, ",");
-    }
-    fprintf(out, "\n");     fflush(out);
+    long gusEnd = clock();
+    gusCost += (double)(gusEnd - gusStart) / CLOCKS_PER_SEC;
+//    fprintf(out, "\nGUS : ");
+//    for(set<int>::iterator lit = gus.begin(); lit != gus.end(); lit++) {
+//        int id = *lit;
+//        if(id < 0) {
+//            fprintf(out, "~");
+//            id *= -1;
+//        }
+//        fprintf(out, "%s", Vocabulary::instance().getAtomName(id));
+//        if(lit != --(gus.end()))
+//            fprintf(out, ",");
+//    }
+//    fprintf(out, "\n");     fflush(out);
     
     // 判断是否存在矛盾：即 a\in UP(L, P)， 同时 a\in GUS(P, L)；
     set<int> intersection;
     set_intersection(up.begin(), up.end(), gus.begin(), gus.end(), inserter(intersection, intersection.begin()));
     if(!intersection.empty()) {
         conflict = true;
-        printf("\nW_P Conflict\n");
+//        printf("\nW_P Conflict\n");
     }
     
     set<int> ngus;
@@ -346,40 +361,41 @@ set<int> Consequence::lfp_WP(FILE* out) {
     set<int> L;         
     L.clear();
     
-    fprintf(out, "\nWP Start :\n");
+//    fprintf(out, "\nWP Start :\n");
     while(true) {
-        fprintf(out, "\nL : ");
-        for(set<int>::iterator lit = L.begin(); lit != L.end(); lit++) {
-            int id = *lit;
-            if(id < 0) {
-                fprintf(out, "~");
-                id *= -1;
-            }
-            fprintf(out, "%s", Vocabulary::instance().getAtomName(id));
-            if(lit != --(L.end()))
-                fprintf(out, ",");
-        }
-        fprintf(out, "\n");     fflush(out);
+//        fprintf(out, "\nL : ");
+//        for(set<int>::iterator lit = L.begin(); lit != L.end(); lit++) {
+//            int id = *lit;
+//            if(id < 0) {
+//                fprintf(out, "~");
+//                id *= -1;
+//            }
+//            fprintf(out, "%s", Vocabulary::instance().getAtomName(id));
+//            if(lit != --(L.end()))
+//                fprintf(out, ",");
+//        }
+//        fprintf(out, "\n");     fflush(out);
         
         wp = W_P(out, L);
         
-        fprintf(out, "\nW_P(L) : ");
-        for(set<int>::iterator sit = wp.begin(); sit != wp.end(); sit++) {
-            int id = *sit;
-            if(id < 0) {
-                fprintf(out, "~");
-                id *= -1;
-            }
-            fprintf(out, "%s", Vocabulary::instance().getAtomName(id));
-            if(sit != --(wp.end()))
-                fprintf(out, ",");
-        }
-        fprintf(out, "\n");     fflush(out);
+//        fprintf(out, "\nW_P(L) : ");
+//        for(set<int>::iterator sit = wp.begin(); sit != wp.end(); sit++) {
+//            int id = *sit;
+//            if(id < 0) {
+//                fprintf(out, "~");
+//                id *= -1;
+//            }
+//            fprintf(out, "%s", Vocabulary::instance().getAtomName(id));
+//            if(sit != --(wp.end()))
+//                fprintf(out, ",");
+//        }
+//        fprintf(out, "\n");     fflush(out);
         
         set<int> wp_L;
         set_difference(wp.begin(), wp.end(), L.begin(), L.end(), inserter(wp_L, wp_L.begin()));
         if(L.size() == wp.size() && wp_L.empty())
             return wp;
+        
         L = wp;
     }
 }
@@ -392,7 +408,19 @@ set<int> Consequence::lfp_WP(FILE* out) {
  *      也可能是 UP(L, P) 自身就矛盾了（即出现空集表示的子句）。
  */
 set<int> Consequence::Lookahead(FILE* out) {
+    long lfpstart = clock();
     set<int> final_consequence = lfp_WP(out);
+    long lfpend = clock();
+    double lfp_wp_time = (double)(lfpend - lfpstart) / CLOCKS_PER_SEC;
+    fprintf(out, "\nlfp(W_P(L)) time = %.3fs\n", lfp_wp_time);   fflush(out);
+    fprintf(out, "\nlfp(W_P(L)) calls Phi(L) %d times\n", cal_phi_times);      fflush(out);
+    fprintf(out, "UP(L, P) in lfp(W_P(L)) cost %.3fs\n", upCost);              fflush(out);
+    fprintf(out, "GUS(P,L) in lfp(W_P(L)) cost %.3fs\n", gusCost);             fflush(out);
+    
+    cal_phi_times = 0;  // 重新计算lookahead中调用phi的次数
+    upCost = 0;
+    gusCost = 0;
+    
     fprintf(out, "\nStep 1 to 3 out Consequence : ");
     for(set<int>::const_iterator fit = final_consequence.begin(); fit != final_consequence.end(); fit++) {
         int id = *fit;
@@ -404,7 +432,7 @@ set<int> Consequence::Lookahead(FILE* out) {
         if(fit != --(final_consequence.end()))
             fprintf(out, ", ");
     }
-    fprintf(out, "\n");         fflush(out);
+    fprintf(out, "\nStep 1 to 3 out Consequence size = %d\n", final_consequence.size());         fflush(out);
     
     
     set<int> tmp;       // 保存着lfp_WP返回结果的原子集的绝对值集
@@ -420,19 +448,23 @@ set<int> Consequence::Lookahead(FILE* out) {
         if(tmp.find(*it) == tmp.end())
             left.insert(*it);
     }
+    fprintf(out, "\nThe atoms left size = %d\n", left.size());  fflush(out);
     
+    long lookaheadstart = clock();
     // lookahead：对剩下的原子逐个猜测真假性
+    int guessingID = 1;
     for(set<int>::const_iterator it = left.begin(); it != left.end(); it++) {
-        printf("\nGuessing atom %s :\n", Vocabulary::instance().getAtomName(*it));
+        fprintf(out, "\n%d. Guessing atom %s :\n", guessingID++, Vocabulary::instance().getAtomName(*it));      fflush(out);
         conflict = false;
         
         // 先猜原子为“真”
         set<int> guess;
         guess.insert(*it);      // 即猜测为真
         set<int> useless = W_P(out, guess);    // 如猜测剩下的原子e为真，则W_P({e})
-        printf("1. Conflict : %d\n", conflict);
+//        printf("1. Conflict : %d\n", conflict);
         if(conflict) { 
             final_consequence.insert(*it * -1);
+            fprintf(out, "L inserts ~%s\n", Vocabulary::instance().getAtomName(*it));   fflush(out);
         }
         
         // 如果上一步没有产生“矛盾”，再猜该原子为“假”
@@ -440,13 +472,20 @@ set<int> Consequence::Lookahead(FILE* out) {
             guess.clear();
             guess.insert(*it * -1);     // 猜该原子为假
             useless = W_P(out, guess);
-            printf("2. Conflict : %d\n", conflict);
+//            printf("2. Conflict : %d\n", conflict);
             if(conflict) {
                 final_consequence.insert(*it);
+                fprintf(out, "L inserts %s\n", Vocabulary::instance().getAtomName(*it));        fflush(out);
             }
         }
     }
-        
+    long lookaheadend = clock();
+    double lookaheadcost = (double)(lookaheadend - lookaheadstart) / CLOCKS_PER_SEC;
+    fprintf(out, "\nLookahead cost time = %.3fs\n", lookaheadcost);      fflush(out);
+    fprintf(out, "\nLookahead calls Phi(L) %d times\n", cal_phi_times);      fflush(out);
+    fprintf(out, "UP(L, P) in Lookahead cost %.3fs\n", upCost);              fflush(out);
+    fprintf(out, "GUS(P,L) in Lookahead cost %.3fs\n", gusCost);             fflush(out);
+    
     return final_consequence;
 }
 
@@ -457,7 +496,13 @@ set<int> Consequence::Lookahead(FILE* out) {
 set<int> Consequence::calConsequence(FILE* out) {
 //    set<int> literals;
 //    return UnitPropagation(literals, clauses);
-    return Lookahead(out);
+//    return Lookahead(out);
+    long lfpWPStart = clock();
+    set<int> lfpwp = lfp_WP(out);
+    long lfpWPEnd = clock();
+    double lfpWPCost = (double)(lfpWPEnd - lfpWPStart) / CLOCKS_PER_SEC;
+    fprintf(out, "\nThe lfp(W_P(L)) cost time : %.3f\n", lfpWPCost);
+    return lfpwp;
 }
 
 
