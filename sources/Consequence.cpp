@@ -412,10 +412,10 @@ set<int> Consequence::Lookahead(FILE* out) {
     set<int> final_consequence = lfp_WP(out);
     long lfpend = clock();
     double lfp_wp_time = (double)(lfpend - lfpstart) / CLOCKS_PER_SEC;
-    fprintf(out, "\nlfp(W_P(L)) time = %.3fs\n", lfp_wp_time);   fflush(out);
-    fprintf(out, "\nlfp(W_P(L)) calls Phi(L) %d times\n", cal_phi_times);      fflush(out);
-    fprintf(out, "UP(L, P) in lfp(W_P(L)) cost %.3fs\n", upCost);              fflush(out);
-    fprintf(out, "GUS(P,L) in lfp(W_P(L)) cost %.3fs\n", gusCost);             fflush(out);
+    fprintf(out, "\nlfp(W_P(L)) time = %.3f\n", lfp_wp_time);   fflush(out);
+//    fprintf(out, "\nlfp(W_P(L)) calls Phi(L) = %d times\n", cal_phi_times);      fflush(out);
+//    fprintf(out, "UP(L, P) in lfp(W_P(L)) cost = %.3fs\n", upCost);              fflush(out);
+//    fprintf(out, "GUS(P,L) in lfp(W_P(L)) cost = %.3fs\n", gusCost);             fflush(out);
     
     cal_phi_times = 0;  // 重新计算lookahead中调用phi的次数
     upCost = 0;
@@ -454,7 +454,7 @@ set<int> Consequence::Lookahead(FILE* out) {
     // lookahead：对剩下的原子逐个猜测真假性
     int guessingID = 1;
     for(set<int>::const_iterator it = left.begin(); it != left.end(); it++) {
-        fprintf(out, "\n%d. Guessing atom %s :\n", guessingID++, Vocabulary::instance().getAtomName(*it));      fflush(out);
+//        fprintf(out, "\n%d. Guessing atom %s :\n", guessingID++, Vocabulary::instance().getAtomName(*it));      fflush(out);
         conflict = false;
         
         // 先猜原子为“真”
@@ -464,7 +464,7 @@ set<int> Consequence::Lookahead(FILE* out) {
 //        printf("1. Conflict : %d\n", conflict);
         if(conflict) { 
             final_consequence.insert(*it * -1);
-            fprintf(out, "L inserts ~%s\n", Vocabulary::instance().getAtomName(*it));   fflush(out);
+//            fprintf(out, "L inserts ~%s\n", Vocabulary::instance().getAtomName(*it));   fflush(out);
         }
         
         // 如果上一步没有产生“矛盾”，再猜该原子为“假”
@@ -475,16 +475,16 @@ set<int> Consequence::Lookahead(FILE* out) {
 //            printf("2. Conflict : %d\n", conflict);
             if(conflict) {
                 final_consequence.insert(*it);
-                fprintf(out, "L inserts %s\n", Vocabulary::instance().getAtomName(*it));        fflush(out);
+//                fprintf(out, "L inserts %s\n", Vocabulary::instance().getAtomName(*it));        fflush(out);
             }
         }
     }
     long lookaheadend = clock();
     double lookaheadcost = (double)(lookaheadend - lookaheadstart) / CLOCKS_PER_SEC;
-    fprintf(out, "\nLookahead cost time = %.3fs\n", lookaheadcost);      fflush(out);
-    fprintf(out, "\nLookahead calls Phi(L) %d times\n", cal_phi_times);      fflush(out);
-    fprintf(out, "UP(L, P) in Lookahead cost %.3fs\n", upCost);              fflush(out);
-    fprintf(out, "GUS(P,L) in Lookahead cost %.3fs\n", gusCost);             fflush(out);
+    fprintf(out, "\nLookahead cost time = %.3f\n", lookaheadcost);      fflush(out);
+//    fprintf(out, "\nLookahead calls Phi(L) = %d times\n", cal_phi_times);      fflush(out);
+//    fprintf(out, "UP(L, P) in Lookahead cost = %.3fs\n", upCost);              fflush(out);
+//    fprintf(out, "GUS(P,L) in Lookahead cost = %.3fs\n", gusCost);             fflush(out);
     
     return final_consequence;
 }
@@ -496,13 +496,15 @@ set<int> Consequence::Lookahead(FILE* out) {
 set<int> Consequence::calConsequence(FILE* out) {
 //    set<int> literals;
 //    return UnitPropagation(literals, clauses);
-//    return Lookahead(out);
-    long lfpWPStart = clock();
-    set<int> lfpwp = lfp_WP(out);
-    long lfpWPEnd = clock();
-    double lfpWPCost = (double)(lfpWPEnd - lfpWPStart) / CLOCKS_PER_SEC;
-    fprintf(out, "\nThe lfp(W_P(L)) cost time : %.3f\n", lfpWPCost);
-    return lfpwp;
+    
+    return Lookahead(out);
+    
+//    long lfpWPStart = clock();
+//    set<int> lfpwp = lfp_WP(out);
+//    long lfpWPEnd = clock();
+//    double lfpWPCost = (double)(lfpWPEnd - lfpWPStart) / CLOCKS_PER_SEC;
+//    fprintf(out, "\nThe lfp(W_P(L)) cost time = %.3f\n", lfpWPCost);
+//    return lfpwp;
 }
 
 

@@ -277,7 +277,7 @@ int main(int argc, char** argv) {
                 fprintf(fout, "~");
             fprintf(fout, "%s ", Vocabulary::instance().getAtomName(abs(*it)));
         }
-        fprintf(fout, "\nThe GWRS of DLP size is %d\n", gwrs.size());        fflush(fout);
+        fprintf(fout, "\nThe GWRS of DLP size = %d\n", gwrs.size());        fflush(fout);
 
         set<int> gsrs = dlp.GSRS(fout);
         fprintf(fout, "\nThe GSRS of DLP is : ");
@@ -286,7 +286,7 @@ int main(int argc, char** argv) {
                 fprintf(fout, "~");
             fprintf(fout, "%s ", Vocabulary::instance().getAtomName(abs(*it)));
         }
-        fprintf(fout, "\nThe GSRS of DLP size is %d\n", gsrs.size());        fflush(fout);
+        fprintf(fout, "\nThe GSRS of DLP size = %d\n", gsrs.size());        fflush(fout);
     }
     
 #endif    

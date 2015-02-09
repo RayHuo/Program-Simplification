@@ -65,3 +65,48 @@ DisjunctiveLoops                    some very slow, run again
 Blocksworld             very slow, run again, may too large, ignore
 Sokoban                 very slow, run again, may too large, ignore
 labyrinth               very slow, run again
+
+=============================================================
+
+
+Base on the new modification : ignore all facts which are also in WFM, while running GWRS and GSRS
+Benchmarks              Situation
+---------------------------------------------------------------------------------
+NLP/channelRouting      negative, GWRS and GSRS are both empty
+NLP/EqTest              negative, GWRS and GSRS are both empty
+NLP/HamiltonianPath     negative, GWRS and GSRS are both empty
+NLP/SchurNumbers        still middle speed and positive
+NLP/RandomNonTight      still very fast but negative, all GWRS and GSRS are empty
+NLP/RLP-150             still very fast but negative, all GWRS and GSRS are empty
+NLP/RLP-200             still very fast but negative, all GWRS and GSRS are empty
+
+NLP/15-Puzzle           positive, GWRS get some size, GSRS is empty
+NLP/labyrinth           small test case will get both GWRS and GSRS's size = 1
+
+DLP/Hampath             negative, GWRS and GSRS are both empty
+DLP/RandomQuantifiedBooleanFormulas    still very fast and GWRS is positive, GSRS is empty 
+DLP/StrategicCompanies  negative, GWRS and GSRS are both empty
+
+
+===============================================================================
+Rerun : 
+NLP/15-Puzzle           positive, GWRS get some size, GSRS is empty                 1
+NLP/labyrinth           small test case will get both GWRS and GSRS's size = 1      1
+NLP/Factoring           very slow, run again                                        0
+NLP/BlockedN-Queens     very slow, run again, may too large, ignore                 0
+DLP/Mutex               very slow, run again                                        1
+clasp/Blocksworld       very slow, run again, may too large, ignore                 0
+clasp/Sokoban           very slow, run again, may too large, ignore                 0
+
+
+===============================================================================
+positive: 
+NLP/SchurNumbers        still middle speed and positive
+DLP/RandomQuantifiedBooleanFormulas    still very fast and GWRS is positive, GSRS is empty
+DLP/Mutex               positive, GWRS get some size, GSRS is empty
+NLP/15-Puzzle           positive, GWRS get some size, GSRS is empty
+NLP/labyrinth           small test case will get both GWRS and GSRS's size = 1
+NLP/Factoring           positive, both GWRS and GSRS are positive
+
+
+root KgduIpbfQtdh1234
