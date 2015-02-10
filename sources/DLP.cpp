@@ -467,7 +467,7 @@ set<int> DLP::GWRS(FILE* out) {
     set<int> gwrs = RSW(out);
     long gwrsEnd = clock();
     double gwrsCost = (double)(gwrsEnd - gwrsStart) / CLOCKS_PER_SEC;
-    fprintf(out, "\nGWRS cost time = %.3f\n", gwrsCost);
+//    fprintf(out, "\nGWRS cost time = %.3f\n", gwrsCost);
     return gwrs;
 }
 
@@ -483,6 +483,6 @@ set<int> DLP::GSRS(FILE* out) {
     set<int> gsrs = RSS(out);
     long gsrsEnd = clock();
     double gsrsCost = (double)(gsrsEnd - gsrsStart) / CLOCKS_PER_SEC;
-    fprintf(out, "\nGSRS cost time = %.3f\n", gsrsCost);
+//    fprintf(out, "\nGSRS cost time = %.3f\n", gsrsCost);
     return gsrs;
 }

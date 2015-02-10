@@ -33,12 +33,16 @@ using namespace std;
 
 //#define MAXU
 //#define GRST
-#define GRS_WS
+//#define GRS_WS
+//#define WFM
+#define SIMPLIFICATION
 
 extern vector<Rule> G_Rules;    // 保存输入文件的所有rules，定义在global.cpp中
 extern FILE* yyin;              // lex.cpp中定义的变量，默认的文件输入对象，注意此处不要重定义
 extern void yyparse();          // parse.cpp中定义的函数，实际进行parser的函数，把输入文件中的rules写进G_Rules并把相关的atom存放在Vocabulary中
 FILE* fout;                     // 自定义的输出文件对象。
+FILE* foutP1;                   // 输出程序中的P1
+FILE* foutLandGWRS;             // 保留L和GWRS
 
 
 /*
@@ -53,17 +57,30 @@ int main(int argc, char** argv) {
         exit(0);
     }
     
-//    string tmp(argv[1]);
-//    string filename = tmp.substr(0, tmp.find_last_of("."));
+
     string filename(argv[1]);
-//    cout << filename << endl;
     filename.replace(3, 6, "outputs");
-//    cout << filename << endl;
-    fout = fopen((filename + ".out").c_str(), "w");
+    
+//    fout = fopen((filename + ".out").c_str(), "w");
+    fout = fopen((filename + "_P2.out").c_str(), "w");
     if(!fout) {
         printf("IO Error : Cannot open the output file!\n");
         exit(0);
     }
+    
+    // 存放P1的文件
+    foutP1 = fopen((filename + "_P1.out").c_str(), "w");
+    if(!foutP1) {
+        printf("IO Error : Cannot open the foutP1 file!\n");
+        exit(0);
+    }
+    
+    foutLandGWRS = fopen((filename + "_LandGWRS").c_str(), "w");
+    if(!foutLandGWRS) {
+        printf("IO Error : Cannot open the foutLandGWRS file!\n");
+        exit(0);
+    }
+    
     
     yyparse();
     printf("End Parser!\n");
@@ -291,6 +308,118 @@ int main(int argc, char** argv) {
     
 #endif    
     
+    
+#ifdef WFM
+    int facts = 0;
+    for(vector<Rule>::const_iterator it = G_Rules.begin(); it != G_Rules.end(); it++) {
+        if(it->type == FACT)
+            facts++;
+    }
+    fprintf(fout, "WFM number which also the facts number = %d\n", facts);
+#endif    
+    
+
+#ifdef SIMPLIFICATION
+    /**
+     * 1）将那些consequence作为约束，加入到P，得到P1;  
+     * 2）通过GWRS化简P，将剩下的consequence作为约束加入到化简后的程序中，得到P2;
+     * 3）然后使用clasp/claspD求解程序P1和P2，比较两者的速度，我们的目标是P2更快些。
+     */
+    
+    // 计算出consequence L
+    Consequence consequence(G_Rules);
+    set<int> L = consequence.calConsequence(fout);
+    
+    fprintf(foutLandGWRS, "L = \n");
+    for(set<int>::const_iterator it = L.begin(); it != L.end(); it++) {
+        if(*it < 0)
+            fprintf(foutLandGWRS, "not ");
+        fprintf(foutLandGWRS, "%s", Vocabulary::instance().getAtomName(abs(*it)));
+        if(it != --(L.end())) {
+            fprintf(foutLandGWRS, ", ");
+        }
+    }
+    fprintf(foutLandGWRS, "\n\nL size = %d\n\n", L.size());
+    
+    
+    // P1
+    for(vector<Rule>::const_iterator pit = G_Rules.begin(); pit != G_Rules.end(); pit++) {
+        pit->output(foutP1);
+    }
+    fprintf(foutP1, "\n");
+    for(set<int>::const_iterator lit = L.begin(); lit != L.end(); lit++) {
+        fprintf(foutP1, ":- ");
+        if(*lit < 0) 
+            fprintf(foutP1, "not ");
+        fprintf(foutP1, "%s.\n", Vocabulary::instance().getAtomName(abs(*lit)));
+    }
+    
+    
+    // P2
+    int type = atoi(argv[2]);       // 0 for NLP, 1 for DLP
+    
+    // 去掉fact，计算GWRS
+    vector<Rule> inputRules;
+    for(vector<Rule>::const_iterator grit = G_Rules.begin(); grit != G_Rules.end(); grit++) {
+        if(grit->type != FACT)
+            inputRules.push_back(*grit);
+    }
+    
+    set<int> gwrs;      gwrs.clear();
+    
+    // NLP 当前情况：顺利跑完，中间逻辑貌似没错，但尚未详细检查输出的过程！！！！！！！！
+    // 计算NLP的greatest strong(and weak) reliable set，注意输入文件是否NLP
+    if(type == 0) {
+        NLP nlp(inputRules, L);
+        gwrs = nlp.GWRS(fout);
+    }
+    // DLP 当前情况：顺利跑完，中间逻辑貌似没错，但尚未详细检查输出的过程！！！！！！！！
+    // 计算DLP的greatest strong(and weak) reliable set，注意输入文件是否DLP
+    if(type == 1) {
+        DLP dlp(inputRules, L);
+        gwrs = dlp.GWRS(fout);
+    }
+    
+    
+    fprintf(foutLandGWRS, "GWRS = \n");
+    for(set<int>::const_iterator it = gwrs.begin(); it != gwrs.end(); it++) {
+        if(*it < 0)
+            fprintf(foutLandGWRS, "not ");
+        fprintf(foutLandGWRS, "%s", Vocabulary::instance().getAtomName(abs(*it)));
+        if(it != --(L.end())) {
+            fprintf(foutLandGWRS, ", ");
+        }
+    }
+    fprintf(foutLandGWRS, "\n\nGWRS size = %d\n", gwrs.size());
+    
+    
+    vector<Rule> origin = G_Rules;
+//    vector<Rule> origin = inputRules;
+    // 获取P2
+    Utils::tr_p(origin, gwrs);          // 第一个参数是取引用的
+    
+    set<int> L_gwrs;    // 理论上，计算出来的GWRS比L要小，这里计算 L - GWRS 作为约束加入到化简过的程序中
+    set_difference(L.begin(), L.end(), gwrs.begin(), gwrs.end(), inserter(L_gwrs, L_gwrs.begin()));
+    
+    // P2中第一部分：基于GWRS化简过后的程序P'
+    for(vector<Rule>::const_iterator it = origin.begin(); it != origin.end(); it++) {
+        it->output(fout);
+    }
+    fprintf(fout, "\n");
+    
+    // P2中第二部分：L - GWRS 作为约束加入到程序中
+    for(set<int>::const_iterator it = L_gwrs.begin(); it != L_gwrs.end(); it++) {
+        fprintf(fout, ":- ");
+        if(*it < 0)
+            fprintf(fout, "not ");
+        fprintf(fout, "%s.\n", Vocabulary::instance().getAtomName(abs(*it)));
+    }
+    
+    
+#endif    
+    
+    fclose(foutP1);
+    fclose(foutLandGWRS);
     fclose(fout);
     fclose(yyin);
     

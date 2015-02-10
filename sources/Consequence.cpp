@@ -497,14 +497,14 @@ set<int> Consequence::calConsequence(FILE* out) {
 //    set<int> literals;
 //    return UnitPropagation(literals, clauses);
     
-    return Lookahead(out);
+//    return Lookahead(out);
     
-//    long lfpWPStart = clock();
-//    set<int> lfpwp = lfp_WP(out);
-//    long lfpWPEnd = clock();
-//    double lfpWPCost = (double)(lfpWPEnd - lfpWPStart) / CLOCKS_PER_SEC;
+    long lfpWPStart = clock();
+    set<int> lfpwp = lfp_WP(out);
+    long lfpWPEnd = clock();
+    double lfpWPCost = (double)(lfpWPEnd - lfpWPStart) / CLOCKS_PER_SEC;
 //    fprintf(out, "\nThe lfp(W_P(L)) cost time = %.3f\n", lfpWPCost);
-//    return lfpwp;
+    return lfpwp;
 }
 
 

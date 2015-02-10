@@ -31,7 +31,7 @@ void Utils::findESRules(const vector<Rule>& rules, Loop& loop) {
 
 
 /*
- * 即tr_p(P, U)，这里直接使用program与U作为参数，所以函数没有形参。
+ * 即tr_p(P, U)：基于U化简P
  * 化简的规则是，对于program中的rule：
  *      头部、负体中出现U中元素的删除该规则，
  *      正体中出现U中元素的删除该原子。
@@ -41,6 +41,9 @@ void Utils::findESRules(const vector<Rule>& rules, Loop& loop) {
  *      如果体部的原子个数为0,则需要把该rule的type修改为FACT
  */
 void Utils::tr_p(vector<Rule>& program, set<int> U) {
+    if(U.empty())
+        return;
+    
     for(vector<Rule>::iterator it = program.begin(); it != program.end(); ) {
         // 提取负体和正体
         set<int> pBody;
