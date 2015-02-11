@@ -44,15 +44,28 @@ void Utils::tr_p(vector<Rule>& program, set<int> U) {
     if(U.empty())
         return;
     
-    for(vector<Rule>::iterator it = program.begin(); it != program.end(); ) {
+    for(vector<Rule>::iterator it = program.begin(); it != program.end(); ) {        
+//        printf("U = ");
+//        for(set<int>::const_iterator uit = U.begin(); uit != U.end(); uit++) {
+//            if(*uit < 0)
+//                printf("not ");
+//            printf("%s, ", Vocabulary::instance().getAtomName(abs(*uit)));
+//        }
+//        printf("\n");   fflush(stdout);
+//        it->output(stdout);     fflush(stdout);
+        
+        
         // 提取负体和正体
         set<int> pBody;
-        set<int> nBody;
+        set<int> nBody;         // {p | not p \in body(r)}
+        set<int> negBody;       // {~p | not p \in body(r)}
         for(set<int>::iterator bit = (it->bodys).begin(); bit != (it->bodys).end(); bit++) {
             if(*bit >= 0)
                 pBody.insert(*bit);
-            else
-                nBody.insert(*bit);
+            else {
+                nBody.insert(abs(*bit));
+                negBody.insert(*bit);
+            }
         }
         
         set<int> h_inter;       // 头部与U的交集
@@ -69,8 +82,10 @@ void Utils::tr_p(vector<Rule>& program, set<int> U) {
         // 如果正体中出现原子，删除该原子
         else if(!pb_inter.empty()) {
             set<int> diff;
-            set_difference((it->bodys).begin(), (it->bodys).end(), U.begin(), U.end(), inserter(diff, diff.begin()));
-            it->bodys = diff;
+            set_difference(pBody.begin(), pBody.end(), U.begin(), U.end(), inserter(diff, diff.begin()));
+            set<int> newBody;
+            set_union(diff.begin(), diff.end(), negBody.begin(), negBody.end(), inserter(newBody, newBody.begin()));
+            it->bodys = newBody;
             // 如果该rule的体部原子个数为0,则修改该rule的type为FACT
             if((it->bodys).size() == 0 || (it->bodys).empty())
                 it->type = FACT;

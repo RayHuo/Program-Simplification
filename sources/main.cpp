@@ -51,14 +51,15 @@ FILE* foutLandGWRS;             // 保留L和GWRS
 int main(int argc, char** argv) {
 //    string inputfile = "IO/inputs/2009/channelRouting/channelRoute.in10.in";
 //    yyin = fopen("IO/inputs/DLP/RandomQuantifiedBooleanFormulas/Ql2k3alpha5.00rho0.8-79-2.cnf.dl.lparse", "r");
-    yyin =fopen(argv[1], "r");
+//    string filename(argv[1]);
+//    string filename = "IO/inputs/NLP/Factoring/fact.grnd.sat.24";
+    string filename = "IO/inputs/samples/sample_nlp1.in";
+    yyin =fopen(filename.c_str(), "r");
     if(!yyin) {
         printf("IO Error : Cannot open the input file!\n");
         exit(0);
     }
     
-
-    string filename(argv[1]);
     filename.replace(3, 6, "outputs");
     
 //    fout = fopen((filename + ".out").c_str(), "w");
@@ -343,20 +344,20 @@ int main(int argc, char** argv) {
     
     
     // P1
+    // “将 consequence 作为约束”，指 如果是事实 fact，则加入 :- not fact. 如果是 否定式如 -p，则加入 :- p.
+    // 由于我们目前的实验只处理 正的结果，所以，就是将 fact 和其他正的 consequence p， 以  :- not p. 的形式加入原始程序。
     for(vector<Rule>::const_iterator pit = G_Rules.begin(); pit != G_Rules.end(); pit++) {
         pit->output(foutP1);
     }
     fprintf(foutP1, "\n");
     for(set<int>::const_iterator lit = L.begin(); lit != L.end(); lit++) {
-        fprintf(foutP1, ":- ");
-        if(*lit < 0) 
-            fprintf(foutP1, "not ");
-        fprintf(foutP1, "%s.\n", Vocabulary::instance().getAtomName(abs(*lit)));
-    }
-    
+        if(*lit >= 0) {
+            fprintf(foutP1, ":- not %s.\n", Vocabulary::instance().getAtomName(*lit));
+        }
+    }  
     
     // P2
-    int type = atoi(argv[2]);       // 0 for NLP, 1 for DLP
+    int type = 0;//atoi(argv[2]);       // 0 for NLP, 1 for DLP
     
     // 去掉fact，计算GWRS
     vector<Rule> inputRules;
@@ -367,13 +368,13 @@ int main(int argc, char** argv) {
     
     set<int> gwrs;      gwrs.clear();
     
-    // NLP 当前情况：顺利跑完，中间逻辑貌似没错，但尚未详细检查输出的过程！！！！！！！！
+
     // 计算NLP的greatest strong(and weak) reliable set，注意输入文件是否NLP
     if(type == 0) {
         NLP nlp(inputRules, L);
         gwrs = nlp.GWRS(fout);
     }
-    // DLP 当前情况：顺利跑完，中间逻辑貌似没错，但尚未详细检查输出的过程！！！！！！！！
+
     // 计算DLP的greatest strong(and weak) reliable set，注意输入文件是否DLP
     if(type == 1) {
         DLP dlp(inputRules, L);
@@ -397,6 +398,10 @@ int main(int argc, char** argv) {
 //    vector<Rule> origin = inputRules;
     // 获取P2
     Utils::tr_p(origin, gwrs);          // 第一个参数是取引用的
+//    printf("\nAfter tr_p :\n");
+//    for(vector<Rule>::const_iterator oit = origin.begin(); oit != origin.end(); oit++) {
+//        oit->output(stdout);
+//    }
     
     set<int> L_gwrs;    // 理论上，计算出来的GWRS比L要小，这里计算 L - GWRS 作为约束加入到化简过的程序中
     set_difference(L.begin(), L.end(), gwrs.begin(), gwrs.end(), inserter(L_gwrs, L_gwrs.begin()));
@@ -409,10 +414,9 @@ int main(int argc, char** argv) {
     
     // P2中第二部分：L - GWRS 作为约束加入到程序中
     for(set<int>::const_iterator it = L_gwrs.begin(); it != L_gwrs.end(); it++) {
-        fprintf(fout, ":- ");
-        if(*it < 0)
-            fprintf(fout, "not ");
-        fprintf(fout, "%s.\n", Vocabulary::instance().getAtomName(abs(*it)));
+        if(*it >= 0) {   
+            fprintf(fout, ":- not %s.\n", Vocabulary::instance().getAtomName(*it));
+        }
     }
     
     

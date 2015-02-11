@@ -1,0 +1,10 @@
+clasp version 2.1.3
+Reading from stdin
+Solving...
+Answer: 1
+e c a
+SATISFIABLE
+
+Models      : 1     
+Time        : 0.000s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time    : 0.000s
