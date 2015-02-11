@@ -43,7 +43,7 @@ extern void yyparse();          // parse.cpp中定义的函数，实际进行par
 FILE* fout;                     // 自定义的输出文件对象。
 FILE* foutP1;                   // 输出程序中的P1
 FILE* foutLandGWRS;             // 保留L和GWRS
-
+FILE* foutTime;                 // 存放P1和P2的计算时间的文件，就一个。
 
 /*
  * This is the Program for both NLP and DLP simplification
@@ -51,9 +51,9 @@ FILE* foutLandGWRS;             // 保留L和GWRS
 int main(int argc, char** argv) {
 //    string inputfile = "IO/inputs/2009/channelRouting/channelRoute.in10.in";
 //    yyin = fopen("IO/inputs/DLP/RandomQuantifiedBooleanFormulas/Ql2k3alpha5.00rho0.8-79-2.cnf.dl.lparse", "r");
-//    string filename(argv[1]);
+    string filename(argv[1]);
 //    string filename = "IO/inputs/NLP/Factoring/fact.grnd.sat.24";
-    string filename = "IO/inputs/samples/sample_nlp1.in";
+//    string filename = "IO/inputs/samples/sample_nlp1.in";
     yyin =fopen(filename.c_str(), "r");
     if(!yyin) {
         printf("IO Error : Cannot open the input file!\n");
@@ -68,6 +68,7 @@ int main(int argc, char** argv) {
         printf("IO Error : Cannot open the output file!\n");
         exit(0);
     }
+    string fileP2Name =  filename + "_P2.out";
     
     // 存放P1的文件
     foutP1 = fopen((filename + "_P1.out").c_str(), "w");
@@ -75,10 +76,18 @@ int main(int argc, char** argv) {
         printf("IO Error : Cannot open the foutP1 file!\n");
         exit(0);
     }
+    string fileP1Name =  filename + "_P1.out";
     
     foutLandGWRS = fopen((filename + "_LandGWRS").c_str(), "w");
     if(!foutLandGWRS) {
         printf("IO Error : Cannot open the foutLandGWRS file!\n");
+        exit(0);
+    }
+    
+    
+    foutTime = fopen("IO/timeHold.txt", "w");
+    if(!foutTime) {
+        printf("IO Error : Cannot open the foutTime file!\n");
         exit(0);
     }
     
@@ -357,7 +366,7 @@ int main(int argc, char** argv) {
     }  
     
     // P2
-    int type = 0;//atoi(argv[2]);       // 0 for NLP, 1 for DLP
+    int type = atoi(argv[2]);       // 0 for NLP, 1 for DLP
     
     // 去掉fact，计算GWRS
     vector<Rule> inputRules;
@@ -420,11 +429,18 @@ int main(int argc, char** argv) {
     }
     
     
+    // 计算时间并比较
+//    fprintf(foutTime, "Benchmark\tTime Cost\n---------------------------------------------------------\n");
+    Utils::callClasp(fileP1Name, foutTime);
+    Utils::callClasp(fileP2Name, foutTime);
+    fprintf(foutTime, "\n");
+    
+    
 #endif    
     
-    fclose(foutP1);
+    fclose(foutP1);     // P1
     fclose(foutLandGWRS);
-    fclose(fout);
+    fclose(fout);       // P2
     fclose(yyin);
     
     return 0;
