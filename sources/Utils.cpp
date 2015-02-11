@@ -183,69 +183,33 @@ void Utils::callClasp(string fileName, FILE* out) {
 }
 
 
-/*
- * 调用claspD来求程序的answer set，输入的程序为solutionXs及solutionYs中产生的程序文件。
- */
-set< set<int> > Utils::callClaspD(string fileName) {
+void Utils::callClaspD(string fileName, FILE* out) {
     // 管道调用 RUN_CMD 计算并将其结果写进 OUTPUT_FILE
-//    string cmd = "gringo " + fileName + " | claspD 100 > " + OUTPUT_FILE;
-//    char buff[BUFF_SIZE];
-//    FILE *pipe_file = popen(cmd.c_str(), "r");
-//    FILE *output_file = fopen(OUTPUT_FILE, "w");
-//    while (fgets(buff, BUFF_SIZE, pipe_file)) {
-//        fprintf(output_file, "%s", buff);
-//    }
-//    pclose(pipe_file);
-//    fclose(output_file);
-//    
-//    long start = clock();
-//    // 提取answer set
-//    set< set<string> > ret;     // 结果所在，还要转成int
-//    string line, str;
-//    ifstream answer_in(OUTPUT_FILE);
-//    bool flag = false;
-//    while (getline(answer_in, line)) {
-//        if (line.substr(0, 6) == "Answer") {
-//            flag = true;
-//            continue;
-//        }
-//        if (flag) {
-//            flag = false;
-//            stringstream ss(line);
-//            set<string> ans;
-//            while (ss >> str) {
-//                ans.insert(str);
-//            }
-//            ret.insert(ans);
-//        }
-//    }
-//    answer_in.close();
-//    
-////    for(set< set<string> >::iterator sit = ret.begin(); sit != ret.end(); sit++) {
-////        for(set<string>::iterator rit = (*sit).begin(); rit != (*sit).end(); rit++)
-////            printf("%s ", (*rit).c_str());
-////        printf("\n");
-////        fflush(stdout);
-////    }
-//    
-//    
-//    // 把ret中的string转化为对应的atom ID。
-//    set< set<int> > result;     //printf("\nAnswer sets : \n");
-//    for(set< set<string> >::iterator rit = ret.begin(); rit != ret.end(); rit++) {
-//        set<int> tmp;   
-//        for(set<string>::iterator sit = (*rit).begin(); sit != (*rit).end(); sit++) {
-////            printf("%s\n", (*sit).c_str());     fflush(stdout);
-//            int id = Vocabulary::instance().getAtomName((char*)((*sit).c_str()));
-//            if(id != -1)
-//                tmp.insert(id);
-//            else
-//                printf("\ncallClaspD Error!\n");
-//        }
-//        //printf("\n");
-//        result.insert(tmp);
-//    }
-//    long end = clock();
-//    double ClaspDTime = (double)(end - start) / CLOCKS_PER_SEC;
-//    
-//    return result;
+    string cmd = "gringo " + fileName + " | claspD 100 > " + OUTPUT_FILE;
+    char buff[BUFF_SIZE];
+    // 执行命令cmd，并可以通过其返回的FILE*对象，此处即pipe_file来读取执行的结果
+    FILE *pipe_file = popen(cmd.c_str(), "r");
+    // 通过下面的操作，把pipe_file中的结果写在一个实际的文件中。
+    FILE *output_file = fopen(OUTPUT_FILE, "w");
+    while (fgets(buff, BUFF_SIZE, pipe_file)) {
+        fprintf(output_file, "%s", buff);
+    }
+    pclose(pipe_file);
+    fclose(output_file);
+    
+    // 获取计算时间
+    string line, modelString, timeString, maohao, calModel, calTime;
+    ifstream answer_in(OUTPUT_FILE);     
+    while(getline(answer_in, line)) {
+        if(line.substr(0, 6) == "Models") {
+            stringstream ss(line);
+            ss >> modelString >> maohao >> calModel;    // 读取输出中的 ：Models      : 2  
+            fprintf(out, "%s\t%s\t", fileName.c_str(), calModel.c_str());
+        }
+        if(line.substr(0, 4) == "Time") {
+            stringstream ss(line);
+            ss >> timeString >> maohao >> calTime;    // 读取输出中的 ：Time        : 0.024s
+            fprintf(out, "%s\n", calTime.c_str());
+        }
+    }
 }

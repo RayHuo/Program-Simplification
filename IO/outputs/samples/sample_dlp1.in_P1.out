@@ -1,0 +1,9 @@
+c | d.
+a | b :- c.
+d :- not c.
+a :- c, d.
+c :- a.
+d | b :- not a.
+:- not c.
+
+:- not c.

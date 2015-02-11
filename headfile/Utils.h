@@ -38,7 +38,7 @@ public:
     static void callClasp(string fileName, FILE* out);
     
     // 调用claspD运行程序
-    static set< set<int> > callClaspD(string fileName);
+    static void callClaspD(string fileName, FILE* out);
     
 };
 

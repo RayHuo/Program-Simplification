@@ -43,7 +43,7 @@ extern void yyparse();          // parse.cpp中定义的函数，实际进行par
 FILE* fout;                     // 自定义的输出文件对象。
 FILE* foutP1;                   // 输出程序中的P1
 FILE* foutLandGWRS;             // 保留L和GWRS
-FILE* foutTime;                 // 存放P1和P2的计算时间的文件，就一个。
+FILE* foutTime;                 // 存放P1和P2的计算时间的文件。
 
 /*
  * This is the Program for both NLP and DLP simplification
@@ -85,7 +85,7 @@ int main(int argc, char** argv) {
     }
     
     
-    foutTime = fopen("IO/timeHold.txt", "w");
+    foutTime = fopen((filename + "_time").c_str(), "w");
     if(!foutTime) {
         printf("IO Error : Cannot open the foutTime file!\n");
         exit(0);
@@ -431,15 +431,23 @@ int main(int argc, char** argv) {
     
     // 计算时间并比较
 //    fprintf(foutTime, "Benchmark\tTime Cost\n---------------------------------------------------------\n");
-    Utils::callClasp(fileP1Name, foutTime);
-    Utils::callClasp(fileP2Name, foutTime);
-    fprintf(foutTime, "\n");
+    if(type == 0) {
+        Utils::callClasp(fileP1Name, foutTime);
+        Utils::callClasp(fileP2Name, foutTime);
+        fprintf(foutTime, "\n");
+    }
+    if(type == 1) {
+        Utils::callClaspD(fileP1Name, foutTime);
+        Utils::callClaspD(fileP2Name, foutTime);
+        fprintf(foutTime, "\n");
+    }
     
     
 #endif    
     
     fclose(foutP1);     // P1
     fclose(foutLandGWRS);
+    fclose(foutTime);
     fclose(fout);       // P2
     fclose(yyin);
     
