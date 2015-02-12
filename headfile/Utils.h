@@ -34,12 +34,14 @@ public:
     static set<int> rule2DNF(const Rule& rule);         // DNF就是一个文字集，负文字用对应的负数表示即可
     static vector<Rule> findESRules(const vector<Rule>& rules, set<int> X);     // R^-(X, P)，更为纯粹地基于一个集合来找外部支持
 
-    // 调用clasp运行程序
+    // 调用clasp或claspD运行程序
     static void callClasp(string fileName, FILE* out);
-    
-    // 调用claspD运行程序
     static void callClaspD(string fileName, FILE* out);
     
+    // 调用smodels（NLP）或cmodels（DLP）运行程序
+    static void callSmodels(string fileName, FILE* out);
+    static void callCmodels(string fileName, FILE* out);
+    static void callDLV(string fileName, FILE* out);
 };
 
 

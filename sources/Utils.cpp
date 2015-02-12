@@ -213,3 +213,111 @@ void Utils::callClaspD(string fileName, FILE* out) {
         }
     }
 }
+
+
+/**
+ * 
+ * @param fileName 进行计算的程序文件
+ * @param out 输出统计数据，如解的个数，时间等数据。
+ */
+void Utils::callSmodels(string fileName, FILE* out) {
+        // 管道调用 RUN_CMD 计算并将其结果写进 OUTPUT_FILE
+    string cmd = "gringo " + fileName + " | smodels 100 > " + OUTPUT_FILE;
+    char buff[BUFF_SIZE];
+    // 执行命令cmd，并可以通过其返回的FILE*对象，此处即pipe_file来读取执行的结果
+    FILE *pipe_file = popen(cmd.c_str(), "r");
+    // 通过下面的操作，把pipe_file中的结果写在一个实际的文件中。
+    FILE *output_file = fopen(OUTPUT_FILE, "w");
+    while (fgets(buff, BUFF_SIZE, pipe_file)) {
+        fprintf(output_file, "%s", buff);
+    }
+    pclose(pipe_file);
+    fclose(output_file);
+    
+    // 获取计算时间
+    string line, duration, calTime;
+    ifstream answer_in(OUTPUT_FILE);     
+    int answerNum = 0;
+    while(getline(answer_in, line)) {
+        if(line.substr(0, 7) == "Answer:") {
+            answerNum++;
+        }
+        if(line.substr(0, 9) == "Duration:") {
+            stringstream ss(line);
+            ss >> duration >> calTime;    // 读取输出中的 ：Time        : 0.024s
+            fprintf(out, "%s\t%d\t%s\n", fileName.c_str(), answerNum, calTime.c_str());
+        }
+    }
+}
+
+
+/**
+ * 
+ * @param fileName 进行计算的程序文件
+ * @param out 输出统计数据，如解的个数，时间等数据。
+ */
+void Utils::callCmodels(string fileName, FILE* out) {
+        // 管道调用 RUN_CMD 计算并将其结果写进 OUTPUT_FILE
+    string cmd = "gringo " + fileName + " | cmodels 100 > " + OUTPUT_FILE;
+    char buff[BUFF_SIZE];
+    // 执行命令cmd，并可以通过其返回的FILE*对象，此处即pipe_file来读取执行的结果
+    long cmodelsStart = clock();
+    FILE *pipe_file = popen(cmd.c_str(), "r");
+    long cmodelsEnd = clock();
+    double cmodelsTime = (double)(cmodelsEnd - cmodelsStart) / CLOCKS_PER_SEC;
+    // 通过下面的操作，把pipe_file中的结果写在一个实际的文件中。
+    FILE *output_file = fopen(OUTPUT_FILE, "w");
+    while (fgets(buff, BUFF_SIZE, pipe_file)) {
+        fprintf(output_file, "%s", buff);
+    }
+    pclose(pipe_file);
+    fclose(output_file);
+    
+    // 获取计算时间
+    string line, duration, calTime;
+    ifstream answer_in(OUTPUT_FILE);     
+    int answerNum = 0;
+    while(getline(answer_in, line)) {
+        if(line.substr(0, 7) == "Answer:") {
+            answerNum++;
+        }
+    }
+    
+    fprintf(out, "%s\t%d\t%.3f\n", fileName.c_str(), answerNum, cmodelsTime);
+}
+
+
+/**
+ * 
+ * @param fileName 进行计算的程序文件
+ * @param out 输出统计数据，如解的个数，时间等数据。
+ */
+void Utils::callDLV(string fileName, FILE* out) {
+        // 管道调用 RUN_CMD 计算并将其结果写进 OUTPUT_FILE
+    string cmd = "dlv -n=100 " + fileName + " > " + OUTPUT_FILE;
+    char buff[BUFF_SIZE];
+    // 执行命令cmd，并可以通过其返回的FILE*对象，此处即pipe_file来读取执行的结果
+    long dlvStart = clock();
+    FILE *pipe_file = popen(cmd.c_str(), "r");
+    long dlvEnd = clock();
+    double dlvTime = (double)(dlvEnd - dlvStart) / CLOCKS_PER_SEC;
+    // 通过下面的操作，把pipe_file中的结果写在一个实际的文件中。
+    FILE *output_file = fopen(OUTPUT_FILE, "w");
+    while (fgets(buff, BUFF_SIZE, pipe_file)) {
+        fprintf(output_file, "%s", buff);
+    }
+    pclose(pipe_file);
+    fclose(output_file);
+    
+    // 获取计算时间
+    string line, duration, calTime;
+    ifstream answer_in(OUTPUT_FILE);     
+    int answerNum = 0;
+    while(getline(answer_in, line)) {
+        if(line.substr(0, 1) == "{") {
+            answerNum++;
+        }
+    }
+    
+    fprintf(out, "%s\t%d\t%.3f\n", fileName.c_str(), answerNum, dlvTime);
+}

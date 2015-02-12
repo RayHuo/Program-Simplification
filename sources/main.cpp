@@ -330,6 +330,7 @@ int main(int argc, char** argv) {
     
 
 #ifdef SIMPLIFICATION
+    printf("Using Smodels and DLV\n");
     /**
      * 1）将那些consequence作为约束，加入到P，得到P1;  
      * 2）通过GWRS化简P，将剩下的consequence作为约束加入到化简后的程序中，得到P2;
@@ -430,15 +431,33 @@ int main(int argc, char** argv) {
     
     
     // 计算时间并比较
-//    fprintf(foutTime, "Benchmark\tTime Cost\n---------------------------------------------------------\n");
+    
+//    // clasp 和 claspD
+//    if(type == 0) {
+//        Utils::callClasp(fileP1Name, foutTime);
+//        Utils::callClasp(fileP2Name, foutTime);
+//        fprintf(foutTime, "\n");
+//    }
+//    if(type == 1) {
+//        Utils::callClaspD(fileP1Name, foutTime);
+//        Utils::callClaspD(fileP2Name, foutTime);
+//        fprintf(foutTime, "\n");
+//    }
+    
+    
+    // smodels(NLP) 和 DLV(DLP)
     if(type == 0) {
-        Utils::callClasp(fileP1Name, foutTime);
-        Utils::callClasp(fileP2Name, foutTime);
+//        printf("Using Smodels\n");
+        Utils::callSmodels(fileP1Name, foutTime);
+        Utils::callSmodels(fileP2Name, foutTime);
         fprintf(foutTime, "\n");
     }
     if(type == 1) {
-        Utils::callClaspD(fileP1Name, foutTime);
-        Utils::callClaspD(fileP2Name, foutTime);
+//        printf("Using DLV\n");
+//        Utils::callCmodels(fileP1Name, foutTime);
+//        Utils::callCmodels(fileP2Name, foutTime);
+        Utils::callDLV(fileP1Name, foutTime);
+        Utils::callDLV(fileP2Name, foutTime);
         fprintf(foutTime, "\n");
     }
     
