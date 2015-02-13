@@ -33,9 +33,9 @@ using namespace std;
 
 //#define MAXU
 //#define GRST
-//#define GRS_WS
+#define GRS_WS
 //#define WFM
-#define SIMPLIFICATION
+//#define SIMPLIFICATION
 
 extern vector<Rule> G_Rules;    // 保存输入文件的所有rules，定义在global.cpp中
 extern FILE* yyin;              // lex.cpp中定义的变量，默认的文件输入对象，注意此处不要重定义
@@ -43,7 +43,7 @@ extern void yyparse();          // parse.cpp中定义的函数，实际进行par
 FILE* fout;                     // 自定义的输出文件对象。
 FILE* foutP1;                   // 输出程序中的P1
 FILE* foutLandGWRS;             // 保留L和GWRS
-FILE* foutTime;                 // 存放P1和P2的计算时间的文件。
+//FILE* foutTime;                 // 存放P1和P2的计算时间的文件。
 
 /*
  * This is the Program for both NLP and DLP simplification
@@ -66,28 +66,6 @@ int main(int argc, char** argv) {
     fout = fopen((filename + "_P2.out").c_str(), "w");
     if(!fout) {
         printf("IO Error : Cannot open the output file!\n");
-        exit(0);
-    }
-    string fileP2Name =  filename + "_P2.out";
-    
-    // 存放P1的文件
-    foutP1 = fopen((filename + "_P1.out").c_str(), "w");
-    if(!foutP1) {
-        printf("IO Error : Cannot open the foutP1 file!\n");
-        exit(0);
-    }
-    string fileP1Name =  filename + "_P1.out";
-    
-    foutLandGWRS = fopen((filename + "_LandGWRS").c_str(), "w");
-    if(!foutLandGWRS) {
-        printf("IO Error : Cannot open the foutLandGWRS file!\n");
-        exit(0);
-    }
-    
-    
-    foutTime = fopen((filename + "_time").c_str(), "w");
-    if(!foutTime) {
-        printf("IO Error : Cannot open the foutTime file!\n");
         exit(0);
     }
     
@@ -330,6 +308,39 @@ int main(int argc, char** argv) {
     
 
 #ifdef SIMPLIFICATION
+    string fileP2Name =  filename + "_P2.out";
+    
+    // 存放P1的文件
+    foutP1 = fopen((filename + "_P1.out").c_str(), "w");
+    if(!foutP1) {
+        printf("IO Error : Cannot open the foutP1 file!\n");
+        exit(0);
+    }
+    string fileP1Name =  filename + "_P1.out";
+    
+    foutLandGWRS = fopen((filename + "_LandGWRS").c_str(), "w");
+    if(!foutLandGWRS) {
+        printf("IO Error : Cannot open the foutLandGWRS file!\n");
+        exit(0);
+    }
+    
+    string fileP1Out = filename + "_P1ASOut";
+    string fileP2Out = filename + "_P2ASOut";
+    
+//    FILE* fileP1Out = fopen((filename + "_P1ASOut").c_str(), "w");   
+////    foutTime = fopen((filename + "_time").c_str(), "w");
+//    if(!foutTime) {
+//        printf("IO Error : Cannot open the fileP1Out file!\n");
+//        exit(0);
+//    }
+    
+//    FILE* fileP2Out = fopen((filename + "_P2ASOut").c_str(), "w");   
+////    foutTime = fopen((filename + "_time").c_str(), "w");
+//    if(!foutTime) {
+//        printf("IO Error : Cannot open the fileP2Out file!\n");
+//        exit(0);
+//    }
+    
     printf("Using Smodels and DLV\n");
     /**
      * 1）将那些consequence作为约束，加入到P，得到P1;  
@@ -448,25 +459,31 @@ int main(int argc, char** argv) {
     // smodels(NLP) 和 DLV(DLP)
     if(type == 0) {
 //        printf("Using Smodels\n");
-        Utils::callSmodels(fileP1Name, foutTime);
-        Utils::callSmodels(fileP2Name, foutTime);
-        fprintf(foutTime, "\n");
+//        Utils::callSmodels(fileP1Name, foutTime);
+//        Utils::callSmodels(fileP2Name, foutTime);
+        Utils::callSmodels(fileP1Name, fileP1Out);
+        Utils::callSmodels(fileP2Name, fileP2Out);
+//        fprintf(foutTime, "\n");
     }
     if(type == 1) {
 //        printf("Using DLV\n");
 //        Utils::callCmodels(fileP1Name, foutTime);
 //        Utils::callCmodels(fileP2Name, foutTime);
-        Utils::callDLV(fileP1Name, foutTime);
-        Utils::callDLV(fileP2Name, foutTime);
-        fprintf(foutTime, "\n");
+//        Utils::callDLV(fileP1Name, foutTime);
+//        Utils::callDLV(fileP2Name, foutTime);
+//        Utils::callDLV(fileP1Name, fileP1Out);
+//        Utils::callDLV(fileP2Name, fileP2Out);
+//        fprintf(foutTime, "\n");
     }
-    
-    
-#endif    
     
     fclose(foutP1);     // P1
     fclose(foutLandGWRS);
-    fclose(foutTime);
+//    fclose(fileP1Out);
+//    fclose(fileP2Out);
+    
+#endif    
+    
+
     fclose(fout);       // P2
     fclose(yyin);
     

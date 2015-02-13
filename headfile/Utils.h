@@ -39,7 +39,7 @@ public:
     static void callClaspD(string fileName, FILE* out);
     
     // 调用smodels（NLP）或cmodels（DLP）运行程序
-    static void callSmodels(string fileName, FILE* out);
+    static void callSmodels(string fileName, string out);
     static void callCmodels(string fileName, FILE* out);
     static void callDLV(string fileName, FILE* out);
 };

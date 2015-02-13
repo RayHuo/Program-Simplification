@@ -34,13 +34,14 @@ private:
     int rsspl_time;
     int all_c_in_rswpl_time;
     int all_c_in_rsspl_time;
+    bool rsspl_flag;
 public:
     DLP();
     DLP(vector<Rule> p, set<int> l);
     ~DLP();
     
     set<int> RSWPL(set<int> X, FILE* out);      // 论文中algorithm 1的函数的weak版本。
-    set<int> RSSPL(set<int> X, FILE* out);      // 论文中algorithm 1的函数的strong版本。
+    set<int> RSSPL(set<int> X, FILE* out, bool flag);      // 论文中algorithm 1的函数的strong版本。
     set<int> RSW(FILE* out);                    // 计算RSWPL的极小不动点
     set<int> RSS(FILE* out);                    // 计算RSSPL的极小不动点
     set<int> GWRS(FILE* out);                   // 直接调用RWS得到结果

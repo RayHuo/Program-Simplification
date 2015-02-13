@@ -1,0 +1,409 @@
+Calculating the Greatest Reliable Set :
+Vocabulary List : 
+c with id 1
+d with id 2
+a with id 3
+b with id 4
+
+
+WP Start :
+
+L : 
+
+=============================
+W_P(L) Start : 
+L : 
+
+UP(L, P) : c
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+c | d.
+d :- not c.
+d | b :- not a.
+
+Phi out :
+c, d, b
+
+X : c, d, b
+
+Satisfy rules :
+c | d.
+a | b :- c.
+d :- not c.
+a :- c, d.
+d | b :- not a.
+
+Phi out :
+c, d, a, b
+
+X : c, d, a, b
+
+Satisfy rules :
+c | d.
+a | b :- c.
+d :- not c.
+a :- c, d.
+c :- a.
+d | b :- not a.
+
+Phi out :
+c, d, a, b
+
+GUS : 
+
+W_P(L) : c
+
+L : c
+
+=============================
+W_P(L) Start : 
+L : c
+
+UP(L, P) : c
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+d | b :- not a.
+
+Phi out :
+c, d, b
+
+X : c, d, b
+
+Satisfy rules :
+a | b :- c.
+a :- c, d.
+d | b :- not a.
+
+Phi out :
+c, d, a, b
+
+X : c, d, a, b
+
+Satisfy rules :
+a | b :- c.
+a :- c, d.
+d | b :- not a.
+
+Phi out :
+c, d, a, b
+
+GUS : 
+
+W_P(L) : c
+
+Step 1 to 3 out Consequence : c
+
+=============================
+W_P(L) Start : 
+L : d
+
+UP(L, P) : c,d,a
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+
+Phi out :
+d
+
+X : d
+
+Satisfy rules :
+
+Phi out :
+d
+
+GUS : c,a,b
+
+=============================
+W_P(L) Start : 
+L : a
+
+UP(L, P) : c,a
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+c | d.
+d :- not c.
+
+Phi out :
+c, d, a
+
+X : c, d, a
+
+Satisfy rules :
+c | d.
+d :- not c.
+c :- a.
+
+Phi out :
+c, d, a
+
+GUS : b
+
+=============================
+W_P(L) Start : 
+L : ~a
+
+UP(L, P) : ~a,~d,c,b
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+c | d.
+d :- not c.
+d | b :- not a.
+
+Phi out :
+c, d, b
+
+X : c, d, b
+
+Satisfy rules :
+c | d.
+a | b :- c.
+d :- not c.
+d | b :- not a.
+
+Phi out :
+c, d, b
+
+GUS : a
+
+=============================
+W_P(L) Start : 
+L : b
+
+UP(L, P) : c,b
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+c | d.
+d :- not c.
+
+Phi out :
+c, d, b
+
+X : c, d, b
+
+Satisfy rules :
+c | d.
+d :- not c.
+a :- c, d.
+
+Phi out :
+c, d, a, b
+
+X : c, d, a, b
+
+Satisfy rules :
+c | d.
+d :- not c.
+a :- c, d.
+c :- a.
+
+Phi out :
+c, d, a, b
+
+GUS : 
+
+=============================
+W_P(L) Start : 
+L : ~b
+
+UP(L, P) : ~b,c,a
+
+------------------------
+PhiL Start:
+
+
+X : 
+
+Satisfy rules :
+c | d.
+d :- not c.
+d | b :- not a.
+
+Phi out :
+c, d
+
+X : c, d
+
+Satisfy rules :
+c | d.
+a | b :- c.
+d :- not c.
+a :- c, d.
+d | b :- not a.
+
+Phi out :
+c, d, a
+
+X : c, d, a
+
+Satisfy rules :
+c | d.
+a | b :- c.
+d :- not c.
+a :- c, d.
+c :- a.
+d | b :- not a.
+
+Phi out :
+c, d, a
+
+GUS : b
+
+Final Consequence : ~d, c
+
+=============================
+Start DLP GWRS : 
+
+---------------------------
+RSW :
+
+RSW X : 
+
++++++++++++++++++++++++++
+RSWPL :
+X : 
+L : ~d c 
+H : 
+	rule : c | d.
+		item : c 
+	rule : a | b :- c.
+		item : a b 
+C : c 
+A : c 
+C : a b 
+
+foreach p \in C = { a b }
+
++++++++++++++++++++++++++
+RSWPL :
+X : a 
+L : ~d c 
+H : 
+	rule : c | d.
+		item : c 
+	rule : c :- a.
+		item : c 
+C : c 
+A : c a 
+Return A : c a 
+p = a, and rswpl(X \cup {p}) = { c a }
+A : c 
+Return A : c 
+
+RSW rswpl : c 
+
+---------------------------
+RSW :
+
+RSW X : c 
+
++++++++++++++++++++++++++
+RSWPL :
+X : c 
+L : ~d c 
+H : 
+	rule : a | b :- c.
+		item : a b 
+C : a b 
+
+foreach p \in C = { a b }
+
++++++++++++++++++++++++++
+RSWPL :
+X : c a 
+L : ~d c 
+H : 
+Return A : c a 
+p = a, and rswpl(X \cup {p}) = { c a }
+A : c 
+Return A : c 
+
+RSW rswpl : c 
+
+The GWRS of DLP is : c 
+
+=============================
+Start DLP GSRS : 
+
+---------------------------
+RSS :
+
+RSS X : 
+
++++++++++++++++++++++++++
+RSSPL :
+X : 
+L : ~d c 
+H : 
+	rule : c | d.
+		item : c 
+C : c 
+A : c 
+Return A : c 
+
+RSS rsspl : c 
+
+---------------------------
+RSS :
+
+RSS X : c 
+
++++++++++++++++++++++++++
+RSSPL :
+X : c 
+L : ~d c 
+H : 
+	rule : a | b :- c.
+		item : a b 
+C : a b 
+
+foreach p \in C = { a b }
+
++++++++++++++++++++++++++
+RSSPL :
+X : c a 
+L : ~d c 
+H : 
+Return A : c a 
+p = a, and rsspl(X \cup {p}) = { c a }
+A : c 
+Return A : c 
+
+RSS rsspl : c 
+
+The GSRS of DLP is : c 

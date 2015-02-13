@@ -30,6 +30,7 @@ DLP::DLP() {
     rsspl_time = 0;
     all_c_in_rswpl_time = 0;
     all_c_in_rsspl_time = 0;
+    rsspl_flag = false;
 }
 
 
@@ -58,6 +59,7 @@ DLP::DLP(vector<Rule> p, set<int> l) : program(p), L(l) {
     rsspl_time = 0;
     all_c_in_rswpl_time = 0;
     all_c_in_rsspl_time = 0;
+    rsspl_flag = false;
 }
 
 
@@ -74,6 +76,7 @@ DLP::~DLP() {
     rsspl_time = 0;
     all_c_in_rswpl_time = 0;
     all_c_in_rsspl_time = 0;
+    rsspl_flag = false;
 }
 
 
@@ -228,7 +231,7 @@ bool DLP::all_C_in_RSWPL(set<int> X, set<int> C, FILE* out) {
  * @param out 输出中间结果，便于测试
  * @return 
  */
-set<int> DLP::RSSPL(set<int> X, FILE* out) {
+set<int> DLP::RSSPL(set<int> X, FILE* out, bool flag) {
     rswpl_time++;
 //    printf("RSSPL working\n");
 //    fprintf(out, "\n+++++++++++++++++++++++++\nRSSPL :\n");
@@ -298,11 +301,20 @@ set<int> DLP::RSSPL(set<int> X, FILE* out) {
 //        fprintf(out, "\n");     fflush(out);
         
         
-//        if(C->size() == 1 || all_C_in_RSSPL(X, *C, out)) {
-        if(C->size() == 1) {
-            set<int> A_C;       // A \cup C
-            set_union(A.begin(), A.end(), C->begin(), C->end(), inserter(A_C, A_C.begin()));
-            A = A_C;
+        if(flag) {
+            if(C->size() == 1) {
+                set<int> A_C;       // A \cup C
+                set_union(A.begin(), A.end(), C->begin(), C->end(), inserter(A_C, A_C.begin()));
+                A = A_C;
+            }
+        }
+        else {
+            if(C->size() == 1 || all_C_in_RSSPL(X, *C, out)) {
+    //        if(C->size() == 1) {
+                set<int> A_C;       // A \cup C
+                set_union(A.begin(), A.end(), C->begin(), C->end(), inserter(A_C, A_C.begin()));
+                A = A_C;
+            }
         }
         
         
@@ -334,8 +346,9 @@ set<int> DLP::RSSPL(set<int> X, FILE* out) {
  * @param out
  * @return 
  */
-bool DLP::all_C_in_RSSPL(set<int> X, set<int> C, FILE* out) {
-      all_c_in_rsspl_time++;
+bool DLP::all_C_in_RSSPL(set<int> X, set<int> C, FILE* out) {    
+    
+    all_c_in_rsspl_time++;
 //    fprintf(out, "\nforeach p \\in C = { ");
 //    for(set<int>::const_iterator p = C.begin(); p != C.end(); p++) {
 //        if(*p < 0)
@@ -349,7 +362,7 @@ bool DLP::all_C_in_RSSPL(set<int> X, set<int> C, FILE* out) {
         set<int> p_set;  p_set.insert(*p);      // {p}
         set<int> XP;     // X \cup {p}
         set_union(X.begin(), X.end(), p_set.begin(), p_set.end(), inserter(XP, XP.begin()));
-        set<int> rsspl = RSSPL(XP, out);
+        set<int> rsspl = RSSPL(XP, out, true);  // 后面的之考虑 |C| = 1
         
         
 //        fprintf(out, "p = ");
@@ -436,7 +449,7 @@ set<int> DLP::RSS(FILE* out) {
 //        fprintf(out, "\n");     fflush(out);
         
 //        printf("RSS working\n");
-        set<int> rsspl = RSSPL(X, out);
+        set<int> rsspl = RSSPL(X, out, false);
         
         
 //        fprintf(out, "\nRSS rsspl : ");
@@ -483,6 +496,6 @@ set<int> DLP::GSRS(FILE* out) {
     set<int> gsrs = RSS(out);
     long gsrsEnd = clock();
     double gsrsCost = (double)(gsrsEnd - gsrsStart) / CLOCKS_PER_SEC;
-//    fprintf(out, "\nGSRS cost time = %.3f\n", gsrsCost);
+    fprintf(out, "\nGSRS cost time = %.3f\n", gsrsCost);
     return gsrs;
 }
