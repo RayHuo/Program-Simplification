@@ -62,8 +62,8 @@ int main(int argc, char** argv) {
     
     filename.replace(3, 6, "outputs");
     
-//    fout = fopen((filename + ".out").c_str(), "w");
-    fout = fopen((filename + "_P2.out").c_str(), "w");
+    fout = fopen((filename + ".out").c_str(), "w");
+//    fout = fopen((filename + "_P2.out").c_str(), "w");
     if(!fout) {
         printf("IO Error : Cannot open the output file!\n");
         exit(0);
@@ -242,31 +242,31 @@ int main(int argc, char** argv) {
     // 计算NLP的greatest strong(and weak) reliable set，注意输入文件是否NLP
     if(type == 0) {
         NLP nlp(inputRules, L);
-        long gwrsStart = clock();
-        set<int> gwrs = nlp.GWRS(fout);
-        long gwrsEnd = clock();
-        double gwrsCost = (double)(gwrsEnd - gwrsStart) / CLOCKS_PER_SEC; // 得到的耗时单位为秒
-        fprintf(fout, "\nThe GWRS of NLP is : ");
-        for(set<int>::const_iterator it = gwrs.begin(); it != gwrs.end(); it++) {
-            if(*it < 0)
-                fprintf(fout, "~");
-            fprintf(fout, "%s ", Vocabulary::instance().getAtomName(abs(*it)));
-        }
-        fprintf(fout, "\nThe GWRS size of NLP = %d\n", gwrs.size());        fflush(fout);
-        fprintf(fout, "The GWRS cost time = %.3f\n", gwrsCost);             fflush(fout);
+//        long gwrsStart = clock();
+//        set<int> gwrs = nlp.GWRS(fout);
+//        long gwrsEnd = clock();
+//        double gwrsCost = (double)(gwrsEnd - gwrsStart) / CLOCKS_PER_SEC; // 得到的耗时单位为秒
+//        fprintf(fout, "\nThe GWRS of NLP is : ");
+//        for(set<int>::const_iterator it = gwrs.begin(); it != gwrs.end(); it++) {
+//            if(*it < 0)
+//                fprintf(fout, "~");
+//            fprintf(fout, "%s ", Vocabulary::instance().getAtomName(abs(*it)));
+//        }
+//        fprintf(fout, "\nThe GWRS size of NLP = %d\n", gwrs.size());        fflush(fout);
+//        fprintf(fout, "The GWRS cost time = %.3f\n", gwrsCost);             fflush(fout);
 
         long gsrsStart = clock();
         set<int> gsrs = nlp.GSRS(fout);
         long gsrsEnd = clock();
         double gsrsCost = (double)(gsrsEnd - gsrsStart) / CLOCKS_PER_SEC;
-        fprintf(fout, "\nThe GSRS of NLP is : ");
+        fprintf(fout, "\nThe GRS of NLP is : ");
         for(set<int>::const_iterator it = gsrs.begin(); it != gsrs.end(); it++) {
             if(*it < 0)
                 fprintf(fout, "~");
             fprintf(fout, "%s ", Vocabulary::instance().getAtomName(abs(*it)));
         }
-        fprintf(fout, "\nThe GSRS size of NLP = %d\n", gsrs.size());        fflush(fout);
-        fprintf(fout, "The GSRS cost time = %.3f\n", gsrsCost);             fflush(fout);
+        fprintf(fout, "\nThe GRS size of NLP = %d\n", gsrs.size());        fflush(fout);
+        fprintf(fout, "The GRS cost time = %.3f\n", gsrsCost);             fflush(fout);
     }
     
     
@@ -275,23 +275,23 @@ int main(int argc, char** argv) {
     // 计算DLP的greatest strong(and weak) reliable set，注意输入文件是否DLP
     if(type == 1) {
         DLP dlp(inputRules, L);
-        set<int> gwrs = dlp.GWRS(fout);
-        fprintf(fout, "\nThe GWRS of DLP is : ");
-        for(set<int>::const_iterator it = gwrs.begin(); it != gwrs.end(); it++) {
-            if(*it < 0)
-                fprintf(fout, "~");
-            fprintf(fout, "%s ", Vocabulary::instance().getAtomName(abs(*it)));
-        }
-        fprintf(fout, "\nThe GWRS of DLP size = %d\n", gwrs.size());        fflush(fout);
+//        set<int> gwrs = dlp.GWRS(fout);
+//        fprintf(fout, "\nThe GWRS of DLP is : ");
+//        for(set<int>::const_iterator it = gwrs.begin(); it != gwrs.end(); it++) {
+//            if(*it < 0)
+//                fprintf(fout, "~");
+//            fprintf(fout, "%s ", Vocabulary::instance().getAtomName(abs(*it)));
+//        }
+//        fprintf(fout, "\nThe GWRS of DLP size = %d\n", gwrs.size());        fflush(fout);
 
         set<int> gsrs = dlp.GSRS(fout);
-        fprintf(fout, "\nThe GSRS of DLP is : ");
+        fprintf(fout, "\nThe GRS of DLP is : ");
         for(set<int>::const_iterator it = gsrs.begin(); it != gsrs.end(); it++) {
             if(*it < 0)
                 fprintf(fout, "~");
             fprintf(fout, "%s ", Vocabulary::instance().getAtomName(abs(*it)));
         }
-        fprintf(fout, "\nThe GSRS of DLP size = %d\n", gsrs.size());        fflush(fout);
+        fprintf(fout, "\nThe GRS of DLP size = %d\n", gsrs.size());        fflush(fout);
     }
     
 #endif    
